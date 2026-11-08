@@ -1,4 +1,4 @@
-# 物理交互课堂
+# 量子力学导论简化版
 
 网站：https://turney0524.github.io
 
