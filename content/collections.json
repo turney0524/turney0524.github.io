@@ -1,0 +1,82 @@
+[
+  {
+    "slug": "quantum",
+    "title": "量子力学，从基础到近似",
+    "summary": "以完整课本为主线，用笔记补牢概率、算符、变分与几何相位。",
+    "symbol": "ψ",
+    "items": [
+      [
+        "textbooks",
+        "先建立全貌",
+        "从第一章开始，沿波函数、定态、测量、原子与近似方法逐章推进。",
+        "v2-index.html",
+        "量子力学 · 详细第二版"
+      ],
+      [
+        "notes",
+        "再把方法算透",
+        "从非负的展开权重证明上界，亲手完成高斯试探态的极小化。",
+        "articles/variational.html",
+        "变分原理"
+      ],
+      [
+        "notes",
+        "最后理解相位",
+        "在动力学相位之外，看见路径留下的几何信息。",
+        "articles/berry.html",
+        "Berry 相"
+      ]
+    ]
+  },
+  {
+    "slug": "bands",
+    "title": "能带与拓扑的第一步",
+    "summary": "从平移对称性到交替跃迁链，再用有限矩阵观察边界态。",
+    "symbol": "k",
+    "items": [
+      [
+        "notes",
+        "用对称性缩小问题",
+        "从平移算符理解原胞、Bloch 波和布里渊区。",
+        "articles/bloch.html",
+        "Bloch 定理"
+      ],
+      [
+        "papers",
+        "带着模型读经典",
+        "以聚乙炔经典文献为入口，推导交替链的两条能带。",
+        "articles/ssh-reading.html",
+        "SSH 经典回读"
+      ],
+      [
+        "software",
+        "把边界写进代码",
+        "构造开链矩阵，对照能谱、空间分布和本征方程残差。",
+        "articles/numpy-ssh.html",
+        "NumPy SSH 开链"
+      ]
+    ]
+  },
+  {
+    "slug": "computing",
+    "title": "让物理计算可以复现",
+    "summary": "从一个小模型开始，连接推导、代码、边界条件与数值检查。",
+    "symbol": "⌘",
+    "items": [
+      [
+        "papers",
+        "先明确物理近似",
+        "区分冻结晶格的均匀链与原论文的电子—晶格问题。",
+        "articles/ssh-reading.html",
+        "模型与文献"
+      ],
+      [
+        "software",
+        "再建立最小实现",
+        "从 2N×2N 矩阵出发，检查厄米性、本征态归一化与残差。",
+        "articles/numpy-ssh.html",
+        "可运行的 NumPy 示例"
+      ]
+    ]
+  }
+]
