@@ -57,7 +57,7 @@ def footer(prefix):
 def dialogs():
  return '''<dialog id="search-dialog" aria-labelledby="search-title"><div class="dialog-head"><span id="search-title">搜索课本、笔记与文献</span><button class="dialog-close" aria-label="关闭搜索">×</button></div><div class="dialog-body"><label class="sr-only" for="site-search">输入关键词</label><input id="site-search" type="search" placeholder="试试 Bloch、变分法、SSH…" autocomplete="off"><div id="search-results" class="search-results" aria-live="polite"></div></div></dialog><dialog id="wechat-dialog" aria-labelledby="wechat-title"><div class="dialog-head"><span id="wechat-title">在微信里找到我们</span><button class="dialog-close" aria-label="关闭公众号信息">×</button></div><div class="dialog-body"><p class="overline">WECHAT OFFICIAL ACCOUNT</p><p class="wechat-name">计算凝聚态物理</p><p class="wechat-instructions">打开微信 → 搜一搜 → 公众号，搜索 <strong>计算凝聚态物理</strong>。<br>网站方便系统阅读与代码学习，公众号继续分享日常思考。</p><button class="button-primary" id="copy-wechat">复制公众号名称</button></div></dialog>'''
 def shell(title,body,active='',prefix='',description='',canonical='index.html',article=False):
- return f'''<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)} · 计算凝聚态物理</title><meta name="description" content="{esc(description or '课本蒸馏、知识笔记、科研进展与开源软件。用公式、代码与交互模型学习凝聚态物理。')}"><meta name="theme-color" content="#193b39"><link rel="canonical" href="{BASE}/{canonical}"><link rel="icon" href="{prefix}assets/site/favicon.svg" type="image/svg+xml"><link rel="alternate" type="application/rss+xml" title="计算凝聚态物理" href="{prefix}feed.xml"><link rel="stylesheet" href="{prefix}site.css"></head><body>{'<div class="article-progress" aria-hidden="true"></div>' if article else ''}{header(active,prefix)}{body}{footer(prefix)}{dialogs()}<script id="search-data" type="application/json">{json.dumps(search,ensure_ascii=False).replace('</','<'+chr(92)+'/')}</script><script src="{prefix}site.js" defer></script></body></html>'''
+ return f'''<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)} · 计算凝聚态物理</title><meta name="description" content="{esc(description or '课本蒸馏、知识笔记、科研进展与开源软件。用公式、代码与交互模型学习凝聚态物理。')}"><meta name="theme-color" content="#071b49"><link rel="canonical" href="{BASE}/{canonical}"><link rel="icon" href="{prefix}assets/site/favicon.svg" type="image/svg+xml"><link rel="alternate" type="application/rss+xml" title="计算凝聚态物理" href="{prefix}feed.xml"><link rel="stylesheet" href="{prefix}site.css"><link rel="stylesheet" href="{prefix}theme.css"></head><body>{'<div class="article-progress" aria-hidden="true"></div>' if article else ''}{header(active,prefix)}{body}{footer(prefix)}{dialogs()}<script id="search-data" type="application/json">{json.dumps(search,ensure_ascii=False).replace('</','<'+chr(92)+'/')}</script><script src="{prefix}site.js" defer></script></body></html>'''
 def row(p,prefix=''):
  return f'''<a class="entry-row" href="{prefix}{p['href']}" data-entry data-category="{p['category']}" data-tags="{esc(json.dumps(p['tags'],ensure_ascii=False))}"><div><div class="entry-kicker"><span>{esc(p['label'])}</span><span>·</span><time datetime="{p['date']}">{p['date'].replace('-','.')}</time></div><h3>{esc(p['title'])}</h3><p>{esc(p['summary'])}</p><div class="entry-tags">{''.join('<span>'+esc(t)+'</span>' for t in p['tags'])}<small>{p['minutes']} 分钟阅读</small></div></div><span class="row-arrow" aria-hidden="true">↗</span></a>'''
 def bookfeature():
@@ -118,7 +118,7 @@ for n in range(1,13):
   t=t.replace('<button class="quiet" id="print">','<a class="site-back" href="textbooks.html">← 计算凝聚态物理</a><button class="quiet" id="print">',1)
  p.write_text(t)
 p=R/'v2-v2.css';t=p.read_text()
-if '.site-back{' not in t:t+='\n.site-back{font:11px/1.5 system-ui,sans-serif;color:#267367;text-decoration:none;margin-right:12px}@media(max-width:650px){.site-back{font-size:9px;margin-right:5px}}\n'
+if '.site-back{' not in t:t+='\n.site-back{font:11px/1.5 system-ui,sans-serif;color:#173c73;text-decoration:none;margin-right:12px}@media(max-width:650px){.site-back{font-size:9px;margin-right:5px}}\n'
 p.write_text(t)
 p=R/'v2-index.html';t=p.read_text()
 if 'class="site-back"' not in t:t=t.replace('</header>','<a class="site-back" href="textbooks.html">← 返回课本蒸馏</a></header>',1)
@@ -134,5 +134,13 @@ urls=ET.Element('urlset',xmlns='http://www.sitemaps.org/schemas/sitemap/0.9')
 for p in sorted(R.glob('*.html'))+sorted((R/'articles').glob('*.html')):
  u=ET.SubElement(urls,'url');ET.SubElement(u,'loc').text=BASE+'/'+p.relative_to(R).as_posix()
 (R/'sitemap.xml').write_bytes(ET.tostring(urls,encoding='utf-8',xml_declaration=True));(R/'robots.txt').write_text('User-agent: *\nAllow: /\nSitemap: '+BASE+'/sitemap.xml\n')
-(R/'assets/site/favicon.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42"><rect width="42" height="42" rx="8" fill="#193b39"/><g transform="translate(5 5) scale(.76)" color="#e2e9ba">'+LOGO[LOGO.index('><path')+1:LOGO.rindex('</svg>')]+'</g></svg>')
+(R/'assets/site/favicon.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42"><rect width="42" height="42" rx="8" fill="#071b49"/><g transform="translate(5 5) scale(.76)" color="#dfb764">'+LOGO[LOGO.index('><path')+1:LOGO.rindex('</svg>')]+'</g></svg>')
 print(f'''Built homepage, 5 categories, 3 collections, {len(posts)} articles, RSS and sitemap.''')
+
+# Shared cream / navy / gold palette across retained course pages.
+for p in list(R.glob('*.html'))+list((R/'articles').glob('*.html')):
+ t=p.read_text();href='../theme.css' if p.parent.name=='articles' else 'theme.css'
+ if 'href="'+href+'"' not in t:
+  link='<link rel="stylesheet" href="'+href+'">'
+  t=t.replace('</head>',link+'</head>',1) if '</head>' in t else t.replace('</style>','</style>'+link,1)
+ p.write_text(t)

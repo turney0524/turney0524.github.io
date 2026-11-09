@@ -5,10 +5,10 @@
     source = JSON.parse(document.getElementById('demo-source').textContent),
     models = QMSeries.models;
   const colors = {
-      teal: '#197e83',
-      orange: '#ba693b',
-      blue: '#4979a8',
-      muted: '#a9b5ac'
+      teal: '#173c73',
+      orange: '#ac7b29',
+      blue: '#527bb0',
+      muted: '#a9a99f'
     },
     records = [],
     $ = s => document.querySelector(s);
@@ -70,25 +70,25 @@
         Y = y => h - pad.b - (y - p.ymin) / (p.ymax - p.ymin) * (h - pad.t - pad.b);
       ctx.lineWidth = .7;
       if (p.band) {
-        ctx.fillStyle = '#197e8310';
+        ctx.fillStyle = '#173c7310';
         ctx.fillRect(pad.l, Y(p.band[1]), w - pad.l - pad.r, Y(p.band[0]) - Y(p.band[1]));
       }
       for (let j = 0; j <= 4; j++) {
         const x = p.xmin + (p.xmax - p.xmin) * j / 4,
           y = p.ymin + (p.ymax - p.ymin) * j / 4;
-        ctx.strokeStyle = '#e5ebe4';
+        ctx.strokeStyle = '#f6f0df';
         ctx.beginPath();
         ctx.moveTo(pad.l, Y(y));
         ctx.lineTo(w - pad.r, Y(y));
         ctx.stroke();
-        ctx.fillStyle = '#7e8e82';
+        ctx.fillStyle = '#6c7890';
         ctx.font = '10px system-ui';
         ctx.fillText(Math.abs(y) < .00001 ? '0' : y.toFixed(Math.abs(y) > 10 ? 1 : 2), 2, Y(y) + 3);
         ctx.textAlign = 'center';
         ctx.fillText(x.toFixed(Math.abs(x) > 20 ? 0 : 1), X(x), h - 26);
         ctx.textAlign = 'left';
       }
-      ctx.fillStyle = '#63796b';
+      ctx.fillStyle = '#384c70';
       ctx.textAlign = 'center';
       ctx.fillText(p.xlabel || '', (pad.l + w - pad.r) / 2, h - 7);
       ctx.textAlign = 'left';
@@ -117,7 +117,7 @@
         }
         ctx.stroke();
       }
-      ctx.strokeStyle = '#829a89';
+      ctx.strokeStyle = '#6c7890';
       ctx.lineWidth = 1;
       ctx.setLineDash([4, 5]);
       for (const x of p.marks || []) {
@@ -133,11 +133,11 @@
         t = 25,
         n = p.items.length,
         span = (w - l - 12) / n;
-      ctx.fillStyle = '#7e8e82';
+      ctx.fillStyle = '#6c7890';
       ctx.font = '10px system-ui';
       ctx.fillText('0', 5, b + 2);
       ctx.fillText(p.ymax.toFixed(1), 2, t + 4);
-      ctx.strokeStyle = '#d6e2d8';
+      ctx.strokeStyle = '#e0d6b9';
       ctx.beginPath();
       ctx.moveTo(l, t);
       ctx.lineTo(l, b);
@@ -148,7 +148,7 @@
           bh = (b - t) * it.v / p.ymax;
         ctx.fillStyle = colors[it.color] || colors.teal;
         ctx.fillRect(l + j * span + span * .16, b - bh, span * .68, bh);
-        ctx.fillStyle = '#647d6c';
+        ctx.fillStyle = '#6c7890';
         ctx.textAlign = 'center';
         ctx.fillText(it.label, l + (j + .5) * span, b + 19);
         ctx.fillText(it.v.toFixed(3), l + (j + .5) * span, Math.max(t + 11, b - bh - 8));
@@ -180,9 +180,9 @@
       }
       oc.putImageData(img, 0, 0);
       ctx.drawImage(off, left, top, side, side);
-      ctx.strokeStyle = '#d5dfd5';
+      ctx.strokeStyle = '#e0d6b9';
       ctx.strokeRect(left, top, side, side);
-      ctx.fillStyle = '#718679';
+      ctx.fillStyle = '#6c7890';
       ctx.textAlign = 'center';
       ctx.fillText(p.xlabel, left + side / 2, top + side + 29);
       ctx.fillText(String(p.xmin), left, top + side + 14);
@@ -207,7 +207,7 @@
         cy = h / 2,
         r = Math.min(w / 2 - 38, h / 2 - 24),
         project = v => [cx + r * (v[0] + .3 * v[1]), cy - r * (v[2] - .18 * v[1])];
-      ctx.strokeStyle = '#d6e1d6';
+      ctx.strokeStyle = '#e0d6b9';
       ctx.lineWidth = 1;
       ctx.beginPath();
       ctx.arc(cx, cy, r, 0, Math.PI * 2);
@@ -215,21 +215,21 @@
       ctx.beginPath();
       ctx.ellipse(cx, cy, r, r * .22, 0, 0, Math.PI * 2);
       ctx.stroke();
-      ctx.strokeStyle = '#d6e1d6';
+      ctx.strokeStyle = '#e0d6b9';
       ctx.beginPath();
       ctx.moveTo(cx - r, cy);
       ctx.lineTo(cx + r, cy);
       ctx.moveTo(cx, cy - r);
       ctx.lineTo(cx, cy + r);
       ctx.stroke();
-      ctx.fillStyle = '#7e9183';
+      ctx.fillStyle = '#6c7890';
       ctx.fillText('z', cx + 5, cy - r + 7);
       ctx.fillText('x', cx + r - 7, cy - 7);
       let v = p.vector;
       if (p.kind === 'cone') {
         const n = phi => [Math.sin(p.theta) * Math.cos(phi), Math.sin(p.theta) * Math.sin(phi), Math.cos(p.theta)];
         for (const [end, color] of [
-            [Math.PI * 2, '#cad9cc'],
+            [Math.PI * 2, '#e0d6b9'],
             [p.phi, colors.orange]
           ]) {
           ctx.beginPath();
@@ -245,7 +245,7 @@
       }
       if (p.axis) {
         const [x, y] = project(p.axis);
-        arrow(ctx, cx, cy, x, y, '#a9b5ac');
+        arrow(ctx, cx, cy, x, y, '#a9a99f');
       }
       const [x, y] = project(v);
       arrow(ctx, cx, cy, x, y, colors.teal);
@@ -259,8 +259,8 @@
         cy = h * .51,
         X = x => cx + scale * x,
         Y = y => cy - scale * y;
-      ctx.fillStyle = '#eef4ee';
-      ctx.strokeStyle = '#83a898';
+      ctx.fillStyle = '#f6f0df';
+      ctx.strokeStyle = '#6c7890';
       ctx.lineWidth = 2;
       ctx.beginPath();
       ctx.arc(cx, cy, scale, 0, Math.PI * 2);
@@ -268,7 +268,7 @@
       ctx.stroke();
       arrow(ctx, X(-2.3), Y(p.b), X(p.cx), Y(p.cy), colors.blue);
       arrow(ctx, X(p.cx), Y(p.cy), X(p.cx + 1.75 * p.dx), Y(p.cy + 1.75 * p.dy), colors.orange);
-      ctx.strokeStyle = '#adbeb1';
+      ctx.strokeStyle = '#a9a99f';
       ctx.setLineDash([4, 5]);
       ctx.beginPath();
       ctx.moveTo(X(-2.3), cy);
@@ -277,7 +277,7 @@
       ctx.lineTo(X(p.cx), Y(p.cy));
       ctx.stroke();
       ctx.setLineDash([]);
-      ctx.fillStyle = '#6e8776';
+      ctx.fillStyle = '#6c7890';
       ctx.fillText('入射 →', X(-2.2), Y(p.b) - 12);
       ctx.fillText('a', cx + scale / 2, cy - 8);
     } else if (p.kind === 'polar') {
@@ -286,7 +286,7 @@
         r = Math.min(w / 2 - 30, h / 2 - 25);
       let max = 1e-12;
       for (let j = 0; j <= 360; j++) max = Math.max(max, p.fn(j * Math.PI / 180));
-      ctx.strokeStyle = '#dce6dc';
+      ctx.strokeStyle = '#f6f0df';
       ctx.beginPath();
       ctx.arc(cx, cy, r, 0, 2 * Math.PI);
       ctx.moveTo(cx - r, cy);
@@ -306,7 +306,7 @@
       }
       ctx.closePath();
       ctx.stroke();
-      ctx.fillStyle = '#7b8e7f';
+      ctx.fillStyle = '#6c7890';
       ctx.fillText('θ=0', cx + r - 18, cy + 20);
       ctx.fillText('π', cx - r, cy + 20);
     } else if (p.kind === 'transition') {
@@ -324,12 +324,12 @@
         ctx.lineTo(x + 32, y);
         ctx.stroke();
       }
-      ctx.fillStyle = '#506e5c';
+      ctx.fillStyle = '#384c70';
       ctx.textAlign = 'center';
       ctx.fillText(p.initial, X1, Y(p.ei) - 16);
       ctx.fillText(p.final, X2, Y(p.ef) - 16);
-      arrow(ctx, X1 + 15, Y(p.ei) + 4, X2 - 15, Y(p.ef) + 4, p.allowed ? colors.orange : '#b2bcb2');
-      ctx.fillStyle = p.allowed ? colors.orange : '#829181';
+      arrow(ctx, X1 + 15, Y(p.ei) + 4, X2 - 15, Y(p.ef) + 4, p.allowed ? colors.orange : '#a9a99f');
+      ctx.fillStyle = p.allowed ? colors.orange : '#6c7890';
       ctx.fillText(p.allowed ? 'E1 角向允许 ↓' : '检查能量方向与选择定则', w / 2, h - 12);
       ctx.textAlign = 'left';
     }
