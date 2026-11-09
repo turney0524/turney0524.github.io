@@ -29,7 +29,7 @@ for p in sorted((R/'content').rglob('*.md')):
  text=p.read_text();assert text.startswith('---\n'),p
  meta,body=text[4:].split('\n---\n',1);x=json.loads(meta)
  assert x['category'] in ['notes','papers','software'];assert re.fullmatch('[a-z0-9-]+',x['slug'])
- x.update(body=body,source=p.relative_to(R).as_posix(),href='articles/'+x['slug']+'.html');posts.append(x)
+ x.update(body=body,source=p.relative_to(R).as_posix(),href=x.get('href','articles/'+x['slug']+'.html'));posts.append(x)
 assert len({x['slug'] for x in posts})==len(posts)
 # Explicit editorial order; future posts appear first by publication date.
 order={'numpy-ssh':0,'bloch':1,'ssh-reading':2,'variational':3,'berry':4}
@@ -105,6 +105,7 @@ def render_md(text):
  result=re.sub(r'<h2>(.*?)</h2>',h,result,flags=re.S)
  return result,toc
 for p in posts:
+ if p.get('standalone'):continue
  rendered,toc=render_md(p['body']);name=CATS[p['category']][0]
  aside=''.join(f'''<a href="#{id}">{label}</a>''' for id,label in toc)
  body=f'''<main id="main" class="wrap"><header class="article-head"><div class="breadcrumbs"><a href="../index.html">首页</a><span>/</span><a href="../{p['category']}.html">{name}</a></div><div class="badge-line"><span class="badge">{p['label']}</span>{''.join('<span class="badge filled">'+esc(t)+'</span>' for t in p['tags'])}</div><h1>{esc(p['title'])}</h1><p class="article-deck">{esc(p['summary'])}</p><div class="article-meta"><span>计算凝聚态物理</span><time datetime="{p['date']}">{p['date'].replace('-','.')}</time><span>约 {p['minutes']} 分钟阅读</span><a href="../{p['source']}">Markdown 原文 ↗</a></div></header><div class="article-layout"><article class="prose">{rendered}<div class="article-end"><strong>把这一步，接回更大的图景。</strong><p>继续读相关内容，或在纸上重做一遍推导，再用代码检查结果。</p><a href="../collections.html">浏览学习合集 →</a></div></article><aside class="article-aside"><p class="overline">这一篇的路线</p><nav aria-label="文章目录">{aside}</nav><a class="download-md" href="../{p['source']}">查看 Markdown 源文件 ↗</a></aside></div></main>'''

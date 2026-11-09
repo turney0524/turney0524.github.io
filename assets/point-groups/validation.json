@@ -1,0 +1,19 @@
+{
+  "groups": 32,
+  "operations": 332,
+  "irreps": 175,
+  "class_count": 175,
+  "all_homomorphisms_checked": true,
+  "all_row_orthogonality_checked": true,
+  "all_dimension_square_sums_checked": true,
+  "centrosymmetric_groups": 11,
+  "proper_only_groups": 11,
+  "polar_groups": 10,
+  "piezo_allowed_groups": 20,
+  "max_matrix_error_tolerance": 2e-07,
+  "serialized_data_checks": 8473,
+  "animation_endpoints_checked": 332,
+  "column_orthogonality": true,
+  "tensor_product_integer_checks": true,
+  "representative_bilbao_decompositions": true
+}
