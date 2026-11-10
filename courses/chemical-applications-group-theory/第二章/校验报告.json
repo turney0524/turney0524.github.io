@@ -1,0 +1,229 @@
+{
+  "status": "PASS",
+  "checks": 5169,
+  "groups": [
+    {
+      "group": "C1",
+      "order": 1,
+      "subgroups": 1,
+      "classes": [
+        1
+      ],
+      "axioms": "PASS"
+    },
+    {
+      "group": "C2",
+      "order": 2,
+      "subgroups": 2,
+      "classes": [
+        1,
+        1
+      ],
+      "axioms": "PASS"
+    },
+    {
+      "group": "C3",
+      "order": 3,
+      "subgroups": 2,
+      "classes": [
+        1,
+        1,
+        1
+      ],
+      "axioms": "PASS"
+    },
+    {
+      "group": "C4",
+      "order": 4,
+      "subgroups": 3,
+      "classes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "axioms": "PASS"
+    },
+    {
+      "group": "C5",
+      "order": 5,
+      "subgroups": 2,
+      "classes": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "axioms": "PASS"
+    },
+    {
+      "group": "C6",
+      "order": 6,
+      "subgroups": 4,
+      "classes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "axioms": "PASS"
+    },
+    {
+      "group": "C8",
+      "order": 8,
+      "subgroups": 4,
+      "classes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "axioms": "PASS"
+    },
+    {
+      "group": "C12",
+      "order": 12,
+      "subgroups": 6,
+      "classes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "axioms": "PASS"
+    },
+    {
+      "group": "V4",
+      "order": 4,
+      "subgroups": 5,
+      "classes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "axioms": "PASS"
+    },
+    {
+      "group": "D3",
+      "order": 6,
+      "subgroups": 6,
+      "classes": [
+        1,
+        3,
+        2
+      ],
+      "axioms": "PASS"
+    },
+    {
+      "group": "D4",
+      "order": 8,
+      "subgroups": 10,
+      "classes": [
+        1,
+        2,
+        1,
+        2,
+        2
+      ],
+      "axioms": "PASS"
+    },
+    {
+      "group": "C4xC2",
+      "order": 8,
+      "subgroups": 8,
+      "classes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "axioms": "PASS"
+    },
+    {
+      "group": "Z222",
+      "order": 8,
+      "subgroups": 16,
+      "classes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "axioms": "PASS"
+    },
+    {
+      "group": "Q8",
+      "order": 8,
+      "subgroups": 6,
+      "classes": [
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "axioms": "PASS"
+    },
+    {
+      "group": "A4",
+      "order": 12,
+      "subgroups": 10,
+      "classes": [
+        1,
+        4,
+        4,
+        3
+      ],
+      "axioms": "PASS"
+    }
+  ],
+  "notes": [
+    "All h^3 associativity checks per group; exact arithmetic",
+    "Textbook column-times-row table matches all36 entries",
+    "All matrix realizations respect group multiplication",
+    "Every subgroup/coset/class and centralizer identity checked",
+    "Exercise2.4 counterexample and A4 nonconverse checked"
+  ],
+  "page_checks": {
+    "internal_links": 149,
+    "mathml_nodes_in_course_files": 288,
+    "desktop": "PASS",
+    "mobile_390px": "PASS",
+    "whole_page_horizontal_overflow": false,
+    "frontend_errors": 0,
+    "gallery_groups_tested": 15,
+    "inverse_correct_and_wrong_paths": "PASS",
+    "triangle_composition_and_swap": "PASS",
+    "conjugation_endpoint": "PASS",
+    "editable_axiom_audit": "PASS",
+    "three_element_table_derivation": "PASS",
+    "subgroup_generated_closure": "PASS",
+    "coset_left_right_display": "PASS",
+    "D4_mirror_class_and_centralizer": "PASS",
+    "source_disclosure": "PASS"
+  }
+}

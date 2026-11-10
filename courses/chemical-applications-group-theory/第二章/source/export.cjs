@@ -1,0 +1,1 @@
+const G=require('../assets/groups.js');console.log(JSON.stringify(Object.values(G.groups).map(g=>({...g,_subs:undefined,subgroups:G.subgroups(g),classes:G.classes(g),centralizers:g.raw.map((_,i)=>G.centralizer(g,i))}))));

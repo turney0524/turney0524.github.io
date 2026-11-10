@@ -1,0 +1,1082 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>第三章 · 分子对称性和对称群｜Cotton动态课本</title><meta name="description" content="对照Cotton中英文第三版3.1–3.15：原书定义、公式、全部九组示例、16个三维交互实验、五步点群判别，以及完整原页与习题对照。"><meta name="theme-color" content="#071b49"><style>:root{--paper:#fffcf1;--card:#fffef8;--ink:#071b49;--text:#33455e;--gold:#b28b43;--line:#ddd4bc;--soft:#f4edda;--blue:#43789a;--red:#a46061;--serif:Georgia,'Songti SC','Noto Serif CJK SC',serif;--sans:system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--text);font:16px/1.95 var(--sans)}a{color:#174172;text-underline-offset:4px}button,select,input{font:inherit}button{cursor:pointer}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:3px}button{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:7px 14px;border-radius:4px;font-size:12px;transition:background .2s}button:hover,button[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}.topbar{height:70px;position:sticky;top:0;z-index:20;background:#fffcf1f5;backdrop-filter:blur(12px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 4%;gap:20px}.brand{font:600 18px var(--serif);text-decoration:none;color:var(--ink)}.brand i{font:italic 30px Georgia;margin-right:10px}.topbar nav{display:flex;gap:22px;font-size:11px;align-items:center}.status{font-size:10px;letter-spacing:1px;border:1px solid #d6bc82;color:#806329;border-radius:30px;padding:4px 11px}#reading-progress{position:absolute;bottom:-1px;left:0;height:2px;background:var(--gold);width:0}.wrap{max-width:1390px;margin:auto;padding:0 4%}.hero{display:grid;grid-template-columns:1.25fr .85fr;gap:50px;padding:66px 0 52px;border-bottom:1px solid var(--line);align-items:center}.eyebrow,.kicker{color:#96743c;font:10px/1.7 var(--sans);letter-spacing:2.5px;text-transform:uppercase}.hero h1{font:600 clamp(35px,4vw,57px)/1.32 var(--serif);letter-spacing:-1px;color:var(--ink);margin:18px 0 24px}.hero h1 em{font-style:normal;color:#9d7734}.hero .deck{font-size:16px;line-height:2.1;max-width:600px}.hero .actions{display:flex;gap:24px;align-items:center;flex-wrap:wrap;margin-top:26px;font-size:12px}.primary{display:inline-block;background:var(--ink);color:var(--paper);text-decoration:none;padding:12px 24px}.hero-art{border:1px solid var(--ink);position:relative;padding:26px;background:radial-gradient(ellipse at center,#f4ebd4,transparent 70%)}.hero-art svg{width:100%;height:auto;display:block}.hero-art .caption{font-size:11px;text-align:center;letter-spacing:1px}.hero-art .orb{transform-origin:170px 130px;animation:orbit 28s linear infinite}@keyframes orbit{to{transform:rotate(360deg)}}.meta-strip{display:flex;gap:24px;flex-wrap:wrap;font-size:11px;margin:22px 0 28px;color:#7c817e}.meta-strip b{font-weight:500;color:var(--ink)}.scope{border-left:3px solid var(--gold);padding:16px 22px;background:var(--soft);font-size:13px;line-height:1.9;margin:28px 0 38px}.layout{display:grid;grid-template-columns:185px minmax(0,1fr);gap:50px;align-items:start}.toc{position:sticky;top:100px;padding-top:26px;font-size:11px}.toc a{display:block;text-decoration:none;color:#6c7786;border-left:1px solid var(--line);padding:7px 12px}.toc a.active{border-left:2px solid var(--ink);color:var(--ink);background:#f3eddc}.toc .toc-label{font-size:9px;letter-spacing:2px;color:#a4844e;margin:0 0 15px}.toc hr{border:0;border-top:1px solid var(--line);margin:24px 0}.toc button{width:100%;margin:5px 0}.prose{min-width:0;max-width:1000px}.prose>h1,.prose>blockquote:first-of-type{display:none}.prose h2{font:600 clamp(25px,2.6vw,33px)/1.5 var(--serif);color:var(--ink);margin:64px 0 26px;padding-top:24px;border-top:1px solid var(--line)}.prose h2:first-of-type{margin-top:0}.prose h3{font:600 21px/1.6 var(--serif);color:var(--ink);margin:32px 0 18px}.prose p{margin:20px 0;line-height:2.1;font-size:15px}.prose strong{color:var(--ink)}.prose li{font-size:14px;margin:10px 0}.prose math{color:var(--ink);font-size:1.08em}.prose math[display=inline]{overflow:visible;font-size:1.02em}.math-block{padding:25px 18px;background:#f5eedc;border:1px solid #ded1ad;margin:25px 0;overflow-x:auto;overflow-y:hidden;border-radius:3px}.math-block:focus-visible{outline:2px solid var(--gold)}.prose blockquote{font-size:13px;border-left:3px solid var(--gold);margin:20px 0;padding:6px 20px;background:var(--soft)}.table-scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:12px}th,td{text-align:left;border-bottom:1px solid var(--line);padding:12px 15px}th{background:var(--soft);color:var(--ink)}details{border:1px solid var(--line);margin:20px 0;background:var(--card);padding:12px 18px;border-radius:4px}summary{cursor:pointer;color:var(--ink);font-size:13px}pre{background:#101f36;color:#e9e8de;padding:20px;font:11px/1.7 ui-monospace,SFMono-Regular,Consolas,monospace;overflow:auto;max-height:430px;tab-size:2;border-radius:3px}code{font:12px ui-monospace,monospace}.demo{margin:32px 0 46px;border:1px solid #d3c4a1;background:var(--card);border-radius:5px;overflow:hidden;box-shadow:0 7px 22px #14284904}.demo-head{border-bottom:1px solid var(--line);padding:18px 22px;display:flex;justify-content:space-between;gap:18px;align-items:center;background:#f7f1e2}.demo-head h4{font:600 19px/1.5 var(--serif);margin:0;color:var(--ink)}.demo-no{color:#af8b4c;font:10px var(--sans);letter-spacing:1px;margin-bottom:5px}.demo .prompt{padding:16px 22px 0;font-size:12px;color:#7b693d}.demo-body{padding:10px 22px 20px}.demo canvas{display:block;width:100%;height:310px;touch-action:pan-y}.demo.wide-canvas canvas{height:350px}.controls{display:flex;gap:15px 20px;align-items:end;flex-wrap:wrap;padding:16px 0;border-top:1px solid var(--line)}.controls label{display:flex;flex-direction:column;gap:5px;font-size:11px;min-width:125px;flex:1;color:#5c6878}.controls output{color:var(--ink);font-variant-numeric:tabular-nums}.controls input[type=range]{width:100%;accent-color:var(--gold);height:18px}.controls select{padding:6px 10px;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:3px;font-size:12px;max-width:100%}.button-row{display:flex;gap:8px;flex-wrap:wrap}.result{background:#f2efdf;padding:14px 18px;font-size:12px;line-height:1.9;color:var(--ink);min-height:53px;border-left:2px solid var(--gold)}.note{font-size:11px!important;color:#74808e;line-height:1.8!important;margin:12px 0!important}.demo details{margin:14px 0 0;padding:10px 14px;background:transparent}.source-links{display:flex;gap:15px;font-size:11px;margin:12px 0}.matrix{display:inline-grid;gap:1px;margin:10px 12px 10px 0;border-left:1px solid var(--ink);border-right:1px solid var(--ink);padding:5px 10px;vertical-align:middle}.matrix span{text-align:center;min-width:40px;font:12px/1.9 ui-monospace,monospace}.matrix .nonzero{background:#ece2c7;color:#071b49}.matrix-layout{display:flex;gap:15px;align-items:center;flex-wrap:wrap}.matrix-label{font-size:11px}.mode-choices{display:flex;gap:8px;margin:10px 0 20px;flex-wrap:wrap}.mode-choices button{flex:1;min-width:100px}.stat-line{display:flex;gap:15px;justify-content:space-between;flex-wrap:wrap;font-size:11px;color:#687688;margin:10px 0}.route{padding:24px;background:var(--ink);color:#eceadf;margin:42px 0}.route h3{color:#fff9e6;margin-top:0}.route p{color:#e2e0d6;font-size:13px}.route a{color:#e5c27d}.end{padding:40px 0 60px;border-top:1px solid var(--line);margin-top:50px;display:flex;justify-content:space-between;gap:20px;font-size:11px}.mini-equation{font:italic 15px Georgia;color:var(--ink)}@media(max-width:1050px){.layout{grid-template-columns:145px minmax(0,1fr);gap:25px}.hero{gap:26px}.topbar nav{gap:12px}.hero-art{padding:15px}}@media(max-width:760px){body{font-size:14px}.wrap{padding:0 5%}.hero{grid-template-columns:1fr;padding:35px 0 28px;gap:24px}.hero h1{font-size:36px}.hero-art{max-width:380px;width:100%;justify-self:center}.hero-art svg{max-height:220px}.layout{display:block}.toc{position:static;display:flex;flex-wrap:wrap;gap:5px;padding:5px 0 24px}.toc a{padding:4px 9px;border:1px solid var(--line)}.toc .toc-label,.toc hr,.toc button,.toc .aside-note{display:none}.topbar{padding:0 5%;height:62px;gap:10px}.brand{font-size:14px}.brand i{font-size:25px}.topbar nav{gap:10px;font-size:10px}.topbar .status,.topbar .wide-link{display:none}.prose h2{margin-top:45px;font-size:26px}.prose p{font-size:14px}.prose h3{font-size:20px}.demo-head{padding:15px}.demo-head h4{font-size:17px}.demo-body{padding:10px 12px 16px}.demo .prompt{padding:14px 14px 0}.demo canvas{height:280px}.demo.wide-canvas canvas{height:330px}.controls{gap:10px 16px}.controls label{min-width:115px}.hero .deck{font-size:14px}.math-block{padding:22px 12px}.scope{font-size:12px;padding:14px 16px}.meta-strip{gap:10px 18px}.end{flex-direction:column}.matrix span{min-width:28px;font-size:10px}.matrix{padding:4px 6px}.mode-choices button{padding:7px 6px;font-size:10px;min-width:70px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero-art .orb{animation:none}*{transition:none!important}}@media print{.topbar,.toc,.controls,.demo-head button,.source-links,.hero-art{display:none}.layout,.hero{display:block}.prose{max-width:none}.demo{break-inside:avoid;box-shadow:none}.demo canvas{height:240px}.prose h2{break-after:avoid}body{background:white;color:black}.math-block{background:#fafafa}.wrap{padding:0}details pre{max-height:none}.hero{padding:20px 0}.scope{background:none}}
+
+.demo-head button{flex-shrink:0;white-space:nowrap}
+.cayley{font-size:11px;white-space:nowrap;width:auto;min-width:100%}.cayley td,.cayley th{padding:3px;text-align:center;border:1px solid var(--line)}.cayley button{min-width:34px;width:100%;border:0;border-radius:2px;padding:7px 4px;font:11px/1.3 ui-monospace,monospace;background:transparent}.cayley .on-row,.cayley .on-col{background:#e9e4d1}.cayley .on-cell{background:var(--ink)}.cayley .on-cell button{color:var(--paper)}.cayley th{font-weight:500;background:#f4ecd4}.table-scroll{max-width:100%;border-radius:3px;margin:16px 0;overscroll-behavior-x:contain}.cayley caption{text-align:left;color:#7b6944;padding:8px 0;font-size:10px}.group-chips{display:flex;gap:7px;flex-wrap:wrap;margin:16px 0}.group-chips button{font:12px ui-monospace,monospace;min-width:35px}.group-chips button.selected{background:var(--ink);color:var(--paper)}.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:10px;margin:16px 0}.tile{padding:16px 13px;border:1px solid var(--line);background:#f8f4e7;font-size:12px;line-height:1.8;border-top:3px solid var(--gold)}.tile b{display:block;color:var(--ink);font-size:11px;margin-bottom:7px}.audit-flags{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0}.audit-flags span{border:1px solid var(--line);border-radius:20px;padding:3px 10px;font-size:10px}.audit-flags .pass{background:#e7ede1;color:#365148}.audit-flags .fail{background:#f2dddd;color:#8b4141}.step-list{font-size:12px;line-height:2.1;padding:12px 15px;background:#f4efdf;margin:12px 0;min-height:50px}.step-list .current{color:#99722f;font-weight:600}.facts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;font-size:11px;margin:18px 0}.facts-grid>div{border:1px solid var(--line);padding:12px;color:#77818c}.facts-grid strong{font:600 22px Georgia;color:var(--ink);display:block}.subset-list{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0}.subset-list button{font-size:10px;padding:5px 10px}.demo .group-explain{font-size:12px;color:#647285;line-height:1.9}.static-group table{min-width:0}.static-group .table-scroll{overflow:auto}.static-group summary{font-family:var(--serif);font-size:17px}.color-key{display:flex;gap:10px;flex-wrap:wrap;font-size:11px}.color-key span{border:1px solid var(--line);padding:5px 10px}.hero .deck{max-width:650px}.proof-note{font-size:12px;border-left:2px solid var(--blue);padding:10px 15px;background:#edf0eb}.mode-summary{font-size:11px;color:#7d8790}.demo-head button{flex-shrink:0;white-space:nowrap}.controls>button{align-self:flex-end}.source-box pre{font-size:11px}.demo .table-scroll{margin:15px 0}.hero-art .symmetry-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;font:14px Georgia;color:var(--ink);text-align:center}.hero-art .symmetry-cards span{border:1px solid var(--line);padding:10px}.jump-menu{display:flex;gap:12px;flex-wrap:wrap;margin:15px 0 30px;font-size:11px}.controls label.check-label{display:block;min-width:0;flex:none}.chapter-nav{display:flex;justify-content:space-between;flex-wrap:wrap;gap:15px;font-size:12px;margin:30px 0}.prose blockquote>p{font-size:12px}.demo canvas.short{height:200px}@media(max-width:760px){.facts-grid{grid-template-columns:repeat(3,1fr);gap:5px}.facts-grid>div{font-size:9px;padding:8px}.facts-grid strong{font-size:18px}.cayley button{min-width:32px}.tiles{grid-template-columns:repeat(2,1fr)}.tile{font-size:11px;padding:12px 10px}.table-scroll{max-width:100%}.controls label{min-width:105px}.hero .deck{font-size:14px}.demo canvas.short{height:200px}.mode-summary{font-size:10px}}
+.prose blockquote{display:block!important;border-left-color:#aa8643;background:#f6efdf}.prose>blockquote:first-of-type{display:none!important}.prose blockquote p{font-size:13px;line-height:2}.prose h2{scroll-margin-top:85px}.toc{max-height:calc(100vh - 115px);overflow:auto}.toc a{font-size:10px;line-height:1.7;padding:5px 10px}.toc .toc-label{margin-bottom:10px}.demo canvas{height:340px;cursor:grab;touch-action:none}.demo canvas:active{cursor:grabbing}.control-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:12px 0}.op-buttons{display:flex;gap:5px;flex-wrap:wrap;max-height:165px;overflow:auto;padding:8px 0;margin:10px 0}.op-buttons button{font-size:10px;padding:5px 9px}.op-buttons .active{background:var(--ink);color:var(--paper)}.matrix3{display:grid;grid-template-columns:repeat(3,minmax(35px,1fr));padding:9px 12px;border-left:1px solid var(--ink);border-right:1px solid var(--ink);font:11px/1.9 ui-monospace,monospace;max-width:200px;text-align:center;margin:12px 0}.math-meta{display:flex;gap:20px;align-items:center;flex-wrap:wrap}.bad-match{color:#a14d4f}.good-match{color:#426554}.atom-keys{font-size:10px;line-height:2;color:#75818e;display:flex;flex-wrap:wrap;gap:14px}.atom-keys i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:4px}.case-box{padding:17px 20px;background:#f5efdf;margin:15px 0;border-left:2px solid var(--gold);font-size:12px}.step-flow{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0;font-size:11px}.step-flow span{background:#eee6cf;border:1px solid #ded4b9;padding:7px 12px}.step-flow .chosen{background:var(--ink);color:var(--paper)}.source-page{width:100%;height:auto;display:block;margin:14px 0;border:1px solid var(--line);background:white}.original-pages summary{font-size:13px}.source-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.source-grid a{display:block;font-size:11px;padding:8px;border:1px solid var(--line);text-decoration:none;text-align:center}.source-notice{font-size:12px;color:#7c7f83}.review-summary{font-size:12px}.matrix-summary{font:12px/1.9 ui-monospace,monospace;white-space:pre-wrap}.label-cloud{display:flex;gap:8px;flex-wrap:wrap;font-size:11px}.label-cloud span{padding:5px 8px;border:1px solid var(--line)}.ex-page img{width:100%;height:auto}.small-select{max-width:240px}.controls input[type=checkbox]{accent-color:var(--gold)}.copy-originals{margin:30px 0;border-top:1px solid var(--line);padding-top:20px}.demo .controls label{min-width:120px}.source-box summary{font-size:12px}.demo-head h4{font-size:18px}.hero h1{font-size:clamp(35px,4vw,54px)}.hero-art svg{max-height:290px}.image-note{font-size:10px;color:#8b8c86}.prose .original-pages p{font-size:12px}.mini-table{font-size:11px}.answer{padding:16px;border:1px solid var(--line);background:#faf6e8;margin:14px 0}.reference-ops{font-size:11px;line-height:2;word-break:break-word}.camera-note{font-size:10px;color:#7d8790;margin-bottom:7px}.source-view-link{font-size:11px}.controls select{min-width:80px}.lab-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}@media(max-width:760px){.toc{max-height:none;overflow:visible}.toc a{font-size:10px}.toc .toc-label{display:none}.demo canvas{height:305px}.demo .controls label{min-width:108px}.source-grid{grid-template-columns:repeat(2,1fr)}.demo-head h4{font-size:16px}.lab-grid{grid-template-columns:1fr}.source-page{margin:10px 0}.prose blockquote p{font-size:12px}.controls select{max-width:100%}.op-buttons{max-height:150px}}
+
+.prose .group-symbol{font-family:Georgia,"Times New Roman",serif;white-space:nowrap}.prose .group-symbol sub{font-size:.72em;line-height:0;vertical-align:sub}
+</style></head><body><header class="topbar"><a class="brand" href="../index.html"><i>ψ</i>计算凝聚态物理</a><nav><a href="../第二章/index.html">上一章</a><a href="../index.html">全书目录</a><a href="../第四章/index.html">下一章</a><span class="status">详细原文伴读 / CHAPTER 03</span></nav><div id="reading-progress"></div></header><main class="wrap"><section class="hero"><div><p class="eyebrow">COTTON / MOLECULAR SYMMETRY / A THREE-DIMENSIONAL COMPANION</p><h1>第三章<br><em>分子对称性和对称群</em></h1><p class="deck">把轴、面与中心放回真实的三维空间。<br>追踪每个原子，组合每个操作，<br>再走出完整的点群判别路径。</p><div class="actions"><a class="primary" href="#section-1">按课本顺序阅读　↓</a><a href="#molecule-lab">进入三维实验室 ↗</a><a href="第三章_分子对称性和对称群.md">Markdown 全文 ↗</a></div></div><div class="hero-art"><svg viewBox="0 0 340 270" role="img" aria-label="分子镜面与三维对称轴示意"><ellipse cx="170" cy="136" rx="128" ry="48" fill="none" stroke="#d8cba7"/><path d="M170 20V245M51 199L289 64" stroke="#c2ab75" fill="none"/><path d="M90 40L249 80V230L90 190Z" fill="#d9e7e666" stroke="#7b9ca3"/><path d="M170 110L80 193M170 110L260 193M170 110V45" stroke="#7a8796" stroke-width="4"/><g fill="#071b49"><circle cx="170" cy="110" r="22"/><circle cx="170" cy="45" r="12"/></g><g fill="#43789a"><circle cx="80" cy="193" r="17"/><circle cx="260" cy="193" r="17"/></g><g fill="#fffbed" font-family="Georgia" font-size="15" text-anchor="middle"><text x="170" y="115">A</text><text x="80" y="198">B</text><text x="260" y="198">B</text></g><g fill="#a5813e" font-family="Georgia" font-size="18"><text x="260" y="42">Cₙ</text><text x="65" y="119">σ</text><text x="110" y="256">Sₙ = σₕ Cₙ</text></g></svg><p class="caption">元素是几何实体；操作才是群的成员。</p></div></section><div class="meta-strip"><span><b>十五节</b> 原章顺序完整展开</span><span><b>十六组</b> 三维交互与判别实验</span><span><b>九组</b> 原书分类示例</span><span><b>原页对照</b> 定义 / 原图 / 全部习题</span></div><div class="scope"><strong>原书表述与白话讲解并行。</strong> 引文框尽量保留中译本原话，按3.1–3.15完整组织概念、关系、点群族和示例；每节可展开对应原页逐字逐图核查。补充的计算与模型明确标注，所有操作按原子类型和空间坐标匹配。完整中译章页与英文本扩展习题均保存在本地对照目录。</div><div class="layout"><aside class="toc"><p class="toc-label">READ / ROTATE / IDENTIFY</p><a data-section href="#section-1">3.1 通论：从“看起来对称”走到数学标准</a><a data-section href="#section-2">3.2 对称元素和对称操作：几何实体不是动作</a><a data-section href="#section-3">3.3 对称面和反映：平面里不动，平面外成对</a><a data-section href="#section-4">3.4 反演中心：三个坐标一起变号</a><a data-section href="#section-5">3.5 真轴和真转动：轴阶、操作阶与不同操作的计数</a><a data-section href="#section-6">3.6 非真轴和非真转动：组合成立，分步未必成立</a><a data-section href="#section-7">3.7 对称操作的乘积：总效果要作用在任意点上比较</a><a data-section href="#section-8">3.8 等价对称元素和等价原子：同种不等于等价</a><a data-section href="#section-9">3.9 对称元素和操作之间的一般关系</a><a data-section href="#section-10">3.10 对称元素和旋光异构：缺少镜面与中心还不够</a><a data-section href="#section-11">3.11 对称点群：完整操作集合怎样组成群</a><a data-section href="#section-12">3.12 多重高阶轴的对称性：五种正多面体与七个点群</a><a data-section href="#section-13">3.13 对称操作的类：同一空间动作，换母群可能改变分类</a><a data-section href="#section-14">3.14 分子对称性系统分类法：每一步都要排除更高对称</a><a data-section href="#section-15">3.15 实例：沿原书九组例子逐步走流程</a><a data-section href="#section-16">3.16 习题原文、参考解法与可编辑算例</a><a data-section href="#section-17">3.17 全章对照、术语与必要限定</a><a href="#original-exercises">两版完整原题原图</a><hr><button id="pause-all">暂停全部动画</button><a href="examples.py" download>下载 NumPy 算例 ↓</a><a href="校验报告.json">查看计算核验</a></aside><article class="prose"><h1>第三章 · 分子对称性和对称群</h1>
+
+<blockquote>
+  <p>Cotton《群论在化学中的应用》第三版详细动态伴读。中译本书页13–45、英文版书页17–67。正文严格沿用3.1–3.15的顺序，定义与规则尽量保留中译本原句；引文框标“课本表述”，框外的公式展开、白话解释与交互算例为本教程补充。全章中译本原页及英文版完整习题页另附“原文对照”，包含原图与原题，供逐字逐图核查。</p>
+</blockquote>
+
+<h2 id="section-1">3.1 通论：从“看起来对称”走到数学标准</h2>
+
+<blockquote>
+  <p><strong>课本表述：</strong> “为了建立尽可能有用的分子对称性概念，必须制定一些关于对称性的严格数学标准。”</p>
+</blockquote>
+
+<p>原章的路线有三步。首先研究分子可能具有的对称元素，以及由这些元素产生的对称操作；随后说明，一组完全、但不重复的<strong>对称操作，而不是对称元素</strong>组成数学群；最后用第二章的群论性质，系统确定分子的操作并归入适当的对称群。本章使用化学中常见的Schönflies符号，晶体学另一套符号留到第十一章。</p>
+
+<p>原书特别建议使用三维模型。不是先把分子名称和点群名称一一硬背，而是转动模型，沿不同方向看同一条轴、同一个平面，检验操作后的各个原子是否都能找到同种的对应原子。纸面上一条“交叉线”未必表示真实空间相交，透视图中的正方形也未必就是分子平面。</p>
+
+<p><strong>本页的读法。</strong> 每个模型可以鼠标拖动改变观察方向，滚轮缩放；相机运动不是分子的对称操作。按“施加操作”才改变被跟踪原子的位置。数字是追踪编号，不改变同种原子的化学身份；关掉数字后，观察完整点集是否重合。程序按原子类型逐一匹配，不只比较轮廓。所有几何是教学理想化，不能把显示键长当作实验结构。</p>
+
+<section class="demo" id="molecule-lab" aria-labelledby="molecule-title"><header class="demo-head"><div><div class="demo-no">INTERACTIVE 01 / 观察 · 预测 · 验证</div><h4 id="molecule-title">分子实验室：选择操作，追踪每个原子</h4></div><button data-play aria-pressed="true">暂停动画</button></header><div class="prompt">转相机不等于做对称操作。点下方按钮，再看原子匹配。</div><div class="demo-body"><canvas role="img" aria-label="分子实验室：选择操作，追踪每个原子，可拖动改变相机"></canvas><div class="camera-note">拖动改变相机 · 滚轮缩放 · 操作终点才用于判断对称性</div><div class="controls"><label for="molecule-model">选择分子<select id="molecule-model"><option value="water">水 H₂O</option><option value="ammonia">氨 NH₃</option><option value="bf3">平面 BF₃</option><option value="methane">正四面体 CH₄</option><option value="sf6">正八面体 SF₆</option><option value="square">平面 [PtCl₄]²⁻</option><option value="benzene">苯</option><option value="pf5">三角双锥 PF₅</option><option value="allene">丙二烯</option><option value="ethane">交错乙烷</option><option value="ferrocene">交错二茂铁</option><option value="peroxide">非平面 H₂O₂</option><option value="co2">线性 CO₂</option><option value="hcn">线性 HCN</option><option value="s4">纯S₄通用轨道模型</option><option value="genericCs">单镜面 AB₂C 模型</option></select></label><button id="molecule-reset">恢复初态</button><button id="molecule-camera">重置相机</button><label><span>追踪标签</span><span><input id="molecule-labels" type="checkbox" checked> 显示原子编号</span></label></div><div class="atom-keys" id="molecule-keys"></div><div class="op-buttons" id="molecule-ops"></div><div class="math-meta"><div id="molecule-matrix"></div><div id="molecule-map" class="reference-ops"></div></div><div class="result" id="molecule-status" role="status" aria-live="off">载入计算结果。</div><p class="note">理想化坐标，连接线仅用于显示局部几何。线性群的按钮是有限角度抽样，不是完整无限群。</p><details class="source-box"><summary>查看这个模型的计算代码</summary><pre><code data-source="molecule"></code></pre><div class="source-links"><a href="assets/symmetry.js" download>完整变换核心JS ↓</a><a href="examples.py" download>NumPy复现代码 ↓</a></div></details></div></section>
+
+<details class="original-pages"><summary>展开中文原页 13 · 原话、原图对照</summary><p class="image-note">来自用户提供的第三版扫描本；书页与PDF页数不同。保留原始页面字样，用于本地对读。</p><a href="assets/原文对照/中文-书页13.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页13.jpg" alt="中文第三版第三章书页13，点击查看原尺寸"></a></details><h2 id="section-2">3.2 对称元素和对称操作：几何实体不是动作</h2>
+
+<blockquote>
+  <p><strong>课本表述——对称操作：</strong> “对称操作是使物体作一种运动，完成这种运动之后，物体的每一点都与物体原始取向时的等价点（或可能是同样的点）相重合。”</p>
+  
+  <p><strong>课本表述——对称元素：</strong> “一个对称元素是一个几何实体，如一条直线，一个平面或一个点，与它们相关联，可以完成一个或一个以上的对称操作。”</p>
+</blockquote>
+
+<p>原书还把操作的效果表述为：把物体引入“等价构型——即和原始情况不可区分，但不一定和它等价的构型”。这里最后一句的中文“等价”容易与前半句混淆；对应英文区分的是 <em>equivalent</em> 与 <em>identical</em>。本教程统一说：整体构型不可区分是<strong>等价</strong>，而每个追踪编号都回到原位置是<strong>完全相同</strong>。例如水分子的两个H互换后，整体相同，但H₁未必还在原位置。</p>
+
+<p>对称轴是直线；绕它转120°是一个操作。对称面是平面；通过它反射是一个操作。一个三重轴能够产生E、<span class="group-symbol">C<sub>3</sub></span>、<span class="group-symbol">C<sub>3</sub></span>²三个不同操作，不能因为轴只有一条就只数一个群元素。</p>
+
+<div class="table-scroll"><table>
+<thead>
+<tr>
+  <th>表3.1 对称元素</th>
+  <th>对称操作（一种或多种）</th>
+  <th>常用符号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>平面</td>
+  <td>平面中的反映</td>
+  <td>σ</td>
+</tr>
+<tr>
+  <td>对称中心或反演中心</td>
+  <td>所有原子通过中心的反演</td>
+  <td>i</td>
+</tr>
+<tr>
+  <td>真轴</td>
+  <td>绕轴的一次或多次转动</td>
+  <td><span class="group-symbol">C<sub>n</sub></span>及其幂</td>
+</tr>
+<tr>
+  <td>非真轴</td>
+  <td>绕轴转动后，在垂直于轴的平面中反映；可以重复</td>
+  <td><span class="group-symbol">S<sub>n</sub></span>及其幂</td>
+</tr>
+</tbody>
+</table></div>
+
+<p><strong>存在性必须靠操作验证。</strong> 不能只在图中画一条漂亮的轴就宣布它是<span class="group-symbol">C<sub>n</sub></span>，也不能只因分子中间有一个原子就宣布该原子所在处是反演中心。必须检查对所有原子同时施加相应操作后，完整构型确实不变。</p>
+
+<details class="original-pages"><summary>展开中文原页 13–14 · 原话、原图对照</summary><p class="image-note">来自用户提供的第三版扫描本；书页与PDF页数不同。保留原始页面字样，用于本地对读。</p><a href="assets/原文对照/中文-书页13.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页13.jpg" alt="中文第三版第三章书页13，点击查看原尺寸"></a><a href="assets/原文对照/中文-书页14.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页14.jpg" alt="中文第三版第三章书页14，点击查看原尺寸"></a></details><h2 id="section-3">3.3 对称面和反映：平面里不动，平面外成对</h2>
+
+<p>把待检平面选成xy平面。反射让x、y不变，z变号：</p>
+
+<div class="math-block" tabindex="0" aria-label="公式，可横向滚动"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><msub><mi>&#x003C3;</mi><mrow><mi>x</mi><mi>y</mi></mrow></msub><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x0002C;</mo><mi>y</mi><mo>&#x0002C;</mo><mi>z</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x0002C;</mo><mi>y</mi><mo>&#x0002C;</mo><mo>&#x02212;</mo><mi>z</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0002C;</mo><mspace width="2em" /><mi>M</mi><mo stretchy="false">&#x00028;</mo><msub><mi>&#x003C3;</mi><mrow><mi>x</mi><mi>y</mi></mrow></msub><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mo>&#x00028;</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mo>&#x02212;</mo><mn>1</mn></mtd></mtr></mtable><mo>&#x00029;</mo><mo>&#x0002E;</mo></mrow></math></div>
+
+<p><strong>课本的几何说法：</strong> 从每个原子向平面作垂线，把线段在平面另一侧延长相等距离，再把原子移到另一端。如果所有原子同时这样移动之后得到等价构型，该平面就是对称面。</p>
+
+<p>位于平面上的原子是特殊情况：反射完全不移动它们。因此任意理想平面型分子至少有一个对称面，即分子平面。对不在平面上的同种原子，每个都必须有另一侧的伙伴，所以平面外的每种原子数为偶数；平面内可以有任意个。若某种原子全分子只有一个，它必须位于<strong>每一个</strong>对称面上；有两个这样的面时，它在两面交线上。</p>
+
+<p>同一个反射做两次，每个编号都回去：</p>
+
+<div class="math-block" tabindex="0" aria-label="公式，可横向滚动"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><msup><mi>&#x003C3;</mi><mn>2</mn></msup><mo>&#x0003D;</mo><mi>E</mi><mo>&#x0002C;</mo><mspace width="2em" /><msup><mi>&#x003C3;</mi><mrow><mn>2</mn><mi>k</mi></mrow></msup><mo>&#x0003D;</mo><mi>E</mi><mo>&#x0002C;</mo><mspace width="2em" /><msup><mi>&#x003C3;</mi><mrow><mn>2</mn><mi>k</mi><mo>&#x0002B;</mo><mn>1</mn></mrow></msup><mo>&#x0003D;</mo><mi>&#x003C3;</mi><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>一般平面经过原点、单位法向为n时，补充的计算公式为 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>M</mi><mi>&#x003C3;</mi></msub><mo>&#x0003D;</mo><mi>I</mi><mo>&#x02212;</mo><mn>2</mn><mi>n</mi><msup><mi>n</mi><mi>T</mi></msup></mrow></math>。这个公式把“法向分量反号，面内分量不变”写成矩阵，供程序计算；不必先学会矩阵才理解反射。</p>
+
+<h3>原书逐类例子</h3>
+
+<ul>
+<li>非平面且各类原子都只有奇数个的FClSO，不存在能容纳这些独特原子的共同镜面。F₂SO、Cl₂SO有一个面，经过S、O并平分两个同种卤素的位置。</li>
+<li>线性分子有无穷多个包含分子轴的对称面。</li>
+<li>H₂O有两个面：分子平面不移动任何原子，另一个垂直于分子平面、包含O和键角平分线的面交换两个H。它们不是等价的镜面。</li>
+<li>四面体AB₂<span class="group-symbol">C<sub>2</sub></span>（如CH₂Cl₂）有两个互相垂直的面：一个保持AB₂部分而交换C，另一个保持A<span class="group-symbol">C<sub>2</sub></span>而交换B。</li>
+<li>NH₃、CHCl₃各有三个面。每个面包含主轴和一个外围原子，交换另两个同种原子。NH₃不平面，所以不能有包含N与全部三个H的第四个面。</li>
+<li>把棱锥AB₃逐渐压平，原有三个面保留；只有在<strong>完全平面</strong>的极限，分子平面才新增为第四个面。BF₃、C<span class="group-symbol">O<sub>3</sub></span>²⁻、N<span class="group-symbol">O<sub>3</sub></span>⁻、S<span class="group-symbol">O<sub>3</sub></span>属于这一类平面骨架。</li>
+<li>平面正方形[PtCl₄]²⁻、[AuCl₄]⁻有五个面：分子平面、两条穿过相对配体的竖直面、两条平分相邻配体夹角的竖直面。</li>
+<li>正四面体AB₄有六个面，每面经过中心与一条棱的两个端点；正八面体AB₆有九个面，其中三个穿过四个外围顶点，另六个穿过一对相对顶点并平分另外的棱。</li>
+</ul>
+
+<section class="demo" id="mirror-lab" aria-labelledby="mirror-title"><header class="demo-head"><div><div class="demo-no">INTERACTIVE 02 / 观察 · 预测 · 验证</div><h4 id="mirror-title">镜面里的点不动，镜面外的点成对</h4></div><button data-play aria-pressed="true">暂停动画</button></header><div class="prompt">同一平面能成为NH₃的镜面，也未必能成为另一分子的镜面。</div><div class="demo-body"><canvas role="img" aria-label="镜面里的点不动，镜面外的点成对，可拖动改变相机"></canvas><div class="camera-note">拖动改变相机 · 滚轮缩放 · 操作终点才用于判断对称性</div><div class="controls"><label for="mirror-model">模型<select id="mirror-model"><option value="water">H₂O</option><option value="ammonia">NH₃</option><option value="bf3">BF₃</option><option value="square">正方形AB₄</option><option value="genericCs">单镜面模型</option></select></label><label for="mirror-plane">检验平面<select id="mirror-plane"><option value="vertical">包含z的竖直面</option><option value="horizontal">xy水平面</option></select></label><label for="mirror-angle">竖直面方向角 φ / ° <output id="mirror-angle-out">0</output><input id="mirror-angle" type="range" min="0" max="180" step="5" value="0"></label><button id="mirror-run">播放反映</button><button id="mirror-twice">连续两次 = E</button></div><div class="result" id="mirror-status" role="status" aria-live="off">载入计算结果。</div><p class="note">浅蓝四边形标出候选平面。候选不一定是分子的真实镜面，程序按类型和位置检验。</p><details class="source-box"><summary>查看这个模型的计算代码</summary><pre><code data-source="mirror"></code></pre><div class="source-links"><a href="assets/symmetry.js" download>完整变换核心JS ↓</a><a href="examples.py" download>NumPy复现代码 ↓</a></div></details></div></section>
+
+<details class="original-pages"><summary>展开中文原页 14–16 · 原话、原图对照</summary><p class="image-note">来自用户提供的第三版扫描本；书页与PDF页数不同。保留原始页面字样，用于本地对读。</p><a href="assets/原文对照/中文-书页14.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页14.jpg" alt="中文第三版第三章书页14，点击查看原尺寸"></a><a href="assets/原文对照/中文-书页15.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页15.jpg" alt="中文第三版第三章书页15，点击查看原尺寸"></a><a href="assets/原文对照/中文-书页16.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页16.jpg" alt="中文第三版第三章书页16，点击查看原尺寸"></a></details><h2 id="section-4">3.4 反演中心：三个坐标一起变号</h2>
+
+<blockquote>
+  <p><strong>课本表述：</strong> 若把分子中每个原子的坐标(x,y,z)变成(−x,−y,−z)得到等价构型，则坐标原点所在的点称为“对称中心或反演中心”。</p>
+</blockquote>
+
+<div class="math-block" tabindex="0" aria-label="公式，可横向滚动"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>i</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x0002C;</mo><mi>y</mi><mo>&#x0002C;</mo><mi>z</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mo>&#x02212;</mo><mi>x</mi><mo>&#x0002C;</mo><mo>&#x02212;</mo><mi>y</mi><mo>&#x0002C;</mo><mo>&#x02212;</mo><mi>z</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0002C;</mo><mspace width="2em" /><mi>M</mi><mo stretchy="false">&#x00028;</mo><mi>i</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mo>&#x02212;</mo><mi>I</mi><mo>&#x0002C;</mo><mspace width="2em" /><msup><mi>i</mi><mn>2</mn></msup><mo>&#x0003D;</mo><mi>E</mi><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>反演不是绕某条轴转180°。<span class="group-symbol">C<sub>2</sub></span>(z)只让x、y变号而保留z；反演连z也变号。用一个不在坐标面上的普通点比较，差别立刻可见。原点本身不动，所以只看中心原子完全不能验证反演。</p>
+
+<p>反演中心最多能放一个原子，其余原子必须按同种成对出现。因此，如果两种或更多原子各有奇数个，便不可能都有唯一未配对原子留在同一个反演中心上。不过“外围同种原子是偶数”只是必要条件，不是充分条件。</p>
+
+<p>原书的正例有：正八面体AB₆、平面正方形AB₄、平面反式AB₂<span class="group-symbol">C<sub>2</sub></span>、线性ABA、乙烯、苯。反例有：正五边形<span class="group-symbol">C<sub>5</sub></span>H₅⁻、正四面体AB₄。四面体的A位于几何中心，四个B也是偶数，但每个B的反方向没有另一个B，所以仍无i。</p>
+
+<section class="demo" id="inversion-lab" aria-labelledby="inversion-title"><header class="demo-head"><div><div class="demo-no">INTERACTIVE 03 / 观察 · 预测 · 验证</div><h4 id="inversion-title">反演i与半周转动C₂，差在第三个坐标</h4></div><button data-play aria-pressed="true">暂停动画</button></header><div class="prompt">四个外围原子是偶数，也不保证四面体有反演中心。</div><div class="demo-body"><canvas role="img" aria-label="反演i与半周转动C₂，差在第三个坐标，可拖动改变相机"></canvas><div class="camera-note">拖动改变相机 · 滚轮缩放 · 操作终点才用于判断对称性</div><div class="controls"><label for="inversion-model">分子<select id="inversion-model"><option value="sf6">SF₆ · 有i</option><option value="methane">CH₄ · 无i</option><option value="benzene">苯 · 有i</option><option value="water">水 · 无i</option></select></label><label for="inversion-op">操作<select id="inversion-op"><option value="i">反演 i</option><option value="c2">C₂(z)</option></select></label><button id="inversion-run">播放操作</button></div><div class="matrix-summary" id="inversion-point"></div><div class="result" id="inversion-status" role="status" aria-live="off">载入计算结果。</div><p class="note">额外追踪普通点(0.6,0.3,0.8)，用它区分i与C₂；不能只观察恰好在原点的中心原子。</p><details class="source-box"><summary>查看这个模型的计算代码</summary><pre><code data-source="inversion"></code></pre><div class="source-links"><a href="assets/symmetry.js" download>完整变换核心JS ↓</a><a href="examples.py" download>NumPy复现代码 ↓</a></div></details></div></section>
+
+<details class="original-pages"><summary>展开中文原页 16 · 原话、原图对照</summary><p class="image-note">来自用户提供的第三版扫描本；书页与PDF页数不同。保留原始页面字样，用于本地对读。</p><a href="assets/原文对照/中文-书页16.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页16.jpg" alt="中文第三版第三章书页16，点击查看原尺寸"></a></details><h2 id="section-5">3.5 真轴和真转动：轴阶、操作阶与不同操作的计数</h2>
+
+<p>过等边三角形中心、垂直于三角形平面的轴是<span class="group-symbol">C<sub>3</sub></span>轴。转120°或240°都使整体构型不变；转360°后所有编号也回到原位。原书用“等价”和“完全相同”区分前两次与第三次。</p>
+
+<p>一般<span class="group-symbol">C<sub>n</sub></span>轴表示最小正角 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>2</mn><mi>&#x003C0;</mi><mo>&#x0002F;</mo><mi>n</mi></mrow></math> 的转动保持构型，n取满足条件的最高阶。相同符号<span class="group-symbol">C<sub>n</sub></span>也常表示那一个转动操作。连续m次写成<span class="group-symbol">C<sub>n</sub></span>ᵐ：</p>
+
+<div class="math-block" tabindex="0" aria-label="公式，可横向滚动"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><msubsup><mi>C</mi><mi>n</mi><mi>n</mi></msubsup><mo>&#x0003D;</mo><mi>E</mi><mo>&#x0002C;</mo><mspace width="1em" /><msubsup><mi>C</mi><mi>n</mi><mrow><mi>n</mi><mo>&#x0002B;</mo><mi>k</mi></mrow></msubsup><mo>&#x0003D;</mo><msubsup><mi>C</mi><mi>n</mi><mi>k</mi></msubsup><mo>&#x0002C;</mo><mspace width="1em" /><msub><mi>R</mi><mi>z</mi></msub><mo stretchy="false">&#x00028;</mo><mi>&#x003B8;</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mo>&#x00028;</mo><mtable><mtr><mtd><mi>cos</mi><mi>&#x003B8;</mi></mtd><mtd><mo>&#x02212;</mo><mi>sin</mi><mi>&#x003B8;</mi></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mi>sin</mi><mi>&#x003B8;</mi></mtd><mtd><mi>cos</mi><mi>&#x003B8;</mi></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>&#x00029;</mo><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>一条<span class="group-symbol">C<sub>n</sub></span>轴生成n个不同操作，包括E，不是只生成n−1个。不同轴共享同一个E，不能把E重复计数。<span class="group-symbol">C<sub>n</sub></span>ᵐ的转角m(2π/n)常约成最低项，如<span class="group-symbol">C<sub>4</sub></span>²=<span class="group-symbol">C<sub>2</sub></span>、<span class="group-symbol">C<sub>6</sub></span>²=<span class="group-symbol">C<sub>3</sub></span>、<span class="group-symbol">C<sub>6</sub></span>³=<span class="group-symbol">C<sub>2</sub></span>、<span class="group-symbol">C<sub>6</sub></span>⁴=<span class="group-symbol">C<sub>3</sub></span>²。轴阶n与具体幂操作的阶不总相同，后者为 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>n</mi><mo>&#x0002F;</mo><mo movablelimits="true">gcd</mo><mo stretchy="false">&#x00028;</mo><mi>n</mi><mo>&#x0002C;</mo><mi>m</mi><mo stretchy="false">&#x00029;</mo></mrow></math>。</p>
+
+<p>轴上的原子不动；若某个同种原子在轴外，则其轨道包含n个不同位置，必须还有n−1个同种原子补齐。因此轴外每种原子按n个一组出现；轴上原子不受这个计数约束。</p>
+
+<h3>原书的轴与实例，不只看最高轴</h3>
+
+<p>FClSO无真转轴，Cl₂SO、F₂SO也无真转轴。线性分子绕分子轴可转任意角度，称<span class="group-symbol">C<sub>∞</sub></span>。H₂O、CH₂Cl₂各有一个<span class="group-symbol">C<sub>2</sub></span>；乙烯有三个互相垂直的<span class="group-symbol">C<sub>2</sub></span>；正四面体也有三个<span class="group-symbol">C<sub>2</sub></span>。</p>
+
+<p>棱锥AB₃与平面AB₃有一个主<span class="group-symbol">C<sub>3</sub></span>；四面体与八面体各有四条<span class="group-symbol">C<sub>3</sub></span>，前者穿顶点和对面中心，后者穿两相对三角面中心。平面AB₃还有三条垂直于<span class="group-symbol">C<sub>3</sub></span>的<span class="group-symbol">C<sub>2</sub></span>。正方形AB₄有<span class="group-symbol">C<sub>4</sub></span>及四条面内<span class="group-symbol">C<sub>2</sub></span>；<span class="group-symbol">C<sub>5</sub></span>H₅⁻有<span class="group-symbol">C<sub>5</sub></span>及五条面内<span class="group-symbol">C<sub>2</sub></span>；苯有<span class="group-symbol">C<sub>6</sub></span>及两组三条面内<span class="group-symbol">C<sub>2</sub></span>；环庚三烯正离子<span class="group-symbol">C<sub>7</sub></span>H₇⁺有<span class="group-symbol">C<sub>7</sub></span>；铀茂U(<span class="group-symbol">C<sub>8</sub></span>H₈)₂的理想骨架可含<span class="group-symbol">C<sub>8</sub></span>。</p>
+
+<h3>旋转“复制”其它对称元素时，奇偶n不同</h3>
+
+<p>一条垂直于主轴的<strong>无方向直线</strong>转180°已回到自己，不必转360°才算同一条线。包含主轴的平面也按无方向几何实体计数。所以用主轴的旋转去搬动一个副轴或竖直面：n为奇数时得到n个位置；n为偶数时只得到n/2个位置。</p>
+
+<p>这一步只说明相似搬动得到的元素。完整群的<strong>乘积闭包</strong>往往还要求另一组n/2个，例如<span class="group-symbol">C<sub>4</sub></span>加一个竖直面最终会给四个面，而不是两个。原书把“旋转复制”和“乘积产生”分开讨论，不能把两种计数混在一起。</p>
+
+<section class="demo" id="rotation-lab" aria-labelledby="rotation-title"><header class="demo-head"><div><div class="demo-no">INTERACTIVE 04 / 观察 · 预测 · 验证</div><h4 id="rotation-title">一条Cₙ轴，究竟生成几个不同操作？</h4></div><button data-play aria-pressed="true">暂停动画</button></header><div class="prompt">切换“复制无向副轴”，比较n为奇数与偶数时的不同。</div><div class="demo-body"><canvas role="img" aria-label="一条Cₙ轴，究竟生成几个不同操作？，可拖动改变相机"></canvas><div class="camera-note">拖动改变相机 · 滚轮缩放 · 操作终点才用于判断对称性</div><div class="controls"><label for="rotation-n">主轴 n<select id="rotation-n"><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option></select></label><label for="rotation-m">连续转动次数 m <output id="rotation-m-out">1</output><input id="rotation-m" type="range" min="0" max="8" step="1" value="1"></label><label for="rotation-mode">观察对象<select id="rotation-mode"><option value="atoms">n边形与编号原子</option><option value="axes">一条无向副轴的复制</option></select></label><button id="rotation-next">再转一次</button><button id="rotation-run">重放本次转动</button></div><div class="result" id="rotation-status" role="status" aria-live="off">载入计算结果。</div><p class="note">无向直线转180°已回到自己。仅旋转复制得到的轴数，与完整乘积闭包的轴数不是同一问题。</p><details class="source-box"><summary>查看这个模型的计算代码</summary><pre><code data-source="rotation"></code></pre><div class="source-links"><a href="assets/symmetry.js" download>完整变换核心JS ↓</a><a href="examples.py" download>NumPy复现代码 ↓</a></div></details></div></section>
+
+<details class="original-pages"><summary>展开中文原页 16–19 · 原话、原图对照</summary><p class="image-note">来自用户提供的第三版扫描本；书页与PDF页数不同。保留原始页面字样，用于本地对读。</p><a href="assets/原文对照/中文-书页16.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页16.jpg" alt="中文第三版第三章书页16，点击查看原尺寸"></a><a href="assets/原文对照/中文-书页17.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页17.jpg" alt="中文第三版第三章书页17，点击查看原尺寸"></a><a href="assets/原文对照/中文-书页18.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页18.jpg" alt="中文第三版第三章书页18，点击查看原尺寸"></a><a href="assets/原文对照/中文-书页19.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页19.jpg" alt="中文第三版第三章书页19，点击查看原尺寸"></a></details><h2 id="section-6">3.6 非真轴和非真转动：组合成立，分步未必成立</h2>
+
+<blockquote>
+  <p><strong>课本表述：</strong> “非真转动可认为是由两个步骤组成，即先进行真转动，然后在垂直于转动轴的平面中反映。”</p>
+</blockquote>
+
+<p>取轴为z，垂直面为xy：</p>
+
+<div class="math-block" tabindex="0" aria-label="公式，可横向滚动"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>&#x0003D;</mo><msub><mi>&#x003C3;</mi><mi>h</mi></msub><msub><mi>C</mi><mi>n</mi></msub><mo>&#x0003D;</mo><msub><mi>C</mi><mi>n</mi></msub><msub><mi>&#x003C3;</mi><mi>h</mi></msub><mo>&#x0002C;</mo><mspace width="2em" /><msub><mi>S</mi><mi>n</mi></msub><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x0002C;</mo><mi>y</mi><mo>&#x0002C;</mo><mi>z</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mo stretchy="true" fence="true" minsize="1.2em" maxsize="1.2em">(</mo><mi>x</mi><mi>cos</mi><mi>&#x003B8;</mi><mo>&#x02212;</mo><mi>y</mi><mi>sin</mi><mi>&#x003B8;</mi><mo>&#x0002C;</mo><mtext>&#x000A0;</mtext><mi>x</mi><mi>sin</mi><mi>&#x003B8;</mi><mo>&#x0002B;</mo><mi>y</mi><mi>cos</mi><mi>&#x003B8;</mi><mo>&#x0002C;</mo><mo>&#x02212;</mo><mi>z</mi><mo stretchy="true" fence="true" minsize="1.2em" maxsize="1.2em">)</mo><mo>&#x0002C;</mo><mspace width="1em" /><mi>&#x003B8;</mi><mo>&#x0003D;</mo><mn>2</mn><mi>&#x003C0;</mi><mo>&#x0002F;</mo><mi>n</mi><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>两个步骤可以交换，因为旋转只改变x、y，水平反射只改变z。<strong>但<span class="group-symbol">S<sub>n</sub></span>存在，不意味着<span class="group-symbol">C<sub>n</sub></span>与σₕ各自都是分子的对称操作。</strong> 交错乙烷具有<span class="group-symbol">S<sub>6</sub></span>，单独转60°不保持其构型，单独水平反射也不保持；两步合起来却保持。正四面体的三条<span class="group-symbol">C<sub>2</sub></span>轴同时是<span class="group-symbol">S<sub>4</sub></span>轴，<span class="group-symbol">S<sub>4</sub></span>²=<span class="group-symbol">C<sub>2</sub></span>。</p>
+
+<h3>n为偶数：生成n个操作</h3>
+
+<p>因为<span class="group-symbol">C<sub>n</sub></span>与σₕ交换，<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo stretchy="false">&#x00028;</mo><msub><mi>S</mi><mi>n</mi></msub><msup><mo stretchy="false">&#x00029;</mo><mi>m</mi></msup><mo>&#x0003D;</mo><msubsup><mi>C</mi><mi>n</mi><mi>m</mi></msubsup><msubsup><mi>&#x003C3;</mi><mi>h</mi><mi>m</mi></msubsup></mrow></math>。m偶数时反射抵消，<span class="group-symbol">S<sub>n</sub></span>ᵐ就是真转动；m奇数时仍含一次反射。若n偶数，<span class="group-symbol">S<sub>n</sub></span>ⁿ=<span class="group-symbol">C<sub>n</sub></span>ⁿσₕⁿ=E，最小返回次数为n。</p>
+
+<p>以<span class="group-symbol">S<sub>6</sub></span>为例，六次依次为</p>
+
+<div class="table-scroll"><table>
+<thead>
+<tr>
+  <th>幂</th>
+  <th>常用名称</th>
+  <th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><span class="group-symbol">S<sub>6</sub></span></td>
+  <td><span class="group-symbol">S<sub>6</sub></span></td>
+  <td>转60°并反映</td>
+</tr>
+<tr>
+  <td><span class="group-symbol">S<sub>6</sub></span>²</td>
+  <td><span class="group-symbol">C<sub>3</sub></span></td>
+  <td>转120°</td>
+</tr>
+<tr>
+  <td><span class="group-symbol">S<sub>6</sub></span>³</td>
+  <td>i</td>
+  <td>转180°并反映</td>
+</tr>
+<tr>
+  <td><span class="group-symbol">S<sub>6</sub></span>⁴</td>
+  <td><span class="group-symbol">C<sub>3</sub></span>²</td>
+  <td>转240°</td>
+</tr>
+<tr>
+  <td><span class="group-symbol">S<sub>6</sub></span>⁵</td>
+  <td><span class="group-symbol">S<sub>6</sub></span>⁵</td>
+  <td>另一方向的非真转动</td>
+</tr>
+<tr>
+  <td><span class="group-symbol">S<sub>6</sub></span>⁶</td>
+  <td>E</td>
+  <td>回到原位</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>由<span class="group-symbol">S<sub>n</sub></span>²=<span class="group-symbol">C<sub>n</sub></span>²可知，偶数n的<span class="group-symbol">S<sub>n</sub></span>至少要求同轴<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>C</mi><mrow><mi>n</mi><mo>&#x0002F;</mo><mn>2</mn></mrow></msub></mrow></math>存在；但不能据此多加一个并不存在的<span class="group-symbol">C<sub>n</sub></span>。</p>
+
+<h3>n为奇数：生成2n个操作</h3>
+
+<p>此时<span class="group-symbol">S<sub>n</sub></span>ⁿ=σₕ，因此水平反射本身必存在。再由<span class="group-symbol">S<sub>n</sub></span>σₕ=<span class="group-symbol">C<sub>n</sub></span>，真轴本身也存在。前n次尚未全部返回，直到2n次才得到E。以<span class="group-symbol">S<sub>5</sub></span>为例：</p>
+
+<div class="math-block" tabindex="0" aria-label="公式，可横向滚动"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><msub><mi>S</mi><mn>5</mn></msub><mo>&#x0002C;</mo><mtext>&#x000A0;</mtext><msubsup><mi>C</mi><mn>5</mn><mn>2</mn></msubsup><mo>&#x0002C;</mo><mtext>&#x000A0;</mtext><msubsup><mi>C</mi><mn>5</mn><mn>3</mn></msubsup><msub><mi>&#x003C3;</mi><mi>h</mi></msub><mo>&#x0002C;</mo><mtext>&#x000A0;</mtext><msubsup><mi>C</mi><mn>5</mn><mn>4</mn></msubsup><mo>&#x0002C;</mo><mtext>&#x000A0;</mtext><msub><mi>&#x003C3;</mi><mi>h</mi></msub><mo>&#x0002C;</mo><mtext>&#x000A0;</mtext><msub><mi>C</mi><mn>5</mn></msub><mo>&#x0002C;</mo><mtext>&#x000A0;</mtext><msubsup><mi>C</mi><mn>5</mn><mn>2</mn></msubsup><msub><mi>&#x003C3;</mi><mi>h</mi></msub><mo>&#x0002C;</mo><mtext>&#x000A0;</mtext><msubsup><mi>C</mi><mn>5</mn><mn>3</mn></msubsup><mo>&#x0002C;</mo><mtext>&#x000A0;</mtext><msubsup><mi>C</mi><mn>5</mn><mn>4</mn></msubsup><msub><mi>&#x003C3;</mi><mi>h</mi></msub><mo>&#x0002C;</mo><mtext>&#x000A0;</mtext><mi>E</mi><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>同一组也可写成E、四个<span class="group-symbol">C<sub>5</sub></span>幂、σₕ及四个<span class="group-symbol">C<sub>5</sub></span>幂与σₕ的乘积，即<span class="group-symbol">C<sub>5h</sub></span>。因此“下标为n”不保证操作阶是n：奇数n的<span class="group-symbol">S<sub>n</sub></span>操作阶为2n，偶数n才为n。</p>
+
+<section class="demo" id="improper-lab" aria-labelledby="improper-title"><header class="demo-head"><div><div class="demo-no">INTERACTIVE 05 / 观察 · 预测 · 验证</div><h4 id="improper-title">Sₙ：单独两步都失败，合起来可以成功</h4></div><button data-play aria-pressed="true">暂停动画</button></header><div class="prompt">默认交错乙烷：单独C₆、单独σₕ、组合S₆分别能否匹配？</div><div class="demo-body"><canvas role="img" aria-label="Sₙ：单独两步都失败，合起来可以成功，可拖动改变相机"></canvas><div class="camera-note">拖动改变相机 · 滚轮缩放 · 操作终点才用于判断对称性</div><div class="controls"><label for="improper-n">下标 n<select id="improper-n"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select></label><label for="improper-part">施加什么<select id="improper-part"><option value="combined">Cₙ后σₕ · 合成Sₙ</option><option value="rotation">只作Cₙ</option><option value="mirror">只作σₕ</option><option value="power">Sₙ的k次幂</option></select></label><label for="improper-k">幂 k <output id="improper-k-out">1</output><input id="improper-k" type="range" min="1" max="20" step="1" value="1"></label><button id="improper-run">播放步骤</button><button id="improper-next">k加1</button></div><div class="table-scroll" id="improper-powers"></div><div class="result" id="improper-status" role="status" aria-live="off">载入计算结果。</div><p class="note">n=6用交错乙烷，n=4用正四面体；其它n用Sₙ生成的通用位置轨道，不声称是某个实际分子。中间压扁帧是示意。</p><details class="source-box"><summary>查看这个模型的计算代码</summary><pre><code data-source="improper"></code></pre><div class="source-links"><a href="assets/symmetry.js" download>完整变换核心JS ↓</a><a href="examples.py" download>NumPy复现代码 ↓</a></div></details></div></section>
+
+<details class="original-pages"><summary>展开中文原页 19–20 · 原话、原图对照</summary><p class="image-note">来自用户提供的第三版扫描本；书页与PDF页数不同。保留原始页面字样，用于本地对读。</p><a href="assets/原文对照/中文-书页19.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页19.jpg" alt="中文第三版第三章书页19，点击查看原尺寸"></a><a href="assets/原文对照/中文-书页20.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页20.jpg" alt="中文第三版第三章书页20，点击查看原尺寸"></a></details><h2 id="section-7">3.7 对称操作的乘积：总效果要作用在任意点上比较</h2>
+
+<blockquote>
+  <p><strong>课本表述：</strong> 先作X、再作Y，总效果等于Z，记作“YX=Z”。</p>
+</blockquote>
+
+<p>右边先作用。不能仅观察一个恰好在轴上的点，因为不同操作可能对这个特殊点产生相同效果。应当追踪普通点(x,y,z)，或对整组原子逐一检查。</p>
+
+<p><strong>例一：两个垂直<span class="group-symbol">C<sub>2</sub></span>要求第三个<span class="group-symbol">C<sub>2</sub></span>。</strong></p>
+
+<div class="math-block" tabindex="0" aria-label="公式，可横向滚动"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x0002C;</mo><mi>y</mi><mo>&#x0002C;</mo><mi>z</mi><mo stretchy="false">&#x00029;</mo><mover><mstyle scriptlevel="0"><mo>&#x2192;</mo></mstyle><mpadded width="+0.833em" lspace="0.556em" voffset="-.2em" height="-.2em"><mrow><msub><mi>C</mi><mn>2</mn></msub><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo stretchy="false">&#x00029;</mo></mrow><mspace depth=".25em" /></mpadded></mover><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x0002C;</mo><mo>&#x02212;</mo><mi>y</mi><mo>&#x0002C;</mo><mo>&#x02212;</mo><mi>z</mi><mo stretchy="false">&#x00029;</mo><mover><mstyle scriptlevel="0"><mo>&#x2192;</mo></mstyle><mpadded width="+0.833em" lspace="0.556em" voffset="-.2em" height="-.2em"><mrow><msub><mi>C</mi><mn>2</mn></msub><mo stretchy="false">&#x00028;</mo><mi>y</mi><mo stretchy="false">&#x00029;</mo></mrow><mspace depth=".25em" /></mpadded></mover><mo stretchy="false">&#x00028;</mo><mo>&#x02212;</mo><mi>x</mi><mo>&#x0002C;</mo><mo>&#x02212;</mo><mi>y</mi><mo>&#x0002C;</mo><mi>z</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msub><mi>C</mi><mn>2</mn></msub><mo stretchy="false">&#x00028;</mo><mi>z</mi><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x0002C;</mo><mi>y</mi><mo>&#x0002C;</mo><mi>z</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>故<span class="group-symbol">C<sub>2</sub></span>(y)<span class="group-symbol">C<sub>2</sub></span>(x)=<span class="group-symbol">C<sub>2</sub></span>(z)，反过来也一样。分子不可能恰好只有两条互相垂直的二重轴而没有第三条。</p>
+
+<p><strong>例二：<span class="group-symbol">C<sub>4</sub></span>与一个竖直面要求另一个45°方向的面。</strong> 本页采用右手正角度：σ(xz)先把y变号，再作<span class="group-symbol">C<sub>4</sub></span>(z)把(x,−y,z)送到(y,x,z)，这正是包含z轴与y=x直线的镜像。若用课本该段的相反转动方向，则得到y=−x面；两种方向各给一条对角镜面，不改变“共四个面”的结论。</p>
+
+<p><strong>例三：<span class="group-symbol">C<sub>2</sub></span>(z)与水平反射生成i。</strong></p>
+
+<div class="math-block" tabindex="0" aria-label="公式，可横向滚动"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><msub><mi>&#x003C3;</mi><mi>h</mi></msub><msub><mi>C</mi><mn>2</mn></msub><mo stretchy="false">&#x00028;</mo><mi>z</mi><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x0002C;</mo><mi>y</mi><mo>&#x0002C;</mo><mi>z</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msub><mi>&#x003C3;</mi><mi>h</mi></msub><mo stretchy="false">&#x00028;</mo><mo>&#x02212;</mo><mi>x</mi><mo>&#x0002C;</mo><mo>&#x02212;</mo><mi>y</mi><mo>&#x0002C;</mo><mi>z</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mo>&#x02212;</mo><mi>x</mi><mo>&#x0002C;</mo><mo>&#x02212;</mo><mi>y</mi><mo>&#x0002C;</mo><mo>&#x02212;</mo><mi>z</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mi>i</mi><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x0002C;</mo><mi>y</mi><mo>&#x0002C;</mo><mi>z</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>原书用简单坐标变号处理这些实例，再说明一般角度的旋转、一般平面的反射需要更系统的矩阵方法，第四章才正式建立。本页的矩阵仅是把同一个坐标变换自动化。</p>
+
+<section class="demo" id="products-lab" aria-labelledby="products-title"><header class="demo-head"><div><div class="demo-no">INTERACTIVE 06 / 观察 · 预测 · 验证</div><h4 id="products-title">把两个操作的乘积算给普通点看</h4></div><button data-play aria-pressed="true">暂停动画</button></header><div class="prompt">先看坐标链，再交换两步；是否仍得到同一个矩阵？</div><div class="demo-body"><canvas role="img" aria-label="把两个操作的乘积算给普通点看，可拖动改变相机"></canvas><div class="camera-note">拖动改变相机 · 滚轮缩放 · 操作终点才用于判断对称性</div><div class="controls"><label for="products-pair">操作对<select id="products-pair"><option value="c2">C₂(x)与C₂(y)</option><option value="c4v">σ(xz)与C₄(z)</option><option value="ih">C₂(z)与σₕ</option><option value="noncommute">σ(xz)与C₃(z)</option></select></label><button id="products-run">依次播放</button><button id="products-swap">交换先后</button></div><div class="step-list" id="products-chain"></div><div id="products-matrix"></div><div class="result" id="products-status" role="status" aria-live="off">载入计算结果。</div><p class="note">跟踪普通点，不把任意一组非对称点当作某个分子的对称模型。总矩阵按“后作用 × 先作用”计算。</p><details class="source-box"><summary>查看这个模型的计算代码</summary><pre><code data-source="products"></code></pre><div class="source-links"><a href="assets/symmetry.js" download>完整变换核心JS ↓</a><a href="examples.py" download>NumPy复现代码 ↓</a></div></details></div></section>
+
+<details class="original-pages"><summary>展开中文原页 20–22 · 原话、原图对照</summary><p class="image-note">来自用户提供的第三版扫描本；书页与PDF页数不同。保留原始页面字样，用于本地对读。</p><a href="assets/原文对照/中文-书页20.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页20.jpg" alt="中文第三版第三章书页20，点击查看原尺寸"></a><a href="assets/原文对照/中文-书页21.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页21.jpg" alt="中文第三版第三章书页21，点击查看原尺寸"></a><a href="assets/原文对照/中文-书页22.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页22.jpg" alt="中文第三版第三章书页22，点击查看原尺寸"></a></details><h2 id="section-8">3.8 等价对称元素和等价原子：同种不等于等价</h2>
+
+<blockquote>
+  <p><strong>课本表述：</strong> “分子中等价原子是所有那些可被对称操作互相交换的原子。当然，等价原子必须是同种化学类型的。”</p>
+</blockquote>
+
+<p>对称元素A若能被群内某个操作搬到B，逆操作就能搬回；若也能搬到C，则B、C也能互相到达。这种“在群内可互达”定义一组等价对称元素，而不是仅凭它们的名称相同。</p>
+
+<p>平面BF₃的三条面内<span class="group-symbol">C<sub>2</sub></span>互相等价，三条竖直面也等价；NH₃的三个竖直面等价；H₂O的两个镜面不等价。正方形AB₄的四条面内<span class="group-symbol">C<sub>2</sub></span>分成“穿相对配体”与“平分配体夹角”两组，竖直镜面同样分成两组。苯的六条面内<span class="group-symbol">C<sub>2</sub></span>也分成穿相对碳与平分相对C—C边的两组。</p>
+
+<p>原书原子例子逐项为：甲烷、乙烷、苯、环丙烷中的所有H分别在各自分子内等价；SF₆的所有F等价；Cr(CO)₆中的六个C彼此等价、六个O彼此等价，但C不与O互换。PF₅的轴向F与赤道F虽同种，却不能由该固定构型的点群互换；萘的α与β位C、H不等价；环己烷椅式六个C等价，船式中四个C与另外两个C不同。</p>
+
+<p>这里讨论的是<strong>指定静态构型的点群</strong>。PF₅的Berry伪旋转、环己烷翻椅可以在动力学时间尺度上交换位置，但不是把它们当作同一个刚体点群操作的理由。实验上是否观察到等同信号，还要考虑运动与测量时间尺度。</p>
+
+<section class="demo" id="orbits-lab" aria-labelledby="orbits-title"><header class="demo-head"><div><div class="demo-no">INTERACTIVE 07 / 观察 · 预测 · 验证</div><h4 id="orbits-title">同样是F，为什么PF₅轴向与赤道不等价？</h4></div><button data-play aria-pressed="true">暂停动画</button></header><div class="prompt">点一个原子，金色标出能被群操作送到的位置。</div><div class="demo-body"><canvas role="img" aria-label="同样是F，为什么PF₅轴向与赤道不等价？，可拖动改变相机"></canvas><div class="camera-note">拖动改变相机 · 滚轮缩放 · 操作终点才用于判断对称性</div><div class="controls"><label for="orbits-model">模型<select id="orbits-model"><option value="pf5">PF₅</option><option value="water">H₂O</option><option value="methane">CH₄</option><option value="sf6">SF₆</option><option value="benzene">苯</option></select></label><label for="orbits-atom">追踪原子<select id="orbits-atom"><option value="0">载入后选择</option></select></label><button id="orbits-next">用下一个操作移动</button></div><div class="label-cloud" id="orbits-list"></div><div class="result" id="orbits-status" role="status" aria-live="off">载入计算结果。</div><p class="note">这里固定构型，只允许点群操作。内部重排可能在实验上交换环境，但不是本图的点群操作。</p><details class="source-box"><summary>查看这个模型的计算代码</summary><pre><code data-source="orbits"></code></pre><div class="source-links"><a href="assets/symmetry.js" download>完整变换核心JS ↓</a><a href="examples.py" download>NumPy复现代码 ↓</a></div></details></div></section>
+
+<details class="original-pages"><summary>展开中文原页 22–23 · 原话、原图对照</summary><p class="image-note">来自用户提供的第三版扫描本；书页与PDF页数不同。保留原始页面字样，用于本地对读。</p><a href="assets/原文对照/中文-书页22.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页22.jpg" alt="中文第三版第三章书页22，点击查看原尺寸"></a><a href="assets/原文对照/中文-书页23.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页23.jpg" alt="中文第三版第三章书页23，点击查看原尺寸"></a></details><h2 id="section-9">3.9 对称元素和操作之间的一般关系</h2>
+
+<h3>五条乘积规则，及其产生新元素的意义</h3>
+
+<ol>
+<li><strong>两个真转动的乘积仍是真转动。</strong> 三维中det=+1的正交矩阵相乘仍为+1，所以仅用真转动不能产生镜像或反演。</li>
+<li><strong>相交两镜面的反映乘积是绕交线转动两倍夹角。</strong> 在垂直交线的截面中，若点的方向角为α，先关于方向0反射成−α，再关于方向φ反射成2φ+α，总效果是转2φ。交换次序则转−2φ。</li>
+<li><strong><span class="group-symbol">C<sub>n</sub></span>与一个包含轴的镜面要求n个竖直镜面。</strong> 完整闭包中的相邻镜面夹角为π/n。这与3.5中仅靠旋转搬动时的奇偶计数不同。</li>
+<li><strong>两条夹角θ的<span class="group-symbol">C<sub>2</sub></span>轴的乘积是绕垂直于它们平面的轴转2θ。</strong> 因此主<span class="group-symbol">C<sub>n</sub></span>与一条垂直<span class="group-symbol">C<sub>2</sub></span>要求整套n条垂直<span class="group-symbol">C<sub>2</sub></span>，产生<span class="group-symbol">D<sub>n</sub></span>。</li>
+<li><strong>偶阶真轴与水平面产生反演。</strong> <span class="group-symbol">C<sub>2n</sub></span>的n次幂为<span class="group-symbol">C<sub>2</sub></span>，与σₕ相乘即i；反过来同轴<span class="group-symbol">C<sub>2</sub></span>与i相乘得到σₕ。</li>
+</ol>
+
+<p><strong>角度规则补充。</strong> 原章按相邻生成镜面讨论。若任意挑两条不相邻的镜面，不能总把π/φ直接当作整数n。例如五条镜面中的两条可以相隔72°，其乘积144°仍是五阶转动，而π/72°=2.5不是整数。准确做法是计算2φ的转动阶，或找闭包里的最小相邻夹角。演示中的角度连续可调，未指定实际分子时不把每个角度都宣称为某个有限分子点群。</p>
+
+<h3>原书列出的五种恒成立交换关系</h3>
+
+<blockquote>
+  <p>（1）两个绕同一轴的转动。<br />
+  （2）通过相互垂直的平面的反映。<br />
+  （3）反演和任一反映或转动。<br />
+  （4）绕相互垂直的轴的两个<span class="group-symbol">C<sub>2</sub></span>转动。<br />
+  （5）转动和垂直于转动轴的平面反映。</p>
+</blockquote>
+
+<p>这不是说任意两种对称操作都交换。<span class="group-symbol">C<sub>3</sub></span>与一个包含它的镜面一般不交换；四面体绕不同方向的转动也未必交换。程序会同时算YX与XY并比较矩阵，避免只记一句“某两类操作可以交换”。</p>
+
+<section class="demo" id="planes-lab" aria-labelledby="planes-title"><header class="demo-head"><div><div class="demo-no">INTERACTIVE 08 / 观察 · 预测 · 验证</div><h4 id="planes-title">两次镜像 = 两倍夹角的转动</h4></div><button data-play aria-pressed="true">暂停动画</button></header><div class="prompt">角度从30°改到60°；交换镜面次序，观察转动方向。</div><div class="demo-body"><canvas role="img" aria-label="两次镜像 = 两倍夹角的转动，可拖动改变相机"></canvas><div class="camera-note">拖动改变相机 · 滚轮缩放 · 操作终点才用于判断对称性</div><div class="controls"><label for="planes-angle">两面夹角 φ / ° <output id="planes-angle-out">30</output><input id="planes-angle" type="range" min="0" max="90" step="1" value="30"></label><button id="planes-run">播放两次镜像</button><button id="planes-swap">交换两镜面</button></div><div class="matrix-summary" id="planes-equation"></div><div class="result" id="planes-status" role="status" aria-live="off">载入计算结果。</div><p class="note">这是一般几何变换。只有这些平面确实都是某个分子的对称面时，才能据此推断该分子的其它操作。</p><details class="source-box"><summary>查看这个模型的计算代码</summary><pre><code data-source="planes"></code></pre><div class="source-links"><a href="assets/symmetry.js" download>完整变换核心JS ↓</a><a href="examples.py" download>NumPy复现代码 ↓</a></div></details></div></section>
+
+<details class="original-pages"><summary>展开中文原页 23–24 · 原话、原图对照</summary><p class="image-note">来自用户提供的第三版扫描本；书页与PDF页数不同。保留原始页面字样，用于本地对读。</p><a href="assets/原文对照/中文-书页23.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页23.jpg" alt="中文第三版第三章书页23，点击查看原尺寸"></a><a href="assets/原文对照/中文-书页24.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页24.jpg" alt="中文第三版第三章书页24，点击查看原尺寸"></a></details><h2 id="section-10">3.10 对称元素和旋光异构：缺少镜面与中心还不够</h2>
+
+<p>原书先指出，四种元素可形式上归结为真转动与非真转动两大类，因为 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>S</mi><mn>1</mn></msub><mo>&#x0003D;</mo><mi>&#x003C3;</mi></mrow></math>，<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>S</mi><mn>2</mn></msub><mo>&#x0003D;</mo><mi>i</mi></mrow></math>。其中</p>
+
+<div class="math-block" tabindex="0" aria-label="公式，可横向滚动"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><msub><mi>S</mi><mn>2</mn></msub><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x0002C;</mo><mi>y</mi><mo>&#x0002C;</mo><mi>z</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msub><mi>&#x003C3;</mi><mi>h</mi></msub><msub><mi>C</mi><mn>2</mn></msub><mo stretchy="false">&#x00028;</mo><mi>x</mi><mo>&#x0002C;</mo><mi>y</mi><mo>&#x0002C;</mo><mi>z</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mo>&#x02212;</mo><mi>x</mi><mo>&#x0002C;</mo><mo>&#x02212;</mo><mi>y</mi><mo>&#x0002C;</mo><mo>&#x02212;</mo><mi>z</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0002E;</mo></mrow></math></div>
+
+<blockquote>
+  <p><strong>课本表述：</strong> “没有非真转动轴的分子必定是不对称的。”</p>
+</blockquote>
+
+<p>这里中译本“不对称”对应英文 <em>dissymmetric</em>，不同于 <em>asymmetric</em>。为避免现代术语混淆，本教程说：<strong>刚性构型没有任何<span class="group-symbol">S<sub>n</sub></span>（包括σ与i），当且仅当它是手性的；只有E的<span class="group-symbol">C<sub>1</sub></span>构型称无其它对称性。</strong> 手性分子可以有<span class="group-symbol">C<sub>2</sub></span>、<span class="group-symbol">D<sub>3</sub></span>等真转动，不能把“手性”误读成“点群一定<span class="group-symbol">C<sub>1</sub></span>”。</p>
+
+<h3>为什么有<span class="group-symbol">S<sub>n</sub></span>便不手性？</h3>
+
+<p>令镜面选为<span class="group-symbol">S<sub>n</sub></span>的反射平面。若n为奇数，σₕ本身就在群中，镜像已经与原物重合。若n为偶数而σₕ单独不存在，镜像只需再作相应的真转动便与原物重合，因为<span class="group-symbol">S<sub>n</sub></span>=σₕ<span class="group-symbol">C<sub>n</sub></span>本来就是对称操作。这个用于叠合镜像的真转动不必自身是分子的对称操作。</p>
+
+<p>反演也符合：<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>C</mi><mn>2</mn></msub><mo stretchy="false">&#x00028;</mo><mi>z</mi><mo stretchy="false">&#x00029;</mo><mi>i</mi><mo>&#x0003D;</mo><msub><mi>&#x003C3;</mi><mi>h</mi></msub></mrow></math>。存在i的物体的镜像可以经180°真转动叠合。<span class="group-symbol">S<sub>4</sub></span>的情况同理，镜像与原物相差90°取向。原书用带标签立方体和1,3,5,7-四甲基环辛四烯说明这一点；后者无σ、无i，却有<span class="group-symbol">S<sub>4</sub></span>，所以仍不手性。</p>
+
+<p>反方向也可补成严格证明。若某个真转动R能把镜像σM叠到原物M，即RσM=M，则Rσ是det=−1的对称操作。三维正交变换中，它属于反射、反演或一般非真转动，所以存在某种<span class="group-symbol">S<sub>n</sub></span>。于是完全没有<span class="group-symbol">S<sub>n</sub></span>便不可能叠合镜像。</p>
+
+<h3>“不旋光”的样品为什么不一定推翻手性判断？</h3>
+
+<p>原书讨论了可内部转动而互变的构型，以及NRR′R″的伞式翻转。固定的单个构型可以手性，但两种对映构型迅速互变，导致难以分离或宏观旋光抵消。这不是刚性点群判据的数学例外。外消旋混合物也不能用“没有净旋光”来否定单个分子的手性。</p>
+
+<p>本页把原物、镜像与叠合后的模型并排显示。对四种不同取代基的四面体，用有向体积的正负直观说明手性：镜像改变符号，真转动不改变。对纯<span class="group-symbol">S<sub>4</sub></span>示例，用几组带不同类型的通用位置轨道避免偶然增加镜面；它不是1,3,5,7-四甲基环辛四烯的结构拟合。</p>
+
+<section class="demo" id="chirality-lab" aria-labelledby="chirality-title"><header class="demo-head"><div><div class="demo-no">INTERACTIVE 09 / 观察 · 预测 · 验证</div><h4 id="chirality-title">镜像能否靠真转动叠合？</h4></div><button data-play aria-pressed="true">暂停动画</button></header><div class="prompt">比较四种不同取代基的四面体与没有σ、i的纯S₄模型。</div><div class="demo-body"><canvas role="img" aria-label="镜像能否靠真转动叠合？，可拖动改变相机"></canvas><div class="camera-note">拖动改变相机 · 滚轮缩放 · 操作终点才用于判断对称性</div><div class="controls"><label for="chirality-model">原物<select id="chirality-model"><option value="chiral">四种不同配体 · C₁</option><option value="s4">纯S₄ · 无σ也无i</option><option value="methane">四个相同H · T_d</option><option value="peroxide">非平面H₂O₂ · C₂</option></select></label><label for="chirality-view">显示<select id="chirality-view"><option value="mirror">右侧显示镜像</option><option value="overlap">尝试按已知对称性叠合</option></select></label><button id="chirality-run">播放叠合步骤</button></div><div class="result" id="chirality-status" role="status" aria-live="off">载入计算结果。</div><p class="note">手性判据针对刚性指定构型；实际是否可分离或有净旋光还受动态互变、混合组成等影响。C₁示例用有向体积证明镜像不能被真转动变回。</p><details class="source-box"><summary>查看这个模型的计算代码</summary><pre><code data-source="chirality"></code></pre><div class="source-links"><a href="assets/symmetry.js" download>完整变换核心JS ↓</a><a href="examples.py" download>NumPy复现代码 ↓</a></div></details></div></section>
+
+<details class="original-pages"><summary>展开中文原页 24–27 · 原话、原图对照</summary><p class="image-note">来自用户提供的第三版扫描本；书页与PDF页数不同。保留原始页面字样，用于本地对读。</p><a href="assets/原文对照/中文-书页24.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页24.jpg" alt="中文第三版第三章书页24，点击查看原尺寸"></a><a href="assets/原文对照/中文-书页25.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页25.jpg" alt="中文第三版第三章书页25，点击查看原尺寸"></a><a href="assets/原文对照/中文-书页26.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页26.jpg" alt="中文第三版第三章书页26，点击查看原尺寸"></a><a href="assets/原文对照/中文-书页27.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页27.jpg" alt="中文第三版第三章书页27，点击查看原尺寸"></a></details><h2 id="section-11">3.11 对称点群：完整操作集合怎样组成群</h2>
+
+<p>一份<strong>完整且不重复</strong>的操作清单在连续施加操作的规则下构成群：</p>
+
+<ul>
+<li><strong>封闭：</strong> 两次保持构型的操作复合后仍保持构型。比如平面AB₃的<span class="group-symbol">D<sub>3h</sub></span>有12个操作，包含E、两个<span class="group-symbol">C<sub>3</sub></span>、三个<span class="group-symbol">C<sub>2</sub></span>、三个σᵥ、σₕ及两个<span class="group-symbol">S<sub>3</sub></span>；所有二元乘积仍在其中。</li>
+<li><strong>恒等：</strong> 不作改变，或一套恰好全部撤销的操作，给E。</li>
+<li><strong>结合：</strong> 操作是映射，函数复合满足结合律；与能否交换不同。</li>
+<li><strong>逆元：</strong> 反射与反演自身为逆；<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo stretchy="false">&#x00028;</mo><msubsup><mi>C</mi><mi>n</mi><mi>m</mi></msubsup><msup><mo stretchy="false">&#x00029;</mo><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo>&#x0003D;</mo><msubsup><mi>C</mi><mi>n</mi><mrow><mi>n</mi><mo>&#x02212;</mo><mi>m</mi></mrow></msubsup></mrow></math>。<span class="group-symbol">S<sub>n</sub></span>若n偶，用<span class="group-symbol">S<sub>n</sub></span>ⁿ⁻ᵐ；若n奇可统一用<span class="group-symbol">S<sub>n</sub></span>²ⁿ⁻ᵐ，再化为惯用名称。</li>
+</ul>
+
+<p>“闭合”还不保证你已找全某个分子的所有对称性：某个真子群也闭合。课本这里的完整操作清单还包含“没有漏掉任何实际对称操作”的要求；点群应取全部操作，不能找到一个<span class="group-symbol">C<sub>2</sub></span>就忽略其它轴。</p>
+
+<p>所有点群操作固定一个公共点。允许平移的空间群在第十一章讨论。下面以主轴为竖直z轴定义水平、竖直：σₕ垂直主轴，σᵥ包含主轴；σ_d也包含主轴，但通常平分相邻副<span class="group-symbol">C<sub>2</sub></span>轴之间的角。h、v、d是相对于选定主轴而言，不是屏幕上下或纸面内外。</p>
+
+<h3>各点群族怎样生成，以及阶数怎样数全</h3>
+
+<div class="table-scroll"><table>
+<thead>
+<tr>
+  <th>族</th>
+  <th>必要结构和一组生成元</th>
+  <th>群阶</th>
+  <th>完整操作的组织</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><span class="group-symbol">C<sub>1</sub></span></td>
+  <td>只有E</td>
+  <td>1</td>
+  <td>E</td>
+</tr>
+<tr>
+  <td>Cₛ</td>
+  <td>E、一个镜面</td>
+  <td>2</td>
+  <td>E、σ</td>
+</tr>
+<tr>
+  <td>Cᵢ</td>
+  <td>E、一个反演中心</td>
+  <td>2</td>
+  <td>E、i；等同<span class="group-symbol">S<sub>2</sub></span>群</td>
+</tr>
+<tr>
+  <td><span class="group-symbol">C<sub>n</sub></span></td>
+  <td>一条主<span class="group-symbol">C<sub>n</sub></span>，无其它独立元素</td>
+  <td>n</td>
+  <td><span class="group-symbol">C<sub>n</sub></span>的全部幂</td>
+</tr>
+<tr>
+  <td><span class="group-symbol">S<sub>2n</sub></span></td>
+  <td>只有该非真轴生成的全部操作</td>
+  <td>2n</td>
+  <td><span class="group-symbol">S<sub>2n</sub></span>的幂；其中含同轴<span class="group-symbol">C<sub>n</sub></span></td>
+</tr>
+<tr>
+  <td><span class="group-symbol">C<sub>nh</sub></span></td>
+  <td><span class="group-symbol">C<sub>n</sub></span>加σₕ</td>
+  <td>2n</td>
+  <td>全部<span class="group-symbol">C<sub>n</sub></span>幂，以及各幂乘σₕ</td>
+</tr>
+<tr>
+  <td><span class="group-symbol">C<sub>nv</sub></span></td>
+  <td><span class="group-symbol">C<sub>n</sub></span>加一个竖直面，补齐n个竖直面</td>
+  <td>2n</td>
+  <td>n个主轴转动与n个反射</td>
+</tr>
+<tr>
+  <td><span class="group-symbol">D<sub>n</sub></span></td>
+  <td><span class="group-symbol">C<sub>n</sub></span>加一条垂直<span class="group-symbol">C<sub>2</sub></span>，补齐n条</td>
+  <td>2n</td>
+  <td>n个主轴转动与n个副轴转动</td>
+</tr>
+<tr>
+  <td><span class="group-symbol">D<sub>nh</sub></span></td>
+  <td><span class="group-symbol">D<sub>n</sub></span>加σₕ</td>
+  <td>4n</td>
+  <td><span class="group-symbol">D<sub>n</sub></span>的2n项与各项乘σₕ</td>
+</tr>
+<tr>
+  <td><span class="group-symbol">D<sub>nd</sub></span></td>
+  <td><span class="group-symbol">D<sub>n</sub></span>加平分副轴夹角的σ_d</td>
+  <td>4n</td>
+  <td><span class="group-symbol">D<sub>n</sub></span>、n个σ_d及n个相应非真操作</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>奇数<span class="group-symbol">S<sub>n</sub></span>的群按惯例命名为<span class="group-symbol">C<sub>nh</sub></span>，不另创<span class="group-symbol">S<sub>n</sub></span>群名。<span class="group-symbol">C<sub>nh</sub></span>是阿贝尔群，<span class="group-symbol">D<sub>n</sub></span>、<span class="group-symbol">C<sub>nv</sub></span>在n≥3时一般非阿贝尔。主轴上的低阶幂不算新的独立轴生成元。</p>
+
+<p><strong><span class="group-symbol">D<sub>nh</sub></span>的细数。</strong> E、n−1个主轴真转动、n个副轴<span class="group-symbol">C<sub>2</sub></span>、n个竖直反射与σₕ目前共3n+1项；尚有n−1个主轴真转动乘σₕ的非真操作，补齐4n。漏掉最后这批是常见误数。若n偶，这批含i；若n奇，不能由是否有σₕ就直接推断有i。</p>
+
+<p><strong><span class="group-symbol">D<sub>nd</sub></span>为什么出现<span class="group-symbol">S<sub>2n</sub></span>？</strong> 取副<span class="group-symbol">C<sub>2</sub></span>沿x，σ<em>d的截线与x夹角π/(2n)。组合σ</em>d<span class="group-symbol">C<sub>2</sub></span>(x)的平面内效果是转π/n，z变号，正是同轴<span class="group-symbol">S<sub>2n</sub></span>。点群符号<span class="group-symbol">D<sub>nd</sub></span>的n不是最高非真轴的下标。</p>
+
+<p><strong>线性分子的两种无限群。</strong> 对C<span class="group-symbol">O<sub>2</sub></span>、NCCN这类两半等价的线性构型，除<span class="group-symbol">C<sub>∞</sub></span>与无穷多个竖直面外，还有无穷多条垂直<span class="group-symbol">C<sub>2</sub></span>、σₕ和i，命名<span class="group-symbol">D<sub>∞h</sub></span>。HCN、NNO两半不等价，只有<span class="group-symbol">C<sub>∞</sub></span>与竖直面，命名<span class="group-symbol">C<sub>∞v</sub></span>。程序只能抽样画有限个角度，不能把抽样数误报为其群阶。</p>
+
+<section class="demo" id="families-lab" aria-labelledby="families-title"><header class="demo-head"><div><div class="demo-no">INTERACTIVE 10 / 观察 · 预测 · 验证</div><h4 id="families-title">从几个生成元长成完整点群</h4></div><button data-play aria-pressed="true">暂停动画</button></header><div class="prompt">同一Cₙ，添加σₕ、竖直面或副C₂会多出哪些操作？</div><div class="demo-body"><canvas role="img" aria-label="从几个生成元长成完整点群，可拖动改变相机"></canvas><div class="camera-note">拖动改变相机 · 滚轮缩放 · 操作终点才用于判断对称性</div><div class="controls"><label for="families-type">点群族<select id="families-type"><option value="Cn">Cn</option><option value="Cnv">Cnv</option><option value="Cnh">Cnh</option><option value="Dn">Dn</option><option value="Dnh">Dnh</option><option value="Dnd">Dnd</option><option value="Sn">Sn</option></select></label><label for="families-n">n<select id="families-n"><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option></select></label><button id="families-next">显示下一层闭包</button><button id="families-all">显示全部操作</button></div><div class="op-buttons" id="families-ops"></div><div class="step-flow" id="families-generators"></div><div class="result" id="families-status" role="status" aria-live="off">载入计算结果。</div><p class="note">生成元标为a、b、c。所示通用位置轨道按这些操作构建，只用于群结构，不拟合真实化学分子。</p><details class="source-box"><summary>查看这个模型的计算代码</summary><pre><code data-source="families"></code></pre><div class="source-links"><a href="assets/symmetry.js" download>完整变换核心JS ↓</a><a href="examples.py" download>NumPy复现代码 ↓</a></div></details></div></section>
+
+<details class="original-pages"><summary>展开中文原页 27–31 · 原话、原图对照</summary><p class="image-note">来自用户提供的第三版扫描本；书页与PDF页数不同。保留原始页面字样，用于本地对读。</p><a href="assets/原文对照/中文-书页27.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页27.jpg" alt="中文第三版第三章书页27，点击查看原尺寸"></a><a href="assets/原文对照/中文-书页28.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页28.jpg" alt="中文第三版第三章书页28，点击查看原尺寸"></a><a href="assets/原文对照/中文-书页29.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页29.jpg" alt="中文第三版第三章书页29，点击查看原尺寸"></a><a href="assets/原文对照/中文-书页30.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页30.jpg" alt="中文第三版第三章书页30，点击查看原尺寸"></a><a href="assets/原文对照/中文-书页31.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页31.jpg" alt="中文第三版第三章书页31，点击查看原尺寸"></a></details><h2 id="section-12">3.12 多重高阶轴的对称性：五种正多面体与七个点群</h2>
+
+<p>有不止一条阶数大于2的轴时，不能只沿前面的“唯一主轴+副轴”路线猜。原书从五个正多面体出发，得到T、<span class="group-symbol">T<sub>d</sub></span>、<span class="group-symbol">T<sub>h</sub></span>、O、<span class="group-symbol">O<sub>h</sub></span>、I、<span class="group-symbol">I<sub>h</sub></span>七类。</p>
+
+<h3>为什么正多面体只有五种？</h3>
+
+<p>课本要求各面为相同正多边形，面彼此等价，所有顶点等价、所有棱等价。一个顶点至少有三个面相遇；若周围内角和达到360°便铺平，不能在该顶点折成封闭凸体。</p>
+
+<p>正p边形内角为 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo stretchy="false">&#x00028;</mo><mi>p</mi><mo>&#x02212;</mo><mn>2</mn><mo stretchy="false">&#x00029;</mo><mi>&#x003C0;</mi><mo>&#x0002F;</mo><mi>p</mi></mrow></math>，若每顶点汇合q个面，就要求 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>q</mi><mo stretchy="false">&#x00028;</mo><mi>p</mi><mo>&#x02212;</mo><mn>2</mn><mo stretchy="false">&#x00029;</mo><mi>&#x003C0;</mi><mo>&#x0002F;</mo><mi>p</mi><mo>&#x0003C;</mo><mn>2</mn><mi>&#x003C0;</mi></mrow></math>，其中p、q≥3。正三角形允许q=3、4、5；正方形只允许q=3；正五边形只允许q=3；正六边形及更多边不再允许。于是恰有下列五种。</p>
+
+<div class="table-scroll"><table>
+<thead>
+<tr>
+  <th>正多面体</th>
+  <th>每个面</th>
+  <th>面F</th>
+  <th>顶点V</th>
+  <th>棱E</th>
+  <th>完整点群</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>正四面体</td>
+  <td>正三角形</td>
+  <td>4</td>
+  <td>4</td>
+  <td>6</td>
+  <td><span class="group-symbol">T<sub>d</sub></span></td>
+</tr>
+<tr>
+  <td>立方体</td>
+  <td>正方形</td>
+  <td>6</td>
+  <td>8</td>
+  <td>12</td>
+  <td><span class="group-symbol">O<sub>h</sub></span></td>
+</tr>
+<tr>
+  <td>正八面体</td>
+  <td>正三角形</td>
+  <td>8</td>
+  <td>6</td>
+  <td>12</td>
+  <td><span class="group-symbol">O<sub>h</sub></span></td>
+</tr>
+<tr>
+  <td>正十二面体</td>
+  <td>正五边形</td>
+  <td>12</td>
+  <td>20</td>
+  <td>30</td>
+  <td><span class="group-symbol">I<sub>h</sub></span></td>
+</tr>
+<tr>
+  <td>正二十面体</td>
+  <td>正三角形</td>
+  <td>20</td>
+  <td>12</td>
+  <td>30</td>
+  <td><span class="group-symbol">I<sub>h</sub></span></td>
+</tr>
+</tbody>
+</table></div>
+
+<h3>轴与操作分别计数，别把共享操作算多遍</h3>
+
+<ul>
+<li><strong><span class="group-symbol">T<sub>d</sub></span>，阶24：</strong> 四条<span class="group-symbol">C<sub>3</sub></span>给8个<span class="group-symbol">C<sub>3</sub></span>操作；三条<span class="group-symbol">S<sub>4</sub></span>给6个<span class="group-symbol">S<sub>4</sub></span>与3个<span class="group-symbol">C<sub>2</sub></span>；六个镜面各给一个反射。加一个E，共 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>1</mn><mo>&#x0002B;</mo><mn>8</mn><mo>&#x0002B;</mo><mn>3</mn><mo>&#x0002B;</mo><mn>6</mn><mo>&#x0002B;</mo><mn>6</mn><mo>&#x0003D;</mo><mn>24</mn></mrow></math>。已经由<span class="group-symbol">S<sub>4</sub></span>²生成的<span class="group-symbol">C<sub>2</sub></span>不能再数一次。</li>
+<li><strong><span class="group-symbol">O<sub>h</sub></span>，阶48：</strong> 三条<span class="group-symbol">C<sub>4</sub></span>（各含同轴<span class="group-symbol">C<sub>2</sub></span>）、四条<span class="group-symbol">C<sub>3</sub></span>、六条穿对棱中点的<span class="group-symbol">C<sub>2</sub></span>、三条<span class="group-symbol">S<sub>4</sub></span>、四条<span class="group-symbol">S<sub>6</sub></span>、i、三类坐标面及六类对角面。按类写成 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>E</mi><mo>&#x0002C;</mo><mn>8</mn><msub><mi>C</mi><mn>3</mn></msub><mo>&#x0002C;</mo><mn>6</mn><msubsup><mi>C</mi><mn>2</mn><mi>&#x02032;</mi></msubsup><mo>&#x0002C;</mo><mn>6</mn><msub><mi>C</mi><mn>4</mn></msub><mo>&#x0002C;</mo><mn>3</mn><msub><mi>C</mi><mn>2</mn></msub><mo>&#x0002C;</mo><mi>i</mi><mo>&#x0002C;</mo><mn>6</mn><msub><mi>S</mi><mn>4</mn></msub><mo>&#x0002C;</mo><mn>8</mn><msub><mi>S</mi><mn>6</mn></msub><mo>&#x0002C;</mo><mn>3</mn><msub><mi>&#x003C3;</mi><mi>h</mi></msub><mo>&#x0002C;</mo><mn>6</mn><msub><mi>&#x003C3;</mi><mi>d</mi></msub></mrow></math>，各项数目和为48。</li>
+<li><strong><span class="group-symbol">I<sub>h</sub></span>，阶120：</strong> 六条<span class="group-symbol">C<sub>5</sub></span>（同轴<span class="group-symbol">S<sub>10</sub></span>）、十条<span class="group-symbol">C<sub>3</sub></span>（同轴<span class="group-symbol">S<sub>6</sub></span>）、十五条<span class="group-symbol">C<sub>2</sub></span>、十五个镜面、i。按类写成 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>E</mi><mo>&#x0002C;</mo><mn>12</mn><msub><mi>C</mi><mn>5</mn></msub><mo>&#x0002C;</mo><mn>12</mn><msubsup><mi>C</mi><mn>5</mn><mn>2</mn></msubsup><mo>&#x0002C;</mo><mn>20</mn><msub><mi>C</mi><mn>3</mn></msub><mo>&#x0002C;</mo><mn>15</mn><msub><mi>C</mi><mn>2</mn></msub><mo>&#x0002C;</mo><mi>i</mi><mo>&#x0002C;</mo><mn>12</mn><msub><mi>S</mi><mrow><mn>10</mn></mrow></msub><mo>&#x0002C;</mo><mn>12</mn><msubsup><mi>S</mi><mrow><mn>10</mn></mrow><mn>3</mn></msubsup><mo>&#x0002C;</mo><mn>20</mn><msub><mi>S</mi><mn>6</mn></msub><mo>&#x0002C;</mo><mn>15</mn><mi>&#x003C3;</mi></mrow></math>。低阶幂、E和i在不同轴的描述中会重复出现，但群清单只列一次。</li>
+</ul>
+
+<p>立方体与正八面体具有同一组空间操作：一个的面中心对应另一个的顶点，<span class="group-symbol">C<sub>4</sub></span>与<span class="group-symbol">C<sub>3</sub></span>轴的位置角色互换，但方向集合相同。正十二面体与正二十面体同样互为对偶。截立方体到正八面体的中间形状，如立方八面体，也可保留O<em>h；“具有O</em>h”不等于“必须是正多面体”。</p>
+
+<p>去掉所有det=−1操作，得到纯真转动子群：T的阶12、O的阶24、I的阶60。T的<span class="group-symbol">C<sub>3</sub></span>操作在较小母群内分成4与4两类，不能照搬T_d中的一个8<span class="group-symbol">C<sub>3</sub></span>类。</p>
+
+<p>最后把i加入T得到T<em>h（阶24），它有i、三面反射及相应<span class="group-symbol">S<sub>6</sub></span>，但不同于T</em>d。七类的阶与关系如下：</p>
+
+<div class="table-scroll"><table>
+<thead>
+<tr>
+  <th>群</th>
+  <th>T</th>
+  <th><span class="group-symbol">T<sub>d</sub></span></th>
+  <th><span class="group-symbol">T<sub>h</sub></span></th>
+  <th>O</th>
+  <th><span class="group-symbol">O<sub>h</sub></span></th>
+  <th>I</th>
+  <th><span class="group-symbol">I<sub>h</sub></span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>阶</td>
+  <td>12</td>
+  <td>24</td>
+  <td>24</td>
+  <td>24</td>
+  <td>48</td>
+  <td>60</td>
+  <td>120</td>
+</tr>
+<tr>
+  <td>纯真转动</td>
+  <td>是</td>
+  <td>否</td>
+  <td>否</td>
+  <td>是</td>
+  <td>否</td>
+  <td>是</td>
+  <td>否</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>这里的<span class="group-symbol">C<sub>5</sub></span>与I族并未违反晶体学限制：本章讨论孤立分子与有限物体，不是三维周期晶格的32晶体学点群。</p>
+
+<section class="demo" id="polyhedra-lab" aria-labelledby="polyhedra-title"><header class="demo-head"><div><div class="demo-no">INTERACTIVE 11 / 观察 · 预测 · 验证</div><h4 id="polyhedra-title">转动五种正多面体，数轴而不是数外观</h4></div><button data-play aria-pressed="true">暂停动画</button></header><div class="prompt">立方体与八面体不同形，为什么同为O_h？</div><div class="demo-body"><canvas role="img" aria-label="转动五种正多面体，数轴而不是数外观，可拖动改变相机"></canvas><div class="camera-note">拖动改变相机 · 滚轮缩放 · 操作终点才用于判断对称性</div><div class="controls"><label for="polyhedra-shape">形体<select id="polyhedra-shape"><option value="tetra">正四面体</option><option value="cube">立方体</option><option value="octa">正八面体</option><option value="dodeca">正十二面体</option><option value="ico">正二十面体</option><option value="cubocta">立方八面体 · 非正多面体</option></select></label><label for="polyhedra-subgroup">检视操作<select id="polyhedra-subgroup"><option value="full">完整点群</option><option value="proper">只保留真转动</option></select></label><button id="polyhedra-next">施加下一个操作</button><button id="polyhedra-spin">开关自动转视角</button></div><div class="facts-grid" id="polyhedra-counts"></div><div class="op-buttons" id="polyhedra-ops"></div><div class="result" id="polyhedra-status" role="status" aria-live="off">载入计算结果。</div><p class="note">所有形体由坐标和棱自动绘制。正十二面体由正二十面体的面中心构造，二者共用同一组I_h矩阵。</p><details class="source-box"><summary>查看这个模型的计算代码</summary><pre><code data-source="polyhedra"></code></pre><div class="source-links"><a href="assets/symmetry.js" download>完整变换核心JS ↓</a><a href="examples.py" download>NumPy复现代码 ↓</a></div></details></div></section>
+
+<details class="original-pages"><summary>展开中文原页 31–35 · 原话、原图对照</summary><p class="image-note">来自用户提供的第三版扫描本；书页与PDF页数不同。保留原始页面字样，用于本地对读。</p><a href="assets/原文对照/中文-书页31.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页31.jpg" alt="中文第三版第三章书页31，点击查看原尺寸"></a><a href="assets/原文对照/中文-书页32.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页32.jpg" alt="中文第三版第三章书页32，点击查看原尺寸"></a><a href="assets/原文对照/中文-书页33.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页33.jpg" alt="中文第三版第三章书页33，点击查看原尺寸"></a><a href="assets/原文对照/中文-书页34.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页34.jpg" alt="中文第三版第三章书页34，点击查看原尺寸"></a><a href="assets/原文对照/中文-书页35.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页35.jpg" alt="中文第三版第三章书页35，点击查看原尺寸"></a></details><h2 id="section-13">3.13 对称操作的类：同一空间动作，换母群可能改变分类</h2>
+
+<p>本节把第二章共轭类用于几何操作。依课本，判定同类要求：一个操作可在<strong>由群内对称操作到达的新坐标系</strong>中取代另一个。不能任意旋转坐标系后看着相似，就说它们在原群中共轭。</p>
+
+<p><span class="group-symbol">C<sub>4v</sub></span>有八个操作：E、<span class="group-symbol">C<sub>4</sub></span>、<span class="group-symbol">C<sub>4</sub></span>²=<span class="group-symbol">C<sub>2</sub></span>、<span class="group-symbol">C<sub>4</sub></span>³、两条σᵥ、两条σ_d。逐个计算X⁻¹AX得到五类：</p>
+
+<div class="math-block" tabindex="0" aria-label="公式，可横向滚动"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mo stretchy="false">&#x0007B;</mo><mi>E</mi><mo stretchy="false">&#x0007D;</mo><mo>&#x0002C;</mo><mtext>&#x000A0;</mtext><mo stretchy="false">&#x0007B;</mo><msub><mi>C</mi><mn>4</mn></msub><mo>&#x0002C;</mo><msubsup><mi>C</mi><mn>4</mn><mn>3</mn></msubsup><mo stretchy="false">&#x0007D;</mo><mo>&#x0002C;</mo><mtext>&#x000A0;</mtext><mo stretchy="false">&#x0007B;</mo><msub><mi>C</mi><mn>2</mn></msub><mo stretchy="false">&#x0007D;</mo><mo>&#x0002C;</mo><mi>\
+</mi><mo stretchy="false">&#x0007B;</mo><msubsup><mi>&#x003C3;</mi><mi>v</mi><mrow><mo stretchy="false">&#x00028;</mo><mn>1</mn><mo stretchy="false">&#x00029;</mo></mrow></msubsup><mo>&#x0002C;</mo><msubsup><mi>&#x003C3;</mi><mi>v</mi><mrow><mo stretchy="false">&#x00028;</mo><mn>2</mn><mo stretchy="false">&#x00029;</mo></mrow></msubsup><mo stretchy="false">&#x0007D;</mo><mo>&#x0002C;</mo><mi>\
+</mi><mo stretchy="false">&#x0007B;</mo><msubsup><mi>&#x003C3;</mi><mi>d</mi><mrow><mo stretchy="false">&#x00028;</mo><mn>1</mn><mo stretchy="false">&#x00029;</mo></mrow></msubsup><mo>&#x0002C;</mo><msubsup><mi>&#x003C3;</mi><mi>d</mi><mrow><mo stretchy="false">&#x00028;</mo><mn>2</mn><mo stretchy="false">&#x00029;</mo></mrow></msubsup><mo stretchy="false">&#x0007D;</mo><mo>&#x0002E;</mo></mrow></math></div>
+
+<p><span class="group-symbol">C<sub>4</sub></span>与<span class="group-symbol">C<sub>4</sub></span>³分别是相反方向90°，镜像改变坐标手性，能把二者互换，所以在<span class="group-symbol">C<sub>4v</sub></span>中同类。若缩到仅四个转动的<span class="group-symbol">C<sub>4</sub></span>，那个镜像不在群中，二者便各自单独成类。两组竖直面若要互换，需要45°方向的搬动，而45°转动不在<span class="group-symbol">C<sub>4v</sub></span>中，故它们分成两类。</p>
+
+<p>写特征标表时，把类合并为 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>E</mi><mo>&#x0002C;</mo><mn>2</mn><msub><mi>C</mi><mn>4</mn></msub><mo>&#x0002C;</mo><msub><mi>C</mi><mn>2</mn></msub><mo>&#x0002C;</mo><mn>2</mn><msub><mi>&#x003C3;</mi><mi>v</mi></msub><mo>&#x0002C;</mo><mn>2</mn><msub><mi>&#x003C3;</mi><mi>d</mi></msub></mrow></math>。前面的2表示类里有两个不同操作，不表示把某操作作两次。类似<span class="group-symbol">C<sub>8</sub></span>中若相反方向的幂在更大的母群中确实同类，可写2<span class="group-symbol">C<sub>8</sub></span>、2<span class="group-symbol">C<sub>8</sub></span>²、2<span class="group-symbol">C<sub>8</sub></span>³、<span class="group-symbol">C<sub>2</sub></span>。</p>
+
+<p>课本指出i总是独自成类；唯一主轴群中的σₕ也独自成类。多高阶轴群有多个可以互换的镜面，不能把每个面都随便叫σₕ后套“独自成类”。一般应当真算共轭。</p>
+
+<p><strong>补充限定：</strong> 课本把相反旋转方向合类的讨论概括到较高对称群；这不能无条件扩展到所有母群。<span class="group-symbol">C<sub>nh</sub></span>仍是阿贝尔群，操作各自成类；T里相反的<span class="group-symbol">C<sub>3</sub></span>也分成两类。本页同时提供<span class="group-symbol">C<sub>4</sub></span>/<span class="group-symbol">C<sub>4v</sub></span>、T/<span class="group-symbol">T<sub>d</sub></span>的比较，保留这些必要区别。</p>
+
+<section class="demo" id="classes-lab" aria-labelledby="classes-title"><header class="demo-head"><div><div class="demo-no">INTERACTIVE 12 / 观察 · 预测 · 验证</div><h4 id="classes-title">C₄与C₄v、T与T_d：母群改变，类也改变</h4></div><button data-play aria-pressed="true">暂停动画</button></header><div class="prompt">选同一个转动，看相反方向的幂何时能合成一类。</div><div class="demo-body"><canvas role="img" aria-label="C₄与C₄v、T与T_d：母群改变，类也改变，可拖动改变相机"></canvas><div class="camera-note">拖动改变相机 · 滚轮缩放 · 操作终点才用于判断对称性</div><div class="controls"><label for="classes-group">母群<select id="classes-group"><option value="C4">C₄</option><option value="C4v">C₄v</option><option value="T">T</option><option value="Td">T_d</option><option value="Th">T_h</option><option value="Oh">O_h</option><option value="Ih">I_h</option></select></label><label for="classes-a">群元素<select id="classes-a"><option value="0">E</option></select></label><button id="classes-next">用下一个X作共轭</button></div><div class="tiles" id="classes-list"></div><div class="result" id="classes-status" role="status" aria-live="off">载入计算结果。</div><p class="note">先用全部矩阵求X⁻¹AX，再按不同输出分组。操作名只是说明，类的划分来自实际共轭计算。</p><details class="source-box"><summary>查看这个模型的计算代码</summary><pre><code data-source="classes"></code></pre><div class="source-links"><a href="assets/symmetry.js" download>完整变换核心JS ↓</a><a href="examples.py" download>NumPy复现代码 ↓</a></div></details></div></section>
+
+<details class="original-pages"><summary>展开中文原页 35–38 · 原话、原图对照</summary><p class="image-note">来自用户提供的第三版扫描本；书页与PDF页数不同。保留原始页面字样，用于本地对读。</p><a href="assets/原文对照/中文-书页35.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页35.jpg" alt="中文第三版第三章书页35，点击查看原尺寸"></a><a href="assets/原文对照/中文-书页36.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页36.jpg" alt="中文第三版第三章书页36，点击查看原尺寸"></a><a href="assets/原文对照/中文-书页37.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页37.jpg" alt="中文第三版第三章书页37，点击查看原尺寸"></a><a href="assets/原文对照/中文-书页38.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页38.jpg" alt="中文第三版第三章书页38，点击查看原尺寸"></a></details><h2 id="section-14">3.14 分子对称性系统分类法：每一步都要排除更高对称</h2>
+
+<p>原书五步法的内容如下。此法假定已经掌握理想化的三维几何，不是只由分子式作判断。</p>
+
+<ol>
+<li><strong>先查特殊群。</strong> 线性分子为<span class="group-symbol">C<sub>∞v</sub></span>或<span class="group-symbol">D<sub>∞h</sub></span>；多条高阶轴时考虑T、<span class="group-symbol">T<sub>d</sub></span>、<span class="group-symbol">T<sub>h</sub></span>、O、<span class="group-symbol">O<sub>h</sub></span>、I、<span class="group-symbol">I<sub>h</sub></span>。立方系列都有四条<span class="group-symbol">C<sub>3</sub></span>，I系列有十条<span class="group-symbol">C<sub>3</sub></span>与六条<span class="group-symbol">C<sub>5</sub></span>，应优先找这些关键轴。</li>
+<li><strong>无真轴时的低对称情形。</strong> 没有其它旋转对称而只有σ时为Cₛ，只有i时为Cᵢ，全无其它操作为<span class="group-symbol">C<sub>1</sub></span>。注意σ=<span class="group-symbol">S<sub>1</sub></span>、i=<span class="group-symbol">S<sub>2</sub></span>，所以课本在把低对称元素单独处理时，是暂不把这两种特殊操作混入“另找<span class="group-symbol">S<sub>n</sub></span>”的步骤。</li>
+<li><strong>只有偶数<span class="group-symbol">S<sub>n</sub></span>生成的操作？</strong> 若确实如此，归<span class="group-symbol">S<sub>4</sub></span>、<span class="group-symbol">S<sub>6</sub></span>、<span class="group-symbol">S<sub>8</sub></span>等（<span class="group-symbol">S<sub>2</sub></span>惯称Cᵢ）。若另有独立镜面或副<span class="group-symbol">C<sub>2</sub></span>，就不能停在<span class="group-symbol">S<sub>n</sub></span>群；丙二烯有<span class="group-symbol">S<sub>4</sub></span>却是<span class="group-symbol">D<sub>2d</sub></span>。</li>
+<li><strong>找最高阶真主轴<span class="group-symbol">C<sub>n</sub></span>，查n条垂直<span class="group-symbol">C<sub>2</sub></span>。</strong> 若没有，沿C族：无其它为<span class="group-symbol">C<sub>n</sub></span>，有n个竖直面为<span class="group-symbol">C<sub>nv</sub></span>，有水平面为<span class="group-symbol">C<sub>nh</sub></span>。若三条<span class="group-symbol">C<sub>2</sub></span>没有唯一最高阶，可按分子的几何主方向选参考轴，如丙二烯取C=C=C方向；完全等价时可任选，但随后h/v/d须保持一致。</li>
+<li><strong>有n条副<span class="group-symbol">C<sub>2</sub></span>时沿D族。</strong> 无镜面为<span class="group-symbol">D<sub>n</sub></span>，有σₕ为<span class="group-symbol">D<sub>nh</sub></span>；无σₕ但有平分副轴夹角的σ_d为<span class="group-symbol">D<sub>nd</sub></span>。<span class="group-symbol">D<sub>nh</sub></span>同时也有n个竖直面，不能因先看到σᵥ就误归<span class="group-symbol">C<sub>nv</sub></span>。</li>
+</ol>
+
+<p>“最高对称”并非操作越多随便选个阶大的名字；所有声称的操作都必须保持构型，也不能遗漏已经存在的操作。流程面板使用你给出的结构特征；真正的坐标检验在分子实验室中完成，不把一组人工勾选误称为自动识别任意分子的算法。</p>
+
+<section class="demo" id="classifier-lab" aria-labelledby="classifier-title"><header class="demo-head"><div><div class="demo-no">INTERACTIVE 13 / 观察 · 预测 · 验证</div><h4 id="classifier-title">一步一步判点群，而不是猜名字</h4></div><button data-play aria-pressed="true">暂停动画</button></header><div class="prompt">选择已知例子，或手动更改特征；面板显示采用了哪条分支。</div><div class="demo-body"><div class="controls"><label for="classifier-example">例子<select id="classifier-example"><option value="water">水</option><option value="ammonia">氨</option><option value="allene">丙二烯</option><option value="peroxide">非平面过氧化氢</option><option value="benzene">苯</option><option value="pf5">PF₅</option><option value="ferrocene">交错二茂铁</option><option value="s4">只有S₄</option><option value="custom">手动给定特征</option></select></label><label for="classifier-special">特殊情况<select id="classifier-special"><option value="none">不是特殊群</option><option value="C∞v">线性异端 C∞v</option><option value="D∞h">线性等端 D∞h</option><option value="Td">T_d</option><option value="Oh">O_h</option><option value="Ih">I_h</option></select></label><label for="classifier-n">最高真轴 n<select id="classifier-n"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option></select></label><label for="classifier-c2">n条垂直C₂<select id="classifier-c2"><option value="0">没有</option><option value="1">有</option></select></label><label for="classifier-plane">额外镜面<select id="classifier-plane"><option value="none">没有</option><option value="h">水平σₕ</option><option value="v">竖直σᵥ</option><option value="d">二面σ_d</option></select></label><label for="classifier-onlys">只有Sₙ生成？<select id="classifier-onlys"><option value="0">否</option><option value="4">只有S₄</option><option value="6">只有S₆</option><option value="8">只有S₈</option></select></label></div><div class="step-flow" id="classifier-flow"></div><div class="result" id="classifier-status" role="status" aria-live="off">载入计算结果。</div><p class="note">手动模式输入的是已检查的几何特征，不是对任意分子坐标进行全自动点群识别。矛盾特征会提示重新核查。</p><details class="source-box"><summary>查看这个模型的计算代码</summary><pre><code data-source="classifier"></code></pre><div class="source-links"><a href="assets/symmetry.js" download>完整变换核心JS ↓</a><a href="examples.py" download>NumPy复现代码 ↓</a></div></details></div></section>
+
+<details class="original-pages"><summary>展开中文原页 38–39 · 原话、原图对照</summary><p class="image-note">来自用户提供的第三版扫描本；书页与PDF页数不同。保留原始页面字样，用于本地对读。</p><a href="assets/原文对照/中文-书页38.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页38.jpg" alt="中文第三版第三章书页38，点击查看原尺寸"></a><a href="assets/原文对照/中文-书页39.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页39.jpg" alt="中文第三版第三章书页39，点击查看原尺寸"></a></details><h2 id="section-15">3.15 实例：沿原书九组例子逐步走流程</h2>
+
+<h3>例1 H₂O：<span class="group-symbol">C<sub>2v</sub></span></h3>
+
+<p>最高轴为过O、平分H—O—H角的<span class="group-symbol">C<sub>2</sub></span>，没有另外两条副<span class="group-symbol">C<sub>2</sub></span>。两个包含主轴的面中，一个就是分子平面；无σₕ。故<span class="group-symbol">C<sub>2v</sub></span>，而非仅<span class="group-symbol">C<sub>2</sub></span>。</p>
+
+<h3>例2 NH₃：<span class="group-symbol">C<sub>3v</sub></span></h3>
+
+<p>唯一高阶真轴是<span class="group-symbol">C<sub>3</sub></span>，没有垂直副<span class="group-symbol">C<sub>2</sub></span>，有三个竖直面，各通过一个H并交换另两个H；故<span class="group-symbol">C<sub>3v</sub></span>。若把N压到三个H的平面，才增添σₕ与三条副<span class="group-symbol">C<sub>2</sub></span>，变成<span class="group-symbol">D<sub>3h</sub></span>。这是不同理想构型，不是同一个固定分子做一次点群操作。</p>
+
+<h3>例3 丙二烯H₂C=C=CH₂：<span class="group-symbol">D<sub>2d</sub></span></h3>
+
+<p>两端CH₂平面互相垂直。沿C=C=C有<span class="group-symbol">S<sub>4</sub></span>及其平方<span class="group-symbol">C<sub>2</sub></span>，另有两条垂直<span class="group-symbol">C<sub>2</sub></span>和两个竖直σ_d，所以不能停在<span class="group-symbol">S<sub>4</sub></span>群。无σₕ，故<span class="group-symbol">D<sub>2d</sub></span>。本模型把副<span class="group-symbol">C<sub>2</sub></span>放在面内对角方向，两个CH₂面放在xz与yz方向，坐标设置与通用<span class="group-symbol">D<sub>2d</sub></span>生成元可能相差45°，程序已作共轭换轴。</p>
+
+<h3>例4 H₂<span class="group-symbol">O<sub>2</sub></span>：一般非平面<span class="group-symbol">C<sub>2</sub></span>；顺式平面<span class="group-symbol">C<sub>2v</sub></span>；反式平面<span class="group-symbol">C<sub>2h</sub></span></h3>
+
+<p>原书图中角θ的端点为0°与90°，相当于本教程选用的两侧扭转半角；通常化学二面角对应2θ。普通非平面构型只有<span class="group-symbol">C<sub>2</sub></span>，没有镜面或i。θ=0°两端H在同侧，顺式平面多出两个竖直面，故<span class="group-symbol">C<sub>2v</sub></span>；θ=90°两端相反，反式平面出现σₕ与i，故<span class="group-symbol">C<sub>2h</sub></span>。平面端点是用于比较的非平衡构型，不代表过氧化氢在所有条件下都取这些角。</p>
+
+<h3>例5 1,3,5,7-四甲基环辛四烯：<span class="group-symbol">S<sub>4</sub></span></h3>
+
+<p>按照原书给定的理想构型，甲基取代破坏母体环辛四烯的额外镜面和副轴，只保留<span class="group-symbol">S<sub>4</sub></span>生成的操作。无i、无σ仍不手性，是3.10判据的重要实例；不能只用“无面无心”判断。</p>
+
+<h3>例6 浴盆形环辛四烯：<span class="group-symbol">D<sub>2d</sub></span></h3>
+
+<p>有<span class="group-symbol">S<sub>4</sub></span>与同轴<span class="group-symbol">C<sub>2</sub></span>，还保留两条垂直<span class="group-symbol">C<sub>2</sub></span>及两个σ_d；无σₕ，所以<span class="group-symbol">D<sub>2d</sub></span>。不能因为环有8个碳便给它<span class="group-symbol">C<sub>8</sub></span>：实际浴盆构型不是平面正八边形。</p>
+
+<h3>例7 苯：<span class="group-symbol">D<sub>6h</sub></span></h3>
+
+<p>垂直环面的<span class="group-symbol">C<sub>6</sub></span>与六条面内<span class="group-symbol">C<sub>2</sub></span>把它放入<span class="group-symbol">D<sub>6</sub></span>族，分子平面即σₕ，故<span class="group-symbol">D<sub>6h</sub></span>。它有两组三条竖直面；部分操作也可经<span class="group-symbol">S<sub>6</sub></span>生成，但它的完整群远大于单独的<span class="group-symbol">S<sub>6</sub></span>群。</p>
+
+<h3>例8 三角双锥PF₅：<span class="group-symbol">D<sub>3h</sub></span></h3>
+
+<p>唯一主<span class="group-symbol">C<sub>3</sub></span>，三条垂直<span class="group-symbol">C<sub>2</sub></span>，赤道面为σₕ，故<span class="group-symbol">D<sub>3h</sub></span>。两个轴向F互相等价，三个赤道F互相等价，两组彼此不等价，说明点群分类与原子等价轨道是同一套操作给出的两种信息。</p>
+
+<h3>例9 二茂铁：交错<span class="group-symbol">D<sub>5d</sub></span>、重叠<span class="group-symbol">D<sub>5h</sub></span>、中间<span class="group-symbol">D<sub>5</sub></span></h3>
+
+<p>两个环交错36°时有<span class="group-symbol">S<sub>10</sub></span>、<span class="group-symbol">C<sub>5</sub></span>、五条副<span class="group-symbol">C<sub>2</sub></span>和五个σ_d，无σₕ，故<span class="group-symbol">D<sub>5d</sub></span>。重叠0°时有σₕ，故<span class="group-symbol">D<sub>5h</sub></span>。中间一般扭角仍保留<span class="group-symbol">C<sub>5</sub></span>及五条副<span class="group-symbol">C<sub>2</sub></span>，却没有任何镜面，为<span class="group-symbol">D<sub>5</sub></span>。副<span class="group-symbol">C<sub>2</sub></span>轴的方向随两环相对角改变，不能固定画一套轴后错误地宣布中间构型无副轴。</p>
+
+<section class="demo" id="conformation-lab" aria-labelledby="conformation-title"><header class="demo-head"><div><div class="demo-no">INTERACTIVE 14 / 观察 · 预测 · 验证</div><h4 id="conformation-title">连续扭一点，点群可能突然跳变</h4></div><button data-play aria-pressed="true">暂停动画</button></header><div class="prompt">中间构象也要重新找副轴，不能只看最高主轴。</div><div class="demo-body"><canvas role="img" aria-label="连续扭一点，点群可能突然跳变，可拖动改变相机"></canvas><div class="camera-note">拖动改变相机 · 滚轮缩放 · 操作终点才用于判断对称性</div><div class="controls"><label for="conformation-model">变化对象<select id="conformation-model"><option value="ammonia">NH₃逐渐压平</option><option value="peroxide">H₂O₂扭转</option><option value="ferrocene">二茂铁两环扭转</option><option value="ethane">乙烷两端扭转</option></select></label><label for="conformation-value">参数 <output id="conformation-value-out">55</output><input id="conformation-value" type="range" min="0" max="100" step="1" value="55"></label><button id="conformation-start">第一个端点</button><button id="conformation-end">第二个端点</button><button id="conformation-op">施加当前群的下一操作</button></div><div class="step-flow" id="conformation-route"></div><div class="result" id="conformation-status" role="status" aria-live="off">载入计算结果。</div><p class="note">构象参数的改变是内部结构变形，不是对称操作。只在指定角度的固定构型上计算当前点群；按钮施加的操作才是该构型的对称操作。</p><details class="source-box"><summary>查看这个模型的计算代码</summary><pre><code data-source="conformation"></code></pre><div class="source-links"><a href="assets/symmetry.js" download>完整变换核心JS ↓</a><a href="examples.py" download>NumPy复现代码 ↓</a></div></details></div></section>
+
+<details class="original-pages"><summary>展开中文原页 39–42 · 原话、原图对照</summary><p class="image-note">来自用户提供的第三版扫描本；书页与PDF页数不同。保留原始页面字样，用于本地对读。</p><a href="assets/原文对照/中文-书页39.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页39.jpg" alt="中文第三版第三章书页39，点击查看原尺寸"></a><a href="assets/原文对照/中文-书页40.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页40.jpg" alt="中文第三版第三章书页40，点击查看原尺寸"></a><a href="assets/原文对照/中文-书页41.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页41.jpg" alt="中文第三版第三章书页41，点击查看原尺寸"></a><a href="assets/原文对照/中文-书页42.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页42.jpg" alt="中文第三版第三章书页42，点击查看原尺寸"></a></details><h2 id="section-16">3.16 习题原文、参考解法与可编辑算例</h2>
+
+<p>这部分不代替原书题目。下面先按原题号列出覆盖范围并给可核查的参考解法；所有图形题原图、完整文字在后面的“原题逐页对照”中保留。英文版E组扩展题明显多于本中译本，已单独附上，不把它们合并或删去。</p>
+
+<h3>A组：对称群的性质</h3>
+
+<p><strong>A3.1 最高阶纯转动子群。</strong> <span class="group-symbol">C<sub>8h</sub></span>→<span class="group-symbol">C<sub>8</sub></span>；<span class="group-symbol">D<sub>2d</sub></span>→<span class="group-symbol">D<sub>2</sub></span>；<span class="group-symbol">C<sub>5v</sub></span>→<span class="group-symbol">C<sub>5</sub></span>。方法是保留所有且仅有det=+1的操作，不是仅保留主轴操作：<span class="group-symbol">D<sub>2d</sub></span>还保留两个副<span class="group-symbol">C<sub>2</sub></span>。</p>
+
+<p><strong>A3.2 加入或减少操作。</strong> 增加一个操作时必须补齐全部乘积；删除一个符号却保留能生成它的其它操作，通常不再是群。因此原题中的“减少”需理解为去掉相应生成部分、寻找剩余的闭合子群，而非机械删一格。</p>
+
+<div class="table-scroll"><table>
+<thead>
+<tr>
+  <th>小题</th>
+  <th>原题改动</th>
+  <th>参考分析</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>a</td>
+  <td><span class="group-symbol">C<sub>3</sub></span>加i</td>
+  <td><span class="group-symbol">C<sub>3i</sub></span>，常写<span class="group-symbol">S<sub>6</sub></span>，阶6</td>
+</tr>
+<tr>
+  <td>b</td>
+  <td><span class="group-symbol">C<sub>3v</sub></span>加i</td>
+  <td><span class="group-symbol">D<sub>3d</sub></span>，阶12</td>
+</tr>
+<tr>
+  <td>c</td>
+  <td><span class="group-symbol">C<sub>5v</sub></span>加σₕ</td>
+  <td><span class="group-symbol">D<sub>5h</sub></span>，阶20</td>
+</tr>
+<tr>
+  <td>d</td>
+  <td><span class="group-symbol">S<sub>6</sub></span>减i</td>
+  <td>保留纯转动<span class="group-symbol">C<sub>3</sub></span>；只删i而保留<span class="group-symbol">S<sub>6</sub></span>不能闭合</td>
+</tr>
+<tr>
+  <td>e</td>
+  <td><span class="group-symbol">T<sub>d</sub></span>加i</td>
+  <td><span class="group-symbol">O<sub>h</sub></span>，阶48</td>
+</tr>
+<tr>
+  <td>f</td>
+  <td><span class="group-symbol">C<sub>3</sub></span>加<span class="group-symbol">S<sub>6</sub></span></td>
+  <td><span class="group-symbol">S<sub>6</sub></span>=<span class="group-symbol">C<sub>3i</sub></span>，阶6；同轴约定</td>
+</tr>
+<tr>
+  <td>g</td>
+  <td><span class="group-symbol">D<sub>3d</sub></span>减<span class="group-symbol">S<sub>6</sub></span></td>
+  <td>若删除整个含i的非真部分，得到<span class="group-symbol">D<sub>3</sub></span>；只删一个<span class="group-symbol">S<sub>6</sub></span>不成群</td>
+</tr>
+<tr>
+  <td>h</td>
+  <td><span class="group-symbol">S<sub>4</sub></span>加i</td>
+  <td><span class="group-symbol">C<sub>4h</sub></span>，阶8</td>
+</tr>
+<tr>
+  <td>i</td>
+  <td><span class="group-symbol">C<sub>3h</sub></span>减<span class="group-symbol">S<sub>6</sub></span>⁵（中译扫描）</td>
+  <td>两版均印出这一不相容组合；<span class="group-symbol">C<sub>3h</sub></span>的元素不含<span class="group-symbol">S<sub>6</sub></span>⁵，不能直接删除，疑有排版或符号问题</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>A3.2(i)已放大核对，两版均印为<span class="group-symbol">C<sub>3h</sub></span>减<span class="group-symbol">S<sub>6</sub></span>⁵；原页对照保留了这一表述。若题目要删的是<span class="group-symbol">S<sub>3</sub></span>的幂，仍须按生成闭包重新解释。对于d、g这类“删操作”的题，可能有不止一种可保留的子群，不能在未说明删哪些生成部分时声称唯一答案。</p>
+
+<p><strong>A3.3 奇数<span class="group-symbol">S<sub>n</sub></span>轴的群。</strong> 为<span class="group-symbol">C<sub>nh</sub></span>，阶2n；σₕ=<span class="group-symbol">S<sub>n</sub></span>ⁿ，<span class="group-symbol">C<sub>n</sub></span>=σₕ<span class="group-symbol">S<sub>n</sub></span>。</p>
+
+<p><strong>A3.4 展开<span class="group-symbol">S<sub>5</sub></span>与<span class="group-symbol">S<sub>8</sub></span>。</strong> <span class="group-symbol">S<sub>5</sub></span>十项已在3.6逐项列出。<span class="group-symbol">S<sub>8</sub></span>八项为<span class="group-symbol">S<sub>8</sub></span>、<span class="group-symbol">C<sub>4</sub></span>、<span class="group-symbol">S<sub>8</sub></span>³、<span class="group-symbol">C<sub>2</sub></span>、<span class="group-symbol">S<sub>8</sub></span>⁵、<span class="group-symbol">C<sub>4</sub></span>³、<span class="group-symbol">S<sub>8</sub></span>⁷、E。演示可把n选为5或8，逐次核验，不只看最终数目。</p>
+
+<h3>B组：多面体和其它非分子物体</h3>
+
+<p>原题B3.1–B3.11全部保留。每题应把<strong>标记、线条与颜色作为物体的一部分</strong>，不能先去掉标记再报告裸多面体的高对称群。</p>
+
+<ul>
+<li>B3.1 立方八面体到二十面体：原立方八面体有8个三角面与6个正方形；把每个正方形分成两个三角形后，共8+2×6=20个三角面。还须配合适当顶点位移使面成为正三角形，不是说随手画对角线就已得到正二十面体。</li>
+<li>B3.2 三角十二面体与菱形十二面体：按原图的几何对称性判断，常见理想三角十二面体为<span class="group-symbol">D<sub>2d</sub></span>，菱形十二面体为O<em>h。它们不是五种Platonic正多面体之一，不能只因都有12个面就归I</em>h。</li>
+<li>B3.3 四面体一对不相交棱涂另一颜色，保留群为<span class="group-symbol">D<sub>2d</sub></span>。可在“着色降对称”面板中计算24个母群操作还有哪些保留。</li>
+<li>B3.4 八面体四个互不共棱的面涂白，得到交替四面体式面标记，保留T_d。面颜色不是原子颜色，但同样必须在操作后匹配。</li>
+<li>B3.5–B3.7 按原图的循环面中线方向，B3.5保留T<em>h；B3.6一般扭角保留T，45°端点升为T</em>d；B3.7在原图面中线基础上给交替顶点着色，保留T。这些结果在面板中把线段端点、顶点颜色都作为约束，从O<em>h的48项逐一筛选；不是根据裸立方体直接回答O</em>h。</li>
+<li>B3.8 八面体各面内的三角图案统一扭转：通常内部非真操作被破坏而真转动保留，得到O；角度端点须单独检查，不能把任意角度与端点归为同一情况。</li>
+<li>B3.9 五角十二面体（pyritohedron）为T<em>h；其五边形并非正五边形，各棱不是同一等价类，所以不是正十二面体I</em>h。</li>
+<li>B3.10 六边偏三角面体按原图为<span class="group-symbol">D<sub>3d</sub></span>。顶点与面形状决定点群，名称中的“六边”不是<span class="group-symbol">C<sub>6</sub></span>的证明。</li>
+<li>B3.11 网球要把接缝计入，理想标准接缝模型为<span class="group-symbol">D<sub>2d</sub></span>；实际商标、印字或制造偏差通常继续降低对称性。</li>
+</ul>
+
+<p>复杂标记图若仅凭扫描透视无法唯一重建，应以原图可见与虚线边的几何关系为准；本页不为未建立的三维模型伪造“自动计算结果”。已实现的着色模型会显示全部保留操作，便于把方法迁移到这些题。</p>
+
+<section class="demo" id="decoration-lab" aria-labelledby="decoration-title"><header class="demo-head"><div><div class="demo-no">INTERACTIVE 15 / 观察 · 预测 · 验证</div><h4 id="decoration-title">给棱和面着色，为什么会降对称？</h4></div><button data-play aria-pressed="true">暂停动画</button></header><div class="prompt">裸多面体的操作不一定保留颜色和画线；逐个筛掉不匹配的操作。</div><div class="demo-body"><canvas role="img" aria-label="给棱和面着色，为什么会降对称？，可拖动改变相机"></canvas><div class="camera-note">拖动改变相机 · 滚轮缩放 · 操作终点才用于判断对称性</div><div class="controls"><label for="decoration-type">题目模型<select id="decoration-type"><option value="tetra">B3.3 · 四面体两条对棱着色</option><option value="octa">B3.4 · 八面体四个交替面着色</option><option value="cube">B3.5/6 · 立方体面中线转动</option><option value="black">B3.7 · 面中线加交替顶点颜色</option></select></label><label for="decoration-angle">面中线旋转 θ / ° <output id="decoration-angle-out">0</output><input id="decoration-angle" type="range" min="0" max="45" step="1" value="0"></label><button id="decoration-next">施加下一个保留操作</button></div><div class="op-buttons" id="decoration-ops"></div><div class="result" id="decoration-status" role="status" aria-live="off">载入计算结果。</div><p class="note">棱、面和线用额外标记点编码并作为完整物体的一部分匹配。它们是题目图案的计算模型，不是原子。</p><details class="source-box"><summary>查看这个模型的计算代码</summary><pre><code data-source="decoration"></code></pre><div class="source-links"><a href="assets/symmetry.js" download>完整变换核心JS ↓</a><a href="examples.py" download>NumPy复现代码 ↓</a></div></details></div></section>
+
+<h3>C组：较容易的分子；苯环取代可直接改模型验证</h3>
+
+<p>按原题的理想平面骨架与“忽略H”约定，参考结果如下。</p>
+
+<div class="table-scroll"><table>
+<thead>
+<tr>
+  <th>编号</th>
+  <th>对象</th>
+  <th>点群与主要依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td>SF₅Cl，八面体骨架一个F换Cl</td>
+  <td><span class="group-symbol">C<sub>4v</sub></span>，唯一轴穿Cl与对位F</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td>氯苯</td>
+  <td><span class="group-symbol">C<sub>2v</sub></span>，含分子面和过取代位的垂直面</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td>1,2-二氯苯</td>
+  <td><span class="group-symbol">C<sub>2v</sub></span></td>
+</tr>
+<tr>
+  <td>4</td>
+  <td>1,3-二氯苯</td>
+  <td><span class="group-symbol">C<sub>2v</sub></span></td>
+</tr>
+<tr>
+  <td>5</td>
+  <td>1,4-二氯苯</td>
+  <td><span class="group-symbol">D<sub>2h</sub></span></td>
+</tr>
+<tr>
+  <td>6</td>
+  <td>1,3,5-三氯苯</td>
+  <td><span class="group-symbol">D<sub>3h</sub></span></td>
+</tr>
+<tr>
+  <td>7</td>
+  <td>1,2,3-三氯苯</td>
+  <td><span class="group-symbol">C<sub>2v</sub></span></td>
+</tr>
+<tr>
+  <td>8</td>
+  <td>1,2,4-三氯苯</td>
+  <td>Cₛ，仅保留分子面</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td>反式[CrCl₂(H₂O)₄]⁺，忽略H</td>
+  <td><span class="group-symbol">D<sub>4h</sub></span>，四个O当作等价赤道配体</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td>原图含两个N的并环平面分子</td>
+  <td><span class="group-symbol">C<sub>2h</sub></span>；原图N位置互为反演，保留分子面、<span class="group-symbol">C<sub>2</sub></span>及i，不是未取代萘的<span class="group-symbol">D<sub>2h</sub></span></td>
+</tr>
+<tr>
+  <td>11</td>
+  <td>OPCl₃，四面体配位</td>
+  <td><span class="group-symbol">C<sub>3v</sub></span>，P=O方向为主轴</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td>反式Pt(NH₃)₂Cl₂，忽略H</td>
+  <td><span class="group-symbol">D<sub>2h</sub></span></td>
+</tr>
+<tr>
+  <td>13</td>
+  <td>顺式Pt(NH₃)₂Cl₂，忽略H</td>
+  <td><span class="group-symbol">C<sub>2v</sub></span></td>
+</tr>
+<tr>
+  <td>14</td>
+  <td>BClFBr，理想三角平面</td>
+  <td>Cₛ</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td>取代环丁烷(a–m)</td>
+  <td>保留原图全部13种取代关系；按题设母体<span class="group-symbol">D<sub>4h</sub></span>筛选</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>“忽略H”是题目指定的结构近似；若把配体H的真实方向加入，结果可能降低，不能把近似答案无条件推广到所有构象。C3–C8可在面板上点选环上的Cl/H位置，程序从完整<span class="group-symbol">D<sub>6h</sub></span>操作中筛选，给出保留数与分子点群。</p>
+
+<section class="demo" id="substitution-lab" aria-labelledby="substitution-title"><header class="demo-head"><div><div class="demo-no">INTERACTIVE 16 / 观察 · 预测 · 验证</div><h4 id="substitution-title">把苯环上的H换成Cl，剩下哪些操作？</h4></div><button data-play aria-pressed="true">暂停动画</button></header><div class="prompt">选择原题，或逐个点位置切换H/Cl；同时考虑完整三维操作。</div><div class="demo-body"><canvas role="img" aria-label="把苯环上的H换成Cl，剩下哪些操作？，可拖动改变相机"></canvas><div class="camera-note">拖动改变相机 · 滚轮缩放 · 操作终点才用于判断对称性</div><div class="controls"><label for="substitution-preset">原题例子<select id="substitution-preset"><option value="mono">氯苯</option><option value="ortho">1,2-二氯苯</option><option value="meta">1,3-二氯苯</option><option value="para">1,4-二氯苯</option><option value="135">1,3,5-三氯苯</option><option value="123">1,2,3-三氯苯</option><option value="124">1,2,4-三氯苯</option><option value="benzene">未取代苯</option></select></label><button id="substitution-next">施加下一个保留操作</button></div><div class="group-chips" id="substitution-sites"></div><div class="op-buttons" id="substitution-ops"></div><div class="result" id="substitution-status" role="status" aria-live="off">载入计算结果。</div><p class="note">假定理想平面且替换不改变其它几何参数；保留操作从母群D₆h的24项中逐一筛选。</p><details class="source-box"><summary>查看这个模型的计算代码</summary><pre><code data-source="substitution"></code></pre><div class="source-links"><a href="assets/symmetry.js" download>完整变换核心JS ↓</a><a href="examples.py" download>NumPy复现代码 ↓</a></div></details></div></section>
+
+<h3>D、E组：不明显与复杂分子，原图不能被分子式代替</h3>
+
+<p>中译本D组的12项全部保留：面式Cr(CO)₃(PR₃)₃、图示氯代二茂铁、两种桥联双金属构型、Re₂Cl₈式骨架、笼状P/N体系、环状多烯、二齿配体金属构型、乙烯、交错乙烷、四面体Be螯合物及1,3-二氯丙二烯。E组两幅复杂图也完整保留。英文版另含D组及E组扩展图，见原题页。</p>
+
+<p>可直接核查的文字题：D1面式八面体ML₃L′₃的理想骨架为<span class="group-symbol">C<sub>3v</sub></span>；D9乙烯为<span class="group-symbol">D<sub>2h</sub></span>；D10交错乙烷为<span class="group-symbol">D<sub>3d</sub></span>；D11在题设的四面体Be与两条相同螯合配体理想骨架下为<span class="group-symbol">D<sub>2d</sub></span>；D12非退化取代的1,3-二氯丙二烯为<span class="group-symbol">C<sub>2</sub></span>，可具轴手性。其余涉及配体朝向、桥联方式、遮挡边的图形题应先把原图重建为完整三维坐标，再用3.14流程逐条说明保留与破坏的元素。</p>
+
+<p>这部分提供的是<strong>完整题目和判别方法</strong>，不是一份把复杂扫描图猜成某个群的答案表。已经建立模型的九组正文例子及替换实验均有数值核验；原题未明确给定几何参数时，不虚构唯一三维结构。</p>
+
+<h3 id="original-exercises">原题逐页对照：两版全部习题与图形</h3><details class="original-pages"><summary>展开中文原页 42–45 · 原话、原图对照</summary><p class="image-note">来自用户提供的第三版扫描本；书页与PDF页数不同。保留原始页面字样，用于本地对读。</p><a href="assets/原文对照/中文-书页42.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页42.jpg" alt="中文第三版第三章书页42，点击查看原尺寸"></a><a href="assets/原文对照/中文-书页43.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页43.jpg" alt="中文第三版第三章书页43，点击查看原尺寸"></a><a href="assets/原文对照/中文-书页44.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页44.jpg" alt="中文第三版第三章书页44，点击查看原尺寸"></a><a href="assets/原文对照/中文-书页45.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/中文-书页45.jpg" alt="中文第三版第三章书页45，点击查看原尺寸"></a></details><details class="original-pages"><summary>展开英文原页 61–67 · 原话、原图对照</summary><p class="image-note">来自用户提供的第三版扫描本；书页与PDF页数不同。保留原始页面字样，用于本地对读。</p><a href="assets/原文对照/英文-书页61.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/英文-书页61.jpg" alt="英文第三版第三章书页61，点击查看原尺寸"></a><a href="assets/原文对照/英文-书页62.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/英文-书页62.jpg" alt="英文第三版第三章书页62，点击查看原尺寸"></a><a href="assets/原文对照/英文-书页63.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/英文-书页63.jpg" alt="英文第三版第三章书页63，点击查看原尺寸"></a><a href="assets/原文对照/英文-书页64.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/英文-书页64.jpg" alt="英文第三版第三章书页64，点击查看原尺寸"></a><a href="assets/原文对照/英文-书页65.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/英文-书页65.jpg" alt="英文第三版第三章书页65，点击查看原尺寸"></a><a href="assets/原文对照/英文-书页66.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/英文-书页66.jpg" alt="英文第三版第三章书页66，点击查看原尺寸"></a><a href="assets/原文对照/英文-书页67.jpg" target="_blank"><img class="source-page" loading="lazy" src="assets/原文对照/英文-书页67.jpg" alt="英文第三版第三章书页67，点击查看原尺寸"></a></details><h2 id="section-17">3.17 全章对照、术语与必要限定</h2>
+
+<div class="table-scroll"><table>
+<thead>
+<tr>
+  <th>本章小节</th>
+  <th>中译本书页</th>
+  <th>英文本书页</th>
+  <th>对应主要对象</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>3.1 通论</td>
+  <td>13</td>
+  <td>17</td>
+  <td>数学标准与三维模型</td>
+</tr>
+<tr>
+  <td>3.2 元素与操作</td>
+  <td>13–14</td>
+  <td>18–19</td>
+  <td>两个定义、表3.1</td>
+</tr>
+<tr>
+  <td>3.3 镜面</td>
+  <td>14–16</td>
+  <td>18–22</td>
+  <td>成对约束、平面到多面体全部例子</td>
+</tr>
+<tr>
+  <td>3.4 反演</td>
+  <td>16</td>
+  <td>22</td>
+  <td>坐标变号、必要非充分计数</td>
+</tr>
+<tr>
+  <td>3.5 真转动</td>
+  <td>16–19</td>
+  <td>22–27</td>
+  <td>幂、约分、轴复制与全部实例</td>
+</tr>
+<tr>
+  <td>3.6 非真转动</td>
+  <td>19–20</td>
+  <td>27–29</td>
+  <td>乙烷、四面体、<span class="group-symbol">S<sub>6</sub></span>与<span class="group-symbol">S<sub>5</sub></span></td>
+</tr>
+<tr>
+  <td>3.7 乘积</td>
+  <td>20–22</td>
+  <td>29–32</td>
+  <td>三组坐标推导</td>
+</tr>
+<tr>
+  <td>3.8 等价</td>
+  <td>22–23</td>
+  <td>32–33</td>
+  <td>等价元素与等价原子的所有类别</td>
+</tr>
+<tr>
+  <td>3.9 一般关系</td>
+  <td>23–24</td>
+  <td>33–34</td>
+  <td>五条乘积、五条交换规则</td>
+</tr>
+<tr>
+  <td>3.10 手性与旋光</td>
+  <td>24–27</td>
+  <td>34–39</td>
+  <td><span class="group-symbol">S<sub>1</sub></span>、<span class="group-symbol">S<sub>2</sub></span>、<span class="group-symbol">S<sub>4</sub></span>、叠合及动态互变</td>
+</tr>
+<tr>
+  <td>3.11 点群</td>
+  <td>27–31</td>
+  <td>39–44</td>
+  <td>群公理、各族、线性群</td>
+</tr>
+<tr>
+  <td>3.12 多高阶轴</td>
+  <td>31–35</td>
+  <td>44–50</td>
+  <td>五正多面体、七个群与计数</td>
+</tr>
+<tr>
+  <td>3.13 操作的类</td>
+  <td>35–38</td>
+  <td>50–54</td>
+  <td><span class="group-symbol">C<sub>4v</sub></span>与<span class="group-symbol">C<sub>4</sub></span>、类合并记号</td>
+</tr>
+<tr>
+  <td>3.14 系统分类</td>
+  <td>38–39</td>
+  <td>54–56</td>
+  <td>五步法与流程图</td>
+</tr>
+<tr>
+  <td>3.15 例子</td>
+  <td>39–42</td>
+  <td>56–61</td>
+  <td>九组及各构象</td>
+</tr>
+<tr>
+  <td>习题</td>
+  <td>42–45</td>
+  <td>61–67</td>
+  <td>A–E全题原页</td>
+</tr>
+</tbody>
+</table></div>
+
+<ol>
+<li>本页主动变换使用右手正转角，原书个别例子按顺时针写，涉及对角面时坐标符号会相反；操作集合不受影响。所有程序矩阵用正交笛卡尔坐标，不是晶胞分数坐标。</li>
+<li>“<span class="group-symbol">S<sub>n</sub></span>轴的阶n”与“<span class="group-symbol">S<sub>n</sub></span>作为群元素的阶”须分清；“2<span class="group-symbol">C<sub>4</sub></span>”与“<span class="group-symbol">C<sub>4</sub></span>²”须分清；“几条轴”与“几个群操作”也须分清。</li>
+<li>“元素等价”并不自动把同一轴上的两个相反旋转幂合成一类，须保留母群与方向信息。<span class="group-symbol">C<sub>4</sub></span>/<span class="group-symbol">C<sub>4v</sub></span>、T/<span class="group-symbol">T<sub>d</sub></span>的不同类结构都已由矩阵共轭计算核验。</li>
+<li>反射、反演与<span class="group-symbol">S<sub>n</sub></span>的中间动画不是分子的真实刚体运动，也不表示中间每帧都是对称操作。只有终点矩阵用于判断是否保持构型。转动相机不改变分子的群元素。</li>
+<li>原页对照保留提供的扫描本字样、原图与原题，未去除水印；它们与独立编写的教学正文分开。中英文第三版在习题扩展与排版上不完全一致，页码对应见上表。</li>
+</ol>
+
+<h3>补充资料的来源</h3>
+
+<p>本章主体对照用户提供的Cotton中英文第三版。下列资料仅用于补充题中的几何命名与独立核对：</p>
+
+<ul>
+<li>三角十二面体（snub disphenoid）的<span class="group-symbol">D<sub>2d</sub></span>对称性：<a href="https://scine.ethz.ch/static/download/documentation/molassembler/v3.0.1/cpp/structScine_1_1Molassembler_1_1Shapes_1_1Data_1_1TrigonalDodecahedron.html">ETH Zürich · Molassembler形状文档</a>。</li>
+<li>黄铁矿形的T_h对称性：<a href="https://squjs.squ.edu.om/squjs/vol21/iss2/2/">Koca等，Symmetry of the Pyritohedron and Lattices，2016</a>。</li>
+</ul>
+<div class="route"><h3>下一章：把对称操作变成表示矩阵。</h3><p>本页先用矩阵作为检查几何的计算工具。第四章将正式讨论群的表示、不可约表示与特征标，把“怎么移动”连接到“怎样分类函数和物理状态”。</p></div><div class="chapter-nav"><a href="../第二章/index.html">← 第二章 · 群论的定义和定理</a><a href="../index.html">返回全书目录 ↑</a></div></article></div><footer class="end"><span>计算凝聚态物理 · Cotton第三版动态伴读 · 第三章本地稿</span><a href="README.md">使用、复现与原页说明</a></footer></main><noscript><div class="scope">正文、公式与原页对照可直接阅读；互动需要启用JavaScript，无需插件。</div></noscript><script>/* Orthogonal 3D transformations, typed-atom matching and finite point groups. */
+(function(root){'use strict';
+const I=[[1,0,0],[0,1,0],[0,0,1]],inv=I.map(r=>r.map(x=>-x));
+const dot=(a,b)=>a.reduce((s,x,i)=>s+x*b[i],0),norm=a=>Math.hypot(...a),unit=a=>{const n=norm(a);return a.map(x=>x/n);};
+const transpose=A=>A[0].map((_,j)=>A.map(r=>r[j]));
+const mul=(A,B)=>A.map(r=>B[0].map((_,j)=>r.reduce((s,x,k)=>s+x*B[k][j],0)));
+const act=(M,v)=>M.map(r=>dot(r,v));
+const det=M=>M[0][0]*(M[1][1]*M[2][2]-M[1][2]*M[2][1])-M[0][1]*(M[1][0]*M[2][2]-M[1][2]*M[2][0])+M[0][2]*(M[1][0]*M[2][1]-M[1][1]*M[2][0]);
+const near=(A,B,tol=2e-7)=>A.every((r,i)=>r.every((x,j)=>Math.abs(x-B[i][j])<tol));
+function rotation(axis,angle){const [x,y,z]=unit(axis),c=Math.cos(angle),s=Math.sin(angle),t=1-c;return [[c+x*x*t,x*y*t-z*s,x*z*t+y*s],[y*x*t+z*s,c+y*y*t,y*z*t-x*s],[z*x*t-y*s,z*y*t+x*s,c+z*z*t]];}
+function reflection(normal){const u=unit(normal);return I.map((r,i)=>r.map((x,j)=>x-2*u[i]*u[j]));}
+const rz=a=>rotation([0,0,1],a),rx=a=>rotation([1,0,0],a),sh=reflection([0,0,1]);
+const vertical=a=>reflection([-Math.sin(a),Math.cos(a),0]);
+function power(M,k){if(k<0)return power(transpose(M),-k);let p=I;for(let i=0;i<k;i++)p=mul(M,p);return p;}
+function closure(gens,max=240){const out=[I],words=['E'];for(let i=0;i<out.length;i++)for(let j=0;j<gens.length;j++){const M=mul(gens[j],out[i]);if(!out.some(x=>near(x,M))){out.push(M);words.push(String.fromCharCode(97+j)+(i?'·'+words[i]:''));if(out.length>max)throw Error('Nonfinite/too large generator set');}}return {matrices:out,words};}
+function table(mats){return mats.map(a=>mats.map(b=>{const M=mul(a,b),j=mats.findIndex(x=>near(x,M));if(j<0)throw Error('Not closed');return j;}));}
+function conjugacy(mats){const T=table(mats),iv=mats.map(M=>mats.findIndex(N=>near(N,transpose(M)))),seen=new Set(),classes=[];for(let a=0;a<mats.length;a++)if(!seen.has(a)){const C=[...new Set(mats.map((_,x)=>T[T[iv[x]][a]][x]))].sort((a,b)=>a-b);C.forEach(i=>seen.add(i));classes.push(C);}return {table:T,inverse:iv,classes};}
+function axisAngle(M){let c=Math.max(-1,Math.min(1,(M[0][0]+M[1][1]+M[2][2]-1)/2)),angle=Math.acos(c);if(angle<1e-7)return {axis:[0,0,1],angle:0};if(Math.PI-angle<1e-6){let a=[Math.sqrt(Math.max(0,(M[0][0]+1)/2)),Math.sqrt(Math.max(0,(M[1][1]+1)/2)),Math.sqrt(Math.max(0,(M[2][2]+1)/2))];let k=a.indexOf(Math.max(...a));for(let j=0;j<3;j++)if(j!==k)a[j]=(M[k][j]+M[j][k])/(4*a[k]);return {axis:unit(a),angle};}return {axis:unit([M[2][1]-M[1][2],M[0][2]-M[2][0],M[1][0]-M[0][1]]),angle};}
+function order(M){let p=I;for(let n=1;n<=120;n++){p=mul(M,p);if(near(p,I))return n;}return Infinity;}
+function opName(M){if(near(M,I))return 'E';if(near(M,inv))return 'i';if(det(M)>0){const a=axisAngle(M).angle*180/Math.PI;return 'C · '+Math.round(a*100)/100+'°';}if(near(mul(M,M),I))return 'σ · 镜像';const R=mul(sh,M);return '非真转动 · 阶'+order(M);}
+function match(atoms,M,tol=2e-6){const map=[],used=new Set();for(let i=0;i<atoms.length;i++){const p=act(M,atoms[i].p);let j=atoms.findIndex((a,k)=>!used.has(k)&&a.t===atoms[i].t&&norm(a.p.map((x,j)=>x-p[j]))<tol);if(j<0)return {ok:false,index:i,point:p,map};map.push(j);used.add(j);}return {ok:true,map};}
+function orbits(atoms,ops){const seen=new Set(),out=[];for(let i=0;i<atoms.length;i++)if(!seen.has(i)){const O=[...new Set(ops.map(M=>match(atoms,M)).filter(r=>r.ok).map(r=>r.map[i]))].sort((a,b)=>a-b);O.forEach(j=>seen.add(j));out.push(O);}return out;}
+function family(name,n=3){const C=rz(2*Math.PI/n),X=rx(Math.PI),V=vertical(0),H=sh;let gens,expected;
+ if(name==='Cn'){gens=[C];expected=n;}else if(name==='Cnv'){gens=[C,V];expected=2*n;}else if(name==='Cnh'){gens=[C,H];expected=2*n;}else if(name==='Dn'){gens=[C,X];expected=2*n;}else if(name==='Dnh'){gens=[C,X,H];expected=4*n;}else if(name==='Dnd'){gens=[C,X,vertical(Math.PI/(2*n))];expected=4*n;}else if(name==='Sn'){gens=[mul(sh,rz(2*Math.PI/n))];expected=n%2?2*n:n;}else throw Error(name);return {...closure(gens),gens,expected,name,n};}
+function tetra(){return [[1,1,1],[1,-1,-1],[-1,1,-1],[-1,-1,1]];}
+function ico(){const f=(1+Math.sqrt(5))/2,out=[];for(const a of [-1,1])for(const b of [-1,1])out.push([0,a,b*f],[a,b*f,0],[b*f,0,a]);return out;}
+function edges(ps){let min=Infinity;for(let i=0;i<ps.length;i++)for(let j=0;j<i;j++)min=Math.min(min,norm(ps[i].map((x,k)=>x-ps[j][k])));const out=[];for(let i=0;i<ps.length;i++)for(let j=0;j<i;j++)if(Math.abs(norm(ps[i].map((x,k)=>x-ps[j][k]))-min)<1e-6)out.push([j,i]);return out;}
+function triangles(ps){const ed=new Set(edges(ps).map(([a,b])=>a+','+b)),out=[];for(let a=0;a<ps.length;a++)for(let b=a+1;b<ps.length;b++)for(let c=b+1;c<ps.length;c++)if(ed.has(a+','+b)&&ed.has(a+','+c)&&ed.has(b+','+c))out.push([a,b,c]);return out;}
+const polyCache={};function polyGroup(name){if(polyCache[name])return polyCache[name];let gens;const r3=rotation([1,1,1],2*Math.PI/3),x2=rx(Math.PI),x4=rotation([1,0,0],Math.PI/2);if(name==='T')gens=[r3,x2];if(name==='Td')gens=[r3,x2,reflection([1,-1,0])];if(name==='Th')gens=[r3,x2,inv];if(name==='O')gens=[r3,x4];if(name==='Oh')gens=[r3,x4,inv];if(name==='I'||name==='Ih'){const ps=ico(),face=triangles(ps)[0],a=ps[0],b=face.reduce((s,i)=>s.map((x,k)=>x+ps[i][k]),[0,0,0]);gens=[rotation(a,2*Math.PI/5),rotation(b,2*Math.PI/3)];if(name==='Ih')gens.push(inv);}return polyCache[name]={...closure(gens),gens,name};}
+function polyhedron(name){let ps,g,faces;if(name==='tetra'){ps=tetra();g='Td';faces=4;}if(name==='cube'){ps=[];for(let x of [-1,1])for(let y of [-1,1])for(let z of [-1,1])ps.push([x,y,z]);g='Oh';faces=6;}if(name==='octa'){ps=[[1,0,0],[-1,0,0],[0,1,0],[0,-1,0],[0,0,1],[0,0,-1]];g='Oh';faces=8;}if(name==='ico'){ps=ico();g='Ih';faces=20;}if(name==='dodeca'){const ip=ico();ps=triangles(ip).map(f=>f.reduce((s,i)=>s.map((x,k)=>x+ip[i][k]/3),[0,0,0]));g='Ih';faces=12;}if(name==='cubocta'){ps=[];for(let zero=0;zero<3;zero++)for(let a of [-1,1])for(let b of [-1,1]){let p=[a,b];p.splice(zero,0,0);ps.push(p);}g='Oh';faces=14;}return {ps,edges:edges(ps),group:g,faces};}
+function classify(f){if(f.special&&f.special!=='none')return f.special;if(f.onlyS)return +f.sn===2?'Ci':'S'+f.sn;if(+f.n<2)return f.mirror?'Cs':f.inversion?'Ci':'C1';if(f.perpendicular)return 'D'+f.n+(f.horizontal?'h':f.dihedral?'d':'');return 'C'+f.n+(f.horizontal?'h':f.vertical?'v':'');}
+function atom(t,p){return {t,p};}
+function ring(n,z=0,a=0,r=1,t='B'){return Array.from({length:n},(_,j)=>atom(t,[r*Math.cos(a+j*2*Math.PI/n),r*Math.sin(a+j*2*Math.PI/n),z]));}
+function model(name,param){let atoms,group,n,ops,desc;
+ if(name==='water'){atoms=[atom('O',[0,0,0]),atom('H',[0,.79,-.61]),atom('H',[0,-.79,-.61])];ops=family('Cnv',2).matrices.map(M=>mul(mul([[0,1,0],[1,0,0],[0,0,1]],M),[[0,1,0],[1,0,0],[0,0,1]]));group='C2v';}
+ if(name==='ammonia'||name==='bf3'){const h=name==='bf3'?0:(param??.55);atoms=[atom(name==='bf3'?'B':'N',[0,0,h]),...ring(3,0,0,1,name==='bf3'?'F':'H')];group=Math.abs(h)<1e-9?'D3h':'C3v';ops=family(Math.abs(h)<1e-9?'Dnh':'Cnv',3).matrices;}
+ if(name==='methane'){atoms=[atom('C',[0,0,0]),...tetra().map(p=>atom('H',p.map(x=>x*.65)))];group='Td';ops=polyGroup('Td').matrices;}
+ if(name==='sf6'){atoms=[atom('S',[0,0,0]),...polyhedron('octa').ps.map(p=>atom('F',p))];group='Oh';ops=polyGroup('Oh').matrices;}
+ if(name==='square'){atoms=[atom('Pt',[0,0,0]),...ring(4,0,0,1,'Cl')];group='D4h';ops=family('Dnh',4).matrices;}
+ if(name==='benzene'){atoms=[...ring(6,0,0,1,'C'),...ring(6,0,0,1.5,'H')];group='D6h';ops=family('Dnh',6).matrices;}
+ if(name==='pf5'){atoms=[atom('P',[0,0,0]),atom('F',[0,0,1.35]),atom('F',[0,0,-1.35]),...ring(3,0,0,1,'F')];group='D3h';ops=family('Dnh',3).matrices;}
+ if(name==='allene'){atoms=[atom('C',[0,0,0]),atom('C',[0,0,.8]),atom('C',[0,0,-.8]),atom('H',[.75,0,1.2]),atom('H',[-.75,0,1.2]),atom('H',[0,.75,-1.2]),atom('H',[0,-.75,-1.2])];group='D2d';{const Q=rz(Math.PI/4);ops=family('Dnd',2).matrices.map(M=>mul(mul(Q,M),transpose(Q)));}}
+ if(name==='ethane'||name==='ferrocene'){n=name==='ethane'?3:5;const b=(param??180/n)*Math.PI/180;atoms=[...(name==='ethane'?[atom('C',[0,0,.45]),atom('C',[0,0,-.45])]:[atom('Fe',[0,0,0])]),...ring(n,.8,0,1,name==='ethane'?'H':'C'),...ring(n,-.8,b,1,name==='ethane'?'H':'C')];let gens=[rz(2*Math.PI/n),rotation([Math.cos(b/2),Math.sin(b/2),0],Math.PI)];const nearZero=Math.abs(b)<1e-8,nearStagger=Math.abs(b-Math.PI/n)<1e-8;if(nearZero)gens.push(sh);if(nearStagger)gens.push(mul(sh,rz(Math.PI/n)));ops=closure(gens).matrices;group='D'+n+(nearZero?'h':nearStagger?'d':'');}
+ if(name==='peroxide'){const theta=(param??50)*Math.PI/180,c=Math.cos(theta),s=Math.sin(theta);atoms=[atom('O',[0,0,.5]),atom('O',[0,0,-.5]),atom('H',[c,s,1]),atom('H',[c,-s,-1])];const gens=[rx(Math.PI)];if(Math.abs(theta)<1e-8)gens.push(reflection([0,1,0]));if(Math.abs(theta-Math.PI/2)<1e-8)gens.push(inv);ops=closure(gens).matrices;group=Math.abs(theta)<1e-8?'C2v':Math.abs(theta-Math.PI/2)<1e-8?'C2h':'C2';}
+ if(name==='co2'||name==='hcn'){atoms=[atom(name==='co2'?'C':'C',[0,0,0]),atom(name==='co2'?'O':'H',[0,0,1]),atom(name==='co2'?'O':'N',[0,0,-1])];ops=family(name==='co2'?'Dnh':'Cnv',6).matrices;group=name==='co2'?'D∞h':'C∞v';desc='连续群：下方只抽样显示部分操作，列表不是完整群。';}
+ if(name==='chiral'){atoms=[atom('C',[0,0,0]),...tetra().map((p,j)=>atom(['F','Cl','Br','H'][j],p.map(x=>x*.65)))];ops=[I];group='C1';}
+ if(name==='s4'){const S=mul(sh,rz(Math.PI/2));ops=closure([S]).matrices;atoms=[];for(const [i,p] of [[0,[1,.27,.7]],[1,[.56,.83,.29]],[2,[.22,-.31,1.1]]])for(const M of ops)atoms.push(atom(['A','B','D'][i],act(M,p)));group='S4';}
+ if(name==='genericCs'){atoms=[atom('S',[0,0,0]),atom('O',[0,0,1]),atom('F',[.8,.7,-.5]),atom('F',[.8,-.7,-.5])];ops=[I,reflection([0,1,0])];group='Cs';}
+ if(!atoms)throw Error('Unknown model '+name);return {name,atoms,ops,group,desc:desc||'理想化几何模型；键长与角度仅用于对称性教学，不是结构拟合。'};
+}
+function decorated(kind,angle=0){
+ let atoms,source,expected;
+ if(kind==='tetra'){const ps=tetra(),ed=edges(ps);atoms=ps.map(p=>atom('V',p));const special=new Set();special.add(ed.findIndex(([a,b])=>a===0&&b===1));special.add(ed.findIndex(([a,b])=>a===2&&b===3));ed.forEach(([a,b],i)=>atoms.push(atom(special.has(i)?'red':'black',ps[a].map((x,k)=>(x+ps[b][k])/2))));source=polyGroup('Td').matrices;expected='D2d';}
+ if(kind==='octa'){const ps=polyhedron('octa').ps;atoms=ps.map(p=>atom('V',p));for(const f of triangles(ps)){const c=f.reduce((s,i)=>s.map((x,k)=>x+ps[i][k]/3),[0,0,0]);atoms.push(atom(c[0]*c[1]*c[2]>0?'red':'black',c));}source=polyGroup('Oh').matrices;expected='Td';}
+ if(kind==='cube'||kind==='black'){const ps=polyhedron('cube').ps;atoms=ps.map(p=>atom(kind==='black'?(p[0]*p[1]*p[2]>0?'red':'black'):'V',p));for(let a=0;a<3;a++)for(let sign of [-1,1]){const n=[0,0,0];n[a]=sign;const base=[0,0,0];base[(a+2)%3]=1;const v=act(rotation(n,-angle*Math.PI/180),base);for(let t of [-1,1])atoms.push(atom('line',n.map((x,k)=>x+t*.38*v[k])));}source=polyGroup('Oh').matrices;expected=kind==='black'?'T':Math.abs(angle)<1e-8?'Th':Math.abs(angle-45)<1e-8?'Td':'T';}
+ return {atoms,ops:source.filter(M=>match(atoms,M).ok),source,group:expected};
+}
+function matrixList(atoms,ops){return ops.filter(M=>match(atoms,M).ok);}
+function substitution(n,labels){const base=[...ring(n,0,0,1,'C'),...ring(n,0,0,1.5,'H')];labels.forEach((t,j)=>base[n+j].t=t);const ops=matrixList(base,family('Dnh',n).matrices);return {atoms:base,ops,group:inferPlanar(n,ops)};}
+function inferPlanar(n,ops){const proper=ops.filter(M=>det(M)>0),inver=ops.some(M=>near(M,inv));if(ops.length===4*n)return 'D'+n+'h';if(ops.length===12&&n===6)return 'D3h';if(ops.length===8)return 'D2h';if(ops.length===4)return inver?'C2h':'C2v';if(ops.length===2)return 'Cs';if(ops.length===1)return 'C1';return '群阶 '+ops.length+'，请按流程确认符号';}
+const api={I,inv,dot,norm,unit,transpose,mul,act,det,near,rotation,reflection,rz,rx,sh,vertical,power,closure,table,conjugacy,axisAngle,order,opName,match,orbits,family,tetra,ico,edges,triangles,polyGroup,polyhedron,classify,atom,ring,model,substitution,matrixList,decorated};
+if(typeof module==='object'&&module.exports)module.exports=api;else root.MolecularSymmetry=api;
+})(typeof window!=='undefined'?window:this);
+</script><script>(function(){'use strict';
+const S=window.MolecularSymmetry,$=s=>document.querySelector(s),$$=s=>Array.from(document.querySelectorAll(s)),ink='#071b49',gold='#b28b43',blue='#43789a',red='#a46061',line='#d9d0b7',paper='#fffcf1',muted='#7b8490';
+const fmt=(x,n=3)=>Math.abs(x)<10**(-n)?'0':Number(x.toFixed(n)).toString(),vec=v=>'('+v.map(x=>fmt(x)).join(', ')+')';
+const palette={H:blue,C:ink,O:red,N:'#6b719b',F:'#688b6e',Cl:'#769268',Br:'#a3784e',S:gold,P:gold,Fe:'#9c7b4f',Pt:'#809194',B:blue,A:gold,D:red,V:blue,red:red,black:ink,line:gold};
+const color=t=>palette[t]||'#857995';
+function txt(c,t,x,y,co=ink,size=11,align='left'){c.font=`${size}px system-ui,-apple-system,"PingFang SC",sans-serif`;c.fillStyle=co;c.textAlign=align;c.fillText(t,x,y);}
+function path(c,ps,co=ink,width=1.4){c.beginPath();ps.forEach((p,i)=>i?c.lineTo(p[0],p[1]):c.moveTo(p[0],p[1]));c.strokeStyle=co;c.lineWidth=width;c.stroke();}
+function dot(c,x,y,r,co){c.beginPath();c.arc(x,y,Math.max(1,r),0,2*Math.PI);c.fillStyle=co;c.fill();}
+function matrixHtml(M){return '<div class="matrix3">'+M.flat().map(x=>'<span>'+fmt(x,3)+'<\/span>').join('')+'<\/div>';}
+function tween(M,f){if(f>=1)return M;if(S.det(M)>0){const aa=S.axisAngle(M);return S.rotation(aa.axis,aa.angle*f);}return S.I.map((r,i)=>r.map((x,j)=>x+(M[i][j]-x)*f));}
+const sims=[];
+function register(id,render){const el=$('#'+id+'-lab'),canvas=el.querySelector('canvas'),c=canvas?.getContext('2d'),sim={id,el,canvas,c,render,visible:false,play:!matchMedia('(prefers-reduced-motion:reduce)').matches,time:0,phase:1,from:S.I,to:S.I,cam:{yaw:.55,pitch:.6,zoom:1},spin:false};
+ sim.current=()=>S.mul(tween(S.mul(sim.to,S.transpose(sim.from)),.5-.5*Math.cos(Math.PI*sim.phase)),sim.from);
+ sim.animate=(M,from=S.I)=>{sim.from=from;sim.to=M;sim.phase=0;sim.play=true;sim.updatePlay();sim.draw();};sim.reset=()=>{sim.phase=1;sim.from=S.I;sim.to=S.I;sim.draw();};
+ sim.draw=()=>{if(!canvas){render(null,0,0,sim);return;}const r=canvas.getBoundingClientRect(),d=Math.min(2,devicePixelRatio||1);if(canvas.width!==Math.round(r.width*d)||canvas.height!==Math.round(r.height*d)){canvas.width=Math.round(r.width*d);canvas.height=Math.round(r.height*d);}c.setTransform(d,0,0,d,0,0);c.clearRect(0,0,r.width,r.height);render(c,r.width,r.height,sim);};
+ const play=el.querySelector('[data-play]');sim.updatePlay=()=>{play.textContent=sim.play?'暂停动画':'播放动画';play.setAttribute('aria-pressed',String(sim.play));};play.onclick=()=>{sim.play=!sim.play;sim.updatePlay();};sim.updatePlay();
+ el.addEventListener('input',e=>{const o=document.getElementById(e.target.id+'-out');if(o)o.textContent=e.target.value;sim.phase=1;sim.draw();});el.addEventListener('change',()=>{sim.phase=1;sim.draw();});
+ if(canvas){new ResizeObserver(()=>sim.draw()).observe(canvas);let drag=null;canvas.addEventListener('pointerdown',e=>{drag=[e.clientX,e.clientY];canvas.setPointerCapture(e.pointerId);});canvas.addEventListener('pointermove',e=>{if(!drag)return;sim.cam.yaw+=(e.clientX-drag[0])*.009;sim.cam.pitch+=(e.clientY-drag[1])*.009;drag=[e.clientX,e.clientY];sim.draw();});canvas.addEventListener('pointerup',()=>drag=null);canvas.addEventListener('pointercancel',()=>drag=null);canvas.addEventListener('wheel',e=>{e.preventDefault();sim.cam.zoom=Math.min(2.6,Math.max(.45,sim.cam.zoom*Math.exp(-e.deltaY*.001)));sim.draw();},{passive:false});}
+ sims.push(sim);return sim;
+}
+function project(sim,w,h,maxRadius,center=[.5,.48]){const V=S.mul(S.rx(sim.cam.pitch),S.rz(sim.cam.yaw)),scale=Math.min(w*.36,h*.35)*sim.cam.zoom/Math.max(.8,maxRadius);return p=>{const v=S.act(V,p);return [w*center[0]+v[0]*scale,h*center[1]-v[2]*scale,v[1]];};}
+function bonds(atoms){const out=[];for(let i=0;i<atoms.length;i++)for(let j=0;j<i;j++){const a=atoms[i],b=atoms[j],d=S.norm(a.p.map((x,k)=>x-b.p[k]));if(a.t==='H'&&b.t==='H')continue;if(a.t==='F'&&b.t==='F')continue;if(a.t==='Cl'&&b.t==='Cl')continue;if(d>.05&&d<1.3&&(a.t==='C'||b.t==='C'||S.norm(a.p)<.1||S.norm(b.p)<.1||a.t==='O'&&b.t==='O'))out.push([j,i]);}return out;}
+function scene(c,w,h,sim,atoms,M=S.I,opts={}){const max=Math.max(1,...atoms.map(a=>S.norm(a.p))),pr=project(sim,w,h,max,opts.center||[.5,.48]),ps=atoms.map(a=>pr(S.act(M,a.p))),ed=opts.edges||bonds(atoms);if(opts.plane){let n=S.unit(opts.plane),u=S.unit(Math.abs(n[2])<.9?[-n[1],n[0],0]:[1,0,0]),v=[n[1]*u[2]-n[2]*u[1],n[2]*u[0]-n[0]*u[2],n[0]*u[1]-n[1]*u[0]],q=[[-1,-1],[1,-1],[1,1],[-1,1]].map(([a,b])=>pr(u.map((x,k)=>(a*x+b*v[k])*max*1.1)));c.beginPath();q.forEach((p,i)=>i?c.lineTo(p[0],p[1]):c.moveTo(p[0],p[1]));c.closePath();c.fillStyle='#7ca2b525';c.fill();c.strokeStyle='#7ca2b580';c.stroke();}
+ if(opts.ghost!==false){c.setLineDash([3,4]);for(const a of atoms){const p=pr(a.p);c.beginPath();c.arc(p[0],p[1],6,0,2*Math.PI);c.strokeStyle='#b8b8a477';c.stroke();}c.setLineDash([]);}
+ for(const [a,b] of ed)path(c,[ps[a],ps[b]],'#9aa7a777',3);
+ if(opts.axes!==false){const origin=pr([0,0,0]);for(const [i,label] of ['x','y','z'].entries()){const p=[0,0,0];p[i]=max*1.2;const q=pr(p);path(c,[origin,q],i===2?'#b28b4355':'#c8c5b544',1);txt(c,label,q[0]+5,q[1],muted,9);}}
+ atoms.map((a,i)=>({a,i,p:ps[i]})).sort((a,b)=>a.p[2]-b.p[2]).forEach(({a,i,p})=>{const highlighted=opts.highlight?.includes(i),r=opts.small?5:a.t==='H'?8:11;dot(c,p[0],p[1],r+2,highlighted?gold:paper);dot(c,p[0],p[1],r,highlighted?gold:color(a.t));if(opts.labels!==false&&!opts.small)txt(c,a.t+(opts.numbers===false?'':i+1),p[0],p[1]+r+14,ink,10,'center');});
+ if(opts.title)txt(c,opts.title,w/2,20,ink,11,'center');
+ return pr;
+}
+function matchMessage(model,M){const r=S.match(model.atoms,M);return r.ok?'✓ 按原子类型逐一匹配成功；完整构型保持不变。':'× 不保持该构型：原子 '+model.atoms[r.index].t+(r.index+1)+' 的终点 '+vec(r.point)+' 找不到同种伙伴。';}
+const cachedModel=new Map();function getModel(name,p){const k=name+':'+p;if(!cachedModel.has(k))cachedModel.set(k,S.model(name,p));return cachedModel.get(k);}
+function operationButtons(root,ops,active=0){root.innerHTML=ops.map((M,i)=>'<button data-op="'+i+'" class="'+(i===active?'active':'')+'" title="'+M.flat().map(x=>fmt(x)).join(', ')+'">'+(i+1)+' · '+S.opName(M)+'<\/button>').join('');}
+// 01 — all operations of idealized molecules, including type-respecting permutation matching.
+let mol=getModel('water'),molIdx=0;const molecule=register('molecule',(c,w,h,sim)=>{scene(c,w,h,sim,mol.atoms,sim.current(),{labels:$('#molecule-labels').checked,title:mol.group+' · 操作 '+S.opName(mol.ops[molIdx])});$('#molecule-status').textContent=mol.group+'；'+(mol.group.includes('∞')?'仅列 '+mol.ops.length+' 个抽样操作。':'完整群 '+mol.ops.length+' 个操作。')+matchMessage(mol,mol.ops[molIdx])+' '+mol.desc;$('#molecule-matrix').innerHTML=matrixHtml(mol.ops[molIdx]);const r=S.match(mol.atoms,mol.ops[molIdx]);$('#molecule-map').textContent=r.ok?'编号置换：'+r.map.map((j,i)=>(i+1)+'→'+(j+1)).join('，'):'';});
+function resetMolecule(){mol=getModel($('#molecule-model').value);molIdx=0;molecule.from=molecule.to=S.I;molecule.phase=1;operationButtons($('#molecule-ops'),mol.ops);$('#molecule-keys').innerHTML=[...new Set(mol.atoms.map(a=>a.t))].map(t=>'<span><i style="background:'+color(t)+'"><\/i>'+t+'<\/span>').join('');molecule.draw();}$('#molecule-model').onchange=resetMolecule;$('#molecule-ops').onclick=e=>{const b=e.target.closest('[data-op]');if(!b)return;molIdx=+b.dataset.op;const from=molecule.to;molecule.animate(S.mul(mol.ops[molIdx],from),from);operationButtons($('#molecule-ops'),mol.ops,molIdx);};$('#molecule-reset').onclick=()=>{molIdx=0;operationButtons($('#molecule-ops'),mol.ops,0);molecule.reset();};$('#molecule-camera').onclick=()=>{molecule.cam={yaw:.55,pitch:.6,zoom:1};molecule.draw();};
+// 02 — candidate planes are tested, not assumed to be symmetry elements.
+function mirrorMatrix(){return $('#mirror-plane').value==='horizontal'?S.sh:S.vertical(+$('#mirror-angle').value*Math.PI/180);}
+const mirror=register('mirror',(c,w,h,sim)=>{const m=getModel($('#mirror-model').value),M=mirrorMatrix(),a=+$('#mirror-angle').value*Math.PI/180,n=$('#mirror-plane').value==='horizontal'?[0,0,1]:[-Math.sin(a),Math.cos(a),0];scene(c,w,h,sim,m.atoms,sim.phase<1?(sim.twice?tween(M,sim.phase<.5?sim.phase*2:2-2*sim.phase):sim.current()):sim.to,{plane:n,title:'候选平面 · '+m.group});$('#mirror-status').textContent=matchMessage(m,M)+' 平面内原子保持原坐标；σ²=E。';});$('#mirror-run').onclick=()=>{mirror.twice=false;mirror.animate(mirrorMatrix());};$('#mirror-twice').onclick=()=>{mirror.twice=true;mirror.animate(S.I);};['mirror-model','mirror-plane','mirror-angle'].forEach(id=>$('#'+id).addEventListener('input',()=>{mirror.to=mirrorMatrix();mirror.phase=1;mirror.draw();}));
+// 03 — inversion versus C2 on a general point.
+const inversion=register('inversion',(c,w,h,sim)=>{const m=getModel($('#inversion-model').value),M=$('#inversion-op').value==='i'?S.inv:S.rz(Math.PI);scene(c,w,h,sim,m.atoms,sim.phase<1?sim.current():M,{title:$('#inversion-op').value==='i'?'反演：x、y、z全部变号':'C₂(z)：z不变'});$('#inversion-status').textContent=matchMessage(m,M);const p=[.6,.3,.8];$('#inversion-point').textContent='普通点 '+vec(p)+' → '+vec(S.act(M,p))+'；det = '+Math.round(S.det(M));});$('#inversion-run').onclick=()=>inversion.animate($('#inversion-op').value==='i'?S.inv:S.rz(Math.PI));
+// 04 — axial rotations and the orbit of an unoriented line.
+$('#rotation-n').value=3;const rotation=register('rotation',(c,w,h,sim)=>{const n=+$('#rotation-n').value,m=+$('#rotation-m').value,M=S.rz(2*Math.PI*m/n);$('#rotation-m').max=n;const atoms=S.ring(n,.1,0,1,'B');const pr=scene(c,w,h,sim,atoms,sim.phase<1?sim.current():M,{title:'C'+n+'^'+m+'，角度 '+fmt(360*m/n)+'°'});if($('#rotation-mode').value==='axes'){const count=n%2?n:n/2;for(let j=0;j<count;j++){const a=2*Math.PI*j/n,p=pr([1.3*Math.cos(a),1.3*Math.sin(a),0]),q=pr([-1.3*Math.cos(a),-1.3*Math.sin(a),0]);path(c,[p,q],j===0?gold:'#b4c5c9',1.4);}}$('#rotation-status').textContent='C'+n+'轴生成 '+n+' 个不同操作（包括E）；当前幂的阶 '+S.order(M)+'。仅靠主轴旋转复制无向线：'+(n%2?n:n/2)+' 个位置。';});$('#rotation-next').onclick=()=>{const n=+$('#rotation-n').value;$('#rotation-m').value=(+$('#rotation-m').value+1)%(n+1);$('#rotation-m-out').textContent=$('#rotation-m').value;rotation.animate(S.rz(2*Math.PI*(+$('#rotation-m').value)/n));};$('#rotation-run').onclick=()=>rotation.animate(S.rz(2*Math.PI*(+$('#rotation-m').value)/(+$('#rotation-n').value)));$('#rotation-n').onchange=()=>{if(+$('#rotation-m').value>+$('#rotation-n').value)$('#rotation-m').value=1;rotation.draw();};
+// 05 — separate factors versus the composite improper operation.
+$('#improper-n').value=6;let improperKey='';function improperData(){const n=+$('#improper-n').value,C=S.rz(2*Math.PI/n),A=S.mul(S.sh,C);let m;if(n===6)m=getModel('ethane');else if(n===4)m=getModel('methane');else {const ops=S.closure([A]).matrices;m={atoms:ops.map(M=>S.atom('B',S.act(M,[1,.22,.7]))),group:'由S'+n+'生成的轨道'};}return {n,C,A,m};}
+function improperTarget(d){const mode=$('#improper-part').value;return mode==='rotation'?d.C:mode==='mirror'?S.sh:mode==='power'?S.power(d.A,+$('#improper-k').value):d.A;}
+const improper=register('improper',(c,w,h,sim)=>{const d=improperData(),M=improperTarget(d),mode=$('#improper-part').value;let current=M;if(sim.phase<1){if(mode==='combined'){const f=sim.phase;if(f<.55)current=S.rz((2*Math.PI/d.n)*f/.55);else {const q=(f-.55)/.45,Z=[[1,0,0],[0,1,0],[0,0,1-2*q]];current=S.mul(Z,d.C);}}else current=sim.current();}scene(c,w,h,sim,d.m.atoms,current,{title:mode==='combined'?(sim.phase<.55?'步骤1：真转动':'步骤2：水平反映'):'观察Sₙ及其幂',plane:[0,0,1]});$('#improper-status').textContent='S'+d.n+'的操作阶 = '+S.order(d.A)+'；'+matchMessage(d.m,M)+' Cₙ单独：'+(S.match(d.m.atoms,d.C).ok?'成立':'不成立')+'；σₕ单独：'+(S.match(d.m.atoms,S.sh).ok?'成立':'不成立')+'。';const key=d.n;if(key!==improperKey){let kmax=d.n%2?2*d.n:d.n;$('#improper-powers').innerHTML='<table class="mini-table"><tr><th>幂k<\/th>'+Array.from({length:kmax},(_,i)=>'<th>'+(i+1)+'<\/th>').join('')+'<\/tr><tr><th>Sₙᵏ<\/th>'+Array.from({length:kmax},(_,i)=>'<td>'+S.opName(S.power(d.A,i+1))+'<\/td>').join('')+'<\/tr><\/table>';improperKey=key;}});$('#improper-run').onclick=()=>{const d=improperData();improper.animate(improperTarget(d));};$('#improper-next').onclick=()=>{$('#improper-part').value='power';const d=improperData();$('#improper-k').value=(+$('#improper-k').value)%S.order(d.A)+1;$('#improper-k-out').textContent=$('#improper-k').value;improper.animate(improperTarget(d));};
+// 06 — an arbitrary point and an oriented local triad distinguish transformations.
+let productSwap=false;function productData(){const key=$('#products-pair').value;let pair=key==='c2'?[S.rx(Math.PI),S.rotation([0,1,0],Math.PI)]:key==='c4v'?[S.vertical(0),S.rz(Math.PI/2)]:key==='ih'?[S.rz(Math.PI),S.sh]:[S.vertical(0),S.rz(2*Math.PI/3)];if(productSwap)pair=pair.slice().reverse();return pair;}
+const products=register('products',(c,w,h,sim)=>{const [X,Y]=productData(),p=[.8,.45,.7],q=S.act(X,p),r=S.act(Y,q),M=S.mul(Y,X);const atoms=[S.atom('A',p),S.atom('B',q),S.atom('D',r)];const pr=scene(c,w,h,sim,atoms,S.I,{edges:[[0,1],[1,2]],title:'A初态 → B第一步 → D最终位置',ghost:false});if(sim.phase<1){const t=sim.phase*2,k=Math.min(1,Math.floor(t)),f=t-k,positions=[p,q,r],v=positions[k].map((x,j)=>x+(positions[k+1][j]-x)*f),point=pr(v);dot(c,point[0],point[1],9,red);}$('#products-chain').textContent=vec(p)+' → '+vec(q)+' → '+vec(r);$('#products-status').textContent='总效果 YX = '+S.opName(M)+'；XY与YX '+(S.near(M,S.mul(X,Y))?'相同，可交换。':'不同，不可交换。');$('#products-matrix').innerHTML=matrixHtml(M);});$('#products-run').onclick=()=>{products.phase=0;products.play=true;products.updatePlay();products.draw();};$('#products-swap').onclick=()=>{productSwap=!productSwap;products.draw();};
+// 07 — true atom orbits under a fixed point group.
+let orbitModel=getModel('pf5'),orbitOp=0;const orbits=register('orbits',(c,w,h,sim)=>{const groups=S.orbits(orbitModel.atoms,orbitModel.ops),a=+$('#orbits-atom').value,O=groups.find(g=>g.includes(a))||[];scene(c,w,h,sim,orbitModel.atoms,sim.phase<1?sim.current():sim.to,{highlight:O,title:orbitModel.group+' · 金色为同一原子轨道'});$('#orbits-list').innerHTML=groups.map(O=>'<span>{'+O.map(i=>orbitModel.atoms[i].t+(i+1)).join(', ')+'}<\/span>').join('');$('#orbits-status').textContent='选中 '+orbitModel.atoms[a].t+(a+1)+'；等价轨道包含 '+O.length+' 个同种原子。全模型分成 '+groups.length+' 组原子轨道。';});function resetOrbits(){orbitModel=getModel($('#orbits-model').value);$('#orbits-atom').innerHTML=orbitModel.atoms.map((a,i)=>'<option value="'+i+'">'+a.t+(i+1)+'<\/option>').join('');$('#orbits-atom').value=1;orbitOp=0;orbits.to=orbits.from=S.I;orbits.phase=1;orbits.draw();}$('#orbits-model').onchange=resetOrbits;$('#orbits-next').onclick=()=>{orbitOp=(orbitOp+1)%orbitModel.ops.length;orbits.animate(orbitModel.ops[orbitOp]);};
+// 08 — two reflections in a cross-section, animated in the right-to-left order.
+let planesSwap=false;const planes=register('planes',(c,w,h,sim)=>{const phi=+$('#planes-angle').value*Math.PI/180,A=S.vertical(0),B=S.vertical(phi),X=planesSwap?B:A,Y=planesSwap?A:B,p=[1,.25,0],q=S.act(X,p),r=S.act(Y,q),cx=w/2,cy=h*.52,scale=Math.min(w*.32,h*.32),pr=v=>[cx+v[0]*scale,cy-v[1]*scale];for(const [i,a] of [0,phi].entries()){const u=[Math.cos(a)*1.3,Math.sin(a)*1.3,0];path(c,[pr(u),pr(u.map(x=>-x))],i?blue:gold,2);}const dots=[p,q,r];dots.forEach((v,i)=>{let d=pr(v);dot(c,d[0],d[1],6,[ink,gold,blue][i]);txt(c,['初点','第一次','第二次'][i],d[0]+9,d[1]-8,[ink,gold,blue][i],10);});path(c,dots.map(pr),'#a6a99e',1);if(sim.phase<1){const f=sim.phase*2,k=Math.min(1,Math.floor(f)),u=f-k,v=dots[k].map((x,j)=>x+(dots[k+1][j]-x)*u),z=pr(v);dot(c,z[0],z[1],9,red);}txt(c,'截面：两镜面交线垂直屏幕',w/2,22,muted,11,'center');$('#planes-equation').textContent='方向角 α → '+(planesSwap?'2φ−α → α−2φ':'−α → α+2φ')+'；转角 '+fmt((planesSwap?-2:2)*phi*180/Math.PI)+'°';$('#planes-status').textContent='矩阵检验：σ₂σ₁ = R_z('+(planesSwap?'-':'')+fmt(2*phi*180/Math.PI)+'°)，误差 '+(S.near(S.mul(Y,X),S.rz((planesSwap?-2:2)*phi))?'小于2×10⁻⁷':'请检查')+'。';});$('#planes-run').onclick=()=>{planes.phase=0;planes.play=true;planes.updatePlay();};$('#planes-swap').onclick=()=>{planesSwap=!planesSwap;planes.draw();};
+// 09 — mirror superposition, with a provable proper/improper distinction.
+const chirality=register('chirality',(c,w,h,sim)=>{const m=getModel($('#chirality-model').value),improper=m.ops.find(M=>S.det(M)<0),mir=S.sh,over=$('#chirality-view').value==='overlap',achiral=!!improper,align=improper?S.mul(improper,mir):S.I;const max=Math.max(1,...m.atoms.map(a=>S.norm(a.p))),scale=.42;function side(M,center,title){const old={...sim.cam};sim.cam.zoom*=scale;scene(c,w,h,sim,m.atoms,M,{center,title:'',axes:false,labels:false,ghost:false});sim.cam=old;txt(c,title,w*center[0],24,ink,11,'center');}side(S.I,[.26,.5],'原构型 '+m.group);let R=over&&achiral?(sim.phase<1?tween(align,.5-.5*Math.cos(Math.PI*sim.phase)):align):S.I;side(S.mul(R,mir),[.74,.5],over&&achiral?'镜像经真转动叠合':'镜像');$('#chirality-status').textContent=achiral?'含det=−1操作，因此非手性。镜像可用det=+1的R=gσ叠回；这里实际检验得到 '+(S.match(m.atoms,S.mul(align,mir)).ok?'匹配成功。':'正在示意。'):('该刚性构型只含真操作，属于手性。'+($('#chirality-model').value==='chiral'?'四种不同配体的有向体积在镜像下反号，任何真转动都不能改变它的符号。':'它有C₂真转轴，说明手性不等于点群必须是C₁。'));});$('#chirality-run').onclick=()=>{chirality.phase=0;chirality.play=true;chirality.updatePlay();};
+// 10 — generator closure and new operations generated by products.
+let famKey='',fam=null,famShown=1;function familyData(){const kind=$('#families-type').value,n=+$('#families-n').value,key=kind+n;if(key!==famKey){fam=S.family(kind,n);famKey=key;famShown=1;}return fam;}
+const families=register('families',(c,w,h,sim)=>{const f=familyData(),atoms=[];for(const M of f.matrices)atoms.push(S.atom('B',S.act(M,[1,.27,.62])));scene(c,w,h,sim,atoms,sim.current(),{small:true,labels:false,title:f.name.replace('n',String(f.n))+' · '+f.matrices.length+' 个不同操作',edges:[]});const count=Math.min(f.matrices.length,famShown);$('#families-ops').innerHTML=f.matrices.slice(0,count).map((M,i)=>'<button data-famop="'+i+'">'+f.words[i]+' · '+S.opName(M)+'<\/button>').join('');$('#families-generators').innerHTML=f.gens.map((M,i)=>'<span>'+String.fromCharCode(97+i)+' = '+S.opName(M)+'<\/span>').join('');$('#families-status').textContent='实际闭包 '+f.matrices.length+' 项；族公式预期 '+f.expected+'。已显示 '+count+' 项，E只计一次。'+(f.name==='Sn'&&f.n%2?'奇数Sₙ按惯例命名C'+f.n+'h。':'');});$('#families-next').onclick=()=>{famShown=Math.min(fam.matrices.length,famShown+fam.gens.length);families.draw();};$('#families-all').onclick=()=>{famShown=fam.matrices.length;families.draw();};$('#families-ops').onclick=e=>{const b=e.target.closest('[data-famop]');if(b)families.animate(fam.matrices[+b.dataset.famop]);};
+// 11 — dual polyhedra share exactly the same spatial operation matrices.
+let polyKey='',poly=null,polyOps=[],polyIndex=0;const polyhedra=register('polyhedra',(c,w,h,sim)=>{const shape=$('#polyhedra-shape').value,sub=$('#polyhedra-subgroup').value,key=shape+sub;if(key!==polyKey){poly=S.polyhedron(shape);polyOps=S.polyGroup(poly.group).matrices.filter(M=>sub==='full'||S.det(M)>0);polyIndex=0;polyKey=key;sim.to=S.I;sim.from=S.I;sim.phase=1;operationButtons($('#polyhedra-ops'),polyOps);}scene(c,w,h,sim,poly.ps.map(p=>S.atom('V',p)),sim.current(),{edges:poly.edges,small:poly.ps.length>12,labels:poly.ps.length<13,title:poly.group+' · '+(sub==='proper'?'纯真转动子群':'完整群')});$('#polyhedra-counts').innerHTML=[['顶点',poly.ps.length],['棱',poly.edges.length],['面',poly.faces]].map(([t,v])=>'<div><strong>'+v+'<\/strong>'+t+'<\/div>').join('');$('#polyhedra-status').textContent='当前列出 '+polyOps.length+' 个操作；'+(shape==='cubocta'?'立方八面体面分两类，不是正多面体，但仍为O_h。':'换观察角度不会改变点群。相同矩阵必须逐一保持所有顶点和棱。');});$('#polyhedra-next').onclick=()=>{polyIndex=(polyIndex+1)%polyOps.length;polyhedra.animate(polyOps[polyIndex]);};$('#polyhedra-ops').onclick=e=>{const b=e.target.closest('[data-op]');if(b)polyhedra.animate(polyOps[+b.dataset.op]);};$('#polyhedra-spin').onclick=()=>{polyhedra.spin=!polyhedra.spin;polyhedra.play=true;polyhedra.updatePlay();};
+// 12 — actual matrix conjugacy, cached per group.
+const classCache={};function groupData(id){if(classCache[id])return classCache[id];const f=id==='C4'?S.family('Cn',4):id==='C4v'?S.family('Cnv',4):S.polyGroup(id);return classCache[id]={...f,...S.conjugacy(f.matrices)};}
+let classId='',classX=0;function setClass(){const id=$('#classes-group').value,g=groupData(id);$('#classes-a').innerHTML=g.matrices.map((M,i)=>'<option value="'+i+'">'+(i+1)+' · '+S.opName(M)+'<\/option>').join('');$('#classes-a').value=g.matrices.length>1?1:0;classX=0;classId=id;}
+const classes=register('classes',(c,w,h,sim)=>{const id=$('#classes-group').value;if(id!==classId)setClass();const g=groupData(id),a=+$('#classes-a').value,x=classX%g.matrices.length,z=g.table[g.table[g.inverse[x]][a]][x],C=g.classes.find(C=>C.includes(a));const seed=[.8,.29,.67],points=g.matrices.map(M=>S.atom('B',S.act(M,seed)));scene(c,w,h,sim,points,g.matrices[z],{small:true,edges:[],labels:false,title:id+' · 类大小 '+C.length});$('#classes-list').innerHTML=g.classes.map((C,i)=>'<div class="tile" style="background:'+(['#ede7d4','#dde8e4','#eee0d9','#e2e1ef'][i%4])+'"><b>第'+(i+1)+'类 · '+C.length+'个操作<\/b>'+C.map(j=>(j+1)+':'+S.opName(g.matrices[j])).join('；')+'<\/div>').join('');$('#classes-status').textContent='群阶 '+g.matrices.length+'；'+g.classes.length+' 个共轭类。当前X='+(x+1)+'，A='+(a+1)+'，X⁻¹AX='+(z+1)+'。逆操作与A'+(C.includes(g.inverse[a])?'在同一类。':'不在同一类。');});$('#classes-group').onchange=()=>{setClass();classes.draw();};$('#classes-next').onclick=()=>{classX++;classes.draw();};$('#classes-a').onchange=()=>{classX=0;classes.draw();};
+// 13 — transparent, feature-driven decision path (not a black-box detector).
+const features={water:[2,0,'v',0],ammonia:[3,0,'v',0],allene:[2,1,'d',0],peroxide:[2,0,'none',0],benzene:[6,1,'h',0],pf5:[3,1,'h',0],ferrocene:[5,1,'d',0],s4:[2,0,'none',4]};
+function applyExample(){const key=$('#classifier-example').value;if(key==='custom')return;const [n,p,m,s]=features[key];$('#classifier-special').value='none';$('#classifier-n').value=n;$('#classifier-c2').value=p;$('#classifier-plane').value=m;$('#classifier-onlys').value=s;}
+const classifier=register('classifier',()=>{const special=$('#classifier-special').value,n=+$('#classifier-n').value,perp=$('#classifier-c2').value==='1',plane=$('#classifier-plane').value,sn=+$('#classifier-onlys').value,f={special,n,perpendicular:perp,horizontal:plane==='h',vertical:plane==='v',dihedral:plane==='d',mirror:plane!=='none',onlyS:!!sn,sn},name=S.classify(f);let steps=['检查特殊群'];if(special!=='none')steps.push('特殊群 '+special);else if(sn)steps.push('只有S'+sn+'生成的操作');else {steps.push('最高轴 C'+n,perp?'有n条垂直C₂':'没有n条垂直C₂',plane==='none'?'无额外镜面':plane==='h'?'有σₕ':plane==='d'?'有σ_d':'有σᵥ');}steps.push(name);$('#classifier-flow').innerHTML=steps.map((t,i)=>'<span class="'+(i===steps.length-1?'chosen':'')+'">'+t+'<\/span>').join(' → ');let warning='';if(sn&&(perp||plane!=='none'))warning=' 输入矛盾：声称“只有Sₙ”，却又加入独立副轴或镜面，请重新核查。';if(!perp&&plane==='d'&&!sn)warning=' σ_d的命名需结合副C₂；若只是普通竖直面，请选σᵥ。';$('#classifier-status').textContent='按给定特征得到 '+name+'。'+warning;});$('#classifier-example').onchange=()=>{applyExample();classifier.draw();};applyExample();
+// 14 — internal deformation changes the group; symmetry operations do not deform the model.
+let conKey='',conModel=null,conOp=0;function conData(){const name=$('#conformation-model').value,v=+$('#conformation-value').value;let p,route;if(name==='ammonia'){p=v/100*.8;route=['平面 D3h','非平面 C3v'];}else if(name==='peroxide'){p=v*.9;route=['顺式 C2v','一般 C2','反式 C2h'];}else {p=v/100*(name==='ferrocene'?36:60);route=['重叠 D'+(name==='ferrocene'?5:3)+'h','中间 D'+(name==='ferrocene'?5:3),'交错 D'+(name==='ferrocene'?5:3)+'d'];}return {name,p,route,key:name+v};}
+const conformation=register('conformation',(c,w,h,sim)=>{const d=conData();if(d.key!==conKey){conModel=getModel(d.name,d.p);conKey=d.key;conOp=0;sim.to=sim.from=S.I;sim.phase=1;}scene(c,w,h,sim,conModel.atoms,sim.current(),{title:conModel.group+' · '+(d.name==='ammonia'?'中心离面高度 '+fmt(d.p):'参数角 '+fmt(d.p)+'°')});$('#conformation-route').innerHTML=d.route.map(t=>'<span class="'+(t.split(' ').pop()===conModel.group?'chosen':'')+'">'+t+'<\/span>').join(' → ');$('#conformation-status').textContent='当前理想构型 '+conModel.group+'，'+conModel.ops.length+' 个操作。'+(d.name==='peroxide'?'θ为半二面角，常规二面角为2θ。':d.name==='ferrocene'||d.name==='ethane'?'副C₂随两端相对角改变方向，已在计算中同步重建。':'只有高度严格等于0，才新增σₕ。');});$('#conformation-start').onclick=()=>{$('#conformation-value').value=0;$('#conformation-value-out').textContent=0;conformation.draw();};$('#conformation-end').onclick=()=>{$('#conformation-value').value=100;$('#conformation-value-out').textContent=100;conformation.draw();};$('#conformation-op').onclick=()=>{conOp=(conOp+1)%conModel.ops.length;conformation.animate(conModel.ops[conOp]);};
+// 15 — color and drawn-line stabilizers of actual parent symmetry matrices.
+let decKey='',dec=null,decOp=0;const decoration=register('decoration',(c,w,h,sim)=>{const k=$('#decoration-type').value,a=k==='cube'?+$('#decoration-angle').value:0,key=k+a;$('#decoration-angle').disabled=k!=='cube';if(key!==decKey){dec=S.decorated(k,a);decKey=key;decOp=0;sim.to=sim.from=S.I;sim.phase=1;operationButtons($('#decoration-ops'),dec.ops);}scene(c,w,h,sim,dec.atoms,sim.current(),{small:true,edges:[],labels:false,title:dec.group+' · 剩余 '+dec.ops.length+' / 母群 '+dec.source.length+' 项'});$('#decoration-status').textContent='按所有顶点、颜色及标记点匹配，保留 '+dec.ops.length+' 项，归为 '+dec.group+'。'+(k==='cube'?'θ=0°为T_h；一般中间角为T；θ=45°为T_d。':k==='black'?'在原图面中线之上增加交替顶点颜色，θ=0°保留T。':'点群可由保留矩阵的操作类型与数量核对。');});$('#decoration-next').onclick=()=>{decOp=(decOp+1)%dec.ops.length;decoration.animate(dec.ops[decOp]);};$('#decoration-ops').onclick=e=>{const b=e.target.closest('[data-op]');if(b)decoration.animate(dec.ops[+b.dataset.op]);};
+// 16 — an explicitly prescribed planar parent group, filtered by substituent type.
+const patterns={mono:[0],ortho:[0,1],meta:[0,2],para:[0,3],'135':[0,2,4],'123':[0,1,2],'124':[0,1,3],benzene:[]};let subLabels=['Cl','H','H','H','H','H'],subKey='',sub=null,subOp=0;
+const substitution=register('substitution',(c,w,h,sim)=>{const key=subLabels.join();if(key!==subKey){sub=S.substitution(6,subLabels);subKey=key;subOp=0;sim.to=sim.from=S.I;sim.phase=1;$('#substitution-sites').innerHTML=subLabels.map((t,i)=>'<button data-site="'+i+'" aria-pressed="'+(t==='Cl')+'">位置'+(i+1)+'：'+t+'<\/button>').join('');operationButtons($('#substitution-ops'),sub.ops);}scene(c,w,h,sim,sub.atoms,sim.current(),{title:sub.group+' · 平面取代苯'});$('#substitution-status').textContent='Cl位置：'+subLabels.map((t,i)=>t==='Cl'?i+1:null).filter(x=>x!==null).join(', ')+'；保留 '+sub.ops.length+' / 24 个D₆h操作，点群 '+sub.group+'。';});$('#substitution-preset').onchange=()=>{const P=patterns[$('#substitution-preset').value];subLabels=Array.from({length:6},(_,i)=>P.includes(i)?'Cl':'H');substitution.draw();};$('#substitution-sites').onclick=e=>{const b=e.target.closest('[data-site]');if(!b)return;const i=+b.dataset.site;subLabels[i]=subLabels[i]==='Cl'?'H':'Cl';substitution.draw();};$('#substitution-next').onclick=()=>{subOp=(subOp+1)%sub.ops.length;substitution.animate(sub.ops[subOp]);};$('#substitution-ops').onclick=e=>{const b=e.target.closest('[data-op]');if(b)substitution.animate(sub.ops[+b.dataset.op]);};
+// Source drawers contain the functions actually used, with dependency links.
+const sources={molecule:[S.match,S.orbits],mirror:[S.reflection,S.match],inversion:[S.act,S.match],rotation:[S.rotation,S.power],improper:[S.family,S.power],products:[S.mul,S.act],orbits:[S.orbits],planes:[S.vertical,S.mul],chirality:[S.det,S.match],families:[S.family,S.closure],polyhedra:[S.polyhedron,S.polyGroup],classes:[S.conjugacy],classifier:[S.classify],conformation:[S.model],decoration:[S.decorated,S.match],substitution:[S.substitution,S.matrixList]};$$('[data-source]').forEach(e=>e.textContent=sources[e.dataset.source].map(f=>f.toString()).join('\n\n'));
+resetMolecule();resetOrbits();
+const observer=new IntersectionObserver(es=>{for(const e of es){const sim=sims.find(s=>s.el===e.target);sim.visible=e.isIntersecting;if(sim.visible)sim.draw();}},{rootMargin:'120px'});sims.forEach(s=>{observer.observe(s.el);s.draw();});
+let last=performance.now();function frame(now){const dt=Math.min(.05,(now-last)/1000);last=now;for(const s of sims)if(s.visible&&s.play&&(s.phase<1||s.spin)){s.time+=dt;s.phase=Math.min(1,s.phase+dt/1.35);if(s.spin)s.cam.yaw+=dt*.25;s.draw();}requestAnimationFrame(frame);}requestAnimationFrame(frame);
+$('#pause-all').onclick=()=>{const stop=sims.some(s=>s.play);sims.forEach(s=>{s.play=!stop;s.updatePlay();});$('#pause-all').textContent=stop?'播放全部动画':'暂停全部动画';};
+const nav=$$('.toc a[data-section]'),heads=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)nav.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id));}),{rootMargin:'-80px 0px -60% 0px'});$$('.prose>h2').forEach(h=>heads.observe(h));addEventListener('scroll',()=>{const total=document.documentElement.scrollHeight-innerHeight;$('#reading-progress').style.width=(total>0?100*scrollY/total:0)+'%';},{passive:true});
+})();
+</script></body></html>

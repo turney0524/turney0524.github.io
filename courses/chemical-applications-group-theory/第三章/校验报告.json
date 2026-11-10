@@ -1,0 +1,883 @@
+{
+  "status": "PASS",
+  "checks": 36571,
+  "groups": [
+    {
+      "name": "Cn2",
+      "order": 2,
+      "classSizes": [
+        1,
+        1
+      ],
+      "proper": 2
+    },
+    {
+      "name": "Cnv2",
+      "order": 4,
+      "classSizes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "proper": 2
+    },
+    {
+      "name": "Cnh2",
+      "order": 4,
+      "classSizes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "proper": 2
+    },
+    {
+      "name": "Dn2",
+      "order": 4,
+      "classSizes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "proper": 4
+    },
+    {
+      "name": "Dnh2",
+      "order": 8,
+      "classSizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "proper": 4
+    },
+    {
+      "name": "Dnd2",
+      "order": 8,
+      "classSizes": [
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "proper": 4
+    },
+    {
+      "name": "Cn3",
+      "order": 3,
+      "classSizes": [
+        1,
+        1,
+        1
+      ],
+      "proper": 3
+    },
+    {
+      "name": "Cnv3",
+      "order": 6,
+      "classSizes": [
+        1,
+        2,
+        3
+      ],
+      "proper": 3
+    },
+    {
+      "name": "Cnh3",
+      "order": 6,
+      "classSizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "proper": 3
+    },
+    {
+      "name": "Dn3",
+      "order": 6,
+      "classSizes": [
+        1,
+        2,
+        3
+      ],
+      "proper": 6
+    },
+    {
+      "name": "Dnh3",
+      "order": 12,
+      "classSizes": [
+        1,
+        2,
+        3,
+        1,
+        2,
+        3
+      ],
+      "proper": 6
+    },
+    {
+      "name": "Dnd3",
+      "order": 12,
+      "classSizes": [
+        1,
+        2,
+        3,
+        3,
+        2,
+        1
+      ],
+      "proper": 6
+    },
+    {
+      "name": "Cn4",
+      "order": 4,
+      "classSizes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "proper": 4
+    },
+    {
+      "name": "Cnv4",
+      "order": 8,
+      "classSizes": [
+        1,
+        2,
+        2,
+        1,
+        2
+      ],
+      "proper": 4
+    },
+    {
+      "name": "Cnh4",
+      "order": 8,
+      "classSizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "proper": 4
+    },
+    {
+      "name": "Dn4",
+      "order": 8,
+      "classSizes": [
+        1,
+        2,
+        2,
+        1,
+        2
+      ],
+      "proper": 8
+    },
+    {
+      "name": "Dnh4",
+      "order": 16,
+      "classSizes": [
+        1,
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
+      "proper": 8
+    },
+    {
+      "name": "Dnd4",
+      "order": 16,
+      "classSizes": [
+        1,
+        2,
+        4,
+        4,
+        1,
+        2,
+        2
+      ],
+      "proper": 8
+    },
+    {
+      "name": "Cn5",
+      "order": 5,
+      "classSizes": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "proper": 5
+    },
+    {
+      "name": "Cnv5",
+      "order": 10,
+      "classSizes": [
+        1,
+        2,
+        5,
+        2
+      ],
+      "proper": 5
+    },
+    {
+      "name": "Cnh5",
+      "order": 10,
+      "classSizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "proper": 5
+    },
+    {
+      "name": "Dn5",
+      "order": 10,
+      "classSizes": [
+        1,
+        2,
+        5,
+        2
+      ],
+      "proper": 10
+    },
+    {
+      "name": "Dnh5",
+      "order": 20,
+      "classSizes": [
+        1,
+        2,
+        5,
+        1,
+        2,
+        2,
+        5,
+        2
+      ],
+      "proper": 10
+    },
+    {
+      "name": "Dnd5",
+      "order": 20,
+      "classSizes": [
+        1,
+        2,
+        5,
+        5,
+        2,
+        2,
+        2,
+        1
+      ],
+      "proper": 10
+    },
+    {
+      "name": "Cn6",
+      "order": 6,
+      "classSizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "proper": 6
+    },
+    {
+      "name": "Cnv6",
+      "order": 12,
+      "classSizes": [
+        1,
+        2,
+        3,
+        2,
+        3,
+        1
+      ],
+      "proper": 6
+    },
+    {
+      "name": "Cnh6",
+      "order": 12,
+      "classSizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "proper": 6
+    },
+    {
+      "name": "Dn6",
+      "order": 12,
+      "classSizes": [
+        1,
+        2,
+        3,
+        2,
+        3,
+        1
+      ],
+      "proper": 12
+    },
+    {
+      "name": "Dnh6",
+      "order": 24,
+      "classSizes": [
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1
+      ],
+      "proper": 12
+    },
+    {
+      "name": "Dnd6",
+      "order": 24,
+      "classSizes": [
+        1,
+        2,
+        6,
+        6,
+        2,
+        2,
+        1,
+        2,
+        2
+      ],
+      "proper": 12
+    },
+    {
+      "name": "Cn7",
+      "order": 7,
+      "classSizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "proper": 7
+    },
+    {
+      "name": "Cnv7",
+      "order": 14,
+      "classSizes": [
+        1,
+        2,
+        7,
+        2,
+        2
+      ],
+      "proper": 7
+    },
+    {
+      "name": "Cnh7",
+      "order": 14,
+      "classSizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "proper": 7
+    },
+    {
+      "name": "Dn7",
+      "order": 14,
+      "classSizes": [
+        1,
+        2,
+        7,
+        2,
+        2
+      ],
+      "proper": 14
+    },
+    {
+      "name": "Dnh7",
+      "order": 28,
+      "classSizes": [
+        1,
+        2,
+        7,
+        1,
+        2,
+        2,
+        7,
+        2,
+        2,
+        2
+      ],
+      "proper": 14
+    },
+    {
+      "name": "Dnd7",
+      "order": 28,
+      "classSizes": [
+        1,
+        2,
+        7,
+        7,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1
+      ],
+      "proper": 14
+    },
+    {
+      "name": "Cn8",
+      "order": 8,
+      "classSizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "proper": 8
+    },
+    {
+      "name": "Cnv8",
+      "order": 16,
+      "classSizes": [
+        1,
+        2,
+        4,
+        2,
+        4,
+        2,
+        1
+      ],
+      "proper": 8
+    },
+    {
+      "name": "Cnh8",
+      "order": 16,
+      "classSizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "proper": 8
+    },
+    {
+      "name": "Dn8",
+      "order": 16,
+      "classSizes": [
+        1,
+        2,
+        4,
+        2,
+        4,
+        2,
+        1
+      ],
+      "proper": 16
+    },
+    {
+      "name": "Dnh8",
+      "order": 32,
+      "classSizes": [
+        1,
+        2,
+        4,
+        1,
+        2,
+        4,
+        2,
+        4,
+        2,
+        2,
+        4,
+        1,
+        2,
+        1
+      ],
+      "proper": 16
+    },
+    {
+      "name": "Dnd8",
+      "order": 32,
+      "classSizes": [
+        1,
+        2,
+        8,
+        8,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2
+      ],
+      "proper": 16
+    },
+    {
+      "name": "S1",
+      "order": 2,
+      "classSizes": [
+        1,
+        1
+      ],
+      "proper": 1
+    },
+    {
+      "name": "S2",
+      "order": 2,
+      "classSizes": [
+        1,
+        1
+      ],
+      "proper": 1
+    },
+    {
+      "name": "S3",
+      "order": 6,
+      "classSizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "proper": 3
+    },
+    {
+      "name": "S4",
+      "order": 4,
+      "classSizes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "proper": 2
+    },
+    {
+      "name": "S5",
+      "order": 10,
+      "classSizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "proper": 5
+    },
+    {
+      "name": "S6",
+      "order": 6,
+      "classSizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "proper": 3
+    },
+    {
+      "name": "S7",
+      "order": 14,
+      "classSizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "proper": 7
+    },
+    {
+      "name": "S8",
+      "order": 8,
+      "classSizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "proper": 4
+    },
+    {
+      "name": "S9",
+      "order": 18,
+      "classSizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "proper": 9
+    },
+    {
+      "name": "S10",
+      "order": 10,
+      "classSizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "proper": 5
+    },
+    {
+      "name": "T",
+      "order": 12,
+      "classSizes": [
+        1,
+        4,
+        3,
+        4
+      ],
+      "proper": 12
+    },
+    {
+      "name": "Td",
+      "order": 24,
+      "classSizes": [
+        1,
+        8,
+        3,
+        6,
+        6
+      ],
+      "proper": 12
+    },
+    {
+      "name": "Th",
+      "order": 24,
+      "classSizes": [
+        1,
+        4,
+        3,
+        1,
+        4,
+        4,
+        3,
+        4
+      ],
+      "proper": 12
+    },
+    {
+      "name": "O",
+      "order": 24,
+      "classSizes": [
+        1,
+        8,
+        6,
+        6,
+        3
+      ],
+      "proper": 24
+    },
+    {
+      "name": "Oh",
+      "order": 48,
+      "classSizes": [
+        1,
+        8,
+        6,
+        1,
+        6,
+        8,
+        3,
+        6,
+        6,
+        3
+      ],
+      "proper": 24
+    },
+    {
+      "name": "I",
+      "order": 60,
+      "classSizes": [
+        1,
+        12,
+        20,
+        12,
+        15
+      ],
+      "proper": 60
+    },
+    {
+      "name": "Ih",
+      "order": 120,
+      "classSizes": [
+        1,
+        12,
+        20,
+        1,
+        12,
+        15,
+        12,
+        20,
+        12,
+        15
+      ],
+      "proper": 60
+    }
+  ],
+  "models": "All typed-atom endpoints matched",
+  "highlights": [
+    "S6 valid while C6 and horizontal mirror separately fail for staggered ethane",
+    "Allene axes conjugated by45° to correct molecular orientation",
+    "Ferrocene and peroxide conformation endpoints verified",
+    "Dual polyhedron vertices and Euler counts verified",
+    "Decorated cube Th→T→Td checked by all48 parent operations",
+    "S4-only cloud independently checked by all possible orthogonal typed maps"
+  ],
+  "browser_review": {
+    "status": "PASS",
+    "viewports": [
+      "1280×720",
+      "390×844"
+    ],
+    "interactive_panels": 16,
+    "console_errors_observed": 0,
+    "checks": [
+      "分子操作与原子置换",
+      "镜面连续两次",
+      "反演失败反例",
+      "副轴复制计数",
+      "S5与S6的操作阶",
+      "不可交换的乘积",
+      "等价原子轨道",
+      "两镜面乘积",
+      "S4模型镜像可叠合",
+      "Dnd操作闭包",
+      "Ih的120项与10个共轭类",
+      "点群分类",
+      "构象端点",
+      "立方体Th/T/Td图案",
+      "取代苯",
+      "原页图片展开",
+      "折叠源码",
+      "手机宽度无横向溢出"
+    ]
+  },
+  "independent_numpy_examples": "PASS",
+  "static_local_links_and_anchors": "PASS"
+}

@@ -6,7 +6,7 @@
 
 ## 内容入口
 
-- [课本蒸馏](https://turney0524.github.io/textbooks.html)：量子力学详细第二版与后续课本。
+- [课本蒸馏](https://turney0524.github.io/textbooks.html)：量子力学详细第二版与《群论在化学中的应用》全书动态伴读。
 - [知识笔记](https://turney0524.github.io/notes.html)：概念、公式推导与日常知识。
 - [科研进展](https://turney0524.github.io/papers.html)：文献报告与标明年份的经典回读。
 - [开源软件](https://turney0524.github.io/software.html)：工具使用与可运行的模型代码。
@@ -72,3 +72,10 @@ python -m http.server 8000
 ## 内容说明
 
 本次网站整理稿包括三篇知识笔记、一篇经典文献的模型入口与一篇 NumPy 实战，不代表已经导入历史公众号文章。量子力学为依据所提供 Griffiths 第二版中文译本独立编写的伴读，公开仓库不附原书 PDF，也不含全部章末习题答案。每篇新增文章应按自己的来源保留引用。
+
+
+## 群论在化学中的应用
+
+课程位于 `courses/chemical-applications-group-theory/`，共11章、84组交互，列入课本蒸馏和群论合集。课程资源与原页均随Pages构建发布，运行不依赖CDN。全站搜索收录课程和11章入口。
+
+更新本地审定稿后，执行 `python3 scripts/import_cotton.py <教材蒸馏目录>`，再构建、检查和推送。导入排除压缩包、制作过程OCR、缓存和预览截图。

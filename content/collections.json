@@ -86,6 +86,13 @@
     "symbol": "G",
     "items": [
       [
+        "textbooks",
+        "沿课本建立系统框架",
+        "从对称操作与表示出发，逐章学习分子轨道、配位场、振动及晶体学。",
+        "courses/chemical-applications-group-theory/index.html",
+        "群论在化学中的应用"
+      ],
+      [
         "notes",
         "从一次变换开始",
         "探索 32 个晶体学点群，连接生成元、不可约表示、特征标与物理应用。",

@@ -2,7 +2,7 @@
 from pathlib import Path
 from urllib.parse import unquote,urlsplit
 import re,xml.etree.ElementTree as ET
-R=Path(__file__).resolve().parents[1];files=list(R.glob('*.html'))+list((R/'articles').glob('*.html'));count=0;math=0
+R=Path(__file__).resolve().parents[1];files=list(R.glob('*.html'))+list((R/'articles').glob('*.html'))+list((R/'courses').rglob('*.html'));count=0;math=0
 for p in files:
     text=p.read_text()
     assert not re.search(r'[\x00-\x08\x0b\x0c\x0e-\x1f]',text),p

@@ -1,0 +1,195 @@
+{
+  "status": "PASS",
+  "checks": 7948,
+  "tolerance": "default 1e-8; Jacobi stopping tolerance 1e-12",
+  "character_tables": {
+    "C3v": {
+      "order": 6,
+      "irreps": 3
+    },
+    "C2v": {
+      "order": 4,
+      "irreps": 4
+    },
+    "D4": {
+      "order": 8,
+      "irreps": 5
+    }
+  },
+  "topics": [
+    "weighted character orthogonality and tensor-product dimensions",
+    "D3 permutation representation",
+    "projector idempotency, orthogonality and completeness",
+    "SALC ranks and orthonormality",
+    "analytic ring spectra and electron conservation",
+    "naphthalene graph, spectra and total pi energy",
+    "symmetric eigenproblem residuals",
+    "two-level energies and mixing weights",
+    "field barycenters and spin occupations",
+    "microstate enumeration",
+    "mass-weighted vibrational eigenmodes and COM",
+    "FG symmetric equivalent",
+    "I/F/C extinctions over integer reflection grid",
+    "all standard screw orders and phase sums",
+    "Seitz composition"
+  ],
+  "limitations": [
+    "Tests validate the stated finite-dimensional teaching models, not full molecular ab initio calculations.",
+    "Original-page fidelity is separately checked by page inventory and visual inspection."
+  ],
+  "browser_review": {
+    "status": "PASS",
+    "defaultPanels": [
+      {
+        "chapter": "4",
+        "failed": [],
+        "overflow": false,
+        "panels": 5,
+        "scripts": [
+          "../共享资源/numerics.js?v=61a8a89a6386",
+          "../共享资源/course.js?v=78cfa6f373e2"
+        ]
+      },
+      {
+        "chapter": "5",
+        "failed": [],
+        "overflow": false,
+        "panels": 5,
+        "scripts": [
+          "../共享资源/numerics.js?v=61a8a89a6386",
+          "../共享资源/course.js?v=78cfa6f373e2"
+        ]
+      },
+      {
+        "chapter": "6",
+        "failed": [],
+        "overflow": false,
+        "panels": 5,
+        "scripts": [
+          "../共享资源/numerics.js?v=61a8a89a6386",
+          "../共享资源/course.js?v=78cfa6f373e2"
+        ]
+      },
+      {
+        "chapter": "7",
+        "failed": [],
+        "overflow": false,
+        "panels": 7,
+        "scripts": [
+          "../共享资源/numerics.js?v=61a8a89a6386",
+          "../共享资源/course.js?v=78cfa6f373e2"
+        ]
+      },
+      {
+        "chapter": "8",
+        "failed": [],
+        "overflow": false,
+        "panels": 7,
+        "scripts": [
+          "../共享资源/numerics.js?v=61a8a89a6386",
+          "../共享资源/course.js?v=78cfa6f373e2"
+        ]
+      },
+      {
+        "chapter": "9",
+        "failed": [],
+        "overflow": false,
+        "panels": 6,
+        "scripts": [
+          "../共享资源/numerics.js?v=61a8a89a6386",
+          "../共享资源/course.js?v=78cfa6f373e2"
+        ]
+      },
+      {
+        "chapter": "10",
+        "failed": [],
+        "overflow": false,
+        "panels": 6,
+        "scripts": [
+          "../共享资源/numerics.js?v=61a8a89a6386",
+          "../共享资源/course.js?v=78cfa6f373e2"
+        ]
+      },
+      {
+        "chapter": "11",
+        "failed": [],
+        "overflow": false,
+        "panels": 7,
+        "scripts": [
+          "../共享资源/numerics.js?v=61a8a89a6386",
+          "../共享资源/course.js?v=78cfa6f373e2"
+        ]
+      }
+    ],
+    "mobile": [
+      {
+        "chapter": "4",
+        "overflowElements": [],
+        "viewport": 390,
+        "width": 375
+      },
+      {
+        "chapter": "5",
+        "overflowElements": [],
+        "viewport": 390,
+        "width": 375
+      },
+      {
+        "chapter": "6",
+        "overflowElements": [],
+        "viewport": 390,
+        "width": 375
+      },
+      {
+        "chapter": "7",
+        "overflowElements": [],
+        "viewport": 390,
+        "width": 375
+      },
+      {
+        "chapter": "8",
+        "overflowElements": [],
+        "viewport": 390,
+        "width": 375
+      },
+      {
+        "chapter": "9",
+        "overflowElements": [],
+        "viewport": 390,
+        "width": 375
+      },
+      {
+        "chapter": "10",
+        "overflowElements": [],
+        "viewport": 390,
+        "width": 375
+      },
+      {
+        "chapter": "11",
+        "overflowElements": [],
+        "viewport": 390,
+        "width": 375
+      }
+    ],
+    "boundaryControlsTested": true,
+    "originalReader": {
+      "pairedPageLoad": true,
+      "nextPage": true,
+      "singleColumn": true,
+      "chineseSolutionsPage342": true
+    },
+    "foldedSource": true,
+    "seitzCellBoundaryDeduplication": "PASS after correction",
+    "consoleErrorsObserved": 0
+  },
+  "static_and_original_page_inventory": "PASS; see 页面与原文完整性报告.json",
+  "independent_numpy_reproduction": "PASS",
+  "new_chapter_count": 8,
+  "original_numbered_sections": 51,
+  "new_interactive_panels": 48,
+  "total_course_interactive_panels": 84,
+  "original_images": {
+    "中文": 342,
+    "英文": 405
+  }
+}

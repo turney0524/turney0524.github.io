@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "checks": 892,
+  "notes": [
+    "Analytic spectra and eigenvector residuals",
+    "Parity quadrature vs analytic integrals",
+    "Water rigid zero modes, normalization and symmetry",
+    "Frequency scaling with force constants",
+    "Finite lattice interference maxima and roots"
+  ],
+  "browser_checks": {
+    "desktop": "PASS",
+    "mobile_390px_no_page_overflow": "PASS",
+    "symmetry_operation_endpoint": "PASS",
+    "selection_rule_nonzero_and_zero_examples": "PASS",
+    "ring_symmetry_breaking": "PASS",
+    "water_isotope_change_and_mode_selection": "PASS",
+    "source_disclosure": "PASS",
+    "console_errors": 0
+  },
+  "offline_note": "HTML内置全部运行资源，无CDN；内嵌浏览器禁止file协议，离线文件未在该浏览器中直接运行，HTTP预览已通过。"
+}

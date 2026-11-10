@@ -1,0 +1,1035 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>第二章 · 群论的定义和定理｜Cotton动态课本</title><meta name="description" content="Cotton第三版第二章详细伴读：四条公理、完整低阶群表、逆元与重排定理、子群与拉格朗日证明、共轭类及全部习题。12组互动与可运行代码。"><meta name="theme-color" content="#071b49"><style>:root{--paper:#fffcf1;--card:#fffef8;--ink:#071b49;--text:#33455e;--gold:#b28b43;--line:#ddd4bc;--soft:#f4edda;--blue:#43789a;--red:#a46061;--serif:Georgia,'Songti SC','Noto Serif CJK SC',serif;--sans:system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--text);font:16px/1.95 var(--sans)}a{color:#174172;text-underline-offset:4px}button,select,input{font:inherit}button{cursor:pointer}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:3px}button{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:7px 14px;border-radius:4px;font-size:12px;transition:background .2s}button:hover,button[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}.topbar{height:70px;position:sticky;top:0;z-index:20;background:#fffcf1f5;backdrop-filter:blur(12px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 4%;gap:20px}.brand{font:600 18px var(--serif);text-decoration:none;color:var(--ink)}.brand i{font:italic 30px Georgia;margin-right:10px}.topbar nav{display:flex;gap:22px;font-size:11px;align-items:center}.status{font-size:10px;letter-spacing:1px;border:1px solid #d6bc82;color:#806329;border-radius:30px;padding:4px 11px}#reading-progress{position:absolute;bottom:-1px;left:0;height:2px;background:var(--gold);width:0}.wrap{max-width:1390px;margin:auto;padding:0 4%}.hero{display:grid;grid-template-columns:1.25fr .85fr;gap:50px;padding:66px 0 52px;border-bottom:1px solid var(--line);align-items:center}.eyebrow,.kicker{color:#96743c;font:10px/1.7 var(--sans);letter-spacing:2.5px;text-transform:uppercase}.hero h1{font:600 clamp(35px,4vw,57px)/1.32 var(--serif);letter-spacing:-1px;color:var(--ink);margin:18px 0 24px}.hero h1 em{font-style:normal;color:#9d7734}.hero .deck{font-size:16px;line-height:2.1;max-width:600px}.hero .actions{display:flex;gap:24px;align-items:center;flex-wrap:wrap;margin-top:26px;font-size:12px}.primary{display:inline-block;background:var(--ink);color:var(--paper);text-decoration:none;padding:12px 24px}.hero-art{border:1px solid var(--ink);position:relative;padding:26px;background:radial-gradient(ellipse at center,#f4ebd4,transparent 70%)}.hero-art svg{width:100%;height:auto;display:block}.hero-art .caption{font-size:11px;text-align:center;letter-spacing:1px}.hero-art .orb{transform-origin:170px 130px;animation:orbit 28s linear infinite}@keyframes orbit{to{transform:rotate(360deg)}}.meta-strip{display:flex;gap:24px;flex-wrap:wrap;font-size:11px;margin:22px 0 28px;color:#7c817e}.meta-strip b{font-weight:500;color:var(--ink)}.scope{border-left:3px solid var(--gold);padding:16px 22px;background:var(--soft);font-size:13px;line-height:1.9;margin:28px 0 38px}.layout{display:grid;grid-template-columns:185px minmax(0,1fr);gap:50px;align-items:start}.toc{position:sticky;top:100px;padding-top:26px;font-size:11px}.toc a{display:block;text-decoration:none;color:#6c7786;border-left:1px solid var(--line);padding:7px 12px}.toc a.active{border-left:2px solid var(--ink);color:var(--ink);background:#f3eddc}.toc .toc-label{font-size:9px;letter-spacing:2px;color:#a4844e;margin:0 0 15px}.toc hr{border:0;border-top:1px solid var(--line);margin:24px 0}.toc button{width:100%;margin:5px 0}.prose{min-width:0;max-width:1000px}.prose>h1,.prose>blockquote:first-of-type{display:none}.prose h2{font:600 clamp(25px,2.6vw,33px)/1.5 var(--serif);color:var(--ink);margin:64px 0 26px;padding-top:24px;border-top:1px solid var(--line)}.prose h2:first-of-type{margin-top:0}.prose h3{font:600 21px/1.6 var(--serif);color:var(--ink);margin:32px 0 18px}.prose p{margin:20px 0;line-height:2.1;font-size:15px}.prose strong{color:var(--ink)}.prose li{font-size:14px;margin:10px 0}.prose math{color:var(--ink);font-size:1.08em}.prose math[display=inline]{overflow:visible;font-size:1.02em}.math-block{padding:25px 18px;background:#f5eedc;border:1px solid #ded1ad;margin:25px 0;overflow-x:auto;overflow-y:hidden;border-radius:3px}.math-block:focus-visible{outline:2px solid var(--gold)}.prose blockquote{font-size:13px;border-left:3px solid var(--gold);margin:20px 0;padding:6px 20px;background:var(--soft)}.table-scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:12px}th,td{text-align:left;border-bottom:1px solid var(--line);padding:12px 15px}th{background:var(--soft);color:var(--ink)}details{border:1px solid var(--line);margin:20px 0;background:var(--card);padding:12px 18px;border-radius:4px}summary{cursor:pointer;color:var(--ink);font-size:13px}pre{background:#101f36;color:#e9e8de;padding:20px;font:11px/1.7 ui-monospace,SFMono-Regular,Consolas,monospace;overflow:auto;max-height:430px;tab-size:2;border-radius:3px}code{font:12px ui-monospace,monospace}.demo{margin:32px 0 46px;border:1px solid #d3c4a1;background:var(--card);border-radius:5px;overflow:hidden;box-shadow:0 7px 22px #14284904}.demo-head{border-bottom:1px solid var(--line);padding:18px 22px;display:flex;justify-content:space-between;gap:18px;align-items:center;background:#f7f1e2}.demo-head h4{font:600 19px/1.5 var(--serif);margin:0;color:var(--ink)}.demo-no{color:#af8b4c;font:10px var(--sans);letter-spacing:1px;margin-bottom:5px}.demo .prompt{padding:16px 22px 0;font-size:12px;color:#7b693d}.demo-body{padding:10px 22px 20px}.demo canvas{display:block;width:100%;height:310px;touch-action:pan-y}.demo.wide-canvas canvas{height:350px}.controls{display:flex;gap:15px 20px;align-items:end;flex-wrap:wrap;padding:16px 0;border-top:1px solid var(--line)}.controls label{display:flex;flex-direction:column;gap:5px;font-size:11px;min-width:125px;flex:1;color:#5c6878}.controls output{color:var(--ink);font-variant-numeric:tabular-nums}.controls input[type=range]{width:100%;accent-color:var(--gold);height:18px}.controls select{padding:6px 10px;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:3px;font-size:12px;max-width:100%}.button-row{display:flex;gap:8px;flex-wrap:wrap}.result{background:#f2efdf;padding:14px 18px;font-size:12px;line-height:1.9;color:var(--ink);min-height:53px;border-left:2px solid var(--gold)}.note{font-size:11px!important;color:#74808e;line-height:1.8!important;margin:12px 0!important}.demo details{margin:14px 0 0;padding:10px 14px;background:transparent}.source-links{display:flex;gap:15px;font-size:11px;margin:12px 0}.matrix{display:inline-grid;gap:1px;margin:10px 12px 10px 0;border-left:1px solid var(--ink);border-right:1px solid var(--ink);padding:5px 10px;vertical-align:middle}.matrix span{text-align:center;min-width:40px;font:12px/1.9 ui-monospace,monospace}.matrix .nonzero{background:#ece2c7;color:#071b49}.matrix-layout{display:flex;gap:15px;align-items:center;flex-wrap:wrap}.matrix-label{font-size:11px}.mode-choices{display:flex;gap:8px;margin:10px 0 20px;flex-wrap:wrap}.mode-choices button{flex:1;min-width:100px}.stat-line{display:flex;gap:15px;justify-content:space-between;flex-wrap:wrap;font-size:11px;color:#687688;margin:10px 0}.route{padding:24px;background:var(--ink);color:#eceadf;margin:42px 0}.route h3{color:#fff9e6;margin-top:0}.route p{color:#e2e0d6;font-size:13px}.route a{color:#e5c27d}.end{padding:40px 0 60px;border-top:1px solid var(--line);margin-top:50px;display:flex;justify-content:space-between;gap:20px;font-size:11px}.mini-equation{font:italic 15px Georgia;color:var(--ink)}@media(max-width:1050px){.layout{grid-template-columns:145px minmax(0,1fr);gap:25px}.hero{gap:26px}.topbar nav{gap:12px}.hero-art{padding:15px}}@media(max-width:760px){body{font-size:14px}.wrap{padding:0 5%}.hero{grid-template-columns:1fr;padding:35px 0 28px;gap:24px}.hero h1{font-size:36px}.hero-art{max-width:380px;width:100%;justify-self:center}.hero-art svg{max-height:220px}.layout{display:block}.toc{position:static;display:flex;flex-wrap:wrap;gap:5px;padding:5px 0 24px}.toc a{padding:4px 9px;border:1px solid var(--line)}.toc .toc-label,.toc hr,.toc button,.toc .aside-note{display:none}.topbar{padding:0 5%;height:62px;gap:10px}.brand{font-size:14px}.brand i{font-size:25px}.topbar nav{gap:10px;font-size:10px}.topbar .status,.topbar .wide-link{display:none}.prose h2{margin-top:45px;font-size:26px}.prose p{font-size:14px}.prose h3{font-size:20px}.demo-head{padding:15px}.demo-head h4{font-size:17px}.demo-body{padding:10px 12px 16px}.demo .prompt{padding:14px 14px 0}.demo canvas{height:280px}.demo.wide-canvas canvas{height:330px}.controls{gap:10px 16px}.controls label{min-width:115px}.hero .deck{font-size:14px}.math-block{padding:22px 12px}.scope{font-size:12px;padding:14px 16px}.meta-strip{gap:10px 18px}.end{flex-direction:column}.matrix span{min-width:28px;font-size:10px}.matrix{padding:4px 6px}.mode-choices button{padding:7px 6px;font-size:10px;min-width:70px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero-art .orb{animation:none}*{transition:none!important}}@media print{.topbar,.toc,.controls,.demo-head button,.source-links,.hero-art{display:none}.layout,.hero{display:block}.prose{max-width:none}.demo{break-inside:avoid;box-shadow:none}.demo canvas{height:240px}.prose h2{break-after:avoid}body{background:white;color:black}.math-block{background:#fafafa}.wrap{padding:0}details pre{max-height:none}.hero{padding:20px 0}.scope{background:none}}
+
+.demo-head button{flex-shrink:0;white-space:nowrap}
+.cayley{font-size:11px;white-space:nowrap;width:auto;min-width:100%}.cayley td,.cayley th{padding:3px;text-align:center;border:1px solid var(--line)}.cayley button{min-width:34px;width:100%;border:0;border-radius:2px;padding:7px 4px;font:11px/1.3 ui-monospace,monospace;background:transparent}.cayley .on-row,.cayley .on-col{background:#e9e4d1}.cayley .on-cell{background:var(--ink)}.cayley .on-cell button{color:var(--paper)}.cayley th{font-weight:500;background:#f4ecd4}.table-scroll{max-width:100%;border-radius:3px;margin:16px 0;overscroll-behavior-x:contain}.cayley caption{text-align:left;color:#7b6944;padding:8px 0;font-size:10px}.group-chips{display:flex;gap:7px;flex-wrap:wrap;margin:16px 0}.group-chips button{font:12px ui-monospace,monospace;min-width:35px}.group-chips button.selected{background:var(--ink);color:var(--paper)}.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:10px;margin:16px 0}.tile{padding:16px 13px;border:1px solid var(--line);background:#f8f4e7;font-size:12px;line-height:1.8;border-top:3px solid var(--gold)}.tile b{display:block;color:var(--ink);font-size:11px;margin-bottom:7px}.audit-flags{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0}.audit-flags span{border:1px solid var(--line);border-radius:20px;padding:3px 10px;font-size:10px}.audit-flags .pass{background:#e7ede1;color:#365148}.audit-flags .fail{background:#f2dddd;color:#8b4141}.step-list{font-size:12px;line-height:2.1;padding:12px 15px;background:#f4efdf;margin:12px 0;min-height:50px}.step-list .current{color:#99722f;font-weight:600}.facts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;font-size:11px;margin:18px 0}.facts-grid>div{border:1px solid var(--line);padding:12px;color:#77818c}.facts-grid strong{font:600 22px Georgia;color:var(--ink);display:block}.subset-list{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0}.subset-list button{font-size:10px;padding:5px 10px}.demo .group-explain{font-size:12px;color:#647285;line-height:1.9}.static-group table{min-width:0}.static-group .table-scroll{overflow:auto}.static-group summary{font-family:var(--serif);font-size:17px}.color-key{display:flex;gap:10px;flex-wrap:wrap;font-size:11px}.color-key span{border:1px solid var(--line);padding:5px 10px}.hero .deck{max-width:650px}.proof-note{font-size:12px;border-left:2px solid var(--blue);padding:10px 15px;background:#edf0eb}.mode-summary{font-size:11px;color:#7d8790}.demo-head button{flex-shrink:0;white-space:nowrap}.controls>button{align-self:flex-end}.source-box pre{font-size:11px}.demo .table-scroll{margin:15px 0}.hero-art .symmetry-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;font:14px Georgia;color:var(--ink);text-align:center}.hero-art .symmetry-cards span{border:1px solid var(--line);padding:10px}.jump-menu{display:flex;gap:12px;flex-wrap:wrap;margin:15px 0 30px;font-size:11px}.controls label.check-label{display:block;min-width:0;flex:none}.chapter-nav{display:flex;justify-content:space-between;flex-wrap:wrap;gap:15px;font-size:12px;margin:30px 0}.prose blockquote>p{font-size:12px}.demo canvas.short{height:200px}@media(max-width:760px){.facts-grid{grid-template-columns:repeat(3,1fr);gap:5px}.facts-grid>div{font-size:9px;padding:8px}.facts-grid strong{font-size:18px}.cayley button{min-width:32px}.tiles{grid-template-columns:repeat(2,1fr)}.tile{font-size:11px;padding:12px 10px}.table-scroll{max-width:100%}.controls label{min-width:105px}.hero .deck{font-size:14px}.demo canvas.short{height:200px}.mode-summary{font-size:10px}}
+</style></head><body><header class="topbar"><a class="brand" href="../index.html"><i>ψ</i>计算凝聚态物理</a><nav><a href="../第一章/index.html">上一章</a><a href="../index.html">全书目录</a><a href="../第三章/index.html">下一章</a><span class="status">详细伴读 / CHAPTER 02</span></nav><div id="reading-progress"></div></header><main class="wrap"><section class="hero"><div><p class="eyebrow">COTTON / GROUP THEORY / DEFINITIONS AND THEOREMS</p><h1>第二章<br><em>群论的定义和定理</em></h1><p class="deck">从“几个动作”走到“完整的群”。<br>把每一步相乘、撤销、分组与换位，<br>都变成能看见、能验证的推理。</p><div class="actions"><a class="primary" href="#section-1">按教材顺序阅读　↓</a><a href="#triangle-demo">先动手操作 ↗</a><a href="第二章_群论的定义和定理.md">Markdown 全文 ↗</a></div></div><div class="hero-art"><svg viewBox="0 0 340 260" aria-label="带编号三角形与群运算" role="img"><g fill="none" stroke="#ded4ba"><circle cx="170" cy="130" r="96"/><path d="M170 22V238M43 130H297"/></g><path d="M170 46L253 190H87Z" fill="#efe6cf" stroke="#071b49" stroke-width="2"/><g fill="#071b49"><circle cx="170" cy="46" r="15"/><circle cx="253" cy="190" r="15"/><circle cx="87" cy="190" r="15"/></g><g fill="#fffcf1" font-family="Georgia" font-size="15" text-anchor="middle"><text x="170" y="51">1</text><text x="253" y="195">2</text><text x="87" y="195">3</text></g><g fill="#ad8542" font-size="20" font-family="Georgia" text-anchor="middle"><text x="170" y="143">X⁻¹AX</text><text x="170" y="247">6 = 1 + 3 + 2</text></g><path d="M220 53Q283 83 278 144" fill="none" stroke="#ad8542" stroke-width="2"/><path d="M271 136L278 146L284 136" fill="none" stroke="#ad8542" stroke-width="2"/></svg><p class="caption">同一个图形，顺序不同，结果就可能不同。</p></div></section><div class="meta-strip"><span><b>完整主线</b> 2.1–2.4 + 十道习题</span><span><b>12组</b> 交互实验</span><span><b>15种</b> 有限群完整数据</span><span><b>建议分3次</b> 阅读与操作</span></div><div class="scope"><strong>详细版：定义不跳过，证明不只报结论。</strong> 对照中译本p.5–12、英文本p.6–16，逐项覆盖本章内容，补齐书中省略的证明并增加简单例子。全页乘法表沿用教材的 <strong>列X × 行Y = XY</strong>，操作顺序为先Y后X。章末保留全部题号并讨论扫描本可疑表述。动画、几何实现、补充定理与代码均由本教程独立编写。</div><div class="layout"><aside class="toc"><p class="toc-label">READ / PREDICT / VERIFY</p><a data-section href="#section-1">2.1 群的定义：先规定“怎样组合”</a><a data-section href="#section-2">2.2 群的例子：从整数走到六阶非交换群</a><a data-section href="#section-3">2.3 子群：在大群里找一套独立运作的规则</a><a data-section href="#section-4">2.4 共轭类：换个位置看，同一类动作怎样互相变换</a><a data-section href="#section-5">2.5 十道习题：逐题推理、核对前提</a><a data-section href="#section-6">2.6 查漏表、勘误提示与学习检查</a><a href="#reference">完整群表与子群清单</a><hr><button id="pause-all">暂停全部动画</button><p class="aside-note" style="font-size:10px;color:#7a8391">建议先读定义与整数，再研究三角形，最后做子群与类的计数。</p><a href="examples.py" download>下载纯 Python 算例 ↓</a></aside><article class="prose"><h1>第二章 · 群论的定义和定理</h1>
+
+<blockquote>
+  <p>Cotton 第三版中英文教材的详细伴读。对应中文版书页5–12（PDF第20–27页）、英文版书页6–16（PDF第15–25页）。沿原章2.1–2.4完整展开定义、例子、定理和论证，补齐原书略写的证明；章末十道习题逐题讨论。所有图形与代码由本教程重建，生活例子、可视化和额外结论标为“补充”。这是可与原书对读的独立讲解，不是逐句翻译。</p>
+</blockquote>
+
+<h2 id="section-1">2.1 群的定义：先规定“怎样组合”</h2>
+
+<h3>2.1.1 一个集合还不够，必须再给一种运算</h3>
+
+<p>“群”不是“很多东西聚在一起”的简称。同一批元素，换一种组合规则，可能构成群，也可能不构成群。因此完整对象应写作 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo stretchy="false">&#x00028;</mo><mi>G</mi><mo>&#x0002C;</mo><mo>&#x02218;</mo><mo stretchy="false">&#x00029;</mo></mrow></math>：G是非空集合，∘是规定好的二元运算。书中习惯把 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>A</mi><mo>&#x02218;</mo><mi>B</mi></mrow></math> 简写成 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>A</mi><mi>B</mi></mrow></math>，把组合称为“乘法”。它未必是普通数的相乘，也可以是相加、置换复合、矩阵相乘或连续施加几何操作。</p>
+
+<p>例如整数集合配上加法是群，配上通常乘法则不是群：整数2的乘法逆元1/2不在整数集合中，0甚至没有乘法逆元。同样，非零实数在乘法下构成群，但若把0也放进来，逆元条件立即失败。判断时必须同时说清“元素是什么”与“运算是什么”。</p>
+
+<p>本书关心的几何例子是作用在分子与晶体上的对称操作，但四条定义并不要求元素一定是几何变换。先学抽象规则，后面就能认出外观很不相同的系统其实具有相同的群结构。</p>
+
+<h3>2.1.2 四条公理，逐条理解</h3>
+
+<p><strong>一、封闭性。</strong> 对任意 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>A</mi><mo>&#x0002C;</mo><mi>B</mi><mo>&#x02208;</mo><mi>G</mi></mrow></math>，乘积 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>A</mi><mi>B</mi></mrow></math> 必须仍属于G。平方 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>A</mi><mn>2</mn></msup></mrow></math> 只是取B=A的特殊情况，并不是第五条条件。直观地说，合法动作连续做两次，结果必须仍能在合法动作清单中找到。</p>
+
+<p><strong>二、恒等元。</strong> 群中有一个元素E，使每个 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>A</mi><mo>&#x02208;</mo><mi>G</mi></mrow></math> 满足</p>
+
+<div class="math-block" tabindex="0" aria-label="公式，可横向滚动"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>E</mi><mi>A</mi><mo>&#x0003D;</mo><mi>A</mi><mi>E</mi><mo>&#x0003D;</mo><mi>A</mi><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>恒等元在加法例子中是0，在非零实数乘法中是1，在几何操作中是“不改变物体的操作”。别把“0”和“1”写进定义本身：它们只是不同运算中的具体实现。</p>
+
+<p><strong>三、结合律。</strong> 对任意三个元素，必须有</p>
+
+<div class="math-block" tabindex="0" aria-label="公式，可横向滚动"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mo stretchy="false">&#x00028;</mo><mi>A</mi><mi>B</mi><mo stretchy="false">&#x00029;</mo><mi>C</mi><mo>&#x0003D;</mo><mi>A</mi><mo stretchy="false">&#x00028;</mo><mi>B</mi><mi>C</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>改变的是“先算哪个相邻的小括号”，元素的先后顺序没有改变。例如((AB)C)D与A(B(CD))都对应同一个有序串ABCD。结合律允许省略括号，却不允许把ABCD改成ACBD。</p>
+
+<p><strong>四、逆元。</strong> 对每个A，都存在群内元素 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>A</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup></mrow></math>，使</p>
+
+<div class="math-block" tabindex="0" aria-label="公式，可横向滚动"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>A</mi><msup><mi>A</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo>&#x0003D;</mo><msup><mi>A</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mi>A</mi><mo>&#x0003D;</mo><mi>E</mi><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>逆元是“撤销A”的动作。加法中的n对应−n，乘法中的非零数a对应1/a，旋转θ对应旋转−θ。对称镜像做两遍恢复原状，因此它是自身的逆元；这与“所有元素都必须有一个不同于自己的逆元”完全不同。恒等元的逆元仍是E。</p>
+
+<h3>2.1.3 结合律不是交换律</h3>
+
+<p>交换律要求 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>A</mi><mi>B</mi><mo>&#x0003D;</mo><mi>B</mi><mi>A</mi></mrow></math>。满足交换律的群称为阿贝尔群；不满足则是非阿贝尔群。交换律不是群公理。</p>
+
+<p><strong>简单例子〔补充〕：</strong> 给桌面上的一本书先向右平移，再绕固定原点转90°，与先转90°再向右平移，最后位置通常不同。这个例子用的是平面刚体运动群，不是本章三角形点群；它只帮助区分“动作都合法”与“动作可交换”。</p>
+
+<p>用函数复合的约定，<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>A</mi><mi>B</mi></mrow></math> 表示先B后A。<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>A</mi><mo stretchy="false">&#x00028;</mo><mi>B</mi><mi>C</mi><mo stretchy="false">&#x00029;</mo></mrow></math> 是先把B、C合成，再做A；<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo stretchy="false">&#x00028;</mo><mi>A</mi><mi>B</mi><mo stretchy="false">&#x00029;</mo><mi>C</mi></mrow></math> 是先做C，再做已经合成的AB。二者都按C、B、A的次序作用，所以结合律成立。下面的三角形演示会用编号顶点追踪它们。</p>
+
+<p>本页所有有限群表严格沿用教材的<strong>列元素×行元素</strong>约定：行Y、列X的格子填 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>X</mi><mi>Y</mi></mrow></math>，也就是先行Y，再列X。很多现代讲义恰好采用相反的表格方向，因此不能不看说明就照抄表格。这里运算表达式始终不变，改变的只是“把左因子放在行还是列”。</p>
+
+<h3>2.1.4 左乘、右乘与消去律</h3>
+
+<p>在AB中，可以说B被A左乘；在BA中，则是B被A右乘。非交换时，这个区别必须保留。在方程两侧消去元素，也要选择正确的一边：</p>
+
+<div class="math-block" tabindex="0" aria-label="公式，可横向滚动"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>A</mi><mi>B</mi><mo>&#x0003D;</mo><mi>A</mi><mi>C</mi><mtext>&#x000A0;</mtext><mi>&#x027F9;</mi><mtext>&#x000A0;</mtext><msup><mi>A</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo stretchy="false">&#x00028;</mo><mi>A</mi><mi>B</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msup><mi>A</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo stretchy="false">&#x00028;</mo><mi>A</mi><mi>C</mi><mo stretchy="false">&#x00029;</mo><mtext>&#x000A0;</mtext><mi>&#x027F9;</mi><mtext>&#x000A0;</mtext><mo stretchy="false">&#x00028;</mo><msup><mi>A</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mi>A</mi><mo stretchy="false">&#x00029;</mo><mi>B</mi><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><msup><mi>A</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mi>A</mi><mo stretchy="false">&#x00029;</mo><mi>C</mi><mtext>&#x000A0;</mtext><mi>&#x027F9;</mi><mtext>&#x000A0;</mtext><mi>B</mi><mo>&#x0003D;</mo><mi>C</mi><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>同理，由BA=CA，要在右侧乘 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>A</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup></mrow></math>，得到B=C。整个过程只用逆元、结合律和恒等元，不用交换律。</p>
+
+<p><strong>补充：恒等元与逆元为什么是唯一的？</strong> 若E、F都满足恒等条件，则EF既等于F，也等于E，所以E=F。若B、C都是A的双侧逆元，则</p>
+
+<div class="math-block" tabindex="0" aria-label="公式，可横向滚动"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>B</mi><mo>&#x0003D;</mo><mi>B</mi><mi>E</mi><mo>&#x0003D;</mo><mi>B</mi><mo stretchy="false">&#x00028;</mo><mi>A</mi><mi>C</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mi>B</mi><mi>A</mi><mo stretchy="false">&#x00029;</mo><mi>C</mi><mo>&#x0003D;</mo><mi>E</mi><mi>C</mi><mo>&#x0003D;</mo><mi>C</mi><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>这也让记号 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>A</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup></mrow></math> 真正有唯一含义。由同样思路，<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo stretchy="false">&#x00028;</mo><msup><mi>A</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><msup><mo stretchy="false">&#x00029;</mo><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo>&#x0003D;</mo><mi>A</mi></mrow></math>。</p>
+
+<h3>2.1.5 乘积的逆元：为什么必须倒着撤销</h3>
+
+<p>原章的第一个定理是</p>
+
+<div class="math-block" tabindex="0" aria-label="公式，可横向滚动"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mo stretchy="false">&#x00028;</mo><mi>A</mi><mi>B</mi><mi>C</mi><mo>&#x022EF;</mo><mi>X</mi><mi>Y</mi><msup><mo stretchy="false">&#x00029;</mo><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo>&#x0003D;</mo><msup><mi>Y</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><msup><mi>X</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo>&#x022EF;</mo><msup><mi>C</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><msup><mi>B</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><msup><mi>A</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>先看两个元素。候选逆元是 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>B</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><msup><mi>A</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup></mrow></math>。检查右乘：</p>
+
+<div class="math-block" tabindex="0" aria-label="公式，可横向滚动"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mo stretchy="false">&#x00028;</mo><mi>A</mi><mi>B</mi><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x00028;</mo><msup><mi>B</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><msup><mi>A</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mi>A</mi><mo stretchy="false">&#x00028;</mo><mi>B</mi><msup><mi>B</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo stretchy="false">&#x00029;</mo><msup><mi>A</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo>&#x0003D;</mo><mi>A</mi><mi>E</mi><msup><mi>A</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo>&#x0003D;</mo><mi>E</mi><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>还要检查左乘：</p>
+
+<div class="math-block" tabindex="0" aria-label="公式，可横向滚动"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mo stretchy="false">&#x00028;</mo><msup><mi>B</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><msup><mi>A</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x00028;</mo><mi>A</mi><mi>B</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msup><mi>B</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo stretchy="false">&#x00028;</mo><msup><mi>A</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mi>A</mi><mo stretchy="false">&#x00029;</mo><mi>B</mi><mo>&#x0003D;</mo><msup><mi>B</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mi>E</mi><mi>B</mi><mo>&#x0003D;</mo><mi>E</mi><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>因此候选确实是逆元。三项时同样从相邻的一对开始消去：</p>
+
+<div class="math-block" tabindex="0" aria-label="公式，可横向滚动"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mo stretchy="false">&#x00028;</mo><mi>A</mi><mi>B</mi><mi>C</mi><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x00028;</mo><msup><mi>C</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><msup><mi>B</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><msup><mi>A</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mi>A</mi><mi>B</mi><mo stretchy="false">&#x00028;</mo><mi>C</mi><msup><mi>C</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo stretchy="false">&#x00029;</mo><msup><mi>B</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><msup><mi>A</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo>&#x0003D;</mo><mi>A</mi><mo stretchy="false">&#x00028;</mo><mi>B</mi><msup><mi>B</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo stretchy="false">&#x00029;</mo><msup><mi>A</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo>&#x0003D;</mo><mi>E</mi><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>另一方面 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>C</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><msup><mi>B</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><msup><mi>A</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo stretchy="false">&#x00028;</mo><mi>A</mi><mi>B</mi><mi>C</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mi>E</mi></mrow></math>。对更长乘积，重复同样的相邻消去即可。注意整个过程中从来没有把不相邻元素越过别的元素挪到一起。</p>
+
+<p><strong>生活例子〔补充〕：</strong> 先穿袜子，再穿鞋；撤销时先脱鞋，再脱袜子。动作序列的逆序与式子的右到左作用约定要配套读：若先C、后B、再A，总操作是ABC；撤销顺序为先 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>A</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup></mrow></math>、后 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>B</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup></mrow></math>、再 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>C</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup></mrow></math>，写成总操作就是 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>C</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><msup><mi>B</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><msup><mi>A</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup></mrow></math>。</p>
+
+<p>在阿贝尔群中，倒序后的逆元可以交换，所以常常看不出顺序的重要；非阿贝尔群能把这个问题暴露出来。下面演示同时给出正确撤销与“只取逆、不倒序”的结果；某些特例两者恰巧相同，不代表后者成为一般公式。</p>
+
+<section id="inverse-demo" class="demo" aria-labelledby="inverse-title"><header class="demo-head"><div><div class="demo-no">LAB 01 / 先预测 · 再操作 · 看证明</div><h4 id="inverse-title">做完三步后，怎样真正撤销？</h4></div><button data-play aria-pressed="true">暂停动画</button></header><div class="prompt">乘积 ABC 表示先C，再B，再A；选正确或错误的撤销方式比较。</div><div class="demo-body"><canvas role="img" aria-label="做完三步后，怎样真正撤销？；通过下方控件操作"></canvas><div class="controls"><label for="inv-a">左端因子 · 最后作用<select id="inv-a"><option value="0">E</option><option value="1">A=s</option><option value="2">B=rs</option><option value="3">C=r²s</option><option value="4">D=r</option><option value="5">F=r²</option></select></label><label for="inv-b">中间因子<select id="inv-b"><option value="0">E</option><option value="1">A=s</option><option value="2">B=rs</option><option value="3">C=r²s</option><option value="4">D=r</option><option value="5">F=r²</option></select></label><label for="inv-c">右端因子 · 最先作用<select id="inv-c"><option value="0">E</option><option value="1">A=s</option><option value="2">B=rs</option><option value="3">C=r²s</option><option value="4">D=r</option><option value="5">F=r²</option></select></label><label for="inv-order">撤销规则<select id="inv-order"><option value="correct">逆序取逆 · 正确</option><option value="wrong">原顺序取逆 · 一般错误</option></select></label><button id="inverse-run">播放六步</button><button id="inverse-step">下一步</button><button id="inverse-reset">恢复初态</button></div><div class="step-list" id="inverse-steps"></div><div class="result" id="inverse-status" role="status" aria-live="off">载入模型后显示。</div><p class="note">三角形属于教材六阶群。顶点编号仅供追踪；反射中的压扁是示意插值，终点才是群操作。</p><details class="source-box"><summary>展开实际数值代码与实现说明</summary><pre><code data-source="inverse"></code></pre><div class="source-links"><a href="assets/groups.js" download>完整群运算 JS ↓</a><a href="examples.py" download>纯 Python 算例 ↓</a></div></details></div></section>
+
+<h2 id="section-2">2.2 群的例子：从整数走到六阶非交换群</h2>
+
+<h3>2.2.1 无限群：整数加法</h3>
+
+<p>原章说明，在进入第11章晶体学之前，主要关心分子点群。多数常见分子点群是有限群；理想线性分子对应的 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>C</mi><mrow><mo>&#x0221E;</mo><mi>v</mi></mrow></msub></mrow></math> 与 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>D</mi><mrow><mo>&#x0221E;</mo><mi>h</mi></mrow></msub></mrow></math> 包含任意角度的绕轴旋转，因而是无限群。具体几何含义到第三章再学，这里先用更简单的整数例子理解“元素可以无限多”。</p>
+
+<p>取 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>G</mi><mo>&#x0003D;</mo><mi mathvariant="double-struck">Z</mi></mrow></math>，运算为通常加法。两个整数之和还是整数，故封闭；0+n=n+0=n，故0为恒等元；整数加法满足结合律；每个n的逆元为−n。因此 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo stretchy="false">&#x00028;</mo><mi mathvariant="double-struck">Z</mi><mo>&#x0002C;</mo><mo>&#x0002B;</mo><mo stretchy="false">&#x00029;</mo></mrow></math> 是群，且因a+b=b+a而是阿贝尔群。</p>
+
+<p>整数群没有有限的“元素个数”。原章接着引入<strong>群的阶</strong>：有限群含有的元素数记为h或 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo stretchy="false">&#x0007C;</mo><mi>G</mi><mo stretchy="false">&#x0007C;</mo></mrow></math>。这里“阶”首先是群的大小，不是某个旋转角度，也不是矩阵维数。元素本身的阶是另一概念：满足 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>A</mi><mi>m</mi></msup><mo>&#x0003D;</mo><mi>E</mi></mrow></math> 的最小正整数m。整数加法中的非零n没有有限的元素阶，因为重复相加永远不会回到0。</p>
+
+<p><strong>为什么不能把数轴窗口当成有限群？</strong> 网页只显示−8到8，但这只是观察窗口。7+5=12仍然是整数，不能因为图上没有12就说整数加法不封闭。相反，若真的把集合改成 {−2,−1,0,1,2} 而保持通常加法，那么2+2=4离开集合，就确实不封闭。时钟上的“回卷”用的是模加法，那是另一个运算。</p>
+
+<section id="integer-demo" class="demo" aria-labelledby="integer-title"><header class="demo-head"><div><div class="demo-no">LAB 02 / 先预测 · 再操作 · 看证明</div><h4 id="integer-title">数轴会出界，整数群不会</h4></div><button data-play aria-pressed="true">暂停动画</button></header><div class="prompt">先选a、b，比较通常加法与把显示窗口误当作集合的区别。</div><div class="demo-body"><canvas role="img" aria-label="数轴会出界，整数群不会；通过下方控件操作"></canvas><div class="controls"><label for="int-a">起点 a <output id="int-a-out">3</output><input type="range" id="int-a" min="-7" max="7" step="1" value="3"></label><label for="int-b">加上的 b <output id="int-b-out">5</output><input type="range" id="int-b" min="-7" max="7" step="1" value="5"></label><button id="integer-run">播放相加</button><button id="integer-inverse">改成逆元 −a</button></div><div class="result" id="integer-status" role="status" aria-live="off">载入模型后显示。</div><p class="note">图只显示−8到8，超出时用边界箭头表示。观测窗口不是群元素集合；此处没有模运算。</p><details class="source-box"><summary>展开实际数值代码与实现说明</summary><pre><code data-source="integer"></code></pre><div class="source-links"><a href="assets/groups.js" download>完整群运算 JS ↓</a><a href="examples.py" download>纯 Python 算例 ↓</a></div></details></div></section>
+
+<h3>2.2.2 乘法表：h²个答案完整规定运算</h3>
+
+<p>列出有限群全部h个互不重复的元素，再列出每个有序乘积，共有 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>h</mi><mn>2</mn></msup></mrow></math> 项。该表称群乘法表或Cayley表。<strong>给定元素集合、并已确认公理后</strong>，乘法表完整规定这个群的运算。</p>
+
+<p>本章表格第一行和第一列都放恒等元。因为 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>X</mi><mi>E</mi><mo>&#x0003D;</mo><mi>E</mi><mi>X</mi><mo>&#x0003D;</mo><mi>X</mi></mrow></math>，这两边直接复制元素清单。读其余格子时，始终先看列X再看行Y，格子是XY。对非阿贝尔群，转置这张表就会把所有乘积的因子顺序反过来。</p>
+
+<h3>2.2.3 重排定理：为什么每行每列恰好各出现一次</h3>
+
+<p><strong>定理。</strong> 群乘法表的任意一行、任意一列，都是全部群元素的一次排列，不重不漏。</p>
+
+<p><strong>证明第一步：固定行Y。</strong> 该行各项是 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>A</mi><mn>1</mn></msub><mi>Y</mi><mo>&#x0002C;</mo><msub><mi>A</mi><mn>2</mn></msub><mi>Y</mi><mo>&#x0002C;</mo><mi>&#x02026;</mi><mo>&#x0002C;</mo><msub><mi>A</mi><mi>h</mi></msub><mi>Y</mi></mrow></math>。若其中两项相同，<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>A</mi><mi>i</mi></msub><mi>Y</mi><mo>&#x0003D;</mo><msub><mi>A</mi><mi>j</mi></msub><mi>Y</mi></mrow></math>，右乘 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>Y</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup></mrow></math> 后得到 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>A</mi><mi>i</mi></msub><mo>&#x0003D;</mo><msub><mi>A</mi><mi>j</mi></msub></mrow></math>。既然元素列表本来无重复，行中不可能重复。</p>
+
+<p><strong>第二步：不重为什么意味着不漏？</strong> 每项因封闭性都在G内；一行有h项，而G恰好只有h个元素。h项互异，只能把全部h个元素都用上。</p>
+
+<p><strong>第三步：固定列X。</strong> 这列是 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>X</mi><msub><mi>A</mi><mn>1</mn></msub><mo>&#x0002C;</mo><mi>&#x02026;</mi><mo>&#x0002C;</mo><mi>X</mi><msub><mi>A</mi><mi>h</mi></msub></mrow></math>。若 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>X</mi><msub><mi>A</mi><mi>i</mi></msub><mo>&#x0003D;</mo><mi>X</mi><msub><mi>A</mi><mi>j</mi></msub></mrow></math>，左乘 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>X</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup></mrow></math>，得到 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>A</mi><mi>i</mi></msub><mo>&#x0003D;</mo><msub><mi>A</mi><mi>j</mi></msub></mrow></math>，所以列中也不重不漏。</p>
+
+<p>原章进一步指出，不同的行不能完全相同，不同的列也不能完全相同。例如不同Y对应的行，在恒等列的条目就已经不同。你可以把“乘以某个固定群元素”理解成给元素重新排队，它不会把两个不同元素挤成一个。</p>
+
+<p><strong>重要补充：逆命题不成立。</strong> 每行每列各出现一次，只能说明表是Latin方阵；即使再放上恒等元，也仍须检查结合律。下面提供一个五元素的非结合例子：它有封闭性、恒等元、双侧逆元，且每行每列都无重复，却不是群。用公理检查器寻找具体的 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo stretchy="false">&#x00028;</mo><mi>A</mi><mi>B</mi><mo stretchy="false">&#x00029;</mo><mi>C</mi><mo>&#x02260;</mo><mi>A</mi><mo stretchy="false">&#x00028;</mo><mi>B</mi><mi>C</mi><mo stretchy="false">&#x00029;</mo></mrow></math>，比凭外观判断可靠。</p>
+
+<section id="axioms-demo" class="demo" aria-labelledby="axioms-title"><header class="demo-head"><div><div class="demo-no">LAB 03 / 先预测 · 再操作 · 看证明</div><h4 id="axioms-title">像群的表，不一定真是群</h4></div></header><div class="prompt">选择非结合例子，找出“每行每列不重复”仍不够的原因；也可点格子编辑。</div><div class="demo-body"><div class="controls"><label for="audit-preset">示例<select id="audit-preset"><option value="C3">三阶循环群 · 合格</option><option value="loop">五元素Latin方阵 · 非结合</option><option value="broken">故意改坏的三阶表</option></select></label><label for="audit-value">选中格子的值<select id="audit-value"><option value="0">E</option><option value="1">A</option><option value="2">B</option></select></label><button id="audit-change">修改本格</button><button id="audit-reset">恢复当前例子</button></div><div class="audit-flags" id="audit-flags"></div><div class="table-scroll" id="audit-table"></div><div class="result" id="axioms-status" role="status" aria-live="off">载入模型后显示。</div><p class="note">在表内点击的格子按“列X×行Y”编辑。检查器独立穷举所有有序三元组，并输出一个结合律失败的具体见证。</p><details class="source-box"><summary>展开实际数值代码与实现说明</summary><pre><code data-source="audit"></code></pre><div class="source-links"><a href="assets/groups.js" download>完整群运算 JS ↓</a><a href="examples.py" download>纯 Python 算例 ↓</a></div></details></div></section>
+
+<h3>2.2.4 一阶、二阶、三阶群：把空格一步步逼出来</h3>
+
+<p><strong>一阶。</strong> 唯一元素E必须满足EE=E，所以只有一种结构。</p>
+
+<p><strong>二阶。</strong> 设元素为E、A。恒等行列已经确定。AA不可能等于A，否则A所在行会有两个A，也可由 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>A</mi><mi>A</mi><mo>&#x0003D;</mo><mi>A</mi><mi>E</mi></mrow></math> 消去A得到A=E，矛盾。所以 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>A</mi><mn>2</mn></msup><mo>&#x0003D;</mo><mi>E</mi></mrow></math>。这就是 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>C</mi><mn>2</mn></msub></mrow></math>，同构于模2加法，或“翻一次改变状态、翻两次恢复”的开关。</p>
+
+<div class="table-scroll"><table>
+<thead>
+<tr>
+  <th>行Y／列X</th>
+  <th>E</th>
+  <th>A</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>E</td>
+  <td>E</td>
+  <td>A</td>
+</tr>
+<tr>
+  <td>A</td>
+  <td>A</td>
+  <td>E</td>
+</tr>
+</tbody>
+</table></div>
+
+<p><strong>三阶。</strong> 设元素为E、A、B。AA不可能等于A，所以只有E或B两个候选。若AA=E，则AB在A行不能再是A或E，只能是B；由AB=EB右消去B，得到A=E，矛盾。故AA=B。</p>
+
+<p>现在A行已用A、B，剩下AB只能为E。B行与B列同样要不重不漏，迫使BA=E、BB=A。完整表为：</p>
+
+<div class="table-scroll"><table>
+<thead>
+<tr>
+  <th>行Y／列X</th>
+  <th>E</th>
+  <th>A</th>
+  <th>B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>E</td>
+  <td>E</td>
+  <td>A</td>
+  <td>B</td>
+</tr>
+<tr>
+  <td>A</td>
+  <td>A</td>
+  <td>B</td>
+  <td>E</td>
+</tr>
+<tr>
+  <td>B</td>
+  <td>B</td>
+  <td>E</td>
+  <td>A</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>这时 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>B</mi><mo>&#x0003D;</mo><msup><mi>A</mi><mn>2</mn></msup></mrow></math>、<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>A</mi><mn>3</mn></msup><mo>&#x0003D;</mo><mi>E</mi></mrow></math>。所以整个群由A的幂产生。表格关于主对角线对称，说明这个群是阿贝尔群。</p>
+
+<section id="fill-demo" class="demo" aria-labelledby="fill-title"><header class="demo-head"><div><div class="demo-no">LAB 04 / 先预测 · 再操作 · 看证明</div><h4 id="fill-title">亲手填完三阶表，别跳过矛盾</h4></div></header><div class="prompt">先试 A²=E 看矛盾，再选 A²=B；其余格子用重排与消去规律补齐。</div><div class="demo-body"><div class="controls"><label for="fill-aa">先假设 A²<select id="fill-aa"><option value="unknown">尚未填写</option><option value="0">E · 错误分支</option><option value="2">B · 正确分支</option></select></label><button id="fill-next">推导下一格</button><button id="fill-reset">清空推导</button></div><div class="table-scroll" id="fill-table"></div><div class="step-list" id="fill-explanation"></div><div class="result" id="fill-status" role="status" aria-live="off">载入模型后显示。</div><p class="note">三个元素互不相同。这里展示的是逻辑推导过程；只有通过完整群公理检查的表才称为群。</p><details class="source-box"><summary>展开实际数值代码与实现说明</summary><pre><code data-source="fill"></code></pre><div class="source-links"><a href="assets/groups.js" download>完整群运算 JS ↓</a><a href="examples.py" download>纯 Python 算例 ↓</a></div></details></div></section>
+
+<h3>2.2.5 循环群：一个元素就能走遍整个群</h3>
+
+<p>若存在元素r，使每个群元素都能写成r的整数次幂，则G是循环群，记 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>G</mi><mo>&#x0003D;</mo><mi>&#x027E8;</mi><mi>r</mi><mi>&#x027E9;</mi></mrow></math>。有限h阶循环群可写作</p>
+
+<div class="math-block" tabindex="0" aria-label="公式，可横向滚动"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>G</mi><mo>&#x0003D;</mo><mo stretchy="false">&#x0007B;</mo><mi>E</mi><mo>&#x0002C;</mo><mi>r</mi><mo>&#x0002C;</mo><msup><mi>r</mi><mn>2</mn></msup><mo>&#x0002C;</mo><mi>&#x02026;</mi><mo>&#x0002C;</mo><msup><mi>r</mi><mrow><mi>h</mi><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo stretchy="false">&#x0007D;</mo><mo>&#x0002C;</mo><mspace width="2em" /><msup><mi>r</mi><mi>h</mi></msup><mo>&#x0003D;</mo><mi>E</mi><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>相乘时指数相加，再对h取模：<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>r</mi><mi>a</mi></msup><msup><mi>r</mi><mi>b</mi></msup><mo>&#x0003D;</mo><msup><mi>r</mi><mrow><mo stretchy="false">&#x00028;</mo><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi><mo stretchy="false">&#x00029;</mo><mo>mod</mo><mi>h</mi></mrow></msup></mrow></math>。因此</p>
+
+<div class="math-block" tabindex="0" aria-label="公式，可横向滚动"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><msup><mi>r</mi><mi>a</mi></msup><msup><mi>r</mi><mi>b</mi></msup><mo>&#x0003D;</mo><msup><mi>r</mi><mrow><mi>a</mi><mo>&#x0002B;</mo><mi>b</mi></mrow></msup><mo>&#x0003D;</mo><msup><mi>r</mi><mrow><mi>b</mi><mo>&#x0002B;</mo><mi>a</mi></mrow></msup><mo>&#x0003D;</mo><msup><mi>r</mi><mi>b</mi></msup><msup><mi>r</mi><mi>a</mi></msup><mo>&#x0002C;</mo></mrow></math></div>
+
+<p>所以循环群必是阿贝尔群。反过来不成立：稍后四阶的 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>C</mi><mn>2</mn></msub><mo>&#x000D7;</mo><msub><mi>C</mi><mn>2</mn></msub></mrow></math> 就是阿贝尔但非循环的例子。</p>
+
+<p><strong>简单例子〔补充〕：</strong> 用一枚带标记的转盘，每次转 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>360</mn><mi>°</mi><mo>&#x0002F;</mo><mi>h</mi></mrow></math>。连续转h次回到原位，且过程中访问h种不同标记方向，这给出 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>C</mi><mi>h</mi></msub></mrow></math> 的一个实现。若转盘本身有h重对称而不作标记，画面可能始终看起来一样；标记仅帮助追踪操作，不应被误当成对称物体的真实不等价结构。</p>
+
+<p><strong>步长不一定是生成元。</strong> 在 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>C</mi><mrow><mn>12</mn></mrow></msub></mrow></math> 中，每次走4格，只访问0、4、8，三步就返回；走5格则访问全部12格。一般有</p>
+
+<div class="math-block" tabindex="0" aria-label="公式，可横向滚动"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mo>ord</mo><mo stretchy="false">&#x00028;</mo><msup><mi>r</mi><mi>k</mi></msup><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mfrac><mrow><mi>h</mi></mrow><mrow><mo movablelimits="true">gcd</mo><mo stretchy="false">&#x00028;</mo><mi>h</mi><mo>&#x0002C;</mo><mi>k</mi><mo stretchy="false">&#x00029;</mo></mrow></mfrac><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>证明：回到E等价于h整除km。写h=dh′、k=dk′，其中d=gcd(h,k)，且h′、k′互素；最小正m便是h′。因此rᵏ是生成元，当且仅当gcd(h,k)=1。这个公式是本教程为理解原章循环群补充的推导。</p>
+
+<section id="cycle-demo" class="demo" aria-labelledby="cycle-title"><header class="demo-head"><div><div class="demo-no">LAB 05 / 先预测 · 再操作 · 看证明</div><h4 id="cycle-title">同一只钟，步长不同会走出不同子群</h4></div><button data-play aria-pressed="true">暂停动画</button></header><div class="prompt">比较12格钟上走4格与走5格，预测几次才能返回0。</div><div class="demo-body"><canvas role="img" aria-label="同一只钟，步长不同会走出不同子群；通过下方控件操作"></canvas><div class="controls"><label for="cycle-n">钟面格数 h<select id="cycle-n"><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option></select></label><label for="cycle-k">每步 k <output id="cycle-k-out">4</output><input type="range" id="cycle-k" min="1" max="11" step="1" value="4"></label><button id="cycle-step">走一步</button><button id="cycle-run">播放一圈轨道</button><button id="cycle-reset">回到0</button></div><div class="result" id="cycle-status" role="status" aria-live="off">载入模型后显示。</div><p class="note">0表示E，位置j表示r^j。金点为已访问元素；不是把转盘的几何外观当作群元素。</p><details class="source-box"><summary>展开实际数值代码与实现说明</summary><pre><code data-source="cycle"></code></pre><div class="source-links"><a href="assets/groups.js" download>完整群运算 JS ↓</a><a href="examples.py" download>纯 Python 算例 ↓</a></div></details></div></section>
+
+<h3>2.2.6 四阶群为什么恰好有两种</h3>
+
+<p>原章给出两类四阶表，记作 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msubsup><mi>G</mi><mn>4</mn><mrow><mo stretchy="false">&#x00028;</mo><mn>1</mn><mo stretchy="false">&#x00029;</mo></mrow></msubsup></mrow></math> 与 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msubsup><mi>G</mi><mn>4</mn><mrow><mo stretchy="false">&#x00028;</mo><mn>2</mn><mo stretchy="false">&#x00029;</mo></mrow></msubsup></mrow></math>。现代常用名分别是 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>C</mi><mn>4</mn></msub></mrow></math> 与Klein四元群 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>V</mi><mn>4</mn></msub><mo>&#x02245;</mo><msub><mi>C</mi><mn>2</mn></msub><mo>&#x000D7;</mo><msub><mi>C</mi><mn>2</mn></msub></mrow></math>。这里“只有两种”是指<strong>同构意义下</strong>只有两种，而不是说所有物体的四元素对称操作都具有相同几何方向。</p>
+
+<p><strong>先排除一种遗漏：四阶群里不能有阶3元素。</strong> 若A的阶为3，则E、A、A²在左乘A时互相循环。假设群中还有第四个元素C，重排定理要求整个左乘映射是一一置换；前三个位置已经占满，剩下只得AC=C。右消去C会得到A=E，矛盾。有限群中，元素连续取幂直到首次回到E，之前各幂互异，所以元素阶不超过群阶。于是四阶群的非恒等元素阶只能为2或4。这段论证不必提前使用后文的拉格朗日定理。</p>
+
+<p><strong>第一类：存在阶4的元素A。</strong> 那么E、A、A²、A³已经是四个不同元素，填满整个群。记B=A²、C=A³，得到循环表：</p>
+
+<div class="table-scroll"><table>
+<thead>
+<tr>
+  <th>行Y／列X</th>
+  <th>E</th>
+  <th>A</th>
+  <th>B</th>
+  <th>C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>E</td>
+  <td>E</td>
+  <td>A</td>
+  <td>B</td>
+  <td>C</td>
+</tr>
+<tr>
+  <td>A</td>
+  <td>A</td>
+  <td>B</td>
+  <td>C</td>
+  <td>E</td>
+</tr>
+<tr>
+  <td>B</td>
+  <td>B</td>
+  <td>C</td>
+  <td>E</td>
+  <td>A</td>
+</tr>
+<tr>
+  <td>C</td>
+  <td>C</td>
+  <td>E</td>
+  <td>A</td>
+  <td>B</td>
+</tr>
+</tbody>
+</table></div>
+
+<p><strong>第二类：不存在阶4元素。</strong> 由刚才的重排论证，所有非恒等元素都只剩阶2的可能。记三个元素为A、B、C，则 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>A</mi><mn>2</mn></msup><mo>&#x0003D;</mo><msup><mi>B</mi><mn>2</mn></msup><mo>&#x0003D;</mo><msup><mi>C</mi><mn>2</mn></msup><mo>&#x0003D;</mo><mi>E</mi></mrow></math>。AB既不能为E（否则B=A⁻¹=A），也不能为A或B（消去会迫使另一个是E），故AB=C。BA同样只能为C，类似可得AC=CA=B、BC=CB=A：</p>
+
+<div class="table-scroll"><table>
+<thead>
+<tr>
+  <th>行Y／列X</th>
+  <th>E</th>
+  <th>A</th>
+  <th>B</th>
+  <th>C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>E</td>
+  <td>E</td>
+  <td>A</td>
+  <td>B</td>
+  <td>C</td>
+</tr>
+<tr>
+  <td>A</td>
+  <td>A</td>
+  <td>E</td>
+  <td>C</td>
+  <td>B</td>
+</tr>
+<tr>
+  <td>B</td>
+  <td>B</td>
+  <td>C</td>
+  <td>E</td>
+  <td>A</td>
+</tr>
+<tr>
+  <td>C</td>
+  <td>C</td>
+  <td>B</td>
+  <td>A</td>
+  <td>E</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>第二类也交换，但任何非恒等元素做两次就停止，不能由一个元素产生四个元素，因此不循环。它可以实现为两个独立开关的翻转：A翻第一位，B翻第二位，C同时翻两位；位串运算是逐位异或。</p>
+
+<p><strong>为什么不能把元素改名当成第三类？</strong> 若把第一类A、C互换，表的字母会变，但存在阶4元素、乘积关系都未改变。群同构是一个保持乘法的一一映射 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>A</mi><mi>B</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>A</mi><mo stretchy="false">&#x00029;</mo><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>B</mi><mo stretchy="false">&#x00029;</mo></mrow></math>。元素阶在同构下不变；第一类元素阶为1、4、2、4，第二类为1、2、2、2，所以这两类不可能仅靠改名互变。</p>
+
+<section id="four-demo" class="demo" aria-labelledby="four-title"><header class="demo-head"><div><div class="demo-no">LAB 06 / 先预测 · 再操作 · 看证明</div><h4 id="four-title">同为四元素，一个能绕圈，一个只能翻开关</h4></div></header><div class="prompt">选择群，再重复施加同名A，观察是否访问所有元素。</div><div class="demo-body"><canvas role="img" aria-label="同为四元素，一个能绕圈，一个只能翻开关；通过下方控件操作"></canvas><div class="controls"><label for="four-group">四阶群<select id="four-group"><option value="C4">C₄ · 四次旋转</option><option value="V4">V₄ · 两个开关</option></select></label><label for="four-op">重复施加<select id="four-op"><option value="1">A</option><option value="2">B</option><option value="3">C</option></select></label><button id="four-step">施加一次</button><button id="four-reset">恢复E</button></div><div class="table-scroll" id="four-table"></div><div class="result" id="four-status" role="status" aria-live="off">载入模型后显示。</div><p class="note">V₄位串00、01、10、11通过异或组合。群的阶相同，不代表元素的阶相同。</p><details class="source-box"><summary>展开实际数值代码与实现说明</summary><pre><code data-source="four"></code></pre><div class="source-links"><a href="assets/groups.js" download>完整群运算 JS ↓</a><a href="examples.py" download>纯 Python 算例 ↓</a></div></details></div></section>
+
+<h3>2.2.7 五阶群、六阶群和教材的六元素例子</h3>
+
+<p>原书把五阶唯一性与六阶分类留作习题。本页先把例子介绍完整，证明在习题区给出。五阶群只有 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>C</mi><mn>5</mn></msub></mrow></math>；六阶有 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>C</mi><mn>6</mn></msub></mrow></math> 与非交换的 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>S</mi><mn>3</mn></msub><mo>&#x02245;</mo><msub><mi>D</mi><mn>3</mn></msub></mrow></math> 两类。</p>
+
+<p>为与教材表逐项对照，本页六阶群统一使用E、A、B、C、D、F六个字母。实现为等边三角形的六个对称操作，取r为逆时针120°旋转、s为穿过顶点1与中心的镜像：</p>
+
+<div class="math-block" tabindex="0" aria-label="公式，可横向滚动"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>E</mi><mo>&#x0003D;</mo><mi>e</mi><mo>&#x0002C;</mo><mspace width="1em" /><mi>A</mi><mo>&#x0003D;</mo><mi>s</mi><mo>&#x0002C;</mo><mspace width="1em" /><mi>B</mi><mo>&#x0003D;</mo><mi>r</mi><mi>s</mi><mo>&#x0002C;</mo><mspace width="1em" /><mi>C</mi><mo>&#x0003D;</mo><msup><mi>r</mi><mn>2</mn></msup><mi>s</mi><mo>&#x0002C;</mo><mspace width="1em" /><mi>D</mi><mo>&#x0003D;</mo><mi>r</mi><mo>&#x0002C;</mo><mspace width="1em" /><mi>F</mi><mo>&#x0003D;</mo><msup><mi>r</mi><mn>2</mn></msup><mo>&#x0002C;</mo><mspace width="2em" /><msup><mi>r</mi><mn>3</mn></msup><mo>&#x0003D;</mo><msup><mi>s</mi><mn>2</mn></msup><mo>&#x0003D;</mo><mi>E</mi><mo>&#x0002C;</mo><mspace width="1em" /><mi>s</mi><mi>r</mi><mo>&#x0003D;</mo><msup><mi>r</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mi>s</mi><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>带编号三角形顶点的置换为A=(23)、B=(12)、C=(13)、D=(123)、F=(132)。<strong>这些字母只是群元素名。</strong> 不是原子种类，也不是表示的A、B、E维数标签。</p>
+
+<div class="table-scroll"><table>
+<thead>
+<tr>
+  <th>行Y／列X</th>
+  <th>E</th>
+  <th>A</th>
+  <th>B</th>
+  <th>C</th>
+  <th>D</th>
+  <th>F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>E</td>
+  <td>E</td>
+  <td>A</td>
+  <td>B</td>
+  <td>C</td>
+  <td>D</td>
+  <td>F</td>
+</tr>
+<tr>
+  <td>A</td>
+  <td>A</td>
+  <td>E</td>
+  <td>D</td>
+  <td>F</td>
+  <td>B</td>
+  <td>C</td>
+</tr>
+<tr>
+  <td>B</td>
+  <td>B</td>
+  <td>F</td>
+  <td>E</td>
+  <td>D</td>
+  <td>C</td>
+  <td>A</td>
+</tr>
+<tr>
+  <td>C</td>
+  <td>C</td>
+  <td>D</td>
+  <td>F</td>
+  <td>E</td>
+  <td>A</td>
+  <td>B</td>
+</tr>
+<tr>
+  <td>D</td>
+  <td>D</td>
+  <td>C</td>
+  <td>A</td>
+  <td>B</td>
+  <td>F</td>
+  <td>E</td>
+</tr>
+<tr>
+  <td>F</td>
+  <td>F</td>
+  <td>B</td>
+  <td>C</td>
+  <td>A</td>
+  <td>E</td>
+  <td>D</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>例如，A行B列读作BA=D；B行A列读作AB=F。因此BA≠AB，非交换性已经体现在表中。表内A、B、C各自平方为E，D²=F、F²=D、DF=FD=E。</p>
+
+<p>下面可以点击任意格子，让三角形先做行操作Y，再做列操作X；它的终点对应XY。选择“交换X、Y”后比较另一种次序。反射动画中的压扁只用于显示镜像路径，不声称能由三维刚性旋转连续实现此平面镜像；终点的矩阵和置换才是实际群元素。</p>
+
+<section id="triangle-demo" class="demo" aria-labelledby="triangle-title"><header class="demo-head"><div><div class="demo-no">LAB 07 / 先预测 · 再操作 · 看证明</div><h4 id="triangle-title">点乘法表，让三角形真的做这两个操作</h4></div><button data-play aria-pressed="true">暂停动画</button></header><div class="prompt">选中行Y与列X，演示先Y后X；交换次序后终点可能不同。</div><div class="demo-body"><canvas role="img" aria-label="点乘法表，让三角形真的做这两个操作；通过下方控件操作"></canvas><div class="controls"><label for="tri-x">列 X · 后作用<select id="tri-x"><option value="0">E</option><option value="1">A=s</option><option value="2">B=rs</option><option value="3">C=r²s</option><option value="4">D=r</option><option value="5">F=r²</option></select></label><label for="tri-y">行 Y · 先作用<select id="tri-y"><option value="0">E</option><option value="1">A=s</option><option value="2">B=rs</option><option value="3">C=r²s</option><option value="4">D=r</option><option value="5">F=r²</option></select></label><button id="triangle-run">播放 Y → X</button><button id="triangle-swap">交换 X、Y</button><button id="triangle-reset">恢复初态</button></div><div class="table-scroll" id="triangle-table"></div><div class="result" id="triangle-status" role="status" aria-live="off">载入模型后显示。</div><p class="note">严格按教材的列×行读表。虚线给参考位置，编号显示顶点置换；图案不变不表示每个顶点没动。</p><details class="source-box"><summary>展开实际数值代码与实现说明</summary><pre><code data-source="triangle"></code></pre><div class="source-links"><a href="assets/groups.js" download>完整群运算 JS ↓</a><a href="examples.py" download>纯 Python 算例 ↓</a></div></details></div></section>
+
+<h2 id="section-3">2.3 子群：在大群里找一套独立运作的规则</h2>
+
+<h3>2.3.1 子集不自动是子群</h3>
+
+<p>若非空子集H⊆G使用<strong>母群原来的运算</strong>本身也构成群，就称H是G的子群，写 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>H</mi><mo>&#x02264;</mo><mi>G</mi></mrow></math>。必须继承运算，不能给子集重新编一张表来凑群。</p>
+
+<p>结合律从母群自动继承，所以实际检查H时，要看它包含E、对乘积封闭、对取逆封闭。本页直接列出违反条件的具体元素，而不只输出“对”或“错”。</p>
+
+<p><strong>便利判据〔补充〕：</strong> 非空H若对任意a,b∈H都有 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>a</mi><msup><mi>b</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo>&#x02208;</mo><mi>H</mi></mrow></math>，则它是子群。取a=b可得E；再取a=E得b⁻¹；最后用逆元闭合把ab写成 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>a</mi><mo stretchy="false">&#x00028;</mo><msup><mi>b</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><msup><mo stretchy="false">&#x00029;</mo><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup></mrow></math> 得到乘积闭合。反方向当然由子群条件得到。</p>
+
+<p><strong>有限集合的更短判据〔补充〕：</strong> 有限非空子集只需检查乘积封闭。对某个a，连续取幂a,a²,…，有限性迫使某两项相等，消去可得某个正幂为E，故E与a⁻¹都出现。无限子集不能这样用：正整数在加法下封闭，却缺0和负数，因而不是整数加法群的子群。</p>
+
+<h3>2.3.2 六阶例子的全部子群</h3>
+
+<p>在上述 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>S</mi><mn>3</mn></msub></mrow></math> 中，全部子群为</p>
+
+<div class="math-block" tabindex="0" aria-label="公式，可横向滚动"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mo stretchy="false">&#x0007B;</mo><mi>E</mi><mo stretchy="false">&#x0007D;</mo><mo>&#x0002C;</mo><mspace width="1em" /><mo stretchy="false">&#x0007B;</mo><mi>E</mi><mo>&#x0002C;</mo><mi>A</mi><mo stretchy="false">&#x0007D;</mo><mo>&#x0002C;</mo><mspace width="1em" /><mo stretchy="false">&#x0007B;</mo><mi>E</mi><mo>&#x0002C;</mo><mi>B</mi><mo stretchy="false">&#x0007D;</mo><mo>&#x0002C;</mo><mspace width="1em" /><mo stretchy="false">&#x0007B;</mo><mi>E</mi><mo>&#x0002C;</mo><mi>C</mi><mo stretchy="false">&#x0007D;</mo><mo>&#x0002C;</mo><mspace width="1em" /><mo stretchy="false">&#x0007B;</mo><mi>E</mi><mo>&#x0002C;</mo><mi>D</mi><mo>&#x0002C;</mo><mi>F</mi><mo stretchy="false">&#x0007D;</mo><mo>&#x0002C;</mo><mspace width="1em" /><mi>G</mi><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>三个二阶子群分别由一条镜像生成；三阶子群由120°旋转生成。包含E与A并不是唯一可能的二阶子群，<strong>同一阶可以有多个不同子群</strong>。</p>
+
+<p>{E,A,B}为什么不是三阶子群？因为BA=D与AB=F都离开集合。若坚持让它封闭，就必须继续加入D、F；再用其它乘积还会得到C，最终生成整个G。相比之下{E,D,F}确实封闭。因此“元素数量刚好整除6”只是必要线索，不是子群判定。</p>
+
+<p>{E}与G自身总是子群。为了避免“平凡子群”的不同用语约定，本页直接写出这两个集合；“真子群”指H≠G，“非平凡真子群”则同时排除{E}与G。质数阶群没有非平凡真子群，但仍有这两个显然的子群。</p>
+
+<section id="subgroup-demo" class="demo" aria-labelledby="subgroup-title"><header class="demo-head"><div><div class="demo-no">LAB 08 / 先预测 · 再操作 · 看证明</div><h4 id="subgroup-title">圈出一个集合，看看它能否独立运作</h4></div></header><div class="prompt">先选{E,A,B}；若不封闭，缺少的乘积是哪一个？</div><div class="demo-body"><div class="controls"><button id="subgroup-bad">选择 {E,A,B}</button><button id="subgroup-good">选择 {E,D,F}</button><button id="subgroup-complete">自动补齐生成的子群</button><button id="subgroup-clear">只留 E</button></div><div class="group-chips" id="subgroup-chips"></div><div class="table-scroll" id="subgroup-table"></div><div class="subset-list" id="subgroup-list"></div><div class="result" id="subgroup-status" role="status" aria-live="off">载入模型后显示。</div><p class="note">自动补齐会反复加入乘积与逆元，直至闭合；不是简单挑选一个大小能整除6的集合。</p><details class="source-box"><summary>展开实际数值代码与实现说明</summary><pre><code data-source="subgroupCheck"></code></pre><div class="source-links"><a href="assets/groups.js" download>完整群运算 JS ↓</a><a href="examples.py" download>纯 Python 算例 ↓</a></div></details></div></section>
+
+<h3>2.3.3 拉格朗日定理：子群的阶为什么整除群阶</h3>
+
+<p><strong>定理。</strong> 若有限群G的阶为h，子群H的阶为g，则存在正整数k，使h=kg。教材用g同时代表子群及其阶；本页用H表示集合、g表示元素数，避免混淆。</p>
+
+<p>证明不是“因为例子都这样”，也不是“把表格切一切应该差不多”。核心是把G分成<strong>不重叠、且每块都恰好含g个元素</strong>的集合。下面补出原书较快略过的“不重叠”步骤。</p>
+
+<p><strong>第一步：从H开始。</strong> 写<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>H</mi><mo>&#x0003D;</mo><mo stretchy="false">&#x0007B;</mo><msub><mi>A</mi><mn>1</mn></msub><mo>&#x0002C;</mo><mi>&#x02026;</mi><mo>&#x0002C;</mo><msub><mi>A</mi><mi>g</mi></msub><mo stretchy="false">&#x0007D;</mo></mrow></math>。若H=G，结论已成立；否则取B∉H，考虑</p>
+
+<div class="math-block" tabindex="0" aria-label="公式，可横向滚动"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>B</mi><mi>H</mi><mo>&#x0003D;</mo><mo stretchy="false">&#x0007B;</mo><mi>B</mi><msub><mi>A</mi><mn>1</mn></msub><mo>&#x0002C;</mo><mi>&#x02026;</mi><mo>&#x0002C;</mo><mi>B</mi><msub><mi>A</mi><mi>g</mi></msub><mo stretchy="false">&#x0007D;</mo><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>这称H的一个左陪集，因为固定元素B放在左边。若BAᵢ=BAⱼ，左消去B得Aᵢ=Aⱼ，所以BH恰有g个不同元素。</p>
+
+<p><strong>第二步：新块BH与H没有交集。</strong> 若BAᵢ=Aⱼ，则右乘Aᵢ⁻¹，有B=AⱼAᵢ⁻¹。右边在H里，这与B∉H矛盾。</p>
+
+<p><strong>第三步：任意两个左陪集不是相同，就是不相交。</strong> 假设BH与CH有公共元素 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>B</mi><msub><mi>A</mi><mi>i</mi></msub><mo>&#x0003D;</mo><mi>C</mi><msub><mi>A</mi><mi>j</mi></msub></mrow></math>。右乘Aᵢ⁻¹，得到</p>
+
+<div class="math-block" tabindex="0" aria-label="公式，可横向滚动"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>B</mi><mo>&#x0003D;</mo><mi>C</mi><msub><mi>A</mi><mi>j</mi></msub><msubsup><mi>A</mi><mi>i</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msubsup><mo>&#x0002C;</mo><mspace width="2em" /><msup><mi>C</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mi>B</mi><mo>&#x0003D;</mo><msub><mi>A</mi><mi>j</mi></msub><msubsup><mi>A</mi><mi>i</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msubsup><mo>&#x02208;</mo><mi>H</mi><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>于是对任意A∈H，有BA=C(AⱼAᵢ⁻¹A)∈CH，故BH⊆CH。交换B、C再论证一次，得到CH⊆BH，因此BH=CH。这就是“一旦碰到一个元素，整块完全相同”，不会只重叠半块。</p>
+
+<p><strong>第四步：把全群分完。</strong> 若还有元素未被覆盖，就取其中一个生成新左陪集；由第三步，它与已有块互不相交。G有限，过程终止。设一共有k块，每块g个，于是</p>
+
+<div class="math-block" tabindex="0" aria-label="公式，可横向滚动"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mo stretchy="false">&#x0007C;</mo><mi>G</mi><mo stretchy="false">&#x0007C;</mo><mo>&#x0003D;</mo><mo stretchy="false">[</mo><mi>G</mi><mi>:</mi><mi>H</mi><mo stretchy="false">]</mo><mo stretchy="false">&#x0007C;</mo><mi>H</mi><mo stretchy="false">&#x0007C;</mo><mo>&#x0003D;</mo><mi>k</mi><mi>g</mi><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>这里 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mo stretchy="false">[</mo><mi>G</mi><mi>:</mi><mi>H</mi><mo stretchy="false">]</mo><mo>&#x0003D;</mo><mi>k</mi></mrow></math> 称指数。陪集分块是一种集合划分，<strong>陪集本身一般不是子群</strong>：不等于H的陪集不含E，就已经失败。把所有子群列出来也不是分块，因为不同子群都含E，通常有交集。</p>
+
+<h3>2.3.4 亲手把六个元素分成等大的包</h3>
+
+<p>取H={E,A}，全部左陪集是 {E,A}、{B,D}、{C,F}；右陪集则是 {E,A}、{B,F}、{C,D}。两种划分每块都含2个元素，但具体分组不同。这让“左乘”和“右乘”的差异有了可以着色观察的样子。</p>
+
+<p>取K={E,D,F}时，左右陪集都恰为K与{A,B,C}。满足对所有x均有xK=Kx的子群叫<strong>正规子群〔补充〕</strong>。本章不以正规性作为拉格朗日定理的前提，也不会把普通陪集直接当成可以相乘的商群元素；那还需要正规性。</p>
+
+<section id="cosets-demo" class="demo" aria-labelledby="cosets-title"><header class="demo-head"><div><div class="demo-no">LAB 09 / 先预测 · 再操作 · 看证明</div><h4 id="cosets-title">把全群装成等大的包：拉格朗日定理</h4></div></header><div class="prompt">取不同子群，比较左陪集与右陪集；逐包出现，看有没有重叠或遗漏。</div><div class="demo-body"><div class="controls"><label for="coset-h">选择子群<select id="coset-h"><option value="mirror">H={E,A} · 阶2</option><option value="rotation">K={E,D,F} · 阶3</option><option value="identity">{E} · 阶1</option><option value="whole">全群 G · 阶6</option></select></label><label for="coset-side">乘在哪一边<select id="coset-side"><option value="left">左陪集 xH</option><option value="right">右陪集 Hx</option></select></label><button id="coset-next">显露下一包</button><button id="coset-all">显露全部</button><button id="coset-reset">重新分包</button></div><div class="tiles" id="coset-tiles"></div><div class="result" id="cosets-status" role="status" aria-live="off">载入模型后显示。</div><p class="note">每个包是集合；除H本身外一般不是子群。左右陪集可以不同，但每边都构成等大的、不相交的划分。</p><details class="source-box"><summary>展开实际数值代码与实现说明</summary><pre><code data-source="cosets"></code></pre><div class="source-links"><a href="assets/groups.js" download>完整群运算 JS ↓</a><a href="examples.py" download>纯 Python 算例 ↓</a></div></details></div></section>
+
+<p><strong>指数2为何保证正规〔补充〕？</strong> 若H的指数为2，则除了H本身，只有一包剩余元素。对x∉H，左陪集xH与右陪集Hx都不含H里的元素，而且大小都为|H|，所以二者都等于<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>G</mi><mi>&#x029F5;</mi><mi>H</mi></mrow></math>。若x∈H，显然xH=Hx=H。于是对所有x都有xH=Hx。这个小证明会在六阶、八阶分类中用到。</p>
+
+<h3>2.3.5 定理说了什么，没说什么</h3>
+
+<ol>
+<li>子群阶一定整除h，但不能反推“h每个因子都必有相应子群”。例：12阶的A₄没有6阶子群；本页附加群浏览器可穷举核验，不把这个事实当作原书已证明的结论。</li>
+<li>单个元素生成的循环子群也是子群，故元素阶整除群阶，且 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>a</mi><mrow><mo stretchy="false">&#x0007C;</mo><mi>G</mi><mo stretchy="false">&#x0007C;</mo></mrow></msup><mo>&#x0003D;</mo><mi>E</mi></mrow></math>。</li>
+<li>若群阶p为质数，取非恒等元a，则ord(a)&gt;1且整除p，所以ord(a)=p，整个群由a生成。于是质数阶群在同构意义下唯一，即<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>C</mi><mi>p</mi></msub></mrow></math>。</li>
+<li>“每个元素的阶整除h”不是“每个元素都具有阶h”。V₄就是最直接反例。</li>
+</ol>
+
+<p><strong>A₄反例的证明〔补充，可稍后读〕：</strong> A₄有8个三循环和3个双换位。若存在6阶子群H，它在12阶群中指数2，因此正规。正规性迫使H包含所取元素的整个共轭类。A₄的类大小是1、3、4、4；含E的若干整类的大小，不可能加成6，矛盾。这里“指数2子群正规”和A₄类的求法属于补充知识；若尚未学到，可先用浏览器列出的全部子群验证反例，再在2.4后回看。</p>
+
+<h2 id="section-4">2.4 共轭类：换个位置看，同一类动作怎样互相变换</h2>
+
+<h3>2.4.1 相似变换与共轭</h3>
+
+<p>给定群内A与X，乘积 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>X</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mi>A</mi><mi>X</mi></mrow></math> 仍在群里。若B满足</p>
+
+<div class="math-block" tabindex="0" aria-label="公式，可横向滚动"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>B</mi><mo>&#x0003D;</mo><msup><mi>X</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mi>A</mi><mi>X</mi><mo>&#x0002C;</mo></mrow></math></div>
+
+<p>便称A与B共轭，X⁻¹AX是A经X作的相似变换。本页保留教材的X⁻¹AX次序；使用XAX⁻¹也会给出相同的整个共轭类，因为X遍历G时，其逆元也遍历G，但对<strong>同一个固定X</strong>，两个结果未必相同。</p>
+
+<p>按右边先作用读这个式子：先X，再A，最后X⁻¹。第一步把原问题搬到另一个等价位置，中间执行A，再搬回来。这个解释不是说X可以任意取一个群外坐标变换；本章定义要求X∈G。</p>
+
+<p><strong>三角形例子。</strong> A固定顶点1、交换2与3。若选X=D=r，则</p>
+
+<div class="math-block" tabindex="0" aria-label="公式，可横向滚动"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><msup><mi>D</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mi>A</mi><mi>D</mi><mo>&#x0003D;</mo><msup><mi>r</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mi>s</mi><mi>r</mi><mo>&#x0003D;</mo><mi>r</mi><mi>s</mi><mo>&#x0003D;</mo><mi>B</mi><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>结果B固定顶点3、交换1与2。镜像动作的“类型”相同，但作用的那条轴换了位置。类似，X=F时得到C。注意先X搬走原来的标记，最后搬回时，得到的轴对应X⁻¹对原轴的作用；不要只凭旋转箭头方向猜字母。</p>
+
+<section id="conjugation-demo" class="demo" aria-labelledby="conjugation-title"><header class="demo-head"><div><div class="demo-no">LAB 10 / 先预测 · 再操作 · 看证明</div><h4 id="conjugation-title">先搬过去，执行A，再搬回来</h4></div><button data-play aria-pressed="true">暂停动画</button></header><div class="prompt">按 X → A → X⁻¹ 三步观察，最后得到的元素是哪一个？</div><div class="demo-body"><canvas role="img" aria-label="先搬过去，执行A，再搬回来；通过下方控件操作"></canvas><div class="controls"><label for="conj-a">要被变换的 A<select id="conj-a"><option value="0">E</option><option value="1">A=s</option><option value="2">B=rs</option><option value="3">C=r²s</option><option value="4">D=r</option><option value="5">F=r²</option></select></label><label for="conj-x">搬动操作 X<select id="conj-x"><option value="0">E</option><option value="1">A=s</option><option value="2">B=rs</option><option value="3">C=r²s</option><option value="4">D=r</option><option value="5">F=r²</option></select></label><button id="conjugation-run">播放三步</button><button id="conjugation-step">下一步</button><button id="conjugation-reset">恢复初态</button></div><div class="step-list" id="conjugation-steps"></div><div class="table-scroll" id="conjugation-transforms"></div><div class="result" id="conjugation-status" role="status" aria-live="off">载入模型后显示。</div><p class="note">这里X必须来自母群。表达式是X⁻¹AX；每个X都会计算，但类中只保留不同的输出。</p><details class="source-box"><summary>展开实际数值代码与实现说明</summary><pre><code data-source="conjugate"></code></pre><div class="source-links"><a href="assets/groups.js" download>完整群运算 JS ↓</a><a href="examples.py" download>纯 Python 算例 ↓</a></div></details></div></section>
+
+<h3>2.4.2 为什么共轭关系确实能把群分成互不交叠的类</h3>
+
+<p>原章依次讨论自身共轭、对称性和传递性。这里把三个证明全部写开。</p>
+
+<p><strong>反身性。</strong> 选X=E，有E⁻¹AE=A，所以A与自身共轭。更一般地，X⁻¹AX=A当且仅当AX=XA：两边左乘X得到AX=XA；反方向直接代入。</p>
+
+<p><strong>对称性。</strong> 若B=X⁻¹AX，则左乘X、右乘X⁻¹，得到A=XBX⁻¹。令Y=X⁻¹，就有A=Y⁻¹BY。因此A共轭于B，B也共轭于A。</p>
+
+<p><strong>传递性。</strong> 若B=X⁻¹AX且C=Y⁻¹BY，则</p>
+
+<div class="math-block" tabindex="0" aria-label="公式，可横向滚动"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>C</mi><mo>&#x0003D;</mo><msup><mi>Y</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><msup><mi>X</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mi>A</mi><mi>X</mi><mi>Y</mi><mo>&#x0003D;</mo><mo stretchy="false">&#x00028;</mo><mi>X</mi><mi>Y</mi><msup><mo stretchy="false">&#x00029;</mo><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mi>A</mi><mo stretchy="false">&#x00028;</mo><mi>X</mi><mi>Y</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>XY仍在群中，所以A与C共轭。原章另一种说法是“若B和C都与A共轭，则B与C共轭”，可由刚证的对称性与传递性推出。</p>
+
+<p>由这三条，共轭是一种等价关系。把与A共轭的<strong>全部</strong>元素收集起来，得到</p>
+
+<div class="math-block" tabindex="0" aria-label="公式，可横向滚动"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mrow><mi mathvariant="normal">C</mi><mi mathvariant="normal">l</mi></mrow><mo stretchy="false">&#x00028;</mo><mi>A</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mo stretchy="false">&#x0007B;</mo><msup><mi>X</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mi>A</mi><mi>X</mi><mi>:</mi><mi>X</mi><mo>&#x02208;</mo><mi>G</mi><mo stretchy="false">&#x0007D;</mo><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>它是集合，不是含重复元素的清单。遍历h个X时，可能反复得到同一个结果；类的大小统计不同输出数。若两个类有一个共同元素，利用传递性可知它们完全相同，否则不相交。因此共轭类确实将全群分割。</p>
+
+<h3>2.4.3 按教材六阶表，逐元素算完整</h3>
+
+<p>先选E。无论X是什么，X⁻¹EX=X⁻¹X=E，所以{E}单独一类。这个结论对任何群都成立。</p>
+
+<p>再选A。依次令X=E、A、B、C、D、F，结果如下：</p>
+
+<div class="table-scroll"><table>
+<thead>
+<tr>
+  <th>X</th>
+  <th>E</th>
+  <th>A</th>
+  <th>B</th>
+  <th>C</th>
+  <th>D</th>
+  <th>F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>X⁻¹AX</td>
+  <td>A</td>
+  <td>A</td>
+  <td>C</td>
+  <td>B</td>
+  <td>B</td>
+  <td>C</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>得到候选类{A,B,C}。对B、C再各遍历一次，也只得到这个集合，因此没有漏项。它们是三条不同方向的镜像，彼此通过群内变换转换。</p>
+
+<p>最后选D：</p>
+
+<div class="table-scroll"><table>
+<thead>
+<tr>
+  <th>X</th>
+  <th>E</th>
+  <th>A</th>
+  <th>B</th>
+  <th>C</th>
+  <th>D</th>
+  <th>F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>X⁻¹DX</td>
+  <td>D</td>
+  <td>F</td>
+  <td>F</td>
+  <td>F</td>
+  <td>D</td>
+  <td>D</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>对F再遍历也是{D,F}。全部共轭类因此为</p>
+
+<div class="math-block" tabindex="0" aria-label="公式，可横向滚动"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mo stretchy="false">&#x0007B;</mo><mi>E</mi><mo stretchy="false">&#x0007D;</mo><mo>&#x0002C;</mo><mspace width="2em" /><mo stretchy="false">&#x0007B;</mo><mi>A</mi><mo>&#x0002C;</mo><mi>B</mi><mo>&#x0002C;</mo><mi>C</mi><mo stretchy="false">&#x0007D;</mo><mo>&#x0002C;</mo><mspace width="2em" /><mo stretchy="false">&#x0007B;</mo><mi>D</mi><mo>&#x0002C;</mo><mi>F</mi><mo stretchy="false">&#x0007D;</mo><mi>;</mi><mspace width="2em" /><mn>6</mn><mo>&#x0003D;</mo><mn>1</mn><mo>&#x0002B;</mo><mn>3</mn><mo>&#x0002B;</mo><mn>2</mn><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>这不是子群清单。{A,B,C}没有E，并且不同镜像的乘积给旋转，所以不是子群；{D,F}也没有E且DF=E，所以也不是子群。两种概念都讨论“较小集合”，但子群关心运算是否自足，类关心是否可经群内相似变换互相到达。</p>
+
+<h3>2.4.4 类大小为什么也整除群阶：补齐教材只陈述的证明</h3>
+
+<p>原章给出“共轭类大小整除群阶”的结论，未详证。本教程引入一个自然的计数工具来把证明补全。</p>
+
+<p>定义A的中心化子</p>
+
+<div class="math-block" tabindex="0" aria-label="公式，可横向滚动"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><msub><mi>C</mi><mi>G</mi></msub><mo stretchy="false">&#x00028;</mo><mi>A</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mo stretchy="false">&#x0007B;</mo><mi>X</mi><mo>&#x02208;</mo><mi>G</mi><mi>:</mi><mi>X</mi><mi>A</mi><mo>&#x0003D;</mo><mi>A</mi><mi>X</mi><mo stretchy="false">&#x0007D;</mo><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>它是子群：E显然与A交换；若X、Y都与A交换，则XY也与A交换；由XA=AX两侧适当乘X⁻¹，可得X⁻¹也与A交换。令它的阶为c。</p>
+
+<p>考察映射 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>f</mi><mo stretchy="false">&#x00028;</mo><mi>X</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msup><mi>X</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mi>A</mi><mi>X</mi></mrow></math>。若两个输入给出相同输出，</p>
+
+<div class="math-block" tabindex="0" aria-label="公式，可横向滚动"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><msup><mi>X</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mi>A</mi><mi>X</mi><mo>&#x0003D;</mo><msup><mi>Y</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mi>A</mi><mi>Y</mi><mspace width="1em" /><mi>&#x027FA;</mi><mspace width="1em" /><mo stretchy="false">&#x00028;</mo><mi>Y</mi><msup><mi>X</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo stretchy="false">&#x00029;</mo><mi>A</mi><mo>&#x0003D;</mo><mi>A</mi><mo stretchy="false">&#x00028;</mo><mi>Y</mi><msup><mi>X</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo stretchy="false">&#x00029;</mo><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>因此<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>Y</mi><msup><mi>X</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo>&#x02208;</mo><msub><mi>C</mi><mi>G</mi></msub><mo stretchy="false">&#x00028;</mo><mi>A</mi><mo stretchy="false">&#x00029;</mo></mrow></math>，即<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>Y</mi><mo>&#x02208;</mo><msub><mi>C</mi><mi>G</mi></msub><mo stretchy="false">&#x00028;</mo><mi>A</mi><mo stretchy="false">&#x00029;</mo><mi>X</mi></mrow></math>。反过来，只要Y=cX且c与A交换，就有f(Y)=f(X)。所以<strong>每个不同输出恰好对应一个有c个输入的右陪集</strong>。</p>
+
+<p>全部h个输入分成这些等大的包，每包对应类中的一个元素，于是</p>
+
+<div class="math-block" tabindex="0" aria-label="公式，可横向滚动"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mo stretchy="false">&#x0007C;</mo><mrow><mi mathvariant="normal">C</mi><mi mathvariant="normal">l</mi></mrow><mo stretchy="false">&#x00028;</mo><mi>A</mi><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x0007C;</mo><mo>&#x0003D;</mo><mfrac><mrow><mo stretchy="false">&#x0007C;</mo><mi>G</mi><mo stretchy="false">&#x0007C;</mo></mrow><mrow><mo stretchy="false">&#x0007C;</mo><msub><mi>C</mi><mi>G</mi></msub><mo stretchy="false">&#x00028;</mo><mi>A</mi><mo stretchy="false">&#x00029;</mo><mo stretchy="false">&#x0007C;</mo></mrow></mfrac><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>这不但证明类大小整除h，也解释为何h次变换会有重复。例如六阶群的A有中心化子{E,A}，大小2，故类大小6/2=3；D的中心化子{E,D,F}，大小3，故类大小6/3=2。</p>
+
+<p><strong>阿贝尔群的特别情况。</strong> 所有X都与A交换，所以<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>C</mi><mi>G</mi></msub><mo stretchy="false">&#x00028;</mo><mi>A</mi><mo stretchy="false">&#x00029;</mo></mrow></math>=G，类大小为1。每个元素独自成类，即使两个元素具有相同的阶，也不一定共轭。比如C₄的A与A³都是阶4，却各自是单元素类。</p>
+
+<section id="classes-demo" class="demo" aria-labelledby="classes-title"><header class="demo-head"><div><div class="demo-no">LAB 11 / 先预测 · 再操作 · 看证明</div><h4 id="classes-title">h个输入，为什么只得到几个共轭输出？</h4></div></header><div class="prompt">逐个改变X，观察相同输出如何聚成包，连接中心化子与类大小。</div><div class="demo-body"><div class="controls"><label for="class-group">母群<select id="class-group"><option value="D3">D₃ · 三角形</option><option value="D4">D₄ · 正方形</option><option value="C4">C₄ · 阿贝尔反例</option><option value="Q8">Q₈ · 四元数</option></select></label><label for="class-a">选择元素<select id="class-a"><option value="0">E</option></select></label><button id="class-next">遍历下一个 X</button><button id="class-reset">从第一个 X 开始</button></div><div class="tiles" id="class-buckets"></div><div class="color-key" id="class-partition"></div><div class="result" id="classes-status" role="status" aria-live="off">载入模型后显示。</div><p class="note">同阶元素未必共轭；类大小相同也不能证明两群同构。计数的是不同输出，不是计算次数。</p><details class="source-box"><summary>展开实际数值代码与实现说明</summary><pre><code data-source="centralizer"></code></pre><div class="source-links"><a href="assets/groups.js" download>完整群运算 JS ↓</a><a href="examples.py" download>纯 Python 算例 ↓</a></div></details></div></section>
+
+<h3>2.4.5 同样是平面镜像，为什么在另一个群里可能不共轭？〔补充〕</h3>
+
+<p>正方形对称群D₄的元素写成 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>r</mi><mi>k</mi></msup><msup><mi>s</mi><mi>b</mi></msup></mrow></math>，r为90°旋转，s为穿过一对顶点的镜像。四条镜像分成两类：穿过顶点的两条，与穿过边中点的两条。它们的阶全是2，但D₄内没有一个操作能把“顶点轴”变成“边中点轴”。</p>
+
+<p>因此，“阶相同”“都是镜面”“旋转角度相同”都不是完整的共轭判据。必须指定母群，真正计算X⁻¹AX。后面分子点群与特征标表按共轭类组织时，这一点会非常重要；本章先把代数工具打牢。</p>
+
+<h2 id="section-5">2.5 十道习题：逐题推理、核对前提</h2>
+
+<p>本节覆盖两版章末2.1–2.10的全部主题，采用独立题意说明与分步解答。较长的八阶群表由后面的浏览器完整列出，可导出；无需把同一套格子手抄数次。课本中的可疑表述单独说明，不把它们悄悄当成正确命题。</p>
+
+<h3>习题2.1：阿贝尔群中，每个元素为什么独自成类？</h3>
+
+<p>因AX=XA，有X⁻¹AX=X⁻¹XA=A。任意X只输出A，因此Cl(A)={A}。反过来，若群中每个类都单元素，那么任意A、X都有X⁻¹AX=A，于是AX=XA，群就是阿贝尔群。这给出一个可用于检查的等价条件。</p>
+
+<h3>习题2.2：质数阶群的唯一性</h3>
+
+<p>设|G|=p且p是质数。取A≠E，则循环子群⟨A⟩的阶d必须整除p，同时d>1，所以d=p。因此⟨A⟩=G，G是循环群。把rᵏ映到整数k mod p给出到模p加法群的同构。唯一性指结构唯一，不是元素只能叫某些字母。</p>
+
+<h3>习题2.3：五阶群的乘法表与排除其它结构</h3>
+
+<p>由上题，只可能是C₅。取A=r、B=r²、C=r³、D=r⁴，则指数模5相加：</p>
+
+<div class="table-scroll"><table>
+<thead>
+<tr>
+  <th>行Y／列X</th>
+  <th>E</th>
+  <th>A</th>
+  <th>B</th>
+  <th>C</th>
+  <th>D</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>E</td>
+  <td>E</td>
+  <td>A</td>
+  <td>B</td>
+  <td>C</td>
+  <td>D</td>
+</tr>
+<tr>
+  <td>A</td>
+  <td>A</td>
+  <td>B</td>
+  <td>C</td>
+  <td>D</td>
+  <td>E</td>
+</tr>
+<tr>
+  <td>B</td>
+  <td>B</td>
+  <td>C</td>
+  <td>D</td>
+  <td>E</td>
+  <td>A</td>
+</tr>
+<tr>
+  <td>C</td>
+  <td>C</td>
+  <td>D</td>
+  <td>E</td>
+  <td>A</td>
+  <td>B</td>
+</tr>
+<tr>
+  <td>D</td>
+  <td>D</td>
+  <td>E</td>
+  <td>A</td>
+  <td>B</td>
+  <td>C</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>逐格试填可以检验重排限制，但“不存在其它表”最好由质数阶定理说明。同构的重新命名不算新群。单凭每行列无重复，还不能代替完整公理检查。</p>
+
+<h3>习题2.4：先检验命题——扫描本字面表述有反例</h3>
+
+<p>两版扫描本都问为何不能有 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>A</mi><mn>2</mn></msup><mo>&#x0003D;</mo><msup><mi>B</mi><mn>2</mn></msup><mo>&#x02260;</mo><mi>E</mi></mrow></math> 的群。<strong>若没有别的附加条件，这个命题不成立。</strong> C₄中取A=r、B=r³，二者不同，却有</p>
+
+<div class="math-block" tabindex="0" aria-label="公式，可横向滚动"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><msup><mi>A</mi><mn>2</mn></msup><mo>&#x0003D;</mo><msup><mi>r</mi><mn>2</mn></msup><mo>&#x0002C;</mo><mspace width="2em" /><msup><mi>B</mi><mn>2</mn></msup><mo>&#x0003D;</mo><msup><mi>r</mi><mn>6</mn></msup><mo>&#x0003D;</mo><msup><mi>r</mi><mn>2</mn></msup><mo>&#x02260;</mo><mi>E</mi><mo>&#x0002E;</mo></mrow></math></div>
+
+<p>这是原书本章刚给出的四阶循环群，可在浏览器直接核验。另一类反例是四元数群Q₈中i²=j²=−1。因此不能给出一个“证明它不可能”的正确答案。</p>
+
+<p>可能遗漏的附加语境需要依据具体勘误资料再确认，本教程不自行替作者补题。若问题实际想讨论三阶表中的非恒等元素平方，那是特定小群的限制；若想讨论 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>A</mi><mn>2</mn></msup><mo>&#x0003D;</mo><msup><mi>B</mi><mn>2</mn></msup></mrow></math> 能否推出A=B，答案一般也是否定。可约去共同<strong>相邻因子</strong>，不能把非交换表达式当作普通实数开平方。</p>
+
+<h3>习题2.5：给三阶群增加一个可交换元素，是否唯一？</h3>
+
+<p>只有“增加一个与A、B交换的C”不足以唯一确定闭包；还要说明C的阶及它与旧群的关系。例如C₉包含一个C₃子群，也有与其所有元素交换、但不在该子群中的元素，生成闭包可以是9阶。C₃×ℤ给出无限例子。不能把原来的3个元素加1个就说得到4阶群：拉格朗日定理已排除四阶群含三阶子群。</p>
+
+<p><strong>若按最小有限扩张理解，或补充C²=E、C∉C₃</strong>，生成群是C₃×C₂≅C₆。因为所有元素可写成 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>A</mi><mi>i</mi></msup><msup><mi>C</mi><mi>j</mi></msup></mrow></math>，i=0,1,2，j=0,1，六个彼此不同；AC的阶为6。取 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>r</mi><mo>&#x0003D;</mo><mi>A</mi><mi>C</mi></mrow></math> 后即可使用六阶循环群表。下方浏览器可选择C₆查看全部36项。</p>
+
+<h3>习题2.6：循环群为何每个因子恰有一个相应阶的子群？</h3>
+
+<p>设G=⟨r⟩，|G|=h，d整除h。取 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msub><mi>H</mi><mi>d</mi></msub><mo>&#x0003D;</mo><mi>&#x027E8;</mi><msup><mi>r</mi><mrow><mi>h</mi><mo>&#x0002F;</mo><mi>d</mi></mrow></msup><mi>&#x027E9;</mi></mrow></math>。由元素阶公式，它恰有d个元素，所以对应子群存在。</p>
+
+<p>再证唯一。任意子群H≠{E}，在H内写成rᵏ的正指数中取最小值m。对H中任意rᵏ，作整数除法k=qm+s，<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mn>0</mn><mo>&#x02264;</mo><mi>s</mi><mo>&#x0003C;</mo><mi>m</mi></mrow></math>。由于rᵏ与rᵐ都在H，<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msup><mi>r</mi><mi>s</mi></msup><mo>&#x0003D;</mo><msup><mi>r</mi><mi>k</mi></msup><mo stretchy="false">&#x00028;</mo><msup><mi>r</mi><mi>m</mi></msup><msup><mo stretchy="false">&#x00029;</mo><mrow><mo>&#x02212;</mo><mi>q</mi></mrow></msup></mrow></math> 也在H。若s>0便违背m最小，所以s=0。类似用rʰ=E可证明m整除h，故H=⟨rᵐ⟩且|H|=h/m。若要求|H|=d，就只能m=h/d。</p>
+
+<p>例：C₁₂的子群阶1、2、3、4、6、12，对应生成元可取E、r⁶、r⁴、r³、r²、r。每种阶唯一，但同一个子群的生成元可能不唯一，例如⟨r⁴⟩=⟨r⁸⟩。</p>
+
+<h3>习题2.7：八阶的非循环群有哪些？</h3>
+
+<p>同构意义下八阶共有五类，其中C₈循环，其余四类非循环：</p>
+
+<div class="table-scroll"><table>
+<thead>
+<tr>
+  <th>群</th>
+  <th>一种元素与运算实现</th>
+  <th>非恒等元素阶</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>C₄×C₂</td>
+  <td>(a,b)逐分量模4、模2相加</td>
+  <td>3个阶2，4个阶4</td>
+</tr>
+<tr>
+  <td>C₂×C₂×C₂</td>
+  <td>三位二进制逐位异或</td>
+  <td>7个都为阶2</td>
+</tr>
+<tr>
+  <td>D₄（亦有人记D₈）</td>
+  <td>正方形旋转与镜像，r⁴=s²=E，sr=r⁻¹s</td>
+  <td>5个阶2，2个阶4</td>
+</tr>
+<tr>
+  <td>Q₈</td>
+  <td>±1、±i、±j、±k，i²=j²=k²=ijk=−1</td>
+  <td>1个阶2，6个阶4</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>本页D₄的下标表示正方形边数，群阶是8；另一种文献的D₈按群阶命名，先看约定。Q₈不是三维普通点群的对称操作集合，但完全满足群公理，正好说明群不必都是本书分子几何操作的集合。</p>
+
+<p><strong>为什么没有遗漏〔补充分类思路〕？</strong> 阿贝尔八阶群：若有阶8元素，就是C₈；若最大阶4，取其四阶子群之外的元素，通过调整可选到与其交仅E的阶2因子，得到C₄×C₂；若所有非恒等元阶2，独立选3个生成元便得C₂³。非阿贝尔时，若所有非恒等元都阶2，会推出AB=(AB)⁻¹=B⁻¹A⁻¹=BA，矛盾，因此有阶4元素r。⟨r⟩指数2，取s在外面；共轭必须把r送到r⁻¹，否则全群交换。s²∈⟨r⟩且与r兼容；非交换条件下可能为E或r²，分别给D₄与Q₈。</p>
+
+<p>阿贝尔阶4分支中“调整”的细节是：若外部元素b为阶4且b²=r²，则br⁻¹为阶2且不在⟨r⟩；若b²=E，本来已满足。非阿贝尔分支中s²为r的幂，同时s与s²交换，而s把r送r⁻¹，所以s²只可能为E或r²。这样两个略写步骤也得到交代。</p>
+
+<h3>习题2.8：八阶群的全部子群与共轭类</h3>
+
+<p>不是把全群“分解成所有子群”：子群往往重叠，真正互不重叠的划分由共轭类或固定子群的陪集给出。各群全部子群列表可在浏览器展开，下面给出便于核对的数量与类结构。</p>
+
+<div class="table-scroll"><table>
+<thead>
+<tr>
+  <th>群</th>
+  <th>全部子群数（含{E}与G）</th>
+  <th>共轭类大小</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>C₈</td>
+  <td>4</td>
+  <td>1、1、1、1、1、1、1、1</td>
+</tr>
+<tr>
+  <td>C₄×C₂</td>
+  <td>8</td>
+  <td>八个单元素类</td>
+</tr>
+<tr>
+  <td>C₂³</td>
+  <td>16</td>
+  <td>八个单元素类</td>
+</tr>
+<tr>
+  <td>D₄</td>
+  <td>10</td>
+  <td>1、1、2、2、2</td>
+</tr>
+<tr>
+  <td>Q₈</td>
+  <td>6</td>
+  <td>1、1、2、2、2</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>D₄的类为{E}、{r²}、{r,r³}、{s,r²s}、{rs,r³s}；Q₈的类为{1}、{−1}、{i,−i}、{j,−j}、{k,−k}。二者类大小完全一样，但元素阶分布不同，所以不可能同构。类大小清单不是群的完整“身份证”。</p>
+
+<h3>习题2.9：六阶群为什么只有循环与三角形两类？</h3>
+
+<p>给出一个不用高阶分类定理的证明。由拉格朗日定理，元素阶只可能1、2、3、6。若有阶6元素，整个群就是C₆。以下假设没有阶6元素。</p>
+
+<p><strong>先排除“所有非恒等元素都阶2”。</strong> 若每个x=x⁻¹，则AB=(AB)⁻¹=B⁻¹A⁻¹=BA，群必交换。选不同非恒等元A、B，则{E,A,B,AB}构成一个四阶子群：AB既不是E、A、B，且所有乘积闭合。这与4不整除6矛盾。因此至少有阶3元素r。</p>
+
+<p><strong>还需要阶2元素s。</strong> 六阶群除E外有5个元素。非自逆元素可以两两配成{x,x⁻¹}；5为奇数，必有至少一个非恒等元素自逆，因此存在阶2元素s。s不在⟨r⟩内。全部元素就写成E、r、r²、s、rs、r²s。</p>
+
+<p><strong>最后决定r、s如何交错。</strong> ⟨r⟩指数2，所以正规，srs⁻¹必须为r或r²，不能为E。若为r，则rs=sr，于是rs的阶为6（分别利用阶2与阶3互素），与假设矛盾。故srs⁻¹=r⁻¹，即sr=r⁻¹s。所有乘积随之唯一确定，这就是S₃≅D₃。它与C₆一个交换、一个不交换，不同构。</p>
+
+<h3>习题2.10：两个四阶群和C₆的子群与类</h3>
+
+<p>C₄：子群{E}、{E,r²}、G；每个元素单独成类。</p>
+
+<p>V₄：子群{E}、{E,A}、{E,B}、{E,C}、G；每个元素单独成类。</p>
+
+<p>C₆：子群{E}、{E,r³}、{E,r²,r⁴}、G；每个元素单独成类。</p>
+
+<p>注意C₆与教材的非交换六阶群元素个数相同，却有不同的二阶子群数和类结构。下面的“完整群浏览器”可切换这些群，显示所有乘法表、子群、陪集与类，并导出数据，不把习题答案停留在一句结论上。</p>
+
+<section id="gallery-demo" class="demo" aria-labelledby="gallery-title"><header class="demo-head"><div><div class="demo-no">LAB 12 / 先预测 · 再操作 · 看证明</div><h4 id="gallery-title">完整群浏览器：表、逆元、子群与类都不省略</h4></div></header><div class="prompt">选择一个群；下方显示全部元素、全部乘积、全部子群和全部共轭类。</div><div class="demo-body"><div class="controls"><label for="gallery-group">选择群<select id="gallery-group"><option value="C1">C1</option><option value="C2">C2</option><option value="C3">C3</option><option value="C4">C4</option><option value="V4">V4</option><option value="C5">C5</option><option value="C6">C6</option><option value="D3">D3</option><option value="C8">C8</option><option value="C4xC2">C4xC2</option><option value="Z222">Z222</option><option value="D4">D4</option><option value="Q8">Q8</option><option value="C12">C12</option><option value="A4">A4</option></select></label><button id="gallery-export">导出完整群数据 JSON</button></div><div id="gallery-description" class="group-explain"></div><div class="facts-grid" id="gallery-facts"></div><div class="table-scroll" id="gallery-table"></div><div class="table-scroll" id="gallery-orders"></div><div id="gallery-subgroups"></div><div id="gallery-classes"></div><div class="result" id="gallery-status" role="status" aria-live="off">载入模型后显示。</div><p class="note">A₄用于展示“因子不一定有子群”的反例。C₁₂用于循环子群练习。八阶群表与全部子群已在这里及文末静态附表完整给出。</p><details class="source-box"><summary>展开实际数值代码与实现说明</summary><pre><code data-source="subgroups"></code></pre><div class="source-links"><a href="assets/groups.js" download>完整群运算 JS ↓</a><a href="examples.py" download>纯 Python 算例 ↓</a></div></details></div></section>
+
+<h2 id="section-6">2.6 查漏表、勘误提示与学习检查</h2>
+
+<h3>与教材原章的逐项对应</h3>
+
+<div class="table-scroll"><table>
+<thead>
+<tr>
+  <th>教材内容</th>
+  <th>中文书页 / 英文书页</th>
+  <th>本页位置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>四条定义、交换/结合、左右乘</td>
+  <td>5 / 6–7</td>
+  <td>2.1.1–2.1.4</td>
+</tr>
+<tr>
+  <td>乘积逆元定理与证明</td>
+  <td>6 / 7–8</td>
+  <td>2.1.5及动画</td>
+</tr>
+<tr>
+  <td>整数无限群、群阶</td>
+  <td>6 / 8</td>
+  <td>2.2.1</td>
+</tr>
+<tr>
+  <td>群乘法表与重排定理</td>
+  <td>6–7 / 8–9</td>
+  <td>2.2.2–2.2.3</td>
+</tr>
+<tr>
+  <td>一、二、三阶表的构建</td>
+  <td>7–8 / 9–10</td>
+  <td>2.2.4</td>
+</tr>
+<tr>
+  <td>循环群与两个四阶群</td>
+  <td>8–9 / 10–11</td>
+  <td>2.2.5–2.2.6</td>
+</tr>
+<tr>
+  <td>五、六阶群与六阶非交换表</td>
+  <td>9 / 11–12</td>
+  <td>2.2.7</td>
+</tr>
+<tr>
+  <td>子群例子、整除定理及其非逆命题</td>
+  <td>9–10 / 12–13</td>
+  <td>2.3全节</td>
+</tr>
+<tr>
+  <td>相似变换、共轭的性质与类</td>
+  <td>10–11 / 13–14</td>
+  <td>2.4.1–2.4.2</td>
+</tr>
+<tr>
+  <td>六阶群逐元素求类、类大小整除</td>
+  <td>11–12 / 15–16</td>
+  <td>2.4.3–2.4.4</td>
+</tr>
+<tr>
+  <td>十道章末习题</td>
+  <td>12 / 16</td>
+  <td>2.5全节</td>
+</tr>
+</tbody>
+</table></div>
+
+<h3>两版对读时应留意的细节</h3>
+
+<p><strong>习题2.4。</strong> 已给出C₄的明确反例，不能把“不同元素平方相等且非E”说成普遍不可能。</p>
+
+<p><strong>习题2.5。</strong> 需说明新增元素的阶或“最小闭包”等额外要求；“与旧元素交换”本身不唯一规定新群。</p>
+
+<p><strong>共轭计算中的字母。</strong> 扫描的中译本在A的变换列表中把D⁻¹AD与F⁻¹AF列为C、B；英文本对应为B、C。按本页沿用的六阶乘法表，以及D=r、F=r²的实现，直接相乘得到B、C。本页所有动画、表格与解答统一使用这套自洽约定，不在两版的中间字母之间来回切换。两版给出的最终类{A,B,C}并不因此改变。</p>
+
+<p><strong>四阶循环群的自逆元素。</strong> 除E之外，只有r²自逆；若把“只有一个自逆元素”漏掉“除E”这一前提，就会误数。恒等元永远自逆。</p>
+
+<h3>最后用自己的话回答</h3>
+
+<ul>
+<li>为什么必须指定运算，才能问“是不是群”？</li>
+<li>结合律允许动括号，为什么不允许换顺序？</li>
+<li>乘法表每行每列各出现一次，为什么还可能不是群？</li>
+<li>{E,A,B}为什么不能因为有3个元素就当作六阶群的子群？</li>
+<li>陪集与子群有什么区别？共轭类与子群又有什么区别？</li>
+<li>同样阶为2的两条镜像，为什么不一定共轭？</li>
+<li>为什么“子群阶整除群阶”不能倒过来使用？</li>
+</ul>
+
+<p>本章的目标是让这些问题可以从定义和证明一步步回答。进入第三章后，再把这里的元素与运算对应到真正的分子几何对称性；进入表示论后，再讨论为什么同一共轭类共享特征标。</p>
+<h2 id="reference">附表：15种有限群的完整数据</h2><p>以下为静态内容，即使禁用JavaScript仍可查阅。点击展开即可看到每个群的全部乘积、元素阶、全部子群及共轭类。表格、互动与程序使用同一套明确约定。</p><details class="static-group"><summary>C1 · 1阶循环群 · 阶1</summary><p>指数模 1 相加；用带标记的转盘追踪操作。</p><div class="table-scroll"><table class="cayley"><caption>列X × 行Y，格子为XY</caption><thead><tr><th>Y ╲ X</th><th>E</th></tr></thead><tbody><tr><th>E</th><td>E</td></tr></tbody></table></div><p><b>全部元素的阶：</b>E: 1</p><p><b>全部子群（1个）：</b>{E}</p><p><b>全部共轭类：</b>{E}</p></details><details class="static-group"><summary>C2 · 2阶循环群 · 阶2</summary><p>指数模 2 相加；用带标记的转盘追踪操作。</p><div class="table-scroll"><table class="cayley"><caption>列X × 行Y，格子为XY</caption><thead><tr><th>Y ╲ X</th><th>E</th><th>A</th></tr></thead><tbody><tr><th>E</th><td>E</td><td>A</td></tr><tr><th>A</th><td>A</td><td>E</td></tr></tbody></table></div><p><b>全部元素的阶：</b>E: 1, A: 2</p><p><b>全部子群（2个）：</b>{E}； {E, A}</p><p><b>全部共轭类：</b>{E}； {A}</p></details><details class="static-group"><summary>C3 · 3阶循环群 · 阶3</summary><p>指数模 3 相加；用带标记的转盘追踪操作。</p><div class="table-scroll"><table class="cayley"><caption>列X × 行Y，格子为XY</caption><thead><tr><th>Y ╲ X</th><th>E</th><th>A</th><th>B</th></tr></thead><tbody><tr><th>E</th><td>E</td><td>A</td><td>B</td></tr><tr><th>A</th><td>A</td><td>B</td><td>E</td></tr><tr><th>B</th><td>B</td><td>E</td><td>A</td></tr></tbody></table></div><p><b>全部元素的阶：</b>E: 1, A: 3, B: 3</p><p><b>全部子群（2个）：</b>{E}； {E, A, B}</p><p><b>全部共轭类：</b>{E}； {A}； {B}</p></details><details class="static-group"><summary>C4 · 4阶循环群 · 阶4</summary><p>指数模 4 相加；用带标记的转盘追踪操作。</p><div class="table-scroll"><table class="cayley"><caption>列X × 行Y，格子为XY</caption><thead><tr><th>Y ╲ X</th><th>E</th><th>A</th><th>B</th><th>C</th></tr></thead><tbody><tr><th>E</th><td>E</td><td>A</td><td>B</td><td>C</td></tr><tr><th>A</th><td>A</td><td>B</td><td>C</td><td>E</td></tr><tr><th>B</th><td>B</td><td>C</td><td>E</td><td>A</td></tr><tr><th>C</th><td>C</td><td>E</td><td>A</td><td>B</td></tr></tbody></table></div><p><b>全部元素的阶：</b>E: 1, A: 4, B: 2, C: 4</p><p><b>全部子群（3个）：</b>{E}； {E, B}； {E, A, B, C}</p><p><b>全部共轭类：</b>{E}； {A}； {B}； {C}</p></details><details class="static-group"><summary>C5 · 5阶循环群 · 阶5</summary><p>指数模 5 相加；用带标记的转盘追踪操作。</p><div class="table-scroll"><table class="cayley"><caption>列X × 行Y，格子为XY</caption><thead><tr><th>Y ╲ X</th><th>E</th><th>A</th><th>B</th><th>C</th><th>D</th></tr></thead><tbody><tr><th>E</th><td>E</td><td>A</td><td>B</td><td>C</td><td>D</td></tr><tr><th>A</th><td>A</td><td>B</td><td>C</td><td>D</td><td>E</td></tr><tr><th>B</th><td>B</td><td>C</td><td>D</td><td>E</td><td>A</td></tr><tr><th>C</th><td>C</td><td>D</td><td>E</td><td>A</td><td>B</td></tr><tr><th>D</th><td>D</td><td>E</td><td>A</td><td>B</td><td>C</td></tr></tbody></table></div><p><b>全部元素的阶：</b>E: 1, A: 5, B: 5, C: 5, D: 5</p><p><b>全部子群（2个）：</b>{E}； {E, A, B, C, D}</p><p><b>全部共轭类：</b>{E}； {A}； {B}； {C}； {D}</p></details><details class="static-group"><summary>C6 · 6阶循环群 · 阶6</summary><p>指数模 6 相加；用带标记的转盘追踪操作。</p><div class="table-scroll"><table class="cayley"><caption>列X × 行Y，格子为XY</caption><thead><tr><th>Y ╲ X</th><th>E</th><th>r</th><th>r^2</th><th>r^3</th><th>r^4</th><th>r^5</th></tr></thead><tbody><tr><th>E</th><td>E</td><td>r</td><td>r^2</td><td>r^3</td><td>r^4</td><td>r^5</td></tr><tr><th>r</th><td>r</td><td>r^2</td><td>r^3</td><td>r^4</td><td>r^5</td><td>E</td></tr><tr><th>r^2</th><td>r^2</td><td>r^3</td><td>r^4</td><td>r^5</td><td>E</td><td>r</td></tr><tr><th>r^3</th><td>r^3</td><td>r^4</td><td>r^5</td><td>E</td><td>r</td><td>r^2</td></tr><tr><th>r^4</th><td>r^4</td><td>r^5</td><td>E</td><td>r</td><td>r^2</td><td>r^3</td></tr><tr><th>r^5</th><td>r^5</td><td>E</td><td>r</td><td>r^2</td><td>r^3</td><td>r^4</td></tr></tbody></table></div><p><b>全部元素的阶：</b>E: 1, r: 6, r^2: 3, r^3: 2, r^4: 3, r^5: 6</p><p><b>全部子群（4个）：</b>{E}； {E, r^3}； {E, r^2, r^4}； {E, r, r^2, r^3, r^4, r^5}</p><p><b>全部共轭类：</b>{E}； {r}； {r^2}； {r^3}； {r^4}； {r^5}</p></details><details class="static-group"><summary>C8 · 8阶循环群 · 阶8</summary><p>指数模 8 相加；用带标记的转盘追踪操作。</p><div class="table-scroll"><table class="cayley"><caption>列X × 行Y，格子为XY</caption><thead><tr><th>Y ╲ X</th><th>E</th><th>r</th><th>r^2</th><th>r^3</th><th>r^4</th><th>r^5</th><th>r^6</th><th>r^7</th></tr></thead><tbody><tr><th>E</th><td>E</td><td>r</td><td>r^2</td><td>r^3</td><td>r^4</td><td>r^5</td><td>r^6</td><td>r^7</td></tr><tr><th>r</th><td>r</td><td>r^2</td><td>r^3</td><td>r^4</td><td>r^5</td><td>r^6</td><td>r^7</td><td>E</td></tr><tr><th>r^2</th><td>r^2</td><td>r^3</td><td>r^4</td><td>r^5</td><td>r^6</td><td>r^7</td><td>E</td><td>r</td></tr><tr><th>r^3</th><td>r^3</td><td>r^4</td><td>r^5</td><td>r^6</td><td>r^7</td><td>E</td><td>r</td><td>r^2</td></tr><tr><th>r^4</th><td>r^4</td><td>r^5</td><td>r^6</td><td>r^7</td><td>E</td><td>r</td><td>r^2</td><td>r^3</td></tr><tr><th>r^5</th><td>r^5</td><td>r^6</td><td>r^7</td><td>E</td><td>r</td><td>r^2</td><td>r^3</td><td>r^4</td></tr><tr><th>r^6</th><td>r^6</td><td>r^7</td><td>E</td><td>r</td><td>r^2</td><td>r^3</td><td>r^4</td><td>r^5</td></tr><tr><th>r^7</th><td>r^7</td><td>E</td><td>r</td><td>r^2</td><td>r^3</td><td>r^4</td><td>r^5</td><td>r^6</td></tr></tbody></table></div><p><b>全部元素的阶：</b>E: 1, r: 8, r^2: 4, r^3: 8, r^4: 2, r^5: 8, r^6: 4, r^7: 8</p><p><b>全部子群（4个）：</b>{E}； {E, r^4}； {E, r^2, r^4, r^6}； {E, r, r^2, r^3, r^4, r^5, r^6, r^7}</p><p><b>全部共轭类：</b>{E}； {r}； {r^2}； {r^3}； {r^4}； {r^5}； {r^6}； {r^7}</p></details><details class="static-group"><summary>C12 · 12阶循环群 · 阶12</summary><p>指数模 12 相加；用带标记的转盘追踪操作。</p><div class="table-scroll"><table class="cayley"><caption>列X × 行Y，格子为XY</caption><thead><tr><th>Y ╲ X</th><th>E</th><th>r</th><th>r^2</th><th>r^3</th><th>r^4</th><th>r^5</th><th>r^6</th><th>r^7</th><th>r^8</th><th>r^9</th><th>r^10</th><th>r^11</th></tr></thead><tbody><tr><th>E</th><td>E</td><td>r</td><td>r^2</td><td>r^3</td><td>r^4</td><td>r^5</td><td>r^6</td><td>r^7</td><td>r^8</td><td>r^9</td><td>r^10</td><td>r^11</td></tr><tr><th>r</th><td>r</td><td>r^2</td><td>r^3</td><td>r^4</td><td>r^5</td><td>r^6</td><td>r^7</td><td>r^8</td><td>r^9</td><td>r^10</td><td>r^11</td><td>E</td></tr><tr><th>r^2</th><td>r^2</td><td>r^3</td><td>r^4</td><td>r^5</td><td>r^6</td><td>r^7</td><td>r^8</td><td>r^9</td><td>r^10</td><td>r^11</td><td>E</td><td>r</td></tr><tr><th>r^3</th><td>r^3</td><td>r^4</td><td>r^5</td><td>r^6</td><td>r^7</td><td>r^8</td><td>r^9</td><td>r^10</td><td>r^11</td><td>E</td><td>r</td><td>r^2</td></tr><tr><th>r^4</th><td>r^4</td><td>r^5</td><td>r^6</td><td>r^7</td><td>r^8</td><td>r^9</td><td>r^10</td><td>r^11</td><td>E</td><td>r</td><td>r^2</td><td>r^3</td></tr><tr><th>r^5</th><td>r^5</td><td>r^6</td><td>r^7</td><td>r^8</td><td>r^9</td><td>r^10</td><td>r^11</td><td>E</td><td>r</td><td>r^2</td><td>r^3</td><td>r^4</td></tr><tr><th>r^6</th><td>r^6</td><td>r^7</td><td>r^8</td><td>r^9</td><td>r^10</td><td>r^11</td><td>E</td><td>r</td><td>r^2</td><td>r^3</td><td>r^4</td><td>r^5</td></tr><tr><th>r^7</th><td>r^7</td><td>r^8</td><td>r^9</td><td>r^10</td><td>r^11</td><td>E</td><td>r</td><td>r^2</td><td>r^3</td><td>r^4</td><td>r^5</td><td>r^6</td></tr><tr><th>r^8</th><td>r^8</td><td>r^9</td><td>r^10</td><td>r^11</td><td>E</td><td>r</td><td>r^2</td><td>r^3</td><td>r^4</td><td>r^5</td><td>r^6</td><td>r^7</td></tr><tr><th>r^9</th><td>r^9</td><td>r^10</td><td>r^11</td><td>E</td><td>r</td><td>r^2</td><td>r^3</td><td>r^4</td><td>r^5</td><td>r^6</td><td>r^7</td><td>r^8</td></tr><tr><th>r^10</th><td>r^10</td><td>r^11</td><td>E</td><td>r</td><td>r^2</td><td>r^3</td><td>r^4</td><td>r^5</td><td>r^6</td><td>r^7</td><td>r^8</td><td>r^9</td></tr><tr><th>r^11</th><td>r^11</td><td>E</td><td>r</td><td>r^2</td><td>r^3</td><td>r^4</td><td>r^5</td><td>r^6</td><td>r^7</td><td>r^8</td><td>r^9</td><td>r^10</td></tr></tbody></table></div><p><b>全部元素的阶：</b>E: 1, r: 12, r^2: 6, r^3: 4, r^4: 3, r^5: 12, r^6: 2, r^7: 12, r^8: 3, r^9: 4, r^10: 6, r^11: 12</p><p><b>全部子群（6个）：</b>{E}； {E, r^6}； {E, r^4, r^8}； {E, r^3, r^6, r^9}； {E, r^2, r^4, r^6, r^8, r^10}； {E, r, r^2, r^3, r^4, r^5, r^6, r^7, r^8, r^9, r^10, r^11}</p><p><b>全部共轭类：</b>{E}； {r}； {r^2}； {r^3}； {r^4}； {r^5}； {r^6}； {r^7}； {r^8}； {r^9}； {r^10}； {r^11}</p></details><details class="static-group"><summary>V₄ · Klein四元群 · 阶4</summary><p>两个独立开关按位异或；A=01、B=10、C=11。</p><div class="table-scroll"><table class="cayley"><caption>列X × 行Y，格子为XY</caption><thead><tr><th>Y ╲ X</th><th>E</th><th>A</th><th>B</th><th>C</th></tr></thead><tbody><tr><th>E</th><td>E</td><td>A</td><td>B</td><td>C</td></tr><tr><th>A</th><td>A</td><td>E</td><td>C</td><td>B</td></tr><tr><th>B</th><td>B</td><td>C</td><td>E</td><td>A</td></tr><tr><th>C</th><td>C</td><td>B</td><td>A</td><td>E</td></tr></tbody></table></div><p><b>全部元素的阶：</b>E: 1, A: 2, B: 2, C: 2</p><p><b>全部子群（5个）：</b>{E}； {E, A}； {E, B}； {E, C}； {E, A, B, C}</p><p><b>全部共轭类：</b>{E}； {A}； {B}； {C}</p></details><details class="static-group"><summary>D3 · 6阶三角形群 · 阶6</summary><p>r^3=s²=E，sr=r⁻¹s。</p><div class="table-scroll"><table class="cayley"><caption>列X × 行Y，格子为XY</caption><thead><tr><th>Y ╲ X</th><th>E</th><th>A</th><th>B</th><th>C</th><th>D</th><th>F</th></tr></thead><tbody><tr><th>E</th><td>E</td><td>A</td><td>B</td><td>C</td><td>D</td><td>F</td></tr><tr><th>A</th><td>A</td><td>E</td><td>D</td><td>F</td><td>B</td><td>C</td></tr><tr><th>B</th><td>B</td><td>F</td><td>E</td><td>D</td><td>C</td><td>A</td></tr><tr><th>C</th><td>C</td><td>D</td><td>F</td><td>E</td><td>A</td><td>B</td></tr><tr><th>D</th><td>D</td><td>C</td><td>A</td><td>B</td><td>F</td><td>E</td></tr><tr><th>F</th><td>F</td><td>B</td><td>C</td><td>A</td><td>E</td><td>D</td></tr></tbody></table></div><p><b>全部元素的阶：</b>E: 1, A: 2, B: 2, C: 2, D: 3, F: 3</p><p><b>全部子群（6个）：</b>{E}； {E, A}； {E, B}； {E, C}； {E, D, F}； {E, A, B, C, D, F}</p><p><b>全部共轭类：</b>{E}； {A, B, C}； {D, F}</p></details><details class="static-group"><summary>D4 · 8阶正方形群 · 阶8</summary><p>r^4=s²=E，sr=r⁻¹s。</p><div class="table-scroll"><table class="cayley"><caption>列X × 行Y，格子为XY</caption><thead><tr><th>Y ╲ X</th><th>E</th><th>r</th><th>r^2</th><th>r^3</th><th>s</th><th>rs</th><th>r^2s</th><th>r^3s</th></tr></thead><tbody><tr><th>E</th><td>E</td><td>r</td><td>r^2</td><td>r^3</td><td>s</td><td>rs</td><td>r^2s</td><td>r^3s</td></tr><tr><th>r</th><td>r</td><td>r^2</td><td>r^3</td><td>E</td><td>r^3s</td><td>s</td><td>rs</td><td>r^2s</td></tr><tr><th>r^2</th><td>r^2</td><td>r^3</td><td>E</td><td>r</td><td>r^2s</td><td>r^3s</td><td>s</td><td>rs</td></tr><tr><th>r^3</th><td>r^3</td><td>E</td><td>r</td><td>r^2</td><td>rs</td><td>r^2s</td><td>r^3s</td><td>s</td></tr><tr><th>s</th><td>s</td><td>rs</td><td>r^2s</td><td>r^3s</td><td>E</td><td>r</td><td>r^2</td><td>r^3</td></tr><tr><th>rs</th><td>rs</td><td>r^2s</td><td>r^3s</td><td>s</td><td>r^3</td><td>E</td><td>r</td><td>r^2</td></tr><tr><th>r^2s</th><td>r^2s</td><td>r^3s</td><td>s</td><td>rs</td><td>r^2</td><td>r^3</td><td>E</td><td>r</td></tr><tr><th>r^3s</th><td>r^3s</td><td>s</td><td>rs</td><td>r^2s</td><td>r</td><td>r^2</td><td>r^3</td><td>E</td></tr></tbody></table></div><p><b>全部元素的阶：</b>E: 1, r: 4, r^2: 2, r^3: 4, s: 2, rs: 2, r^2s: 2, r^3s: 2</p><p><b>全部子群（10个）：</b>{E}； {E, r^2}； {E, s}； {E, rs}； {E, r^2s}； {E, r^3s}； {E, r, r^2, r^3}； {E, r^2, s, r^2s}； {E, r^2, rs, r^3s}； {E, r, r^2, r^3, s, rs, r^2s, r^3s}</p><p><b>全部共轭类：</b>{E}； {r, r^3}； {r^2}； {s, r^2s}； {rs, r^3s}</p></details><details class="static-group"><summary>C₄ × C₂ · 阶8</summary><p>逐分量模 4、模 2 相加。</p><div class="table-scroll"><table class="cayley"><caption>列X × 行Y，格子为XY</caption><thead><tr><th>Y ╲ X</th><th>E</th><th>(0,1)</th><th>(1,0)</th><th>(1,1)</th><th>(2,0)</th><th>(2,1)</th><th>(3,0)</th><th>(3,1)</th></tr></thead><tbody><tr><th>E</th><td>E</td><td>(0,1)</td><td>(1,0)</td><td>(1,1)</td><td>(2,0)</td><td>(2,1)</td><td>(3,0)</td><td>(3,1)</td></tr><tr><th>(0,1)</th><td>(0,1)</td><td>E</td><td>(1,1)</td><td>(1,0)</td><td>(2,1)</td><td>(2,0)</td><td>(3,1)</td><td>(3,0)</td></tr><tr><th>(1,0)</th><td>(1,0)</td><td>(1,1)</td><td>(2,0)</td><td>(2,1)</td><td>(3,0)</td><td>(3,1)</td><td>E</td><td>(0,1)</td></tr><tr><th>(1,1)</th><td>(1,1)</td><td>(1,0)</td><td>(2,1)</td><td>(2,0)</td><td>(3,1)</td><td>(3,0)</td><td>(0,1)</td><td>E</td></tr><tr><th>(2,0)</th><td>(2,0)</td><td>(2,1)</td><td>(3,0)</td><td>(3,1)</td><td>E</td><td>(0,1)</td><td>(1,0)</td><td>(1,1)</td></tr><tr><th>(2,1)</th><td>(2,1)</td><td>(2,0)</td><td>(3,1)</td><td>(3,0)</td><td>(0,1)</td><td>E</td><td>(1,1)</td><td>(1,0)</td></tr><tr><th>(3,0)</th><td>(3,0)</td><td>(3,1)</td><td>E</td><td>(0,1)</td><td>(1,0)</td><td>(1,1)</td><td>(2,0)</td><td>(2,1)</td></tr><tr><th>(3,1)</th><td>(3,1)</td><td>(3,0)</td><td>(0,1)</td><td>E</td><td>(1,1)</td><td>(1,0)</td><td>(2,1)</td><td>(2,0)</td></tr></tbody></table></div><p><b>全部元素的阶：</b>E: 1, (0,1): 2, (1,0): 4, (1,1): 4, (2,0): 2, (2,1): 2, (3,0): 4, (3,1): 4</p><p><b>全部子群（8个）：</b>{E}； {E, (0,1)}； {E, (2,0)}； {E, (2,1)}； {E, (0,1), (2,0), (2,1)}； {E, (1,0), (2,0), (3,0)}； {E, (1,1), (2,0), (3,1)}； {E, (0,1), (1,0), (1,1), (2,0), (2,1), (3,0), (3,1)}</p><p><b>全部共轭类：</b>{E}； {(0,1)}； {(1,0)}； {(1,1)}； {(2,0)}； {(2,1)}； {(3,0)}； {(3,1)}</p></details><details class="static-group"><summary>C₂ × C₂ × C₂ · 阶8</summary><p>三位二进制按位异或。</p><div class="table-scroll"><table class="cayley"><caption>列X × 行Y，格子为XY</caption><thead><tr><th>Y ╲ X</th><th>E</th><th>001</th><th>010</th><th>011</th><th>100</th><th>101</th><th>110</th><th>111</th></tr></thead><tbody><tr><th>E</th><td>E</td><td>001</td><td>010</td><td>011</td><td>100</td><td>101</td><td>110</td><td>111</td></tr><tr><th>001</th><td>001</td><td>E</td><td>011</td><td>010</td><td>101</td><td>100</td><td>111</td><td>110</td></tr><tr><th>010</th><td>010</td><td>011</td><td>E</td><td>001</td><td>110</td><td>111</td><td>100</td><td>101</td></tr><tr><th>011</th><td>011</td><td>010</td><td>001</td><td>E</td><td>111</td><td>110</td><td>101</td><td>100</td></tr><tr><th>100</th><td>100</td><td>101</td><td>110</td><td>111</td><td>E</td><td>001</td><td>010</td><td>011</td></tr><tr><th>101</th><td>101</td><td>100</td><td>111</td><td>110</td><td>001</td><td>E</td><td>011</td><td>010</td></tr><tr><th>110</th><td>110</td><td>111</td><td>100</td><td>101</td><td>010</td><td>011</td><td>E</td><td>001</td></tr><tr><th>111</th><td>111</td><td>110</td><td>101</td><td>100</td><td>011</td><td>010</td><td>001</td><td>E</td></tr></tbody></table></div><p><b>全部元素的阶：</b>E: 1, 001: 2, 010: 2, 011: 2, 100: 2, 101: 2, 110: 2, 111: 2</p><p><b>全部子群（16个）：</b>{E}； {E, 001}； {E, 010}； {E, 011}； {E, 100}； {E, 101}； {E, 110}； {E, 111}； {E, 001, 010, 011}； {E, 001, 100, 101}； {E, 001, 110, 111}； {E, 010, 100, 110}； {E, 010, 101, 111}； {E, 011, 100, 111}； {E, 011, 101, 110}； {E, 001, 010, 011, 100, 101, 110, 111}</p><p><b>全部共轭类：</b>{E}； {001}； {010}； {011}； {100}； {101}； {110}； {111}</p></details><details class="static-group"><summary>Q₈ · 四元数群 · 阶8</summary><p>i²=j²=k²=ijk=−1；不是三维普通分子点群。</p><div class="table-scroll"><table class="cayley"><caption>列X × 行Y，格子为XY</caption><thead><tr><th>Y ╲ X</th><th>1</th><th>−1</th><th>i</th><th>−i</th><th>j</th><th>−j</th><th>k</th><th>−k</th></tr></thead><tbody><tr><th>1</th><td>1</td><td>−1</td><td>i</td><td>−i</td><td>j</td><td>−j</td><td>k</td><td>−k</td></tr><tr><th>−1</th><td>−1</td><td>1</td><td>−i</td><td>i</td><td>−j</td><td>j</td><td>−k</td><td>k</td></tr><tr><th>i</th><td>i</td><td>−i</td><td>−1</td><td>1</td><td>−k</td><td>k</td><td>j</td><td>−j</td></tr><tr><th>−i</th><td>−i</td><td>i</td><td>1</td><td>−1</td><td>k</td><td>−k</td><td>−j</td><td>j</td></tr><tr><th>j</th><td>j</td><td>−j</td><td>k</td><td>−k</td><td>−1</td><td>1</td><td>−i</td><td>i</td></tr><tr><th>−j</th><td>−j</td><td>j</td><td>−k</td><td>k</td><td>1</td><td>−1</td><td>i</td><td>−i</td></tr><tr><th>k</th><td>k</td><td>−k</td><td>−j</td><td>j</td><td>i</td><td>−i</td><td>−1</td><td>1</td></tr><tr><th>−k</th><td>−k</td><td>k</td><td>j</td><td>−j</td><td>−i</td><td>i</td><td>1</td><td>−1</td></tr></tbody></table></div><p><b>全部元素的阶：</b>1: 1, −1: 2, i: 4, −i: 4, j: 4, −j: 4, k: 4, −k: 4</p><p><b>全部子群（6个）：</b>{1}； {1, −1}； {1, −1, i, −i}； {1, −1, j, −j}； {1, −1, k, −k}； {1, −1, i, −i, j, −j, k, −k}</p><p><b>全部共轭类：</b>{1}； {−1}； {i, −i}； {j, −j}； {k, −k}</p></details><details class="static-group"><summary>A₄ · 4个对象的交错群（群阶12） · 阶12</summary><p>4个对象的偶置换；群阶12，用作整除逆命题的反例。</p><div class="table-scroll"><table class="cayley"><caption>列X × 行Y，格子为XY</caption><thead><tr><th>Y ╲ X</th><th>E</th><th>(234)</th><th>(243)</th><th>(12)(34)</th><th>(123)</th><th>(124)</th><th>(132)</th><th>(134)</th><th>(13)(24)</th><th>(142)</th><th>(143)</th><th>(14)(23)</th></tr></thead><tbody><tr><th>E</th><td>E</td><td>(234)</td><td>(243)</td><td>(12)(34)</td><td>(123)</td><td>(124)</td><td>(132)</td><td>(134)</td><td>(13)(24)</td><td>(142)</td><td>(143)</td><td>(14)(23)</td></tr><tr><th>(234)</th><td>(234)</td><td>(243)</td><td>E</td><td>(124)</td><td>(12)(34)</td><td>(123)</td><td>(134)</td><td>(13)(24)</td><td>(132)</td><td>(14)(23)</td><td>(142)</td><td>(143)</td></tr><tr><th>(243)</th><td>(243)</td><td>E</td><td>(234)</td><td>(123)</td><td>(124)</td><td>(12)(34)</td><td>(13)(24)</td><td>(132)</td><td>(134)</td><td>(143)</td><td>(14)(23)</td><td>(142)</td></tr><tr><th>(12)(34)</th><td>(12)(34)</td><td>(132)</td><td>(142)</td><td>E</td><td>(134)</td><td>(143)</td><td>(234)</td><td>(123)</td><td>(14)(23)</td><td>(243)</td><td>(124)</td><td>(13)(24)</td></tr><tr><th>(123)</th><td>(123)</td><td>(13)(24)</td><td>(143)</td><td>(243)</td><td>(132)</td><td>(14)(23)</td><td>E</td><td>(124)</td><td>(142)</td><td>(234)</td><td>(12)(34)</td><td>(134)</td></tr><tr><th>(124)</th><td>(124)</td><td>(134)</td><td>(14)(23)</td><td>(234)</td><td>(13)(24)</td><td>(142)</td><td>(243)</td><td>(12)(34)</td><td>(143)</td><td>E</td><td>(123)</td><td>(132)</td></tr><tr><th>(132)</th><td>(132)</td><td>(142)</td><td>(12)(34)</td><td>(143)</td><td>E</td><td>(134)</td><td>(123)</td><td>(14)(23)</td><td>(234)</td><td>(13)(24)</td><td>(243)</td><td>(124)</td></tr><tr><th>(134)</th><td>(134)</td><td>(14)(23)</td><td>(124)</td><td>(142)</td><td>(234)</td><td>(13)(24)</td><td>(12)(34)</td><td>(143)</td><td>(243)</td><td>(132)</td><td>E</td><td>(123)</td></tr><tr><th>(13)(24)</th><td>(13)(24)</td><td>(143)</td><td>(123)</td><td>(14)(23)</td><td>(243)</td><td>(132)</td><td>(124)</td><td>(142)</td><td>E</td><td>(134)</td><td>(234)</td><td>(12)(34)</td></tr><tr><th>(142)</th><td>(142)</td><td>(12)(34)</td><td>(132)</td><td>(134)</td><td>(143)</td><td>E</td><td>(14)(23)</td><td>(234)</td><td>(123)</td><td>(124)</td><td>(13)(24)</td><td>(243)</td></tr><tr><th>(143)</th><td>(143)</td><td>(123)</td><td>(13)(24)</td><td>(132)</td><td>(14)(23)</td><td>(243)</td><td>(142)</td><td>E</td><td>(124)</td><td>(12)(34)</td><td>(134)</td><td>(234)</td></tr><tr><th>(14)(23)</th><td>(14)(23)</td><td>(124)</td><td>(134)</td><td>(13)(24)</td><td>(142)</td><td>(234)</td><td>(143)</td><td>(243)</td><td>(12)(34)</td><td>(123)</td><td>(132)</td><td>E</td></tr></tbody></table></div><p><b>全部元素的阶：</b>E: 1, (234): 3, (243): 3, (12)(34): 2, (123): 3, (124): 3, (132): 3, (134): 3, (13)(24): 2, (142): 3, (143): 3, (14)(23): 2</p><p><b>全部子群（10个）：</b>{E}； {E, (14)(23)}； {E, (12)(34)}； {E, (13)(24)}； {E, (234), (243)}； {E, (123), (132)}； {E, (124), (142)}； {E, (134), (143)}； {E, (12)(34), (13)(24), (14)(23)}； {E, (234), (243), (12)(34), (123), (124), (132), (134), (13)(24), (142), (143), (14)(23)}</p><p><b>全部共轭类：</b>{E}； {(234), (124), (132), (143)}； {(243), (123), (134), (142)}； {(12)(34), (13)(24), (14)(23)}</p></details><div class="route"><h3>下一章：让抽象群对应到真实分子。</h3><p>第三章再系统讨论分子的对称元素、对称操作与点群分类。本章先理解运算和集合的逻辑；需要几何直觉时，可参考已上线的 <a href="https://turney0524.github.io/point-groups.html">32点群动态展示</a>。</p></div><div class="chapter-nav"><a href="../第一章/index.html">← 第一章 · 绪论</a><a href="../index.html">返回全书目录 ↑</a></div></article></div><footer class="end"><span>计算凝聚态物理 · Cotton 第三版动态伴读 · 第二章本地稿</span><span><a href="README.md">使用说明</a>　/　<a href="校验报告.json">数值核验报告</a></span></footer></main><noscript><div class="scope">正文、公式及静态完整表可直接阅读，互动需要JavaScript；无需安装插件。</div></noscript><script>/* Exact finite-group engine. Internal table[a][b] = a*b; textbook UI transposes it. */
+(function(root){'use strict';
+const mod=(a,n)=>(a%n+n)%n,eq=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
+function create(id,name,raw,product,labels,meta={}){
+ const table=raw.map(a=>raw.map(b=>{const p=product(a,b),j=raw.findIndex(x=>eq(x,p));if(j<0)throw Error('Not closed: '+id);return j;}));
+ const e=table.findIndex((r,i)=>r.every((x,j)=>x===j)&&table.every((r,j)=>r[i]===j));
+ const inverse=raw.map((_,i)=>table[i].findIndex((x,j)=>x===e&&table[j][i]===e));
+ const orders=raw.map((_,i)=>{let p=e;for(let k=1;k<=raw.length;k++){p=table[p][i];if(p===e)return k;}throw Error('Missing finite order');});
+ return {id,name,raw,table,e,inverse,orders,labels,n:raw.length,...meta};
+}
+function cyclic(n){return create('C'+n,'C'+n+' · '+n+'阶循环群',Array.from({length:n},(_,i)=>i),(a,b)=>(a+b)%n,Array.from({length:n},(_,i)=>i===0?'E':n<=5?['','A','B','C','D'][i]:i===1?'r':'r^'+i),{kind:'cyclic',degree:n,description:'指数模 '+n+' 相加；用带标记的转盘追踪操作。'});}
+function dihedral(n){let raw=[];for(let k=0;k<n;k++)raw.push([k,0]);for(let k=0;k<n;k++)raw.push([k,1]);if(n===3)raw=[[0,0],[0,1],[1,1],[2,1],[1,0],[2,0]];
+ return create('D'+n,'D'+n+' · '+(2*n)+'阶'+(n===3?'三角形':'正方形')+'群',raw,([k,b],[l,c])=>[mod(k+(b?-l:l),n),b^c],raw.map(([k,b],i)=>n===3?['E','A','B','C','D','F'][i]:b?(k===0?'s':k===1?'rs':'r^'+k+'s'):(k===0?'E':k===1?'r':'r^'+k)),{kind:'dihedral',degree:n,description:'r^'+n+'=s²=E，sr=r⁻¹s。'});
+}
+function direct(a,b,id,name,labels){const raw=[];for(let i=0;i<a;i++)for(let j=0;j<b;j++)raw.push([i,j]);return create(id,name,raw,([i,j],[k,l])=>[(i+k)%a,(j+l)%b],labels||raw.map(([i,j])=>i===0&&j===0?'E':'('+i+','+j+')'),{kind:'abstract',description:'逐分量模 '+a+'、模 '+b+' 相加。'});}
+const V4=create('V4','V₄ · Klein四元群',[0,1,2,3],(a,b)=>a^b,['E','A','B','C'],{kind:'v4',description:'两个独立开关按位异或；A=01、B=10、C=11。'});
+const Z222=create('Z222','C₂ × C₂ × C₂',Array.from({length:8},(_,i)=>i),(a,b)=>a^b,Array.from({length:8},(_,i)=>i?i.toString(2).padStart(3,'0'):'E'),{kind:'abstract',description:'三位二进制按位异或。'});
+const units=[[0,1],[1,0],[0,0],[0,-1]],unitTable=[[0,1,2,3],[1,0,3,2],[2,3,0,1],[3,2,1,0]],unitSigns=[[1,1,1,1],[1,-1,1,-1],[1,-1,-1,1],[1,1,-1,-1]];
+// Basis indices 0=1,1=i,2=j,3=k. i*j=k, j*k=i, k*i=j.
+const qRaw=[[1,0],[-1,0],[1,1],[-1,1],[1,2],[-1,2],[1,3],[-1,3]];
+const Q8=create('Q8','Q₈ · 四元数群',qRaw,([s,a],[t,b])=>[s*t*unitSigns[a][b],unitTable[a][b]],['1','−1','i','−i','j','−j','k','−k'],{kind:'abstract',description:'i²=j²=k²=ijk=−1；不是三维普通分子点群。'});
+function permutations(xs){if(!xs.length)return [[]];return xs.flatMap((x,i)=>permutations(xs.filter((_,j)=>i!==j)).map(p=>[x,...p]));}
+function cycleName(p){const used=new Set();let out='';for(let i=0;i<p.length;i++)if(!used.has(i)){let cyc=[],j=i;do{cyc.push(j+1);used.add(j);j=p[j];}while(j!==i);if(cyc.length>1)out+='('+cyc.join('')+')';}return out||'E';}
+const even=permutations([0,1,2,3]).filter(p=>{let inv=0;for(let i=0;i<4;i++)for(let j=i+1;j<4;j++)inv+=p[i]>p[j];return inv%2===0;});
+const A4=create('A4','A₄ · 4个对象的交错群（群阶12）',even,(p,q)=>q.map(x=>p[x]),even.map(cycleName),{kind:'abstract',description:'4个对象的偶置换；群阶12，用作整除逆命题的反例。'});
+const groups={};[1,2,3,4,5,6,8,12].forEach(n=>{let g=cyclic(n);groups[g.id]=g;});for(const g of [V4,dihedral(3),dihedral(4),direct(4,2,'C4xC2','C₄ × C₂'),Z222,Q8,A4])groups[g.id]=g;
+function mul(g,a,b){return g.table[a][b];}
+function word(g,xs){return xs.reduce((p,x)=>mul(g,p,x),g.e);}
+function closure(g,seed){let set=new Set([g.e,...seed]),changed=true;while(changed){changed=false;for(const x of Array.from(set)){for(const y of Array.from(set)){const z=mul(g,x,y);if(!set.has(z)){set.add(z);changed=true;}}const z=g.inverse[x];if(!set.has(z)){set.add(z);changed=true;}}}return [...set].sort((a,b)=>a-b);}
+function subgroupCheck(g,subset){const S=new Set(subset);if(!S.size)return {ok:false,reason:'empty'};if(!S.has(g.e))return {ok:false,reason:'identity',missing:g.e};for(const x of S){if(!S.has(g.inverse[x]))return {ok:false,reason:'inverse',x,missing:g.inverse[x]};for(const y of S)if(!S.has(mul(g,x,y)))return {ok:false,reason:'product',x,y,missing:mul(g,x,y)};}return {ok:true};}
+function subgroups(g){if(g._subs)return g._subs;const out=[];for(let m=1;m<(1<<g.n);m++){if(!(m&(1<<g.e)))continue;const S=[];for(let i=0;i<g.n;i++)if(m&(1<<i))S.push(i);if(g.n%S.length===0&&subgroupCheck(g,S).ok)out.push(S);}return g._subs=out.sort((a,b)=>a.length-b.length||a.join(',').localeCompare(b.join(',')));}
+function cosets(g,H,side='left'){const seen=new Set(),out=[];for(let x=0;x<g.n;x++)if(!seen.has(x)){const members=H.map(h=>side==='left'?mul(g,x,h):mul(g,h,x)).sort((a,b)=>a-b);members.forEach(y=>seen.add(y));out.push({representative:x,members});}return out;}
+function conjugate(g,a,x){return mul(g,mul(g,g.inverse[x],a),x);}
+function centralizer(g,a){return g.raw.map((_,i)=>i).filter(x=>mul(g,x,a)===mul(g,a,x));}
+function classes(g){let seen=new Set(),out=[];for(let a=0;a<g.n;a++)if(!seen.has(a)){let C=[...new Set(g.raw.map((_,x)=>conjugate(g,a,x)))].sort((a,b)=>a-b);C.forEach(x=>seen.add(x));out.push(C);}return out;}
+function audit(T){const n=T.length,result={closure:true,identity:-1,inverses:true,associativity:true,latin:true,commutative:true};
+ for(let i=0;i<n;i++)for(let j=0;j<n;j++){if(!Number.isInteger(T[i][j])||T[i][j]<0||T[i][j]>=n)result.closure=false;if(T[i][j]!==T[j][i])result.commutative=false;}
+ if(!result.closure){result.associativity=false;result.inverses=false;return result;}
+ result.identity=T.findIndex((r,i)=>r.every((x,j)=>x===j)&&T.every((r,j)=>r[i]===j));
+ result.latin=T.every(r=>new Set(r).size===n)&&T[0].every((_,j)=>new Set(T.map(r=>r[j])).size===n);
+ result.inverses=result.identity>=0&&T.every((r,i)=>r.some((x,j)=>x===result.identity&&T[j][i]===result.identity));
+ for(let a=0;a<n;a++)for(let b=0;b<n;b++)for(let c=0;c<n;c++)if(T[T[a][b]][c]!==T[a][T[b][c]]){result.associativity=false;result.witness??={a,b,c,left:T[T[a][b]][c],right:T[a][T[b][c]]};}
+ result.group=result.closure&&result.identity>=0&&result.inverses&&result.associativity;return result;
+}
+function matrix(g,i){if(g.kind==='cyclic'){let a=2*Math.PI*g.raw[i]/g.degree;return [[Math.cos(a),-Math.sin(a)],[Math.sin(a),Math.cos(a)]];}if(g.kind==='dihedral'){const [k,b]=g.raw[i],a=2*Math.PI*k/g.degree,c=Math.cos(a),s=Math.sin(a),d=b?-1:1;return [[c,-d*s],[s,d*c]];}if(g.kind==='v4'){const b=g.raw[i];return [[b&1?-1:1,0],[0,b&2?-1:1]];}return null;}
+function act(M,v){return M.map(r=>r[0]*v[0]+r[1]*v[1]);}
+const api={groups,mul,word,closure,subgroupCheck,subgroups,cosets,conjugate,centralizer,classes,audit,matrix,act,cycleName};if(typeof module==='object'&&module.exports)module.exports=api;else root.GroupTheory=api;
+})(typeof window!=='undefined'?window:this);
+</script><script>(function(){'use strict';
+const G=window.GroupTheory,$=s=>document.querySelector(s),$$=s=>Array.from(document.querySelectorAll(s)),D=G.groups.D3;
+const ink='#071b49',gold='#b28b43',blue='#43789a',red='#a46061',line='#ddd2b7',muted='#7a8591',paper='#fffcf1';
+const colors=['#e7e8cf','#d8e7e5','#ead9d5','#dfe0ee','#f0e1bb','#d9e5cc','#e4d8e8','#d9e2ec'];
+const names=(g,S)=>'{'+S.map(i=>g.labels[i]).join(', ')+'}',fmt=x=>Math.abs(x)<1e-9?'0':Number(x.toFixed(3)).toString();
+function text(c,t,x,y,color=ink,size=12,align='left'){c.fillStyle=color;c.font=`${size}px system-ui,-apple-system,"PingFang SC",sans-serif`;c.textAlign=align;c.fillText(t,x,y);}
+function path(c,ps,color=ink,width=1.5){c.beginPath();ps.forEach((p,i)=>i?c.lineTo(...p):c.moveTo(...p));c.strokeStyle=color;c.lineWidth=width;c.stroke();}
+function ball(c,x,y,r,color){c.beginPath();c.arc(x,y,r,0,Math.PI*2);c.fillStyle=color;c.fill();}
+function matmul(A,B){return A.map(r=>B[0].map((_,j)=>r.reduce((s,v,k)=>s+v*B[k][j],0)));}
+const sims=[];
+function register(id,render,animated=false){const el=$('#'+id+'-demo'),canvas=el.querySelector('canvas'),c=canvas?.getContext('2d');const sim={id,el,canvas,c,render,animated,time:0,play:!matchMedia('(prefers-reduced-motion:reduce)').matches,visible:false};
+ sim.draw=()=>{if(!canvas){render(null,0,0,sim.time);return;}const r=canvas.getBoundingClientRect(),d=Math.min(devicePixelRatio||1,2);if(canvas.width!==Math.round(r.width*d)||canvas.height!==Math.round(r.height*d)){canvas.width=Math.round(r.width*d);canvas.height=Math.round(r.height*d);}c.setTransform(d,0,0,d,0,0);c.clearRect(0,0,r.width,r.height);render(c,r.width,r.height,sim.time);};
+ if(canvas)new ResizeObserver(()=>sim.draw()).observe(canvas);
+ el.addEventListener('input',e=>{const o=document.getElementById(e.target.id+'-out');if(o)o.textContent=e.target.value;sim.draw();});el.addEventListener('change',()=>sim.draw());
+ const b=el.querySelector('[data-play]');if(b){sim.updatePlay=()=>{b.textContent=sim.play?'暂停动画':'播放动画';b.setAttribute('aria-pressed',String(sim.play));};b.onclick=()=>{sim.play=!sim.play;sim.updatePlay();};sim.updatePlay();}
+ sims.push(sim);return sim;
+}
+function optionList(g){return g.labels.map((x,i)=>'<option value="'+i+'">'+x+'<\/option>').join('');}
+function bookTable(g,root,{x=-1,y=-1,subset=null,values=null,marks=[]}={}){const labels=g.labels,T=values||g.table,mark=new Set(marks);root.innerHTML='<table class="cayley"><caption>列X × 行Y = XY；先行操作，再列操作<\/caption><thead><tr><th>Y ╲ X<\/th>'+labels.map((a,i)=>'<th class="'+(i===x?'on-col':'')+'">'+a+'<\/th>').join('')+'<\/tr><\/thead><tbody>'+labels.map((a,j)=>'<tr><th class="'+(j===y?'on-row':'')+'">'+a+'<\/th>'+labels.map((b,i)=>{const val=T[i][j],selected=i===x&&j===y,inSubset=subset&&subset.includes(i)&&subset.includes(j),value=val<0?'?':labels[val];return '<td class="'+(selected?'on-cell':inSubset?'on-row':j===y||i===x?'on-col':'')+'"'+(mark.has(i+','+j)?' style="background:#ead6b1"':'')+'><button data-x="'+i+'" data-y="'+j+'" aria-label="列'+b+'乘行'+a+'等于'+value+'">'+value+'<\/button><\/td>';}).join('')+'<\/tr>').join('')+'<\/tbody><\/table>';}
+function machine(g){return {g,pose:g.e,ops:[],i:0,u:0,auto:false,
+ load(ops,auto=true){this.pose=g.e;this.ops=ops;this.i=0;this.u=0;this.auto=auto;},
+ next(){this.auto=false;this.u=0;if(this.i<this.ops.length){this.pose=G.mul(g,this.ops[this.i],this.pose);this.i++;}},
+ tick(dt){if(!this.auto||this.i>=this.ops.length)return;this.u+=dt/1.05;if(this.u>=1){this.u=0;this.pose=G.mul(g,this.ops[this.i],this.pose);this.i++;if(this.i>=this.ops.length)this.auto=false;}},
+ matrix(){const base=G.matrix(g,this.pose);if(!this.auto||this.i>=this.ops.length)return base;const op=this.ops[this.i],raw=g.raw[op];let theta=2*Math.PI*raw[0]/g.degree;if(theta>Math.PI)theta-=2*Math.PI;const f=.5-.5*Math.cos(Math.PI*this.u),a=f*theta,c=Math.cos(a),s=Math.sin(a),d=raw[1]?1-2*f:1;return matmul([[c,-s*d],[s,c*d]],base);}
+ };}
+function polygon(c,w,h,M,n=3,title=''){const cx=w/2,cy=h*.48,r=Math.min(w*.3,h*.29),base=Array.from({length:n},(_,i)=>[Math.cos(2*Math.PI*i/n),Math.sin(2*Math.PI*i/n)]),screen=v=>[cx+v[0]*r,cy-v[1]*r];
+ text(c,title,w/2,23,muted,11,'center');c.setLineDash([4,5]);path(c,[...base,base[0]].map(screen),line,1.5);c.setLineDash([]);
+ const ps=base.map(v=>screen(G.act(M,v)));c.beginPath();ps.forEach((p,i)=>i?c.lineTo(...p):c.moveTo(...p));c.closePath();c.fillStyle='#eee5ce66';c.fill();c.strokeStyle=ink;c.lineWidth=2;c.stroke();ps.forEach(([x,y],i)=>{ball(c,x,y,13,[blue,gold,red,ink][i%4]);text(c,String(i+1),x,y+4,paper,12,'center');});
+ text(c,'虚线为初态；数字是被追踪的顶点',w/2,h-16,muted,10,'center');}
+// 01: inverse of a product, both correct and deliberately wrong order.
+$('#inv-a').value=1;$('#inv-b').value=4;$('#inv-c').value=2;
+const invM=machine(D);function invPlan(){const a=+$('#inv-a').value,b=+$('#inv-b').value,c=+$('#inv-c').value,forward=[c,b,a],undo=($('#inv-order').value==='correct'?[a,b,c]:[c,b,a]).map(i=>D.inverse[i]);return [...forward,...undo];}invM.load(invPlan(),false);
+const inv=register('inverse',(c,w,h)=>{polygon(c,w,h,invM.matrix(),3,'当前累计操作：'+D.labels[invM.pose]);const a=+$('#inv-a').value,b=+$('#inv-b').value,cc=+$('#inv-c').value,expr=D.labels[a]+D.labels[b]+D.labels[cc],correct=$('#inv-order').value==='correct';$('#inverse-steps').innerHTML=invM.ops.map((op,i)=>'<span class="'+(i===invM.i?'current':'')+'">'+(i===3?'｜撤销： ':'')+(i+1)+'. '+D.labels[op]+'<\/span>').join('　→　');$('#inverse-status').textContent='原乘积 '+expr+'；已完成 '+invM.i+'/6 步，累计结果 '+D.labels[invM.pose]+(invM.i===6?(invM.pose===D.e?'，回到E。':'，没有回到E。'):'。')+(correct?'使用逆序取逆。':'故意保留原顺序：有些特殊输入也会偶然恢复，不是一般公式。');},true);inv.advance=dt=>invM.tick(dt);
+$('#inverse-run').onclick=()=>{invM.load(invPlan(),true);inv.play=true;inv.updatePlay();inv.draw();};$('#inverse-step').onclick=()=>{if(invM.i>=6)invM.load(invPlan(),false);invM.next();inv.draw();};$('#inverse-reset').onclick=()=>{invM.load(invPlan(),false);inv.draw();};['inv-a','inv-b','inv-c','inv-order'].forEach(id=>$('#'+id).addEventListener('change',()=>{invM.load(invPlan(),false);inv.draw();}));
+// 02: integers under addition, never silently take a residue.
+let numberProgress=1;const integer=register('integer',(c,w,h)=>{const a=+$('#int-a').value,b=+$('#int-b').value,cx=w/2,y=h*.5,left=28,right=w-28,px=n=>left+(Math.max(-8,Math.min(8,n))+8)/16*(right-left),end=a+b;path(c,[[left,y],[right,y]],line,2);for(let i=-8;i<=8;i++){path(c,[[px(i),y-4],[px(i),y+4]],line,1);if(i%2===0)text(c,String(i),px(i),y+25,muted,10,'center');}const f=.5-.5*Math.cos(Math.PI*numberProgress),now=a+b*f;path(c,[[px(a),y-40],[px(now),y-40]],gold,3);ball(c,px(now),y-40,7,blue);text(c,'起点 '+a,px(a),y-67,ink,11,'center');text(c,'a + b = '+a+' + ('+b+') = '+end,cx,25,ink,13,'center');if(Math.abs(end)>8)text(c,'终点 '+end+' 在显示窗外，仍是合法整数。',cx,h-40,red,12,'center');else text(c,'逆元：'+a+' 的加法逆元是 '+(-a),cx,h-40,muted,11,'center');$('#integer-status').textContent=end+' ∈ ℤ；恒等元是0，'+a+'的逆元是'+(-a)+'。'+(Math.abs(end)>8?'这不是封闭性失败，只是图只画到±8。':'不要把通常加法与模加法混淆。');},true);integer.advance=dt=>{numberProgress=Math.min(1,numberProgress+dt/1.3);};$('#integer-run').onclick=()=>{numberProgress=0;integer.play=true;integer.updatePlay();integer.draw();};$('#integer-inverse').onclick=()=>{$('#int-b').value=-Number($('#int-a').value);$('#int-b-out').textContent=$('#int-b').value;numberProgress=0;integer.draw();};
+// 03: editable Cayley table plus exhaustive axiom audit.
+const loop=[[0,1,2,3,4],[1,0,3,4,2],[2,4,0,1,3],[3,2,4,0,1],[4,3,1,2,0]];let T=G.groups.C3.table.map(r=>r.slice()),auditCell=[1,1];
+function resetAudit(){const key=$('#audit-preset').value;T=(key==='loop'?loop:G.groups.C3.table).map(r=>r.slice());if(key==='broken')T[1][1]=0;auditCell=[1,1];$('#audit-value').innerHTML=Array.from({length:T.length},(_,i)=>'<option value="'+i+'">'+['E','A','B','C','D'][i]+'<\/option>').join('');$('#audit-value').value=T[1][1];}
+resetAudit();
+const axioms=register('axioms',()=>{const g={labels:['E','A','B','C','D'].slice(0,T.length),table:T},a=G.audit(T);bookTable(g,$('#audit-table'),{x:auditCell[0],y:auditCell[1]});$('#audit-flags').innerHTML=[['封闭',a.closure],['恒等',a.identity>=0],['双侧逆',a.inverses],['结合',a.associativity],['每行列无重复',a.latin],['交换（非公理）',a.commutative]].map(([t,v])=>'<span class="'+(v?'pass':'fail')+'">'+(v?'✓ ':'× ')+t+'<\/span>').join('');const L=g.labels;$('#axioms-status').textContent=(a.group?'四条公理全部通过，这是一张群表。':'不是群。')+(a.witness?'结合律反例：('+L[a.witness.a]+L[a.witness.b]+')'+L[a.witness.c]+' = '+L[a.witness.left]+'，但 '+L[a.witness.a]+'('+L[a.witness.b]+L[a.witness.c]+') = '+L[a.witness.right]+'。':'')+' 当前编辑：列'+L[auditCell[0]]+' × 行'+L[auditCell[1]]+'。';},false);
+$('#audit-preset').onchange=()=>{resetAudit();axioms.draw();};$('#audit-reset').onclick=()=>{resetAudit();axioms.draw();};$('#audit-table').onclick=e=>{const b=e.target.closest('[data-x]');if(!b)return;auditCell=[+b.dataset.x,+b.dataset.y];$('#audit-value').value=T[auditCell[0]][auditCell[1]];axioms.draw();};$('#audit-change').onclick=()=>{T[auditCell[0]][auditCell[1]]=+$('#audit-value').value;axioms.draw();};
+// 04: a derivation, not an unexplained table reveal.
+let fillStep=0;const fill=register('fill',()=>{const choice=$('#fill-aa').value,g=G.groups.C3,F=Array.from({length:3},()=>Array(3).fill(-1));for(let i=0;i<3;i++)F[0][i]=F[i][0]=i;let explanation='先由恒等元填好首行与首列。A²不能为A，剩下E或B两个候选。';if(choice==='0'){F[1][1]=0;explanation='假设A²=E。A行还缺B，迫使AB=B；于是AB=EB，右消去B得到A=E，与元素互异矛盾。此分支不能完成群表。';}else if(choice==='2'){F[1][1]=2;const cells=[[1,2],[2,1],[2,2]],notes=['选择A²=B。现在看A行剩下什么。','补AB=E：A所在行已用A、B，只剩E。','补BA=E：A所在列也必须不重不漏。','补B²=A：最后缺少A。全部三阶表已确定，再检查公理。'];cells.slice(0,fillStep).forEach(([x,y])=>F[x][y]=g.table[x][y]);explanation=notes[fillStep];}bookTable(g,$('#fill-table'),{values:F});$('#fill-explanation').textContent=explanation;$('#fill-status').textContent=choice==='0'?'错误分支已得到矛盾。':fillStep===3&&choice==='2'?'完整表通过群公理；A³=E，B=A²。':'已知格子来自恒等条件与重排定理，问号是尚未推出的值。';});$('#fill-aa').onchange=()=>{fillStep=0;fill.draw();};$('#fill-next').onclick=()=>{if($('#fill-aa').value==='2')fillStep=Math.min(3,fillStep+1);fill.draw();};$('#fill-reset').onclick=()=>{fillStep=0;$('#fill-aa').value='unknown';fill.draw();};
+// 05: generated cyclic subgroup.
+$('#cycle-n').value=12;let cyclePos=0,visited=new Set([0]),cycleAuto=false,cycleClock=0;
+const cycle=register('cycle',(c,w,h)=>{const n=+$('#cycle-n').value,k=+$('#cycle-k').value,order=n/gcd(n,k),cx=w/2,cy=h*.49,r=Math.min(w*.31,h*.31);$('#cycle-k').max=n-1;if(k>=n)$('#cycle-k').value=1;for(let i=0;i<n;i++){let a=-Math.PI/2+2*Math.PI*i/n,x=cx+r*Math.cos(a),y=cy+r*Math.sin(a);ball(c,x,y,15,visited.has(i)?gold:'#eee8d7');text(c,String(i),x,y+4,visited.has(i)?paper:ink,11,'center');if(i===cyclePos){c.beginPath();c.arc(x,y,20,0,Math.PI*2);c.strokeStyle=ink;c.stroke();}}const a=-Math.PI/2+2*Math.PI*cyclePos/n;path(c,[[cx,cy],[cx+.75*r*Math.cos(a),cy+.75*r*Math.sin(a)]],ink,2);text(c,'当前位置 '+cyclePos,cx,cy+8,ink,11,'center');text(c,'已访问 '+visited.size+' / '+n,w/2,h-14,muted,10,'center');$('#cycle-status').textContent='ord(r^'+k+') = '+n+'/gcd('+n+','+k+') = '+order+'。'+(order===n?'该步长是生成元。':'只生成一个真子群，不会走遍全群。');},true);function gcd(a,b){while(b)[a,b]=[b,a%b];return a;}function resetCycle(){cyclePos=0;visited=new Set([0]);cycleAuto=false;cycleClock=0;}function cycleStep(){const n=+$('#cycle-n').value,k=+$('#cycle-k').value;cyclePos=(cyclePos+k)%n;visited.add(cyclePos);if(cyclePos===0)cycleAuto=false;cycle.draw();}cycle.advance=dt=>{if(cycleAuto){cycleClock+=dt;if(cycleClock>.6){cycleClock=0;cycleStep();}}};$('#cycle-step').onclick=()=>{cycleAuto=false;cycleStep();};$('#cycle-run').onclick=()=>{resetCycle();cycleAuto=true;cycle.play=true;cycle.updatePlay();};$('#cycle-reset').onclick=()=>{resetCycle();cycle.draw();};$('#cycle-n').onchange=()=>{if(+$('#cycle-k').value>=+$('#cycle-n').value)$('#cycle-k').value=1;$('#cycle-k-out').textContent=$('#cycle-k').value;resetCycle();cycle.draw();};$('#cycle-k').oninput=()=>{resetCycle();cycle.draw();};
+// 06: C4 versus V4.
+let fourPose=0;const four=register('four',(c,w,h)=>{const g=G.groups[$('#four-group').value],op=+$('#four-op').value,cx=w/2,cy=h*.47,r=75;if(g.id==='C4'){polygon(c,w,h,G.matrix(g,fourPose),4,'C₄：四次90°旋转返回');}else{for(let b=0;b<2;b++){const x=cx+(b?55:-55),on=(fourPose>>b)&1;c.fillStyle='#eee6d1';c.fillRect(x-28,cy-41,56,80);ball(c,x,cy+(on?-20:20),18,on?gold:blue);text(c,on?'1':'0',x,cy+(on?-16:24),paper,13,'center');}text(c,'A翻第一位，B翻第二位，C同时翻',cx,25,ink,11,'center');text(c,'当前位串 '+fourPose.toString(2).padStart(2,'0'),cx,h-25,muted,11,'center');}bookTable(g,$('#four-table'),{x:op,y:fourPose});$('#four-status').textContent='当前 '+g.labels[fourPose]+'；下一步左乘 '+g.labels[op]+'；ord('+g.labels[op]+')='+g.orders[op]+'。全部元素阶：'+g.orders.join('、')+'。';});$('#four-group').onchange=()=>{fourPose=0;four.draw();};$('#four-step').onclick=()=>{const g=G.groups[$('#four-group').value];fourPose=G.mul(g,+$('#four-op').value,fourPose);four.draw();};$('#four-reset').onclick=()=>{fourPose=0;four.draw();};
+// 07: textbook table, choose a row and column, then apply actual active matrices.
+$('#tri-x').value=1;$('#tri-y').value=2;const triM=machine(D);let triKey='';function triPlan(){return [+$('#tri-y').value,+$('#tri-x').value];}
+const triangle=register('triangle',(c,w,h)=>{const x=+$('#tri-x').value,y=+$('#tri-y').value,z=G.mul(D,x,y),other=G.mul(D,y,x),key=x+','+y;polygon(c,w,h,triM.matrix(),3,'先 '+D.labels[y]+'，后 '+D.labels[x]+'；当前 '+D.labels[triM.pose]);if(key!==triKey){bookTable(D,$('#triangle-table'),{x,y});triKey=key;}$('#triangle-status').textContent='列'+D.labels[x]+' × 行'+D.labels[y]+' = '+D.labels[z]+'；反过来 '+D.labels[y]+D.labels[x]+' = '+D.labels[other]+'。'+(z===other?'这对元素可交换。':'这对元素不交换。')+' 已完成 '+triM.i+'/2 步，当前累计 '+D.labels[triM.pose]+'。';},true);triangle.advance=dt=>triM.tick(dt);triM.load(triPlan(),false);
+$('#triangle-table').onclick=e=>{const b=e.target.closest('[data-x]');if(!b)return;$('#tri-x').value=b.dataset.x;$('#tri-y').value=b.dataset.y;triM.load(triPlan(),true);triangle.play=true;triangle.updatePlay();triangle.draw();};$('#triangle-run').onclick=()=>{triM.load(triPlan(),true);triangle.play=true;triangle.updatePlay();triangle.draw();};$('#triangle-swap').onclick=()=>{let x=$('#tri-x').value;$('#tri-x').value=$('#tri-y').value;$('#tri-y').value=x;triM.load(triPlan(),true);triangle.play=true;triangle.updatePlay();triangle.draw();};$('#triangle-reset').onclick=()=>{triM.load(triPlan(),false);triangle.draw();};['tri-x','tri-y'].forEach(id=>$('#'+id).onchange=()=>{triM.load(triPlan(),false);triangle.draw();});
+// 08: candidate subgroup and smallest generated closure.
+let subset=[0,1,2];const subgroup=register('subgroup',()=>{const check=G.subgroupCheck(D,subset);$('#subgroup-chips').innerHTML=D.labels.map((x,i)=>'<button data-member="'+i+'" class="'+(subset.includes(i)?'selected':'')+'" aria-pressed="'+subset.includes(i)+'">'+x+'<\/button>').join('');bookTable(D,$('#subgroup-table'),{subset});let msg='';if(check.ok)msg='是子群，阶 '+subset.length+'；6/'+subset.length+' = '+6/subset.length+'。';else if(check.reason==='empty')msg='空集不是群。';else if(check.reason==='identity')msg='缺少恒等元E。';else if(check.reason==='inverse')msg='缺少 '+D.labels[check.x]+' 的逆元 '+D.labels[check.missing]+'。';else msg='不封闭：'+D.labels[check.x]+D.labels[check.y]+' = '+D.labels[check.missing]+'，但结果不在所选集合中。';$('#subgroup-status').textContent=names(D,subset)+'：'+msg;$('#subgroup-list').innerHTML=G.subgroups(D).map((S,i)=>'<button data-sub="'+i+'">'+names(D,S)+'<\/button>').join('');});$('#subgroup-chips').onclick=e=>{const b=e.target.closest('[data-member]');if(!b)return;let i=+b.dataset.member;subset=subset.includes(i)?subset.filter(x=>x!==i):[...subset,i].sort((a,b)=>a-b);subgroup.draw();};$('#subgroup-list').onclick=e=>{const b=e.target.closest('[data-sub]');if(b){subset=G.subgroups(D)[+b.dataset.sub].slice();subgroup.draw();}};$('#subgroup-bad').onclick=()=>{subset=[0,1,2];subgroup.draw();};$('#subgroup-good').onclick=()=>{subset=[0,4,5];subgroup.draw();};$('#subgroup-complete').onclick=()=>{subset=G.closure(D,subset);subgroup.draw();};$('#subgroup-clear').onclick=()=>{subset=[0];subgroup.draw();};
+// 09: disjoint equal-size coset packets, with reveal rather than a misleading overlap.
+let cosetShow=1;function getH(){return {mirror:[0,1],rotation:[0,4,5],identity:[0],whole:[0,1,2,3,4,5]}[$('#coset-h').value];}
+const cosets=register('cosets',()=>{const H=getH(),side=$('#coset-side').value,cs=G.cosets(D,H,side),show=Math.min(cs.length,cosetShow),left=G.cosets(D,H,'left').map(c=>c.members.join(',')).sort().join(';'),right=G.cosets(D,H,'right').map(c=>c.members.join(',')).sort().join(';');$('#coset-tiles').innerHTML=cs.map((p,i)=>'<div class="tile" style="background:'+colors[i]+';opacity:'+(i<show?1:.25)+'"><b>包 '+(i+1)+' · '+(side==='left'?D.labels[p.representative]+'H':'H'+D.labels[p.representative])+'<\/b>'+(i<show?names(D,p.members):'尚未显露')+'<\/div>').join('');$('#cosets-status').textContent='已显露 '+show+' 包，每包 '+H.length+' 个元素；全部 '+cs.length+' 包，6 = '+cs.length+' × '+H.length+'。'+(left===right?'此H的左右陪集相同。':'此H的左右陪集不同。')+' 这些包不重不漏地覆盖全群。';});$('#coset-next').onclick=()=>{cosetShow++;cosets.draw();};$('#coset-all').onclick=()=>{cosetShow=6;cosets.draw();};$('#coset-reset').onclick=()=>{cosetShow=1;cosets.draw();};['coset-h','coset-side'].forEach(id=>$('#'+id).onchange=()=>{cosetShow=1;cosets.draw();});
+// 10: X -> A -> X^-1, and all transforms in a table.
+$('#conj-a').value=1;$('#conj-x').value=4;const conjM=machine(D);let conjKey='';function conjPlan(){const a=+$('#conj-a').value,x=+$('#conj-x').value;return [x,a,D.inverse[x]];}conjM.load(conjPlan(),false);
+const conjugation=register('conjugation',(c,w,h)=>{const a=+$('#conj-a').value,x=+$('#conj-x').value,z=G.conjugate(D,a,x),key=a+','+x;polygon(c,w,h,conjM.matrix(),3,'X⁻¹AX = '+D.labels[z]+'；当前 '+D.labels[conjM.pose]);$('#conjugation-steps').innerHTML=conjM.ops.map((op,i)=>'<span class="'+(i===conjM.i?'current':'')+'">'+(i+1)+'. '+['搬走 X','执行 A','搬回 X⁻¹'][i]+' = '+D.labels[op]+'<\/span>').join('　→　');if(key!==conjKey){$('#conjugation-transforms').innerHTML='<table><tr><th>X<\/th>'+D.labels.map(v=>'<th>'+v+'<\/th>').join('')+'<\/tr><tr><th>X⁻¹AX<\/th>'+D.labels.map((_,i)=>'<td style="'+(i===x?'background:#e8ddbe':'')+'">'+D.labels[G.conjugate(D,a,i)]+'<\/td>').join('')+'<\/tr><\/table>';conjKey=key;}$('#conjugation-status').textContent='选 A='+D.labels[a]+'，X='+D.labels[x]+'；共轭结果 '+D.labels[z]+'；完整类 '+names(D,G.classes(D).find(S=>S.includes(a)))+'。已完成 '+conjM.i+'/3 步，当前累计 '+D.labels[conjM.pose]+'。';},true);conjugation.advance=dt=>conjM.tick(dt);$('#conjugation-run').onclick=()=>{conjM.load(conjPlan(),true);conjugation.play=true;conjugation.updatePlay();conjugation.draw();};$('#conjugation-step').onclick=()=>{if(conjM.i===3)conjM.load(conjPlan(),false);conjM.next();conjugation.draw();};$('#conjugation-reset').onclick=()=>{conjM.load(conjPlan(),false);conjugation.draw();};['conj-a','conj-x'].forEach(id=>$('#'+id).onchange=()=>{conjM.load(conjPlan(),false);conjugation.draw();});
+// 11: class size, centralizer, and fibers of the conjugation map.
+let classX=0;function resetClass(){const g=G.groups[$('#class-group').value];$('#class-a').innerHTML=optionList(g);$('#class-a').value=g.id==='D3'?1:0;classX=0;}
+const classes=register('classes',()=>{const g=G.groups[$('#class-group').value],a=+$('#class-a').value,C=G.classes(g).find(S=>S.includes(a)),cent=G.centralizer(g,a),x=classX%g.n,z=G.conjugate(g,a,x);$('#class-buckets').innerHTML=C.map((v,i)=>{const inputs=g.labels.map((_,j)=>j).filter(j=>G.conjugate(g,a,j)===v);return '<div class="tile" style="background:'+colors[i%colors.length]+';border-top-color:'+(v===z?ink:gold)+'"><b>输出 '+g.labels[v]+' · '+inputs.length+'个输入<\/b>'+inputs.map(j=>j===x?'<strong>['+g.labels[j]+']<\/strong>':g.labels[j]).join('，')+'<\/div>';}).join('');$('#class-partition').innerHTML=G.classes(g).map((S,i)=>'<span style="background:'+colors[i]+'">'+names(g,S)+'<\/span>').join('');$('#classes-status').textContent='当前 X='+g.labels[x]+'，输出 '+g.labels[z]+'。中心化子 '+names(g,cent)+'，大小 '+cent.length+'；类大小 '+C.length+' = '+g.n+'/'+cent.length+'。下方色块给出整个群的全部类。';});resetClass();$('#class-group').onchange=()=>{resetClass();classes.draw();};$('#class-a').onchange=()=>{classX=0;classes.draw();};$('#class-next').onclick=()=>{classX++;classes.draw();};$('#class-reset').onclick=()=>{classX=0;classes.draw();};
+// 12: all tables and subgroups, no elided answers.
+$('#gallery-group').value='D3';const gallery=register('gallery',()=>{const g=G.groups[$('#gallery-group').value],subs=G.subgroups(g),cs=G.classes(g);$('#gallery-description').textContent=g.name+'：'+g.description;$('#gallery-facts').innerHTML=[['群阶',g.n],['全部子群数',subs.length],['共轭类数',cs.length]].map(([t,v])=>'<div><strong>'+v+'<\/strong>'+t+'<\/div>').join('');bookTable(g,$('#gallery-table'));$('#gallery-orders').innerHTML='<table><tr><th>元素<\/th>'+g.labels.map(x=>'<th>'+x+'<\/th>').join('')+'<\/tr><tr><th>阶<\/th>'+g.orders.map(x=>'<td>'+x+'<\/td>').join('')+'<\/tr><tr><th>逆元<\/th>'+g.inverse.map(x=>'<td>'+g.labels[x]+'<\/td>').join('')+'<\/tr><\/table>';$('#gallery-subgroups').innerHTML='<h4>全部子群（'+subs.length+'）<\/h4><div class="tiles">'+subs.map((S,i)=>'<div class="tile"><b>阶 '+S.length+'<\/b>'+names(g,S)+'<\/div>').join('')+'<\/div>';$('#gallery-classes').innerHTML='<h4>全部共轭类<\/h4><div class="tiles">'+cs.map((S,i)=>'<div class="tile" style="background:'+colors[i%colors.length]+'"><b>类大小 '+S.length+'<\/b>'+names(g,S)+'<\/div>').join('')+'<\/div>';$('#gallery-status').textContent=G.audit(g.table).group?'全部四条群公理通过。'+(g.id==='A4'?'子群阶只出现1、2、3、4、12，没有6阶子群。':'完整表按教材列×行显示，可用导出数据逐项核验。'):'公理检查失败。';});$('#gallery-export').onclick=()=>{const g=G.groups[$('#gallery-group').value],data={...g,_subs:undefined,subgroups:G.subgroups(g),classes:G.classes(g),tableConvention:'Internal table[a][b]=a*b; UI row Y col X=table[X][Y].'},url=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download=g.id+'-complete-group.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
+// Embedded educational source is taken from the functions actually used above.
+const sources={inverse:machine.toString(),integer:'// Under ordinary integer addition:\nconst sum = a + b;\nconst identity = 0;\nconst inverse = -a;\n// Do not reduce modulo the drawing-window size.',audit:G.audit.toString(),fill:'// Identity fixes first row and column.\n// If A*A=E, rearrangement forces A*B=B.\n// A*B=E*B implies A=E by cancellation: contradiction.\n// Hence A*A=B; the remaining three entries are forced.\n'+G.audit.toString(),cycle:'function order(h,k){ return h / gcd(h,k); }\nfunction gcd(a,b){ while(b) [a,b]=[b,a%b]; return a; }\n// Each step updates the exponent modulo h.\nposition = (position + step) % h;',four:'// C4: exponents add modulo 4.\nconst productC4 = (a,b) => (a+b)%4;\n// V4: two bits combine by XOR.\nconst productV4 = (a,b) => a^b;',triangle:'// D_n: element is [k,b] = r^k s^b.\n// sr = r^-1 s. Product has exact integer arithmetic.\nfunction product([k,b],[l,c],n){\n return [((k + (b ? -l : l)) % n + n) % n, b^c];\n}\n// The displayed table uses column X times row Y.\ncell = table[X][Y];',subgroupCheck:[G.subgroupCheck,G.closure].map(f=>f.toString()).join('\n\n'),cosets:G.cosets.toString(),conjugate:G.conjugate.toString(),centralizer:[G.centralizer,G.classes].map(f=>f.toString()).join('\n\n'),subgroups:G.subgroups.toString()};$$('[data-source]').forEach(e=>e.textContent=sources[e.dataset.source]);
+const observer=new IntersectionObserver(es=>{for(const e of es){const s=sims.find(x=>x.el===e.target);s.visible=e.isIntersecting;if(s.visible)s.draw();}},{rootMargin:'100px'});sims.forEach(s=>{observer.observe(s.el);s.draw();});
+let last=performance.now();function frame(now){let dt=Math.min(.05,(now-last)/1000);last=now;for(const s of sims)if(s.visible&&s.play&&s.animated){s.time+=dt;s.advance?.(dt);s.draw();}requestAnimationFrame(frame);}requestAnimationFrame(frame);
+$('#pause-all').onclick=()=>{const stop=sims.some(s=>s.animated&&s.play);sims.forEach(s=>{s.play=!stop;s.updatePlay?.();});$('#pause-all').textContent=stop?'播放全部动画':'暂停全部动画';};
+const nav=$$('.toc a[data-section]'),headObserver=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)nav.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id));}),{rootMargin:'-80px 0px -60% 0px'});$$('.prose > h2').forEach(h=>headObserver.observe(h));
+addEventListener('scroll',()=>{let total=document.documentElement.scrollHeight-innerHeight;$('#reading-progress').style.width=(total>0?100*scrollY/total:0)+'%';},{passive:true});
+})();
+</script></body></html>

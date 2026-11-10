@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "checks": 892,
+  "notes": [
+    "Analytic spectra and eigenvector residuals",
+    "Parity quadrature vs analytic integrals",
+    "Water rigid zero modes, normalization and symmetry",
+    "Frequency scaling with force constants",
+    "Finite lattice interference maxima and roots"
+  ]
+}

@@ -7,6 +7,6 @@ OUT.mkdir()
 for p in R.iterdir():
     if p.is_file() and (p.suffix in {'.html','.css','.js','.svg','.xml'} or p.name in {'robots.txt','.nojekyll','notes.md'} or p.name.startswith('v2-chapter-') and p.suffix=='.md'):
         shutil.copy2(p,OUT/p.name)
-for name in ['assets','articles','content','examples']:
+for name in ['assets','articles','content','examples','courses']:
     shutil.copytree(R/name,OUT/name,ignore=shutil.ignore_patterns('__pycache__','*.pyc','.DS_Store','_template.md'))
 print('Prepared',len(list(OUT.rglob('*'))),'public files and directories.')
