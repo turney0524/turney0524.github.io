@@ -8,7 +8,6 @@
 
 ## 内容依据
 
-核对 Cotton 第三版中英文扫描本：
 
 - `../../Chemical-Applications-of-Group-Theory.pdf`：书页3–5，对应PDF第12–14页。
 - `../../群论在化学中的应用.pdf`：书页3–4，对应PDF第18–19页。

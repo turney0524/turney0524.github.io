@@ -4,7 +4,7 @@ import sys,shutil,json
 R=Path(__file__).resolve().parents[1]
 source=Path(sys.argv[1]).resolve();dest=R/'courses/chemical-applications-group-theory'
 assert (source/'第十一章/index.html').exists(),'Expected reviewed eleven-chapter course'
-excluded={'全书核对','核对资料','页面预览','__pycache__','.git'}
+excluded={'全书核对','核对资料','页面预览','__pycache__','.git','原书页','原文对照'}
 allowed={'.html','.css','.js','.svg','.md','.py','.cjs','.json','.jpg','.png'}
 for f in source.rglob('*'):
  if not f.is_file() or f.suffix not in allowed or any(x in excluded for x in f.relative_to(source).parts):continue
@@ -16,3 +16,6 @@ for p in list(dest.rglob('*.html'))+list(dest.rglob('*.md'))+list(dest.rglob('*.
 info=[{'n':1,'folder':'第一章','title':'绪论'},{'n':2,'folder':'第二章','title':'群论的定义和定理'},{'n':3,'folder':'第三章','title':'分子对称性和对称群'}]+json.loads((dest/'课程源码/chapters.json').read_text())
 (dest/'course-info.json').write_text(json.dumps([{'n':x['n'],'folder':x['folder'],'title':x['title']} for x in info],ensure_ascii=False,indent=2))
 print('Imported',len(list(dest.rglob('*'))),'files/directories to',dest.relative_to(R))
+
+import subprocess
+subprocess.run([sys.executable,str(R/"scripts/sanitize_cotton_public.py")],check=True)

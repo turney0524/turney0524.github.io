@@ -1,7 +1,8 @@
 """Create a public artifact with no Git metadata, workflow files or build tools."""
 from pathlib import Path
-import shutil
+import shutil,subprocess,sys
 R=Path(__file__).resolve().parents[1];OUT=R/'_site'
+subprocess.run([sys.executable,str(R/'scripts/sanitize_cotton_public.py')],check=True)
 if OUT.exists():shutil.rmtree(OUT)
 OUT.mkdir()
 for p in R.iterdir():

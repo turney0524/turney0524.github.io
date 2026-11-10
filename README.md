@@ -76,6 +76,6 @@ python -m http.server 8000
 
 ## 群论在化学中的应用
 
-课程位于 `courses/chemical-applications-group-theory/`，共11章、84组交互，列入课本蒸馏和群论合集。课程资源与原页均随Pages构建发布，运行不依赖CDN。全站搜索收录课程和11章入口。
+课程位于 `courses/chemical-applications-group-theory/`，共11章、84组交互，列入课本蒸馏和群论合集。独立教程与交互代码随Pages构建发布，公开版不含整页教材扫描，运行不依赖CDN。全站搜索收录课程和11章入口。
 
 更新本地审定稿后，执行 `python3 scripts/import_cotton.py <教材蒸馏目录>`，再构建、检查和推送。导入排除压缩包、制作过程OCR、缓存和预览截图。
