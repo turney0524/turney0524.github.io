@@ -22,7 +22,7 @@ lab('salc','把三个人的声音分声部','改变组合，观察三处系数�
 lab('projector','逐操作投影：保留什么，消去什么','选种子和目标表示，逐项显示求和过程。',[sel('irrep','目标',[('A₁','A₁'),('A₂','A₂'),('E','E')]),ran('seed','种子位置',1,3,1),ran('terms','已相加项数',1,6,6)],source='projectorTriangle,permutations')
 lab('gram','投影后还要检查线性独立','三组种子投到E空间，最多只能留下几个独立向量？',[ran('seeds','输入种子数',1,3,3)],source='projectorTriangle,orthonormal')
 lab('square','平方平面配体的四个声部','Eu有两条伙伴；查看它们与s、p、d轨道的匹配。',[sel('basis','选择SALC',[('0','A₁g'),('1','B₁g'),('2','Eu,x'),('3','Eu,y')])],engine='salc',source='salcs,orthonormal')
-lab('tetra','四面体的A₁与T₂','切换四条正交组合，颜色表示相位，圆盘面积表示系数平方。',[sel('basis','选择SALC',[('0','A₁'),('1','T₂,x'),('2','T₂,y'),('3','T₂,z')])],engine='salc',source='salcs,orthonormal')
+lab('tetra','四面体的A₁与T₂','切换四条正交组合，颜色表示相位，圆盘大小表示系数的绝对值。',[sel('basis','选择SALC',[('0','A₁'),('1','T₂,x'),('2','T₂,y'),('3','T₂,z')])],engine='salc',source='salcs,orthonormal')
 lab('huckel','搭图、对角化、看轨道','切换骨架与局部势，同时比较系数、能级、密度与键级。',[sel('kind','骨架',[('chain','链'),('ring','环'),('tmcb','四亚甲基环丁烷')]),N,ORB,ran('electrons','π电子数',0,20,6),ran('defect','1号位点α偏移',-2,2,0,.1)],engine='huckel',source='huckel,eig,observables')
 lab('block','镜面对称把链矩阵拆成小块','先关闭破缺，观察偶/奇SALC之间交叉块为零。',[ran('delta','端点不对称势',0,2,0,.05)],source='huckel,mul,T')
 lab('ring','环的相位波与电子占据','改变环大小和电子数，先判断是否闭壳层。',[N,ORB,ran('electrons','π电子数',0,20,6)],engine='huckel',source='huckel,occupations,observables')
@@ -54,3 +54,5 @@ lab('restriction','为什么周期晶格没有五重轴','转角迹是否为整�
 lab('seitz','操作的平移部分为什么不能直接相加','按顺序组合镜面/二重转动与分数平移，比较AB和BA。',[sel('kind','例子',[('glide','滑移g：g²=平移'),('noncommute','镜面与半格平移：AB≠BA'),('inversion','P−1：一般/特殊位置')]),ran('x','起点x',0,1,.13,.01),ran('y','起点y',0,1,.27,.01)],source='seitz,mv')
 lab('screw','螺旋不是转完之后留在原高度','连续施加nₘ，跟踪未折回的高度。',[sel('axis','螺旋轴',[(x,x.replace('_','₍')+'）') for x in ['2_1','3_1','3_2','4_1','4_2','4_3','6_1','6_2','6_3','6_4','6_5']]),ran('steps','操作次数',0,12,3)],source='screw',note='图中高度以晶胞c为单位，未取模；n次后纯平移m个胞。')
 lab('extinction','散射相位箭头如何相消','切换中心化或螺旋，改变hkl，直接计算复相位和。',[sel('type','平移关系',[('I','I格'),('F','F格'),('C','C格'),('P','P格'),('21','2₁轴的00l'),('41','4₁轴的00l'),('42','4₂轴的00l')]),num('h','h',1,-8,8),num('k','k',1,-8,8),num('l','l',1,-8,8)],source='phaseSum,centered,screw',note='相同散射因子的中心化相位因子；螺旋选项只检验00l，自动忽略h,k并明确标注。')
+
+LABS["seitz"]["note"]="中间帧为点坐标的线性插值，不是刚体运动；终点按Seitz公式计算。"

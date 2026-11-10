@@ -5,10 +5,12 @@
 .prose blockquote{display:block!important;border-left-color:#aa8643;background:#f6efdf}.prose>blockquote:first-of-type{display:none!important}.prose blockquote p{font-size:13px;line-height:2}.prose h2{scroll-margin-top:85px}.toc{max-height:calc(100vh - 115px);overflow:auto}.toc a{font-size:10px;line-height:1.7;padding:5px 10px}.toc .toc-label{margin-bottom:10px}.demo canvas{height:340px;cursor:grab;touch-action:none}.demo canvas:active{cursor:grabbing}.control-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:12px 0}.op-buttons{display:flex;gap:5px;flex-wrap:wrap;max-height:165px;overflow:auto;padding:8px 0;margin:10px 0}.op-buttons button{font-size:10px;padding:5px 9px}.op-buttons .active{background:var(--ink);color:var(--paper)}.matrix3{display:grid;grid-template-columns:repeat(3,minmax(35px,1fr));padding:9px 12px;border-left:1px solid var(--ink);border-right:1px solid var(--ink);font:11px/1.9 ui-monospace,monospace;max-width:200px;text-align:center;margin:12px 0}.math-meta{display:flex;gap:20px;align-items:center;flex-wrap:wrap}.bad-match{color:#a14d4f}.good-match{color:#426554}.atom-keys{font-size:10px;line-height:2;color:#75818e;display:flex;flex-wrap:wrap;gap:14px}.atom-keys i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:4px}.case-box{padding:17px 20px;background:#f5efdf;margin:15px 0;border-left:2px solid var(--gold);font-size:12px}.step-flow{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0;font-size:11px}.step-flow span{background:#eee6cf;border:1px solid #ded4b9;padding:7px 12px}.step-flow .chosen{background:var(--ink);color:var(--paper)}.source-page{width:100%;height:auto;display:block;margin:14px 0;border:1px solid var(--line);background:white}.original-pages summary{font-size:13px}.source-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.source-grid a{display:block;font-size:11px;padding:8px;border:1px solid var(--line);text-decoration:none;text-align:center}.source-notice{font-size:12px;color:#7c7f83}.review-summary{font-size:12px}.matrix-summary{font:12px/1.9 ui-monospace,monospace;white-space:pre-wrap}.label-cloud{display:flex;gap:8px;flex-wrap:wrap;font-size:11px}.label-cloud span{padding:5px 8px;border:1px solid var(--line)}.ex-page img{width:100%;height:auto}.small-select{max-width:240px}.controls input[type=checkbox]{accent-color:var(--gold)}.copy-originals{margin:30px 0;border-top:1px solid var(--line);padding-top:20px}.demo .controls label{min-width:120px}.source-box summary{font-size:12px}.demo-head h4{font-size:18px}.hero h1{font-size:clamp(35px,4vw,54px)}.hero-art svg{max-height:290px}.image-note{font-size:10px;color:#8b8c86}.prose .original-pages p{font-size:12px}.mini-table{font-size:11px}.answer{padding:16px;border:1px solid var(--line);background:#faf6e8;margin:14px 0}.reference-ops{font-size:11px;line-height:2;word-break:break-word}.camera-note{font-size:10px;color:#7d8790;margin-bottom:7px}.source-view-link{font-size:11px}.controls select{min-width:80px}.lab-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}@media(max-width:760px){.toc{max-height:none;overflow:visible}.toc a{font-size:10px}.toc .toc-label{display:none}.demo canvas{height:305px}.demo .controls label{min-width:108px}.source-grid{grid-template-columns:repeat(2,1fr)}.demo-head h4{font-size:16px}.lab-grid{grid-template-columns:1fr}.source-page{margin:10px 0}.prose blockquote p{font-size:12px}.controls select{max-width:100%}.op-buttons{max-height:150px}}
 
 .prose .group-symbol{font-family:Georgia,"Times New Roman",serif;white-space:nowrap}.prose .group-symbol sub{font-size:.72em;line-height:0;vertical-align:sub}
+
+.interaction-badge{font-size:11px;padding:6px 10px;border:1px solid #ddd4bc;border-radius:4px;color:#806329;white-space:nowrap}button:disabled{cursor:default;opacity:.65}
 </style></head><body><header class="topbar"><a class="brand" href="../index.html"><i>ψ</i>计算凝聚态物理</a><nav><a href="../第二章/index.html">上一章</a><a href="../index.html">全书目录</a><a href="../第四章/index.html">下一章</a><span class="status">交互学习伴读 / CHAPTER 03</span></nav><div id="reading-progress"></div></header><main class="wrap"><section class="hero"><div><p class="eyebrow">COTTON / MOLECULAR SYMMETRY / A THREE-DIMENSIONAL COMPANION</p><h1>第三章<br><em>分子对称性和对称群</em></h1><p class="deck">把轴、面与中心放回真实的三维空间。<br>追踪每个原子，组合每个操作，<br>再走出完整的点群判别路径。</p><div class="actions"><a class="primary" href="#section-1">按课本顺序阅读　↓</a><a href="#molecule-lab">进入三维实验室 ↗</a><a href="第三章_分子对称性和对称群.md">Markdown 全文 ↗</a></div></div><div class="hero-art"><svg viewBox="0 0 340 270" role="img" aria-label="分子镜面与三维对称轴示意"><ellipse cx="170" cy="136" rx="128" ry="48" fill="none" stroke="#d8cba7"/><path d="M170 20V245M51 199L289 64" stroke="#c2ab75" fill="none"/><path d="M90 40L249 80V230L90 190Z" fill="#d9e7e666" stroke="#7b9ca3"/><path d="M170 110L80 193M170 110L260 193M170 110V45" stroke="#7a8796" stroke-width="4"/><g fill="#071b49"><circle cx="170" cy="110" r="22"/><circle cx="170" cy="45" r="12"/></g><g fill="#43789a"><circle cx="80" cy="193" r="17"/><circle cx="260" cy="193" r="17"/></g><g fill="#fffbed" font-family="Georgia" font-size="15" text-anchor="middle"><text x="170" y="115">A</text><text x="80" y="198">B</text><text x="260" y="198">B</text></g><g fill="#a5813e" font-family="Georgia" font-size="18"><text x="260" y="42">Cₙ</text><text x="65" y="119">σ</text><text x="110" y="256">Sₙ = σₕ Cₙ</text></g></svg><p class="caption">元素是几何实体；操作才是群的成员。</p></div></section><div class="meta-strip"><span><b>十五节</b> 原章顺序完整展开</span><span><b>十六组</b> 三维交互与判别实验</span><span><b>九组</b> 原书分类示例</span><span><b>逐节讲解</b> 定义 / 原图 / 全部习题</span></div><div class="scope">依照Cotton第三版的主题组织，提供独立编写的讲解、公式推导、示例与交互代码。公开版不提供教材整页扫描或整册习题解答；核对课本请使用合法获得的教材。</div><div class="layout"><aside class="toc"><p class="toc-label">READ / ROTATE / IDENTIFY</p><a data-section href="#section-1">3.1 通论：从“看起来对称”走到数学标准</a><a data-section href="#section-2">3.2 对称元素和对称操作：几何实体不是动作</a><a data-section href="#section-3">3.3 对称面和反映：平面里不动，平面外成对</a><a data-section href="#section-4">3.4 反演中心：三个坐标一起变号</a><a data-section href="#section-5">3.5 真轴和真转动：轴阶、操作阶与不同操作的计数</a><a data-section href="#section-6">3.6 非真轴和非真转动：组合成立，分步未必成立</a><a data-section href="#section-7">3.7 对称操作的乘积：总效果要作用在任意点上比较</a><a data-section href="#section-8">3.8 等价对称元素和等价原子：同种不等于等价</a><a data-section href="#section-9">3.9 对称元素和操作之间的一般关系</a><a data-section href="#section-10">3.10 对称元素和旋光异构：缺少镜面与中心还不够</a><a data-section href="#section-11">3.11 对称点群：完整操作集合怎样组成群</a><a data-section href="#section-12">3.12 多重高阶轴的对称性：五种正多面体与七个点群</a><a data-section href="#section-13">3.13 对称操作的类：同一空间动作，换母群可能改变分类</a><a data-section href="#section-14">3.14 分子对称性系统分类法：每一步都要排除更高对称</a><a data-section href="#section-15">3.15 实例：沿原书九组例子逐步走流程</a><a data-section href="#section-16">3.16 习题原文、参考解法与可编辑算例</a><a data-section href="#section-17">3.17 全章对照、术语与必要限定</a><hr><button id="pause-all">暂停全部动画</button><a href="examples.py" download>下载 NumPy 算例 ↓</a><a href="校验报告.json">查看计算核验</a></aside><article class="prose"><h1>第三章 · 分子对称性和对称群</h1>
 
 <blockquote>
-  <p>Cotton《群论在化学中的应用》第三版详细动态伴读。中译本书页13–45、英文版书页17–67。正文严格沿用3.1–3.15的顺序，定义与规则尽量保留中译本原句；引文框标“课本表述”，框外的公式展开、白话解释与交互算例为本教程补充。全章中译本原页及英文版完整习题页另附“原文对照”，包含原图与原题，供逐字逐图核查。</p>
+  <p>Cotton《群论在化学中的应用》第三版详细动态伴读。中译本书页13–45、英文版书页17–67。正文严格沿用3.1–3.15的顺序，定义与规则尽量保留中译本原句；引文框标“课本表述”，框外的公式展开、白话解释与交互算例为本教程补充。</p>
 </blockquote>
 
 <h2 id="section-1">3.1 通论：从“看起来对称”走到数学标准</h2>
@@ -610,19 +612,19 @@
 
 <h2 id="section-16">3.16 习题原文、参考解法与可编辑算例</h2>
 
-<p>这部分不代替原书题目。下面先按原题号列出覆盖范围并给可核查的参考解法；所有图形题原图、完整文字在后面的“原题逐页对照”中保留。英文版E组扩展题明显多于本中译本，已单独附上，不把它们合并或删去。</p>
+<p>这部分不代替原书题目。英文版E组扩展题明显多于本中译本，已单独附上，不把它们合并或删去。</p>
 
 <h3>A组：对称群的性质</h3>
 
 <p><strong>A3.1 最高阶纯转动子群。</strong> <span class="group-symbol">C<sub>8h</sub></span>→<span class="group-symbol">C<sub>8</sub></span>；<span class="group-symbol">D<sub>2d</sub></span>→<span class="group-symbol">D<sub>2</sub></span>；<span class="group-symbol">C<sub>5v</sub></span>→<span class="group-symbol">C<sub>5</sub></span>。方法是保留所有且仅有det=+1的操作，不是仅保留主轴操作：<span class="group-symbol">D<sub>2d</sub></span>还保留两个副<span class="group-symbol">C<sub>2</sub></span>。</p>
 
-<p><strong>A3.2 加入或减少操作。</strong> 增加一个操作时必须补齐全部乘积；删除一个符号却保留能生成它的其它操作，通常不再是群。因此原题中的“减少”需理解为去掉相应生成部分、寻找剩余的闭合子群，而非机械删一格。</p>
+<p><strong>A3.2 加入或减少操作。</strong> 增加一个操作时必须补齐全部乘积；删除一个符号却保留能生成它的其它操作，通常不再是群。</p>
 
 <div class="table-scroll"><table>
 <thead>
 <tr>
   <th>小题</th>
-  <th>原题改动</th>
+  <th></th>
   <th>参考分析</th>
 </tr>
 </thead>
@@ -683,7 +685,7 @@
 
 <h3>B组：多面体和其它非分子物体</h3>
 
-<p>原题B3.1–B3.11全部保留。每题应把<strong>标记、线条与颜色作为物体的一部分</strong>，不能先去掉标记再报告裸多面体的高对称群。</p>
+<p>每题应把<strong>标记、线条与颜色作为物体的一部分</strong>，不能先去掉标记再报告裸多面体的高对称群。</p>
 
 <ul>
 <li>B3.1 立方八面体到二十面体：原立方八面体有8个三角面与6个正方形；把每个正方形分成两个三角形后，共8+2×6=20个三角面。还须配合适当顶点位移使面成为正三角形，不是说随手画对角线就已得到正二十面体。</li>
@@ -703,7 +705,7 @@
 
 <h3>C组：较容易的分子；苯环取代可直接改模型验证</h3>
 
-<p>按原题的理想平面骨架与“忽略H”约定，参考结果如下。</p>
+<p></p>
 
 <div class="table-scroll"><table>
 <thead>
@@ -794,17 +796,17 @@
 
 <p>“忽略H”是题目指定的结构近似；若把配体H的真实方向加入，结果可能降低，不能把近似答案无条件推广到所有构象。C3–C8可在面板上点选环上的Cl/H位置，程序从完整<span class="group-symbol">D<sub>6h</sub></span>操作中筛选，给出保留数与分子点群。</p>
 
-<section class="demo" id="substitution-lab" aria-labelledby="substitution-title"><header class="demo-head"><div><div class="demo-no">INTERACTIVE 16 / 观察 · 预测 · 验证</div><h4 id="substitution-title">把苯环上的H换成Cl，剩下哪些操作？</h4></div><button data-play aria-pressed="true">暂停动画</button></header><div class="prompt">选择原题，或逐个点位置切换H/Cl；同时考虑完整三维操作。</div><div class="demo-body"><canvas role="img" aria-label="把苯环上的H换成Cl，剩下哪些操作？，可拖动改变相机"></canvas><div class="camera-note">拖动改变相机 · 滚轮缩放 · 操作终点才用于判断对称性</div><div class="controls"><label for="substitution-preset">原题例子<select id="substitution-preset"><option value="mono">氯苯</option><option value="ortho">1,2-二氯苯</option><option value="meta">1,3-二氯苯</option><option value="para">1,4-二氯苯</option><option value="135">1,3,5-三氯苯</option><option value="123">1,2,3-三氯苯</option><option value="124">1,2,4-三氯苯</option><option value="benzene">未取代苯</option></select></label><button id="substitution-next">施加下一个保留操作</button></div><div class="group-chips" id="substitution-sites"></div><div class="op-buttons" id="substitution-ops"></div><div class="result" id="substitution-status" role="status" aria-live="off">载入计算结果。</div><p class="note">假定理想平面且替换不改变其它几何参数；保留操作从母群D₆h的24项中逐一筛选。</p><details class="source-box"><summary>查看这个模型的计算代码</summary><pre><code data-source="substitution"></code></pre><div class="source-links"><a href="assets/symmetry.js" download>完整变换核心JS ↓</a><a href="examples.py" download>NumPy复现代码 ↓</a></div></details></div></section>
+<section class="demo" id="substitution-lab" aria-labelledby="substitution-title"><header class="demo-head"><div><div class="demo-no">INTERACTIVE 16 / 观察 · 预测 · 验证</div><h4 id="substitution-title">把苯环上的H换成Cl，剩下哪些操作？</h4></div><button data-play aria-pressed="true">暂停动画</button></header><div class="prompt"></div><div class="demo-body"><canvas role="img" aria-label="把苯环上的H换成Cl，剩下哪些操作？，可拖动改变相机"></canvas><div class="camera-note">拖动改变相机 · 滚轮缩放 · 操作终点才用于判断对称性</div><div class="controls"><label for="substitution-preset"><select id="substitution-preset"><option value="mono">氯苯</option><option value="ortho">1,2-二氯苯</option><option value="meta">1,3-二氯苯</option><option value="para">1,4-二氯苯</option><option value="135">1,3,5-三氯苯</option><option value="123">1,2,3-三氯苯</option><option value="124">1,2,4-三氯苯</option><option value="benzene">未取代苯</option></select></label><button id="substitution-next">施加下一个保留操作</button></div><div class="group-chips" id="substitution-sites"></div><div class="op-buttons" id="substitution-ops"></div><div class="result" id="substitution-status" role="status" aria-live="off">载入计算结果。</div><p class="note">假定理想平面且替换不改变其它几何参数；保留操作从母群D₆h的24项中逐一筛选。</p><details class="source-box"><summary>查看这个模型的计算代码</summary><pre><code data-source="substitution"></code></pre><div class="source-links"><a href="assets/symmetry.js" download>完整变换核心JS ↓</a><a href="examples.py" download>NumPy复现代码 ↓</a></div></details></div></section>
 
 <h3>D、E组：不明显与复杂分子，原图不能被分子式代替</h3>
 
-<p>中译本D组的12项全部保留：面式Cr(CO)₃(PR₃)₃、图示氯代二茂铁、两种桥联双金属构型、Re₂Cl₈式骨架、笼状P/N体系、环状多烯、二齿配体金属构型、乙烯、交错乙烷、四面体Be螯合物及1,3-二氯丙二烯。E组两幅复杂图也完整保留。英文版另含D组及E组扩展图，见原题页。</p>
+<p>中译本D组的12项全部保留：面式Cr(CO)₃(PR₃)₃、图示氯代二茂铁、两种桥联双金属构型、Re₂Cl₈式骨架、笼状P/N体系、环状多烯、二齿配体金属构型、乙烯、交错乙烷、四面体Be螯合物及1,3-二氯丙二烯。E组两幅复杂图也完整保留。</p>
 
 <p>可直接核查的文字题：D1面式八面体ML₃L′₃的理想骨架为<span class="group-symbol">C<sub>3v</sub></span>；D9乙烯为<span class="group-symbol">D<sub>2h</sub></span>；D10交错乙烷为<span class="group-symbol">D<sub>3d</sub></span>；D11在题设的四面体Be与两条相同螯合配体理想骨架下为<span class="group-symbol">D<sub>2d</sub></span>；D12非退化取代的1,3-二氯丙二烯为<span class="group-symbol">C<sub>2</sub></span>，可具轴手性。其余涉及配体朝向、桥联方式、遮挡边的图形题应先把原图重建为完整三维坐标，再用3.14流程逐条说明保留与破坏的元素。</p>
 
-<p>这部分提供的是<strong>完整题目和判别方法</strong>，不是一份把复杂扫描图猜成某个群的答案表。已经建立模型的九组正文例子及替换实验均有数值核验；原题未明确给定几何参数时，不虚构唯一三维结构。</p>
+<p>这部分提供的是<strong>完整题目和判别方法</strong>，不是一份把复杂扫描图猜成某个群的答案表。</p>
 
-<h3 id="original-exercises">原题逐页对照：两版全部习题与图形</h3><h2 id="section-17">3.17 全章对照、术语与必要限定</h2>
+<h3 id="original-exercises"></h3><h2 id="section-17">3.17 全章对照、术语与必要限定</h2>
 
 <div class="table-scroll"><table>
 <thead>
@@ -910,7 +912,7 @@
   <td>习题</td>
   <td>42–45</td>
   <td>61–67</td>
-  <td>A–E全题原页</td>
+  <td></td>
 </tr>
 </tbody>
 </table></div>
@@ -920,7 +922,7 @@
 <li>“<span class="group-symbol">S<sub>n</sub></span>轴的阶n”与“<span class="group-symbol">S<sub>n</sub></span>作为群元素的阶”须分清；“2<span class="group-symbol">C<sub>4</sub></span>”与“<span class="group-symbol">C<sub>4</sub></span>²”须分清；“几条轴”与“几个群操作”也须分清。</li>
 <li>“元素等价”并不自动把同一轴上的两个相反旋转幂合成一类，须保留母群与方向信息。<span class="group-symbol">C<sub>4</sub></span>/<span class="group-symbol">C<sub>4v</sub></span>、T/<span class="group-symbol">T<sub>d</sub></span>的不同类结构都已由矩阵共轭计算核验。</li>
 <li>反射、反演与<span class="group-symbol">S<sub>n</sub></span>的中间动画不是分子的真实刚体运动，也不表示中间每帧都是对称操作。只有终点矩阵用于判断是否保持构型。转动相机不改变分子的群元素。</li>
-<li>逐节讲解保留提供的扫描本字样、原图与原题，未去除水印；它们与独立编写的教学正文分开。中英文第三版在习题扩展与排版上不完全一致，页码对应见上表。</li>
+<li>中英文第三版在习题扩展与排版上不完全一致，页码对应见上表。</li>
 </ol>
 
 <h3>补充资料的来源</h3>
@@ -931,7 +933,7 @@
 <li>三角十二面体（snub disphenoid）的<span class="group-symbol">D<sub>2d</sub></span>对称性：<a href="https://scine.ethz.ch/static/download/documentation/molassembler/v3.0.1/cpp/structScine_1_1Molassembler_1_1Shapes_1_1Data_1_1TrigonalDodecahedron.html">ETH Zürich · Molassembler形状文档</a>。</li>
 <li>黄铁矿形的T_h对称性：<a href="https://squjs.squ.edu.om/squjs/vol21/iss2/2/">Koca等，Symmetry of the Pyritohedron and Lattices，2016</a>。</li>
 </ul>
-<div class="route"><h3>下一章：把对称操作变成表示矩阵。</h3><p>本页先用矩阵作为检查几何的计算工具。第四章将正式讨论群的表示、不可约表示与特征标，把“怎么移动”连接到“怎样分类函数和物理状态”。</p></div><div class="chapter-nav"><a href="../第二章/index.html">← 第二章 · 群论的定义和定理</a><a href="../index.html">返回全书目录 ↑</a></div></article></div><footer class="end"><span>计算凝聚态物理 · Cotton第三版动态伴读 · 第三章本地稿</span><a href="README.md">使用、复现与原页说明</a></footer></main><noscript><div class="scope">依照Cotton第三版的主题组织，提供独立编写的讲解、公式推导、示例与交互代码。公开版不提供教材整页扫描或整册习题解答；核对课本请使用合法获得的教材。</div></noscript><script>/* Orthogonal 3D transformations, typed-atom matching and finite point groups. */
+<div class="route"><h3>下一章：把对称操作变成表示矩阵。</h3><p>本页先用矩阵作为检查几何的计算工具。第四章将正式讨论群的表示、不可约表示与特征标，把“怎么移动”连接到“怎样分类函数和物理状态”。</p></div><div class="chapter-nav"><a href="../第二章/index.html">← 第二章 · 群论的定义和定理</a><a href="../index.html">返回全书目录 ↑</a></div></article></div><footer class="end"><span>计算凝聚态物理 · Cotton第三版动态伴读 · 第三章本地稿</span><a href="README.md"></a></footer></main><noscript><div class="scope">依照Cotton第三版的主题组织，提供独立编写的讲解、公式推导、示例与交互代码。公开版不提供教材整页扫描或整册习题解答；核对课本请使用合法获得的教材。</div></noscript><script>/* Orthogonal 3D transformations, typed-atom matching and finite point groups. */
 (function(root){'use strict';
 const I=[[1,0,0],[0,1,0],[0,0,1]],inv=I.map(r=>r.map(x=>-x));
 const dot=(a,b)=>a.reduce((s,x,i)=>s+x*b[i],0),norm=a=>Math.hypot(...a),unit=a=>{const n=norm(a);return a.map(x=>x/n);};
@@ -1008,9 +1010,9 @@ const sims=[];
 function register(id,render){const el=$('#'+id+'-lab'),canvas=el.querySelector('canvas'),c=canvas?.getContext('2d'),sim={id,el,canvas,c,render,visible:false,play:!matchMedia('(prefers-reduced-motion:reduce)').matches,time:0,phase:1,from:S.I,to:S.I,cam:{yaw:.55,pitch:.6,zoom:1},spin:false};
  sim.current=()=>S.mul(tween(S.mul(sim.to,S.transpose(sim.from)),.5-.5*Math.cos(Math.PI*sim.phase)),sim.from);
  sim.animate=(M,from=S.I)=>{sim.from=from;sim.to=M;sim.phase=0;sim.play=true;sim.updatePlay();sim.draw();};sim.reset=()=>{sim.phase=1;sim.from=S.I;sim.to=S.I;sim.draw();};
- sim.draw=()=>{if(!canvas){render(null,0,0,sim);return;}const r=canvas.getBoundingClientRect(),d=Math.min(2,devicePixelRatio||1);if(canvas.width!==Math.round(r.width*d)||canvas.height!==Math.round(r.height*d)){canvas.width=Math.round(r.width*d);canvas.height=Math.round(r.height*d);}c.setTransform(d,0,0,d,0,0);c.clearRect(0,0,r.width,r.height);render(c,r.width,r.height,sim);};
- const play=el.querySelector('[data-play]');sim.updatePlay=()=>{play.textContent=sim.play?'暂停动画':'播放动画';play.setAttribute('aria-pressed',String(sim.play));};play.onclick=()=>{sim.play=!sim.play;sim.updatePlay();};sim.updatePlay();
- el.addEventListener('input',e=>{const o=document.getElementById(e.target.id+'-out');if(o)o.textContent=e.target.value;sim.phase=1;sim.draw();});el.addEventListener('change',()=>{sim.phase=1;sim.draw();});
+ sim.draw=()=>{if(!canvas){render(null,0,0,sim);return;}const r=canvas.getBoundingClientRect(),d=Math.min(2,devicePixelRatio||1);if(canvas.width!==Math.round(r.width*d)||canvas.height!==Math.round(r.height*d)){canvas.width=Math.round(r.width*d);canvas.height=Math.round(r.height*d);}c.setTransform(d,0,0,d,0,0);c.clearRect(0,0,r.width,r.height);render(c,r.width,r.height,sim);sim.updatePlay?.();};
+ const play=el.querySelector('[data-play]');sim.updatePlay=()=>{if(!canvas){play.hidden=true;return;}const hasOperation=sim.phase<1||!S.near(sim.to,S.I);play.disabled=!hasOperation&&!sim.spin;play.textContent=sim.spin?(sim.play?'暂停转视角':'播放转视角'):sim.phase>=1?(hasOperation?'重播本次操作':'先选择对称操作'):sim.play?'暂停动画':'继续演示';play.setAttribute('aria-pressed',String(sim.play&&sim.phase<1));syncGlobal();};play.onclick=()=>{if(sim.phase>=1&&!sim.spin){sim.from=S.I;sim.phase=0;sim.play=true;}else sim.play=!sim.play;sim.updatePlay();sim.draw();};sim.updatePlay();
+ el.addEventListener('input',e=>{const o=document.getElementById(e.target.id+'-out');if(o)o.textContent=e.target.value;sim.phase=1;sim.draw();sim.updatePlay();});el.addEventListener('change',()=>{sim.phase=1;sim.draw();sim.updatePlay();});
  if(canvas){new ResizeObserver(()=>sim.draw()).observe(canvas);let drag=null;canvas.addEventListener('pointerdown',e=>{drag=[e.clientX,e.clientY];canvas.setPointerCapture(e.pointerId);});canvas.addEventListener('pointermove',e=>{if(!drag)return;sim.cam.yaw+=(e.clientX-drag[0])*.009;sim.cam.pitch+=(e.clientY-drag[1])*.009;drag=[e.clientX,e.clientY];sim.draw();});canvas.addEventListener('pointerup',()=>drag=null);canvas.addEventListener('pointercancel',()=>drag=null);canvas.addEventListener('wheel',e=>{e.preventDefault();sim.cam.zoom=Math.min(2.6,Math.max(.45,sim.cam.zoom*Math.exp(-e.deltaY*.001)));sim.draw();},{passive:false});}
  sims.push(sim);return sim;
 }
@@ -1074,9 +1076,10 @@ const substitution=register('substitution',(c,w,h,sim)=>{const key=subLabels.joi
 // Source drawers contain the functions actually used, with dependency links.
 const sources={molecule:[S.match,S.orbits],mirror:[S.reflection,S.match],inversion:[S.act,S.match],rotation:[S.rotation,S.power],improper:[S.family,S.power],products:[S.mul,S.act],orbits:[S.orbits],planes:[S.vertical,S.mul],chirality:[S.det,S.match],families:[S.family,S.closure],polyhedra:[S.polyhedron,S.polyGroup],classes:[S.conjugacy],classifier:[S.classify],conformation:[S.model],decoration:[S.decorated,S.match],substitution:[S.substitution,S.matrixList]};$$('[data-source]').forEach(e=>e.textContent=sources[e.dataset.source].map(f=>f.toString()).join('\n\n'));
 resetMolecule();resetOrbits();
-const observer=new IntersectionObserver(es=>{for(const e of es){const sim=sims.find(s=>s.el===e.target);sim.visible=e.isIntersecting;if(sim.visible)sim.draw();}},{rootMargin:'120px'});sims.forEach(s=>{observer.observe(s.el);s.draw();});
-let last=performance.now();function frame(now){const dt=Math.min(.05,(now-last)/1000);last=now;for(const s of sims)if(s.visible&&s.play&&(s.phase<1||s.spin)){s.time+=dt;s.phase=Math.min(1,s.phase+dt/1.35);if(s.spin)s.cam.yaw+=dt*.25;s.draw();}requestAnimationFrame(frame);}requestAnimationFrame(frame);
-$('#pause-all').onclick=()=>{const stop=sims.some(s=>s.play);sims.forEach(s=>{s.play=!stop;s.updatePlay();});$('#pause-all').textContent=stop?'播放全部动画':'暂停全部动画';};
+const observer=new IntersectionObserver(es=>{for(const e of es){const sim=sims.find(s=>s.el===e.target);sim.visible=e.isIntersecting;if(sim.visible)sim.draw();sim.updatePlay();}},{rootMargin:'120px'});sims.forEach(s=>{observer.observe(s.el);s.draw();s.updatePlay();});
+let last=performance.now();function frame(now){const dt=Math.min(.05,(now-last)/1000);last=now;for(const s of sims)if(s.visible&&s.play&&(s.phase<1||s.spin)){s.time+=dt;s.phase=Math.min(1,s.phase+dt/1.35);if(s.spin)s.cam.yaw+=dt*.25;s.draw();s.updatePlay();}requestAnimationFrame(frame);}requestAnimationFrame(frame);
+function syncGlobal(){const running=sims.some(s=>s.canvas&&s.play&&(s.phase<1||s.spin)),eligible=sims.some(s=>s.canvas&&(s.phase<1||s.spin||!S.near(s.to,S.I))),button=$('#pause-all');button.disabled=!eligible;button.textContent=running?'暂停正在演示':eligible?'继续／重播已选操作':'先选择一个对称操作';}$('#pause-all').onclick=()=>{const stop=sims.some(s=>s.canvas&&s.play&&(s.phase<1||s.spin));sims.filter(s=>s.canvas).forEach(s=>{if(stop)s.play=false;else if(s.phase<1||s.spin)s.play=true;else if(!S.near(s.to,S.I)){s.from=S.I;s.phase=0;s.play=true;}s.updatePlay();});syncGlobal();};syncGlobal();
+
 const nav=$$('.toc a[data-section]'),heads=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)nav.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id));}),{rootMargin:'-80px 0px -60% 0px'});$$('.prose>h2').forEach(h=>heads.observe(h));addEventListener('scroll',()=>{const total=document.documentElement.scrollHeight-innerHeight;$('#reading-progress').style.width=(total>0?100*scrollY/total:0)+'%';},{passive:true});
 })();
 </script></body></html>

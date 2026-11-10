@@ -12,9 +12,9 @@ const sims=[];
 function register(id,render,animated=true){
  const el=$('#'+id),canvas=el.querySelector('canvas'),ctx=canvas.getContext('2d');
  const sim={id,el,canvas,ctx,render,animated,visible:false,play:!matchMedia('(prefers-reduced-motion: reduce)').matches,time:0,w:0,h:0};
- sim.draw=()=>{const r=canvas.getBoundingClientRect(),dpr=Math.min(2,devicePixelRatio||1);if(!r.width)return;if(sim.w!==r.width||sim.h!==r.height){sim.w=r.width;sim.h=r.height;canvas.width=Math.round(r.width*dpr);canvas.height=Math.round(r.height*dpr);}ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,sim.w,sim.h);render(ctx,sim.w,sim.h,sim.time);};
+ sim.draw=()=>{const r=canvas.getBoundingClientRect(),dpr=Math.min(2,devicePixelRatio||1);if(!r.width)return;if(sim.w!==r.width||sim.h!==r.height){sim.w=r.width;sim.h=r.height;canvas.width=Math.round(r.width*dpr);canvas.height=Math.round(r.height*dpr);}ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,sim.w,sim.h);render(ctx,sim.w,sim.h,sim.time);sim.updatePlay?.();};
  new ResizeObserver(()=>sim.draw()).observe(canvas);
- const btn=el.querySelector('[data-play]');if(btn){const update=()=>{btn.textContent=sim.play?'暂停动画':'播放动画';btn.setAttribute('aria-pressed',String(sim.play));};btn.addEventListener('click',()=>{sim.play=!sim.play;update();sim.draw();});update();}
+ const btn=el.querySelector('[data-play]');if(btn){if(!animated){btn.hidden=true;const badge=document.createElement('span');badge.textContent='参数交互';badge.className='interaction-badge';btn.after(badge);}const update=()=>{btn.textContent=sim.isRunning&&!sim.isRunning()?'播放 C₂ 操作':sim.play?'暂停动画':'播放动画';btn.setAttribute('aria-pressed',String(sim.play));};sim.updatePlay=update;btn.addEventListener('click',()=>{if(sim.restart&&sim.isRunning&&!sim.isRunning())sim.restart();else sim.play=!sim.play;update();sim.draw();});update();}
  el.addEventListener('input',event=>{const out=document.getElementById(event.target.id+'-out');if(out)out.textContent=event.target.value;sim.draw();});el.addEventListener('change',()=>sim.draw());sims.push(sim);return sim;
 }
 const waterState={angle:0,start:0,target:0,elapsed:1,showLabels:true,isotope:false};
@@ -30,9 +30,10 @@ const geo=register('symmetry-demo',(c,w,h,t)=>{
  pts.sort((a,b)=>b.depth-a.depth).forEach(p=>{const color=p.i===1&&waterState.isotope?gold:blue;circle(c,p.x,p.y,18,color);label(c,p.i===1&&waterState.isotope?'D':'H',p.x,p.y+4,paper,13,'center');if(waterState.showLabels)label(c,p.i===0?'①':'②',p.x,p.y+37,muted,14,'center');});
  label(c,'φ = '+Math.round(a*180/Math.PI)+'°',w/2,h-20,gold,12,'center');
 },true);
-geo.advance=dt=>{if(waterState.elapsed<1){waterState.elapsed=Math.min(1,waterState.elapsed+dt/1.2);const f=.5-.5*Math.cos(Math.PI*waterState.elapsed);waterState.angle=waterState.start+(waterState.target-waterState.start)*f;$('#symmetry-status').textContent=waterState.elapsed<1?'正在沿观察路径转动；中间帧不要求具有该对称性。':waterState.isotope?'HDO：轮廓仍重合，但 H 与 D 身份互换；核质量分布没有恢复。':'H₂O：两个同种 H 交换，完整分子与参考轮廓重合。';}};
+geo.advance=dt=>{if(waterState.elapsed<1){waterState.elapsed=Math.min(1,waterState.elapsed+dt/1.2);const f=.5-.5*Math.cos(Math.PI*waterState.elapsed);waterState.angle=waterState.start+(waterState.target-waterState.start)*f;if(waterState.elapsed>=1)geo.play=false;geo.updatePlay?.();$('#symmetry-status').textContent=waterState.elapsed<1?'正在沿观察路径转动；中间帧不要求具有该对称性。':waterState.isotope?'HDO：轮廓仍重合，但 H 与 D 身份互换；核质量分布没有恢复。':'H₂O：两个同种 H 交换，完整分子与参考轮廓重合。';}};
 $('#symmetry-status').textContent='初态：先预测两个原子怎样交换，再点 C₂(z)。';
 $('#apply-c2').onclick=()=>{waterState.start=waterState.angle;waterState.target=waterState.angle+Math.PI;waterState.elapsed=0;geo.play=true;geo.el.querySelector('[data-play]').textContent='暂停动画';geo.el.querySelector('[data-play]').setAttribute('aria-pressed','true');};
+geo.play=false;geo.isRunning=()=>waterState.elapsed<1;geo.restart=()=>$('#apply-c2').click();geo.updatePlay();
 $('#geometry-reset').onclick=()=>{waterState.angle=0;waterState.elapsed=1;$('#symmetry-status').textContent='初态：先预测两个原子怎样交换，再点 C₂(z)。';geo.draw();};
 $('#show-atom-labels').onchange=e=>{waterState.showLabels=e.target.checked;geo.draw();};
 $('#geometry-isotope').onchange=e=>{waterState.isotope=e.target.value==='hdo';$('#symmetry-status').textContent=waterState.isotope?'现在同位素身份可区分，比较 C₂ 操作前后的质量分布。':'两侧同为 H，追踪编号只是观察标签。';geo.draw();};

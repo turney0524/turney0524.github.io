@@ -191,5 +191,7 @@
   "original_images": {
     "中文": 342,
     "英文": 405
-  }
+  },
+  "public_edition": "Independent lessons and code; full-book scan assets removed from current public tree.",
+  "motion_review": "See 动画帧校验报告.json and 逐章复查报告.json"
 }

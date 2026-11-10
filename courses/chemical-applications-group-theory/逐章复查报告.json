@@ -1,0 +1,150 @@
+{
+  "status": "PASS",
+  "chapters": [
+    {
+      "chapter": "第一章",
+      "errors": [],
+      "ui": {
+        "brokenResults": [],
+        "modules": 8,
+        "overflow": false,
+        "scanReaders": 0
+      }
+    },
+    {
+      "chapter": "第二章",
+      "errors": [],
+      "ui": {
+        "brokenResults": [],
+        "modules": 12,
+        "overflow": false,
+        "scanReaders": 0
+      }
+    },
+    {
+      "chapter": "第三章",
+      "errors": [],
+      "ui": {
+        "brokenResults": [],
+        "modules": 16,
+        "overflow": false,
+        "scanReaders": 0
+      }
+    },
+    {
+      "chapter": "第四章",
+      "errors": [],
+      "ui": {
+        "brokenResults": [],
+        "modules": 5,
+        "overflow": false,
+        "scanReaders": 0
+      }
+    },
+    {
+      "chapter": "第五章",
+      "errors": [],
+      "ui": {
+        "brokenResults": [],
+        "modules": 5,
+        "overflow": false,
+        "scanReaders": 0
+      }
+    },
+    {
+      "chapter": "第六章",
+      "errors": [],
+      "ui": {
+        "brokenResults": [],
+        "modules": 5,
+        "overflow": false,
+        "scanReaders": 0
+      }
+    },
+    {
+      "chapter": "第七章",
+      "errors": [],
+      "ui": {
+        "brokenResults": [],
+        "modules": 7,
+        "overflow": false,
+        "scanReaders": 0
+      }
+    },
+    {
+      "chapter": "第八章",
+      "errors": [],
+      "ui": {
+        "brokenResults": [],
+        "modules": 7,
+        "overflow": false,
+        "scanReaders": 0
+      }
+    },
+    {
+      "chapter": "第九章",
+      "errors": [],
+      "ui": {
+        "brokenResults": [],
+        "modules": 6,
+        "overflow": false,
+        "scanReaders": 0
+      }
+    },
+    {
+      "chapter": "第十章",
+      "errors": [],
+      "ui": {
+        "brokenResults": [],
+        "modules": 6,
+        "overflow": false,
+        "scanReaders": 0
+      }
+    },
+    {
+      "chapter": "第十一章",
+      "errors": [],
+      "ui": {
+        "brokenResults": [],
+        "modules": 7,
+        "overflow": false,
+        "scanReaders": 0
+      }
+    }
+  ],
+  "chapter6StepChecks": [
+    {
+      "id": "salc",
+      "stepChanged": true,
+      "paused": "播放演示",
+      "errors": []
+    },
+    {
+      "id": "projector",
+      "stepChanged": true,
+      "paused": "播放演示",
+      "errors": []
+    },
+    {
+      "id": "gram",
+      "stepChanged": true,
+      "paused": "播放演示",
+      "errors": []
+    },
+    {
+      "id": "square",
+      "stepChanged": true,
+      "paused": "播放演示",
+      "errors": []
+    },
+    {
+      "id": "tetra",
+      "stepChanged": true,
+      "paused": "播放演示",
+      "errors": []
+    }
+  ],
+  "chapter6TimedScreenshotChange": true,
+  "globalPauseScreenshotStable": true,
+  "scope": "All 84 module initializations and console logs; deterministic geometry-frame checks for later 48 modules; chapter 6 manual-step and actual timed playback verified."
+}

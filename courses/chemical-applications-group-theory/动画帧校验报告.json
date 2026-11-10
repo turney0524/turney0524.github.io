@@ -1,0 +1,283 @@
+{
+  "status": "PASS",
+  "checks": 126,
+  "method": "Compare actual Canvas geometry commands at two distinct times, and verify exact symmetry-operation endpoints; static parameter diagrams never advertise playback.",
+  "modules": [
+    {
+      "key": "basis",
+      "engine": "basis",
+      "animated": true,
+      "geometryChanges": true
+    },
+    {
+      "key": "representation",
+      "engine": "representation",
+      "animated": true,
+      "geometryChanges": true
+    },
+    {
+      "key": "characters",
+      "engine": "characters",
+      "animated": false,
+      "geometryChanges": false
+    },
+    {
+      "key": "reduction",
+      "engine": "reduction",
+      "animated": false,
+      "geometryChanges": false
+    },
+    {
+      "key": "fourier",
+      "engine": "fourier",
+      "animated": true,
+      "geometryChanges": true
+    },
+    {
+      "key": "commute",
+      "engine": "commute",
+      "animated": false,
+      "geometryChanges": false
+    },
+    {
+      "key": "degeneracy",
+      "engine": "degeneracy",
+      "animated": false,
+      "geometryChanges": false
+    },
+    {
+      "key": "products",
+      "engine": "products",
+      "animated": false,
+      "geometryChanges": false
+    },
+    {
+      "key": "integral",
+      "engine": "integral",
+      "animated": true,
+      "geometryChanges": true
+    },
+    {
+      "key": "selection",
+      "engine": "selection",
+      "animated": false,
+      "geometryChanges": false
+    },
+    {
+      "key": "salc",
+      "engine": "salc",
+      "animated": true,
+      "geometryChanges": true
+    },
+    {
+      "key": "projector",
+      "engine": "projector",
+      "animated": true,
+      "geometryChanges": true
+    },
+    {
+      "key": "gram",
+      "engine": "gram",
+      "animated": true,
+      "geometryChanges": true
+    },
+    {
+      "key": "square",
+      "engine": "salc",
+      "animated": true,
+      "geometryChanges": true
+    },
+    {
+      "key": "tetra",
+      "engine": "salc",
+      "animated": true,
+      "geometryChanges": true
+    },
+    {
+      "key": "huckel",
+      "engine": "huckel",
+      "animated": false,
+      "geometryChanges": false
+    },
+    {
+      "key": "block",
+      "engine": "block",
+      "animated": false,
+      "geometryChanges": false
+    },
+    {
+      "key": "ring",
+      "engine": "huckel",
+      "animated": false,
+      "geometryChanges": false
+    },
+    {
+      "key": "naphthalene",
+      "engine": "huckel",
+      "animated": false,
+      "geometryChanges": false
+    },
+    {
+      "key": "avoided",
+      "engine": "avoided",
+      "animated": false,
+      "geometryChanges": false
+    },
+    {
+      "key": "threecenter",
+      "engine": "huckel",
+      "animated": false,
+      "geometryChanges": false
+    },
+    {
+      "key": "electrocyclic",
+      "engine": "electrocyclic",
+      "animated": true,
+      "geometryChanges": true
+    },
+    {
+      "key": "orbital",
+      "engine": "orbital",
+      "animated": false,
+      "geometryChanges": false
+    },
+    {
+      "key": "octasalc",
+      "engine": "salc",
+      "animated": true,
+      "geometryChanges": true
+    },
+    {
+      "key": "hybrid",
+      "engine": "hybrid",
+      "animated": false,
+      "geometryChanges": false
+    },
+    {
+      "key": "pimix",
+      "engine": "pimix",
+      "animated": false,
+      "geometryChanges": false
+    },
+    {
+      "key": "wade",
+      "engine": "wade",
+      "animated": false,
+      "geometryChanges": false
+    },
+    {
+      "key": "sandwich",
+      "engine": "sandwich",
+      "animated": false,
+      "geometryChanges": false
+    },
+    {
+      "key": "terms",
+      "engine": "terms",
+      "animated": false,
+      "geometryChanges": false
+    },
+    {
+      "key": "field",
+      "engine": "field",
+      "animated": false,
+      "geometryChanges": false
+    },
+    {
+      "key": "spin",
+      "engine": "spin",
+      "animated": false,
+      "geometryChanges": false
+    },
+    {
+      "key": "laporte",
+      "engine": "laporte",
+      "animated": false,
+      "geometryChanges": false
+    },
+    {
+      "key": "spinor",
+      "engine": "spinor",
+      "animated": true,
+      "geometryChanges": true
+    },
+    {
+      "key": "vibration",
+      "engine": "vibration",
+      "animated": true,
+      "geometryChanges": true
+    },
+    {
+      "key": "vibcount",
+      "engine": "vibcount",
+      "animated": false,
+      "geometryChanges": false
+    },
+    {
+      "key": "stretch",
+      "engine": "stretch",
+      "animated": false,
+      "geometryChanges": false
+    },
+    {
+      "key": "fg",
+      "engine": "fg",
+      "animated": true,
+      "geometryChanges": true
+    },
+    {
+      "key": "spectra",
+      "engine": "spectra",
+      "animated": false,
+      "geometryChanges": false
+    },
+    {
+      "key": "fermi",
+      "engine": "avoided",
+      "animated": false,
+      "geometryChanges": false
+    },
+    {
+      "key": "lattice",
+      "engine": "lattice",
+      "animated": false,
+      "geometryChanges": false
+    },
+    {
+      "key": "wallpaper",
+      "engine": "wallpaper",
+      "animated": false,
+      "geometryChanges": false
+    },
+    {
+      "key": "bravais",
+      "engine": "bravais",
+      "animated": true,
+      "geometryChanges": true
+    },
+    {
+      "key": "restriction",
+      "engine": "restriction",
+      "animated": false,
+      "geometryChanges": false
+    },
+    {
+      "key": "seitz",
+      "engine": "seitz",
+      "animated": true,
+      "geometryChanges": true
+    },
+    {
+      "key": "screw",
+      "engine": "screw",
+      "animated": true,
+      "geometryChanges": true
+    },
+    {
+      "key": "extinction",
+      "engine": "extinction",
+      "animated": false,
+      "geometryChanges": false
+    }
+  ]
+}

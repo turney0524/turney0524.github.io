@@ -1,0 +1,374 @@
+[
+  {
+    "key": "basis",
+    "engine": "basis",
+    "values": {
+      "angle": 45
+    }
+  },
+  {
+    "key": "representation",
+    "engine": "representation",
+    "values": {
+      "a": 1,
+      "b": 3
+    }
+  },
+  {
+    "key": "characters",
+    "engine": "characters",
+    "values": {
+      "group": "C3v",
+      "a": 1,
+      "b": 2
+    }
+  },
+  {
+    "key": "reduction",
+    "engine": "reduction",
+    "values": {
+      "c0": 3,
+      "c1": 0,
+      "c2": 1
+    }
+  },
+  {
+    "key": "fourier",
+    "engine": "fourier",
+    "values": {
+      "n": 5,
+      "k": 1
+    }
+  },
+  {
+    "key": "commute",
+    "engine": "commute",
+    "values": {
+      "delta": 0,
+      "angle": 120
+    }
+  },
+  {
+    "key": "degeneracy",
+    "engine": "degeneracy",
+    "values": {
+      "delta": 0
+    }
+  },
+  {
+    "key": "products",
+    "engine": "products",
+    "values": {
+      "a": "A₁",
+      "b": "E"
+    }
+  },
+  {
+    "key": "integral",
+    "engine": "integral",
+    "values": {
+      "kind": "odd",
+      "bound": 1
+    }
+  },
+  {
+    "key": "selection",
+    "engine": "selection",
+    "values": {
+      "initial": "A₁",
+      "final": "E",
+      "operator": "A₁"
+    }
+  },
+  {
+    "key": "salc",
+    "engine": "salc",
+    "values": {
+      "basis": "0"
+    }
+  },
+  {
+    "key": "projector",
+    "engine": "projector",
+    "values": {
+      "irrep": "A₁",
+      "seed": 1,
+      "terms": 6
+    }
+  },
+  {
+    "key": "gram",
+    "engine": "gram",
+    "values": {
+      "seeds": 3
+    }
+  },
+  {
+    "key": "square",
+    "engine": "salc",
+    "values": {
+      "basis": "0"
+    }
+  },
+  {
+    "key": "tetra",
+    "engine": "salc",
+    "values": {
+      "basis": "0"
+    }
+  },
+  {
+    "key": "huckel",
+    "engine": "huckel",
+    "values": {
+      "kind": "chain",
+      "n": 6,
+      "orb": 1,
+      "electrons": 6,
+      "defect": 0
+    }
+  },
+  {
+    "key": "block",
+    "engine": "block",
+    "values": {
+      "delta": 0
+    }
+  },
+  {
+    "key": "ring",
+    "engine": "huckel",
+    "values": {
+      "n": 6,
+      "orb": 1,
+      "electrons": 6
+    }
+  },
+  {
+    "key": "naphthalene",
+    "engine": "huckel",
+    "values": {
+      "orb": 1,
+      "electrons": 10
+    }
+  },
+  {
+    "key": "avoided",
+    "engine": "avoided",
+    "values": {
+      "detuning": 0,
+      "coupling": 0.35
+    }
+  },
+  {
+    "key": "threecenter",
+    "engine": "huckel",
+    "values": {
+      "closing": 0,
+      "orb": 2,
+      "electrons": 4
+    }
+  },
+  {
+    "key": "electrocyclic",
+    "engine": "electrocyclic",
+    "values": {
+      "electrons": "4",
+      "condition": "thermal",
+      "motion": "con",
+      "angle": 45
+    }
+  },
+  {
+    "key": "orbital",
+    "engine": "orbital",
+    "values": {
+      "orbital": "s",
+      "plane": "xy"
+    }
+  },
+  {
+    "key": "octasalc",
+    "engine": "salc",
+    "values": {
+      "basis": "0"
+    }
+  },
+  {
+    "key": "hybrid",
+    "engine": "hybrid",
+    "values": {
+      "basis": "0"
+    }
+  },
+  {
+    "key": "pimix",
+    "engine": "pimix",
+    "values": {
+      "ligand": -2,
+      "coupling": 0.6
+    }
+  },
+  {
+    "key": "wade",
+    "engine": "wade",
+    "values": {
+      "vertices": 6,
+      "electrons": 14
+    }
+  },
+  {
+    "key": "sandwich",
+    "engine": "sandwich",
+    "values": {
+      "k": 1,
+      "parity": "plus",
+      "twist": 36
+    }
+  },
+  {
+    "key": "terms",
+    "engine": "terms",
+    "values": {
+      "shell": "2"
+    }
+  },
+  {
+    "key": "field",
+    "engine": "field",
+    "values": {
+      "shape": "octa",
+      "delta": 1.5,
+      "distortion": 0
+    }
+  },
+  {
+    "key": "spin",
+    "engine": "spin",
+    "values": {
+      "electrons": 6,
+      "delta": 0.6
+    }
+  },
+  {
+    "key": "laporte",
+    "engine": "laporte",
+    "values": {
+      "mix": 0
+    }
+  },
+  {
+    "key": "spinor",
+    "engine": "spinor",
+    "values": {
+      "angle": 360
+    }
+  },
+  {
+    "key": "vibration",
+    "engine": "vibration",
+    "values": {
+      "mode": "symmetric",
+      "amplitude": 0.16
+    }
+  },
+  {
+    "key": "vibcount",
+    "engine": "vibcount",
+    "values": {
+      "operation": 0
+    }
+  },
+  {
+    "key": "stretch",
+    "engine": "stretch",
+    "values": {
+      "s1": 0.5,
+      "s2": 0.5
+    }
+  },
+  {
+    "key": "fg",
+    "engine": "fg",
+    "values": {
+      "mass": 16,
+      "endmass": 1,
+      "k1": 1,
+      "k2": 1,
+      "mode": 1
+    }
+  },
+  {
+    "key": "spectra",
+    "engine": "spectra",
+    "values": {
+      "model": "water"
+    }
+  },
+  {
+    "key": "fermi",
+    "engine": "avoided",
+    "values": {
+      "detuning": 0,
+      "coupling": 0.2
+    }
+  },
+  {
+    "key": "lattice",
+    "engine": "lattice",
+    "values": {
+      "ratio": 1,
+      "angle": 90,
+      "basis": "old"
+    }
+  },
+  {
+    "key": "wallpaper",
+    "engine": "wallpaper",
+    "values": {
+      "group": "p1"
+    }
+  },
+  {
+    "key": "bravais",
+    "engine": "bravais",
+    "values": {
+      "type": "P",
+      "angle": 30
+    }
+  },
+  {
+    "key": "restriction",
+    "engine": "restriction",
+    "values": {
+      "n": 5
+    }
+  },
+  {
+    "key": "seitz",
+    "engine": "seitz",
+    "values": {
+      "kind": "glide",
+      "x": 0.13,
+      "y": 0.27
+    }
+  },
+  {
+    "key": "screw",
+    "engine": "screw",
+    "values": {
+      "axis": "2_1",
+      "steps": 3
+    }
+  },
+  {
+    "key": "extinction",
+    "engine": "extinction",
+    "values": {
+      "type": "I",
+      "h": 1,
+      "k": 1,
+      "l": 1
+    }
+  }
+]
