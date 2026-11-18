@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-18",
+  "status": "passed",
+  "checks": [
+    "Jacobi eigensolver: 2×2 analytic eigenvalues",
+    "Chern phases m = −3, −1, 1, 3 match 0, +1, −1, 0",
+    "All three analytic bulk gap closures detected",
+    "Harper q=2,3,4,7,9: symmetry, trace and trace(H²) invariants",
+    "SSH open chain: ±E pairing and topological end levels",
+    "Rice–Mele pump: continuous Wannier center shift = 1.000000",
+    "Stable lower-band spinor normalization at generic point and both poles",
+    "18 chapters + appendix, 11 labs, unique IDs, all anchors and local assets"
+  ],
+  "limits": [
+    "Browser rendering and controls checked separately; this report tests numerical and structural invariants.",
+    "Finite-grid curvature integration is unreliable near gap closures.",
+    "No tests claim coverage of every textbook derivation or real materials."
+  ]
+}

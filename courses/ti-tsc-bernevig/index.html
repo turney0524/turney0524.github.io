@@ -1,0 +1,403 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="拓扑绝缘体与拓扑超导：18章原创中文学习笔记、逐步推导和可交互物理实验。基于 Bernevig 与 Hughes 2013 教材的交互笔记。"><title>拓扑绝缘体与拓扑超导 (bernevig版本)笔记</title><link rel="canonical" href="https://turney0524.github.io/courses/ti-tsc-bernevig/"><link rel="stylesheet" href="assets/style.css"><script>window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']],tags:'none'},svg:{fontCache:'local'},options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script><script defer src="assets/tex-svg-full.js"></script><script defer src="assets/app.js"></script></head><body>
+<div id="reading-progress"></div><button id="menu" aria-label="切换章节目录">☰ 目录</button>
+<aside><a class="brand" href="#top"><span class="brand-icon">∂</span><div>态与边界<small>TOPOLOGICAL MATTER</small></div></a><div class="edition">BERNEVIG × HUGHES · 学习伴读</div><label class="search-label" for="search">查找章节与知识点</label><input id="search" type="search" placeholder="试试：质量、宇称、Majorana"><div id="search-status" aria-live="polite"></div><nav><a href="#guide" class="special">学习路线与使用说明</a><a href="#ch1" data-ch="ch1"><span>01</span>从能带到拓扑</a><a href="#ch2" data-ch="ch2"><span>02</span>Berry 相位：量子态的平行移动</a><a href="#ch3" data-ch="ch3"><span>03</span>霍尔电导与 Chern 数</a><a href="#ch4" data-ch="ch4"><span>04</span>时间反演与 Kramers 成对</a><a href="#ch5" data-ch="ch5"><span>05</span>磁通穿过方格：Hofstadter 问题</a><a href="#ch6" data-ch="ch6"><span>06</span>体边对应：边界为何必须有态</a><a href="#ch7" data-ch="ch7"><span>07</span>石墨烯：两个谷与 Dirac 费米子</a><a href="#ch8" data-ch="ch8"><span>08</span>Chern 绝缘体的最小模型</a><a href="#ch9" data-ch="ch9"><span>09</span>时间反演拓扑绝缘体</a><a href="#ch10" data-ch="ch10"><span>10</span>Z₂ 不变量、极化与 Wilson 环</a><a href="#ch11" data-ch="ch11"><span>11</span>不同维度中的能带相交</a><a href="#ch12" data-ch="ch12"><span>12</span>反演对称性的快捷键</a><a href="#ch13" data-ch="ch13"><span>13</span>四维量子霍尔与第二 Chern 数</a><a href="#ch14" data-ch="ch14"><span>14</span>降维与轴子角 θ</a><a href="#ch15" data-ch="ch15"><span>15</span>Z₂ 指标怎样留下实验痕迹</a><a href="#ch16" data-ch="ch16"><span>16</span>拓扑超导：从 BdG 到 Majorana</a><a href="#ch17" data-ch="ch17"><span>17</span>时间反演拓扑超导与分类</a><a href="#ch18" data-ch="ch18"><span>18</span>近邻效应：在 TI 边界上工程化质量</a><a href="#appendix" class="special">符号表 · 练习 · 资料说明</a></nav><div class="aside-bottom"><span id="read-count">0 / 18 章已读</span><button id="theme" aria-label="切换深浅主题">◐ 主题</button></div></aside>
+<main id="top"><header><span><a href="https://turney0524.github.io/notes.html">← 知识笔记</a> · <a href="https://turney0524.github.io/collection-bands.html">能带与拓扑合集</a></span><span class="badge">交互笔记 · v1.1</span></header>
+<div class="hero"><div class="eyebrow">FROM GEOMETRY TO PHYSICS</div><h1>拓扑绝缘体与拓扑超导 <span class="title-edition">(bernevig版本)笔记</span></h1><p>拓扑绝缘体与拓扑超导的中文学习笔记。<br>把抽象的不变量，变成可以推导、观察与调节的物理图像。</p><div class="hero-actions"><a class="button" href="#guide">开始探索 <span>↗</span></a><a class="text-button" href="#ch8">先玩 Chern 实验 →</a></div><div class="hero-stats"><div><b>18</b><span>章系统笔记</span></div><div><b>11</b><span>交互物理实验</span></div><div><b>∂</b><span>推导 · 例题 · 代码</span></div></div><div class="hero-art" aria-hidden="true"><svg viewBox="0 0 430 400"><defs><linearGradient id="cone" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#38cab0" stop-opacity=".55"/><stop offset="1" stop-color="#38cab0" stop-opacity=".04"/></linearGradient></defs><g stroke="#57747d" stroke-width="1" opacity=".3"><path d="M40 300L375 300M80 325L350 230M190 355L190 40"/></g><path d="M100 75Q195 30 290 75L195 210Z" fill="url(#cone)" stroke="#5ce0c3"/><ellipse cx="195" cy="75" rx="95" ry="27" fill="none" stroke="#5ce0c3"/><path d="M100 345Q195 390 290 345L195 210Z" fill="url(#cone)" stroke="#5ce0c3"/><ellipse cx="195" cy="345" rx="95" ry="27" fill="none" stroke="#5ce0c3"/><ellipse class="orbit" cx="195" cy="210" rx="145" ry="51" fill="none" stroke="#e9b572" stroke-dasharray="5 7" transform="rotate(-20 195 210)"/><circle cx="195" cy="210" r="6" fill="#e9b572"/><text x="318" y="207" fill="#e9b572" font-size="14">gap → 0</text><text x="210" y="37" fill="#82a4aa" font-size="13">E</text><text x="349" y="319" fill="#82a4aa" font-size="13">k</text></svg></div></div>
+<section id="guide" class="guide"><div class="eyebrow">HOW TO READ</div><h2>先建立图像，再让公式落地。</h2><p>本笔记以 B. Andrei Bernevig（with Taylor L. Hughes）2013 年教材为主线，采用原创表述、重新组织的推导、补充例子和重新计算的图。它是伴读资料，不是逐页译本，也不替代原书。</p><div class="routes"><a href="#ch1"><b>01 · 第一次接触</b><span>1 → 2 → 4 → 7 → 8 → 9<br>先理解态、相位、质量和边界。</span></a><a href="#ch3"><b>02 · 想亲手计算</b><span>2 → 3 → 5 → 6 → 8 → 10 → 12<br>连接几何、输运和数值算法。</span></a><a href="#ch16"><b>03 · 走向拓扑超导</b><span>6 → 16 → 17 → 18<br>从质量畴壁理解 Majorana。</span></a></div><div class="note"><b>使用方式</b> 拖动实验滑块，展开推导与答案，点击代码区的复制按钮。目录支持知识点搜索，已读状态保存在当前浏览器；所有资源在本地，无需联网。打印时自动展开正文中的答案与代码，交互图保留当前参数。</div><div class="toolbar"><button id="open-all">展开全部推导与答案</button><button id="close-all">收起全部折叠内容</button><button id="print">打印 / 保存 PDF</button></div><p class="small">页码以书内正文页码为准；本地 PDF 的页序通常比正文页码多 13。图均为本笔记原创绘制，没有嵌入教材页面或原图。材料举例对应教材的历史语境，并非截至今日的实验进展综述。</p></section>
+<section class="chapter" id="ch1" data-title="从能带到拓扑"><div class="chapter-meta">CHAPTER 01 <span>教材正文页 1–5</span></div><h2>从能带到拓扑</h2><p class="subtitle">先问：究竟是什么不能连续改变？</p>
+<h3>1.1 这门课究竟研究什么</h3>
+<p>考虑一块不与外界交换粒子的晶体。低温下电子把低能能带填满，化学势落在能隙里，体内没有随意可用的低能载流子。这是能带绝缘体的起点。但仅凭“有能隙”还不能区分所有绝缘体：两个看起来同样绝缘的系统，它们的占据态在整个动量空间中的组织方式可能不同。</p>
+<p>把每一个动量点的占据态看成一张小纸片。能量告诉你纸片放在多高，波函数告诉你纸片朝向哪里。拓扑能带理论关注这些纸片能否在整个布里渊区里连续拼接。局部几乎一样的纸片，全局可能拼成无法平滑解开的结构。这个比喻只帮助理解“局部与整体”；真正计算的对象是占据态投影算符，而不是晶体的外形。</p>
+<div class="idea">核心问题：在保持体能隙、保护对称性和所讨论的局域性条件时，能否把一个哈密顿量连续变成另一个？不能，就可能属于不同拓扑相。</div>
+<h3>1.2 为什么只看占据态</h3>
+<p>令费米能为零，绝缘体满足所有动量处都没有零能本征值。把所有正能量压平到 +1，负能量压平到 −1，不改变本征态，也不闭隙：</p>
+\[P(\mathbf k)=\sum_{n\in\mathrm{occ}}|u_n(\mathbf k)\rangle\langle u_n(\mathbf k)|,\qquad Q(\mathbf k)=1-2P(\mathbf k).\]
+<p>可以用插值 \(E_n(s)=(1-s)E_n+s\,\mathrm{sgn}(E_n)\) 完成压平，整个过程中能量不穿过零。于是很多看似不同的色散关系都属于同一相，区别保存在 \(P(\mathbf k)\) 的全局变化中。占据带之间允许简并：重要的是占据子空间与未占据子空间之间保持能隙。</p>
+<h3>1.3 入门所需的四件工具</h3>
+<ul><li>线性代数：厄米矩阵的本征值实，本征矢可正交；整体相位不改变物理态。</li><li>量子力学：绝热演化、微扰论、反幺正算符、费米反对易关系。</li><li>固体物理：布洛赫态 \(\psi_{n\mathbf k}=e^{i\mathbf k\cdot\mathbf r}u_{n\mathbf k}\)，动量差一个倒格矢代表同一物理点。</li><li>微积分：梯度、旋度、曲面积分、分部积分。纤维丛语言有帮助，但不是开始计算的门槛。</li></ul>
+<p>一维 BZ 是首尾相接的圆 \(S^1\)，二维 BZ 是两个周期方向组成的环面 \(T^2\)。画成正方形时，对边必须识别。这就是为什么在边界随意截断波函数会算错拓扑数。</p>
+<h3>1.4 原创例题：同样的能谱，不同的态</h3>
+<p>比较 \(H_0(k)=\sigma_x\) 与 \(H_1(k)=\cos k\,\sigma_x+\sin k\,\sigma_y\)。二者都是 \(E_\pm=\pm1\)，但后者的面内向量随动量绕原点一周，前者不绕。在规定的手征对称性 \(\{H,\sigma_z\}=0\) 下，这个整数不能连续改变。</p>
+<details><summary>展开：为什么一定要强调对称性？</summary><p>如果允许加入 \(\sigma_z\) 分量，向量可以离开平面，从球面上绕过原点。取 \(H_s=\cos(\pi s/2)H_1+\sin(\pi s/2)\sigma_z\)，能谱始终为 ±1；再把常向量旋到 \(\sigma_x\)。因此这个一维绕数的保护依赖手征约束。不能把某个模型里的拓扑指标不加条件地推广到所有模型。</p></details>
+<h3>1.5 三个常见误解</h3>
+<p>“拓扑”不等于“任何边界永远导电”：有的保护依赖时间反演，有的边界可被磁性打开能隙。“拓扑能带”也不等于分数量子霍尔系统的内禀拓扑序：本笔记主要讨论自由费米子或平均场 BdG 描述，并不从中推出分数化与任意子。“能带反转”是有用线索，但必须结合对称性、本征态与整个 BZ 的信息才能下结论。</p>
+<div class="exercise"><b>自测</b> 能隙从 2 改成 200，拓扑一定变吗？<details><summary>参考答案</summary><p>不一定。整体乘以正数只改变能标，不改变占据投影。相反，即使能谱外观相似，本征态也可能不同。</p></details></div>
+<h3>1.6 一个具体的“两带”练习：先会算，再谈拓扑</h3><p>Pauli 矩阵满足 \(\sigma_i\sigma_j=\delta_{ij}I+i\epsilon_{ijk}\sigma_k\)。由于 \(d_id_j\) 对称而 \(\epsilon_{ijk}\) 反对称，\((\mathbf d\cdot\boldsymbol\sigma)^2=|\mathbf d|^2I\)。本征值立刻是 ±|d|，不需要展开二次行列式。负能带投影为</p>\[P_-=(I-\hat{\mathbf d}\cdot\boldsymbol\sigma)/2.\]<p>检查：\(P_-^2=P_-\)，\(P_-^\dagger=P_-\)，\(\mathrm{Tr}P_-=1\)。如果你对这些式子不熟，建议先手算一遍：后面几乎所有最简拓扑模型都在反复使用同一组代数。</p><details><summary>例题：d=(3,0,4)，哪个量与拓扑有关？</summary><p>本征能量 ±5，负能投影为 \([I-(3\sigma_x+4\sigma_z)/5]/2\)。把 d 变成 (6,0,8)，能量变成 ±10，但投影完全不变。拓扑需要一整族随 k 变化的投影，单个 d 点本身没有二维 Chern 数。</p></details><div class="chapter-end"><label><input type="checkbox" data-read="1"> 标记本章已读</label><a href="#ch2">下一章 →</a></div></section><section class="chapter" id="ch2" data-title="Berry 相位：量子态的平行移动"><div class="chapter-meta">CHAPTER 02 <span>教材正文页 6–14</span></div><h2>Berry 相位：量子态的平行移动</h2><p class="subtitle">几何相位不是演化变慢以后剩下的“小修正”</p>
+<h3>2.1 从薛定谔方程一步步走出来</h3>
+<p>设 \(H(\mathbf R)|n(\mathbf R)\rangle=E_n|n(\mathbf R)\rangle\)，参数缓慢移动，且选定能级与其他能级分开。写绝热态为</p>
+\[|\psi(t)\rangle=e^{-\frac{i}{\hbar}\int_0^t E_n(t')dt'}e^{i\gamma_n(t)}|n(\mathbf R(t))\rangle.\]
+<p>对右边求导：动力学相位贡献 \(E_n|\psi\rangle\)，剩下两项是 \(-\hbar\dot\gamma_n|n\rangle+i\hbar|\dot n\rangle\)。与左侧的能量项相消，再左乘 \(\langle n|\)，得到</p>
+\[\dot\gamma_n=i\langle n|\dot n\rangle,\quad \gamma_n[C]=\oint_C\mathbf A_n\cdot d\mathbf R,\quad\mathbf A_n=i\langle n|\nabla_{\mathbf R}n\rangle.\]
+<p>归一化条件的导数是 \(\langle\partial n|n\rangle+\langle n|\partial n\rangle=0\)，所以内积纯虚，乘上 i 后 \(\mathbf A\) 为实数。绝热要求可粗略写成 \(\hbar|\langle m|\dot H|n\rangle|/|E_m-E_n|^2\ll1\)。靠近闭隙点，想维持绝热就需要更长的演化时间。</p>
+<h3>2.2 相位可以任意选，为什么结果有意义</h3>
+<p>换基 \(|n\rangle\to e^{i\chi(\mathbf R)}|n\rangle\) 后，\(\mathbf A\to\mathbf A-\nabla\chi\)。闭合回路上，单值的相位因子只允许 \(\chi(T)-\chi(0)=2\pi m\)。因此 \(\gamma\) 本身模 \(2\pi\) 定义，\(e^{i\gamma}\) 不变。开路径的连接积分单独没有规范不变性；需要端点重叠等补偿，不能照搬闭路公式。</p>
+\[F_{ij}=\partial_i A_j-\partial_j A_i=-2\,\mathrm{Im}\langle\partial_i n|\partial_j n\rangle.\]
+<p>连接类似参数空间的矢势，曲率类似磁场。这里的“磁场”在参数空间中，未必是实空间中的真实磁场。一个可测量过程通常比较两条路径的相位差，或利用几何相位对输运的影响。</p>
+<h3>2.3 二能级系统：半个立体角</h3>
+<p>对 \(H=\mathbf d\cdot\boldsymbol\sigma\)，能量为 \(\pm|\mathbf d|\)。令单位向量 \(\hat{\mathbf d}=(\sin\theta\cos\phi,\sin\theta\sin\phi,\cos\theta)\)，一个负能量本征态为</p>
+\[|u_-\rangle=\begin{pmatrix}-e^{-i\phi}\sin(\theta/2)\\\cos(\theta/2)\end{pmatrix},\quad A_\theta=0,\quad A_\phi=\frac{1-\cos\theta}{2}.\]
+<p>在固定纬度绕一周，\(\gamma_-=\pi(1-\cos\theta)=\Omega/2\)。正能带符号相反。取赤道得到 π，绕很小的北极帽得到接近零的相位。改变行走速度不改变立体角，但会改变动力学相位；反向绕行会反转几何相位。</p>
+<div data-lab="berry"></div>
+<p>上图使用解析公式实时绘制：青色轨迹是 \(\hat{\mathbf d}\) 的参数路径，橙色半径标出当前位置。动画表示沿路径取样，不是在求解有限速度的薛定谔方程，也不展示非绝热跃迁。</p>
+<h3>2.4 曲率为什么在简并点附近变大</h3>
+<p>对本征方程求导并投影到 \(m\ne n\) 能级：</p>
+\[\langle m|\partial_i n\rangle=\frac{\langle m|\partial_iH|n\rangle}{E_n-E_m},\quad F_{ij}^{(n)}=-2\mathrm{Im}\sum_{m\ne n}\frac{\langle n|\partial_iH|m\rangle\langle m|\partial_jH|n\rangle}{(E_n-E_m)^2}.\]
+<p>分母是带间隙的平方：接近简并时态对参数特别敏感。对二能级负能带可化为 \(F_{ij}^-=\tfrac12\hat{\mathbf d}\cdot(\partial_i\hat{\mathbf d}\times\partial_j\hat{\mathbf d})\)。在 d 空间原点之外，这相当于强度 1/2 的单极子；原点正是能带简并处。</p>
+<details><summary>数值计算：为什么不要直接差分随机相位的本征矢</summary><p>本征求解器每次都能任意乘一个相位。相邻动量点上的本征矢可能突然差一个负号，直接差分会出现假发散。闭路上使用归一化重叠的乘积：</p>\[\gamma=-\arg\prod_{j=0}^{N-1}\frac{\langle u_j|u_{j+1}\rangle}{|\langle u_j|u_{j+1}\rangle|},\quad u_N=u_0.\]<p>各点的规范因子首尾抵消。如果相邻态几乎正交，网格太粗或经过简并，应加密并检查适用条件。</p></details>
+<div class="exercise"><b>例题</b> \(\theta=\pi/3\)，负能带绕两周，几何相位是多少？<details><summary>展开答案</summary><p>单周为 π/2，两周为 π。绕行三周为 3π/2，四周为 2π，与零在相位因子上等价。</p></details></div>
+<h3>2.5 从“几何”到干涉：一个不依赖电子的例子</h3><p>想象把一个受控二能级系统分成两条演化支路：两支的能量积分相同，但参数路径在 Bloch 球围出的面积不同。重合时动力学相位抵消，干涉条纹平移由 \(\Delta\gamma=\Delta\Omega/2\) 决定。这个例子强调：Berry 相位不是仅存在于晶体中的术语，它来自参数依赖的量子态。</p><details><summary>例题：同一条圆，一条支路快一点会怎样？</summary><p>若两条都满足绝热，几何相位相同，但动力学相位 \(-\int E\,dt/\hbar\) 一般不同。若快到违反绝热，就不再能只用同一条瞬时本征态的 Berry 相位描述结果。速度独立性有前提。</p></details><details><summary>推导补充：为什么南北两张规范不能合成一张？</summary><p>负能态在北极光滑的规范给 \(A_\phi^N=(1-\cos\theta)/2\)，乘 \(e^{i\phi}\) 后得到南极规范 \(A_\phi^S=-(1+\cos\theta)/2\)。重叠区差为 \(A^N-A^S=d\phi\)。沿赤道积分为 2π，所以球面总曲率为 2π。如果可以找到全局单一规范，闭球面上又应得零，矛盾来自不可能的全局规范假设。坐标奇点可以移动，但这份总通量不能消失。</p></details><div class="chapter-end"><label><input type="checkbox" data-read="2"> 标记本章已读</label><a href="#ch3">下一章 →</a></div></section><section class="chapter" id="ch3" data-title="霍尔电导与 Chern 数"><div class="chapter-meta">CHAPTER 03 <span>教材正文页 15–32</span></div><h2>霍尔电导与 Chern 数</h2><p class="subtitle">把带间虚跃迁改写成占据态几何</p>
+<h3>3.1 电流从哪里来</h3>
+<p>在紧束缚模型中，粒子沿键跃迁改变局域密度。对 \(n_i=c_i^\dagger c_i\) 使用海森堡方程 \(\dot n_i=(i/\hbar)[H,n_i]\)，可读出各条键的粒子流；乘粒子电荷后得到电流。另一条路线是在跃迁矩阵元中引入 Peierls 相位，对矢势求导。两条路线应一致，这是检查符号和因子的重要方法。</p>
+<p>对均匀晶体，单粒子速度矩阵为 \(v_i=\hbar^{-1}\partial_{k_i}H\)。这里 k 是波矢；如果使用物理动量 p，公式就变成 \(v_i=\partial_{p_i}H\)，不能把两种记号混用。</p>
+<h3>3.2 线性响应的物理内容</h3>
+<p>弱电场使占据态混入其他能带，电流的横向分量来自这些微小的带间相干。Kubo 公式正好把“先由电场混合、再测量速度”写成两个矩阵元之积，并以能量差的平方作分母。这与上一章的曲率公式具有同一结构。</p>
+\[\sigma_{xy}=\frac{e^2}{\hbar}\sum_{n\in\mathrm{occ}}\int_{\mathrm{BZ}}\frac{d^2k}{(2\pi)^2}F_{xy}^{(n)}=\frac{e^2}{h}\,C,\qquad C=\frac{1}{2\pi}\int_{\mathrm{BZ}}\mathrm{Tr}\,F_{xy}\,d^2k.\]
+<p>约定 \(e>0\) 为电荷量的大小，本文把横向响应写为 \(j_y=\sigma_{xy}E_x\)。若采用 \(j_x/E_y\) 命名同一个反对称张量分量，符号相反。以下 C 的符号始终由 \(A=i\langle u|\partial u\rangle\)、BZ 的 \((k_x,k_y)\) 定向和占据负能带共同决定。</p>
+<h3>3.3 半经典路线也能看出同一结果</h3>
+\[\hbar\dot{\mathbf k}=-e\mathbf E,\qquad\dot{\mathbf r}=\hbar^{-1}\nabla_k E_n-\dot{\mathbf k}\times\boldsymbol\Omega_n.\]
+<p>满带中普通群速度对整个 BZ 积分为零，因为周期函数的导数积分为零；反常速度却由曲率贡献。令电场沿 x，得到电子的 y 向反常速度 \(-eE_x\Omega_z/\hbar\)，乘电子电荷 −e 后正好得到上式的横向电流。这个推导更直观，但严格的线性响应能系统说明带间项与填充条件。</p>
+<h3>3.4 整数从哪里来：两块规范的接缝</h3>
+<p>若能在整个环面选到光滑、周期的单一连接 A，则斯托克斯定理给出总曲率积分为零。非零 C 意味着这种规范不存在，而不是斯托克斯定理失效。将 BZ 分成两块，在交叠边界满足 \(u_b=e^{i\chi}u_a\)，因此 \(A_b=A_a-d\chi\)。两块曲面积分化为接缝上线积分，最后得到</p>
+\[\int_{T^2}F=\oint d\chi=2\pi m.\]
+<p>接缝走一周，相位因子必须回到起点，因此只能绕整数圈。曲率在各处可以连续变化，积分却被全局拼接条件锁定为整数。更一般的多占据带允许 \(U(N)\) 混合，取连接与曲率的迹后，量子化与占据子空间的行列式相位相关。</p>
+<h3>3.5 什么时候不再是整数电导</h3>
+<p>有限温度下，费米分布使能带不再严格满占据；金属只积分费米面以内；驱动过快会产生激发。此时响应不必精确量子化。无序可能破坏动量好量子数，但并不意味着量子霍尔平台立刻消失；需要实空间或扭转边界条件的拓扑描述，并讨论谱隙或迁移率隙。本书的基本推导以清洁、非相互作用绝缘体为主。</p>
+<div class="exercise"><b>例题</b> 两条已占据带的 Chern 数是 +2 与 −1，总霍尔响应多少？<details><summary>答案</summary><p>总 C=1，所以按本文的横向响应约定为 \(e^2/h\)。若两条带互相简并，单带数未必仍能分别定义，但总占据子空间的 C 仍可定义。</p></details></div>
+<h3>3.6 从 Kubo 分母到 Berry 分母的中间步骤</h3><p>静态电场可看作一个慢变参数，使瞬时态发生一阶绝热修正。将修正态展开到未占据能级，系数包含 \(\langle m|\dot n\rangle/(E_n-E_m)\)。再用 \(\dot n=\dot k_x\partial_xn\)，以及</p>\[\langle m|\partial_x n\rangle=\frac{\langle m|\partial_xH|n\rangle}{E_n-E_m},\]<p>电流期望的一阶交叉项便包含两个能量差分母。两个速度算符的反对称虚部产生横向响应，实对称部分则对应别的响应结构。它与曲率的带间表达式完全相同。这说明拓扑响应并不是电子真的跳到上带形成稳定占据，而是电场引起的带间虚混合改变了电流。</p><details><summary>例题：完全平坦的能带是否一定不导霍尔电流？</summary><p>不一定。能带平坦只消除了群速度 \(\nabla_kE\)，不消除本征态的 k 依赖与 Berry 曲率。对保持占据子空间的谱压平，C 不变，霍尔响应也不变。做数值时仍需使用与实际压平哈密顿量对应的速度，不能把原始速度矩阵与另一个模型随意拼接。</p></details><div class="chapter-end"><label><input type="checkbox" data-read="3"> 标记本章已读</label><a href="#ch4">下一章 →</a></div></section><section class="chapter" id="ch4" data-title="时间反演与 Kramers 成对"><div class="chapter-meta">CHAPTER 04 <span>教材正文页 33–40</span></div><h2>时间反演与 Kramers 成对</h2><p class="subtitle">反幺正性中的那个负号，决定了两种世界</p>
+<h3>4.1 为什么时间反演包含复共轭</h3>
+<p>把时间方向反过来，动量和自旋都反号，但位置不变。为了让 \(i\hbar\partial_t\psi=H\psi\) 保持相同形式，必须同时把 i 变成 −i。因此时间反演一般写成 \(\Theta=UK\)，K 为复共轭，U 为幺正矩阵。</p>
+\[\Theta(c_1|u\rangle+c_2|v\rangle)=c_1^*\Theta|u\rangle+c_2^*\Theta|v\rangle,\quad \Theta^2=UU^*.\]
+<p>无自旋的最简模型可取 \(\Theta=K\)，平方为 +1；自旋 1/2 可取 \(\Theta=is_yK\)，平方为 −1。矩阵 s 作用在真实自旋上，后面常见的轨道 Pauli 矩阵 σ 并不自动具有相同的时间反演变换规律。</p>
+<h3>4.2 Kramers 定理的短证明</h3>
+<p>反幺正算符满足 \(\langle\Theta a|\Theta b\rangle=\langle b|a\rangle\)。令 \(a=u,b=\Theta u\)，则</p>
+\[\langle\Theta u|\Theta^2u\rangle=\langle\Theta u|u\rangle.\]
+<p>若 \(\Theta^2=-1\)，左边又等于右边的负值，所以 \(\langle\Theta u|u\rangle=0\)。当 H 与 Θ 对易，二者同能而正交。这不是“自旋上下一定独立”的说法：有自旋轨道耦合时，伙伴态可以是自旋与轨道纠缠的组合。</p>
+<h3>4.3 晶体里只在特定动量保证简并</h3>
+\[UH^*(\mathbf k)U^\dagger=H(-\mathbf k).\]
+<p>一般动量 k 的伙伴在 −k，不是在同一个 k。只有 \(\mathbf\Lambda=-\mathbf\Lambda+\mathbf G\) 的时间反演不变动量（TRIM）处，伙伴才必然位于同一个动量点。二维有四个 TRIM，三维有八个。若同时具有合适的反演对称性，PT 可在每个 k 保持动量不变，于是可以得到遍布 BZ 的双重简并。</p>
+<h3>4.4 时间反演强制总 Chern 数为零</h3>
+<p>时间反演把占据子空间在 k 的曲率映到 −k 的相反数：\(\mathrm{Tr}F_{xy}(-\mathbf k)=-\mathrm{Tr}F_{xy}(\mathbf k)\)。对称 BZ 中正负贡献抵消，所以电荷霍尔响应为零。但“总 C=0”不等价于“拓扑平庸”：两套相反的手性体系可以留下无法成对消去的螺旋边界，这正是 Z₂ 指标要捕捉的内容。</p>
+<div class="exercise"><b>例题</b> \(H(k)=k s_z\) 满足时间反演吗？\(m s_x\) 呢？<details><summary>逐步答案</summary><p>时间反演同时令 k→−k、s→−s，因此两次负号使 \(ks_z\) 不变。常数磁性质量 \(ms_x\) 只有自旋反号，因而破坏时间反演并打开 \(2|m|\) 的能隙。\(ks_x\) 本身则可以是时间反演允许的动量项。</p></details></div>
+<h3>4.5 矩阵检查法：三行就能排除一个错误模型</h3><p>以 \(H(k)=a(k)I+\sum_jb_j(k)s_j\) 为例，自旋 1/2 时间反演要求 \(a(k)=a(-k)\)，\(b_j(k)=-b_j(-k)\)。所以常数自旋劈裂不允许，奇动量的自旋轨道项可以允许。这些条件只适用于 s 确实代表真实自旋、Θ 作用如上时；轨道赝自旋的变换要重新推导。</p><details><summary>例题：反演与时间反演同时存在，Berry 曲率是不是每一条带都为零？</summary><p>若是一条孤立无简并带，可结合反演的偶性与时间反演的奇性得到曲率为零。但自旋 1/2 同时具有 P 与 Θ 时，通常处处有 PT 简并，单带曲率未必有独立规范不变意义。可靠说法是总占据子空间的迹曲率为零，不要给简并子空间任意挑出来的一条态赋予绝对物理曲率。</p></details><div class="chapter-end"><label><input type="checkbox" data-read="4"> 标记本章已读</label><a href="#ch5">下一章 →</a></div></section><section class="chapter" id="ch5" data-title="磁通穿过方格：Hofstadter 问题"><div class="chapter-meta">CHAPTER 05 <span>教材正文页 41–59</span></div><h2>磁通穿过方格：Hofstadter 问题</h2><p class="subtitle">磁场把晶胞放大，也把一条带切成许多子带</p>
+<h3>5.1 从连续矢势到格点相位</h3>
+<p>设每个小方格磁通为 \(\Phi\)，用 \(\alpha=\Phi/(h/e)\) 表示。选 Landau 规范，可把一个方向的跃迁取为实数，另一个方向的相位随横向坐标变化。本文采用如下格点约定：</p>
+\[H=-t\sum_{m,n}\left(c^\dagger_{m+1,n}c_{m,n}+e^{i2\pi\alpha m}c^\dagger_{m,n+1}c_{m,n}+\mathrm{h.c.}\right).\]
+<p>在 y 方向作傅里叶变换，\(\psi_{m,n}=e^{ik_yn}\phi_m\)，得到 Harper 方程：</p>
+\[E\phi_m=-t(\phi_{m+1}+\phi_{m-1})-2t\cos(k_y-2\pi\alpha m)\phi_m.\]
+<p>相位和 k 的正负取决于傅里叶约定，但只要一致，能谱和拓扑结论不会依赖规范。绕一个小方格的总 Peierls 相位是规范不变的磁通信息。</p>
+<h3>5.2 为什么有 q 条磁子带</h3>
+<p>若 \(\alpha=p/q\) 为既约分数，余弦势每 q 个格点重复，磁晶胞含 q 个原晶胞。用 \(\phi_{m+q}=e^{iqk_x}\phi_m\) 将无限链化成 q×q 矩阵。在减小后的磁 BZ 中，一条原始能带分成 q 条子带；不同子带可能接触，所以不能把每一条都默认视作隔离带。</p>
+<p>当 α=1/2，两个相邻 x 位置看到相反的余弦势，能谱出现 Dirac 型接触。α 是有理数时可用有限矩阵求解；逼近无理数要增加 q，并检查近似的分辨率，有限取样图不是严格无理磁通谱的全部细节。</p>
+<div data-lab="harper"></div>
+<p>本实验计算固定 \(\alpha=1/q\)、\(k_x=0\) 的磁 Bloch 矩阵全部本征值，扫描 \(k_y\)。它展示 q 条子带的截面，<b>不是完整 Hofstadter 蝴蝶</b>；完整图还需对 α 和整个磁 BZ 取样。图中能量单位为 t。</p>
+<h3>5.3 磁平移为什么不对易</h3>
+<p>沿 x 再沿 y 与沿 y 再沿 x 的路径包围一个小方格，波函数相差 \(e^{i2\pi\alpha}\)。因而磁平移算符满足投影式交换关系。普通晶格平移的量子数不能原封不动地同时使用，这就是磁晶胞出现的代数原因。</p>
+<h3>5.4 能隙标签与输运</h3>
+<p>若前 r 条子带填满，能隙中的整数标签可由丢番图关系描述：\(r=pC+qs\)，这里 C 的符号须与磁通、曲率和霍尔约定匹配。它给出整数约束，并不单凭这一条方程唯一决定任意情况下的 C；还需连续性、分支范围和能隙信息。</p>
+<p>例如 p/q=1/3，在一种常用定向下，两条主要能隙对应累计 C 为 +1、−1，因此三个隔离子带的 C 依次为 +1、−2、+1。若反转磁场，符号整体反转。这个例子展示“子带数”和“霍尔整数”不是一回事。</p>
+<details><summary>Středa 图像：改变磁场为什么会改变粒子数？</summary><p>把化学势保持在能隙中缓慢改变 B，磁通改变能容纳的占据态数。密度对 B 的斜率与霍尔电导相关。电子电荷和横向电流的定向决定具体符号；最稳妥的做法是在同一约定下同时检查电荷泵方向。量子霍尔的整数既可以从曲率积分读出，也可从“每加一份磁通多出多少态”理解。</p></details>
+<h3>5.5 从 Harper 方程到转移矩阵</h3><p>把差分方程解出 \(\phi_{m+1}\)：</p>\[\binom{\phi_{m+1}}{\phi_m}=T_m\binom{\phi_m}{\phi_{m-1}},\quad T_m=\begin{pmatrix}-E/t-2\cos(k_y-2\pi\alpha m)&-1\\1&0\end{pmatrix}.\]<p>每步行列式为 1，一磁晶胞的乘积 \(\mathcal T=T_{q-1}\cdots T_0\) 也为 1。本征值互为倒数。在能带内，它们可为单位圆上的相位，表示传播；在能隙内，一根模大于 1、另一根模小于 1，表示增长与衰减。边缘态需要选衰减分支，同时满足边界条件。</p><details><summary>例题：为什么不能把所有“衰减解”都叫边缘态？</summary><p>给定能量的体隙里一般存在形式衰减解，但它还必须在边界处满足少掉的邻居所要求的差分方程。只有满足两者的能量才是边缘本征能。转移矩阵研究的是可用解的空间，边界条件从中筛选物理解。</p></details><div class="chapter-end"><label><input type="checkbox" data-read="5"> 标记本章已读</label><a href="#ch6">下一章 →</a></div></section><section class="chapter" id="ch6" data-title="体边对应：边界为何必须有态"><div class="chapter-meta">CHAPTER 06 <span>教材正文页 60–69</span></div><h2>体边对应：边界为何必须有态</h2><p class="subtitle">通量泵、谱流与 Dirac 质量畴壁</p>
+<h3>6.1 Laughlin 思考实验</h3>
+<p>把二维绝缘体卷成圆柱，轴向插入磁通。电子绕圆柱积累 Aharonov–Bohm 相位；插入一个磁通量子，哈密顿量通过大规范变换回到原来。但若体 Chern 数为 C，过程中有整数电荷在两条边之间泵送。</p>
+\[|Q_{\rm pump}|=|C|e\quad\text{每一个绝热磁通周期}.\]
+<p>这里的符号由插入方向和边界定向决定。若两条边都完全有隙且没有别的低能结构，态如何在一个周期里完成跨边界的重新分配？边界能谱必须出现穿过费米能的谱流。净右行支数减净左行支数由两侧体拓扑数之差给出。</p>
+<h3>6.2 一次完整的畴壁零模推导</h3>
+<p>考虑沿 y 平移不变的二维 Dirac 模型，令 \(\hbar=1\)：</p>
+\[H=-iv\sigma_x\partial_x+vk_y\sigma_y+m(x)\sigma_z,\quad m(-\infty)<0,\quad m(+\infty)>0.\]
+<p>先设 \(k_y=E=0\)，将方程左乘 \(\sigma_x\)，利用 \(\sigma_x\sigma_z=-i\sigma_y\)：</p>
+\[v\partial_x\psi+m(x)\sigma_y\psi=0.\]
+<p>取 \(\sigma_y\chi_+=\chi_+\)，则</p>
+\[\psi_0(x)=\mathcal N\exp\left[-\frac1v\int_0^x m(x')dx'\right]\chi_+.\]
+<p>正无穷时积分正向增长；负无穷时质量和积分方向同时变号，积分也正向增长，所以两端均衰减。另一个本征值给出的态发散，必须排除。恢复 \(k_y\)，原来的空间包络不变，得到单向色散 \(E=vk_y\)。反转质量畴壁，允许的自旋器和传播方向一起反转。</p>
+<div data-lab="wall"></div>
+<p>这里采用 \(m(x)=m_0\tanh(x/w)\)，于是 \(|\psi_0|^2\propto[\cosh(x/w)]^{-2m_0w/v}\)。绘制的是该连续模型的解析解，在有限显示区间数值归一化。降低 m₀ 会增大尾部尺度 \(\xi\simeq v/m_0\)。</p>
+<h3>6.3 为什么不是任意质量变号都能直接数边界</h3>
+<p>连续单个 Dirac 锥只给出低能局部信息；晶格上的高能部分决定完整整数。比较同一正则化下的两个区域，拓扑数之差才是可靠的边界计数。还要检查所有允许的质量项：若存在第二个质量，可把质量向量绕开原点，有些看似变号的路径其实不必闭隙。</p>
+<h3>6.4 有限条带的两条边会互相看见</h3>
+<p>左右边的波函数尾部重叠时可以杂化，出现 \(\delta E\sim e^{-L/\xi}\) 的小能隙。因而有限样品中“没有严格的零能”不等于体边对应失效。边缘结构还能额外产生平庸的成对传播支；拓扑只约束不能消掉的净手性部分。</p>
+<div class="exercise"><b>例题</b> C=2 和 C=−1 两个区域相邻，界面有几条通道？<details><summary>答案</summary><p>净手性数的绝对值为 3。可能还有额外的反向通道对，但它们可以成对打开能隙，净值不变。传播正负要指定界面法向和正切方向。</p></details></div>
+<h3>6.5 变得更慢一点：归一化与长度</h3><p>若取阶跃质量 \(m(x)=m_0\,\mathrm{sgn}(x)\)，零模包络为 \(e^{-m_0|x|/v}\)。密度积分</p>\[\int_{-\infty}^\infty e^{-2m_0|x|/v}dx=v/m_0\]<p>所以归一化因子是 \(\mathcal N=\sqrt{m_0/v}\)。注意“波函数衰减长度”为 v/m₀，而“密度指数衰减长度”为 v/(2m₀)，两者差一倍。本文报告 ξ 时默认指波函数幅度的长度。</p><details><summary>例题：把 v 加倍但质量不变，边缘态怎样变化？</summary><p>包络穿透长度加倍，沿界面色散斜率也加倍。体隙 2m₀ 不变，因此拓扑相并未变化，但有限尺寸重叠会增加。恢复 ℏ 时，长度变成 ℏv/m₀。</p></details><div class="chapter-end"><label><input type="checkbox" data-read="6"> 标记本章已读</label><a href="#ch7">下一章 →</a></div></section><section class="chapter" id="ch7" data-title="石墨烯：两个谷与 Dirac 费米子"><div class="chapter-meta">CHAPTER 07 <span>教材正文页 70–90</span></div><h2>石墨烯：两个谷与 Dirac 费米子</h2><p class="subtitle">无能隙的教材，教我们怎样打开拓扑能隙</p>
+<h3>7.1 两个子格不是两种真实自旋</h3>
+<p>蜂窝晶格不是 Bravais 晶格：一个原胞里有 A、B 两个格点。忽略真实自旋，最近邻紧束缚哈密顿量在子格基底中写成</p>
+\[H(\mathbf k)=\begin{pmatrix}0&-t f(\mathbf k)\\-t f^*(\mathbf k)&0\end{pmatrix},\quad f(\mathbf k)=\sum_{j=1}^3e^{i\mathbf k\cdot\boldsymbol\delta_j},\quad E_\pm=\pm t|f|.\]
+<p>三条键贡献三个复数。在特殊动量 K、K′，三个相位像等边三角形的边一样相消，形成零能接触。围绕它展开，经过基底与坐标约定后可写为</p>
+\[H_\tau(\mathbf q)=v(\tau q_x\sigma_x+q_y\sigma_y),\quad\tau=\pm1.\]
+<p>两个谷具有相反的速度定向。它们并非两个互不相关的宇宙：晶格允许的大动量散射可以混合它们；长波近似下才经常把谷近似当作独立标签。</p>
+<h3>7.2 Berry 相位 π 的几何来源</h3>
+<p>围绕一个 Dirac 点走小圆，\(\hat{\mathbf d}\) 沿 Bloch 球赤道绕一圈，负能带几何相位模 \(2\pi\) 为 π。这里循环包围了简并点，不能把这个圆在保持非简并的条件下缩成点。两个谷的绕向相反，但 ±π 在模 \(2\pi\) 下相同；若要区别谷的定向，需要看连续展开的绕数与质量响应。</p>
+<h3>7.3 两种质量的物理区别</h3>
+<p>加子格势差 \(m_S\sigma_z\)，两个谷质量相同，保留无自旋时间反演而破坏反演。由于两谷定向相反，Chern 贡献互相抵消。Haldane 型质量在两谷符号相反，会破坏时间反演，使两个半整数贡献相加。<b>不是只要有能隙，就一定有 Chern 数。</b></p>
+<h3>7.4 Dirac 点的局部与全局稳定性</h3>
+<p>一般二能级简并要求三个分量 \(d_x=d_y=d_z=0\)。二维只有两个动量，泛泛地看简并不稳定。但子格或其他对称性可能禁止 \(d_z\)，剩下两个方程可以在二维有孤立解。局部稳定不意味着永远存在：两个相反绕数的点可以随参数移动并相遇、湮灭。</p>
+<p>改变三条键的跃迁强度会使 Dirac 点移动。当一条跃迁大于另外两条之和，三个复数不再可能构成闭合三角形，节点消失。这提供一个非常具体的“保护条件与参数范围同样重要”的例子。</p>
+<h3>7.5 锯齿边与扶手椅边</h3>
+<p>边界切法决定哪些动量投影在一起。锯齿边可出现连接谷投影的近零能边缘带，扶手椅边通常混合两谷。石墨烯的这些边缘态不能直接等同于二维全隙 Chern 绝缘体的受保护手性通道：体本来就无隙，边界、子格对称性和终止方式都起作用。</p>
+<div class="exercise"><b>例题</b> 把所有 A 子格抬高、B 子格压低，为什么不自动得到量子反常霍尔效应？<details><summary>答案</summary><p>这是两个谷同号的 Semenoff 质量。时间反演仍在，BZ 中总曲率是奇函数，C=0。可以在谷附近得到相反的局部曲率，但谷分辨响应与受保护的总 Chern 电荷响应不是同一件事。</p></details></div>
+<h3>7.6 两个谷的质量记账练习</h3><p>写 \(H_\tau=v(\tau q_x\sigma_x+q_y\sigma_y)+m_\tau\sigma_z\)。负能带总贡献是 \(C=[\mathrm{sgn}(m_+)-\mathrm{sgn}(m_-)]/2\)。</p><table><tr><th>m₊</th><th>m₋</th><th>C</th><th>图像</th></tr><tr><td>+</td><td>+</td><td>0</td><td>谷定向抵消</td></tr><tr><td>−</td><td>−</td><td>0</td><td>谷定向抵消</td></tr><tr><td>+</td><td>−</td><td>+1</td><td>质量反号补偿谷反向</td></tr><tr><td>−</td><td>+</td><td>−1</td><td>手性反转</td></tr></table><p>这个账本以同一晶格正则化为背景，并用于低能节点附近的变化。单独删掉一个谷会丢失完整 BZ 的整数性。</p><div class="chapter-end"><label><input type="checkbox" data-read="7"> 标记本章已读</label><a href="#ch8">下一章 →</a></div></section><section class="chapter" id="ch8" data-title="Chern 绝缘体的最小模型"><div class="chapter-meta">CHAPTER 08 <span>教材正文页 91–107</span></div><h2>Chern 绝缘体的最小模型</h2><p class="subtitle">把整个 BZ 覆盖球面，整数就出现了</p>
+<h3>8.1 先固定我们自己的模型</h3>
+<p>使用适合数值实验的二带方格模型：</p>
+\[H=\sin k_x\,\sigma_x+\sin k_y\,\sigma_y+(m+\cos k_x+\cos k_y)\sigma_z.\]
+<p>这与教材讨论的晶格 Dirac 正则化属于同一类构造，但参数原点、质量符号不必与书中 M 一致。本文不把两套参数直接混用。能量为 \(\pm|\mathbf d|\)，占据负能带，晶格常数和跃迁能标取 1。</p>
+<h3>8.2 完整相图：四个 Dirac 点的账本</h3>
+<p>闭隙要求 sin kₓ=sin kᵧ=0 且质量为零，因此只需检查四个 TRIM：</p>
+<table><tr><th>动量</th><th>质量</th><th>速度定向 χ</th></tr><tr><td>(0,0)</td><td>m+2</td><td>+1</td></tr><tr><td>(π,0)</td><td>m</td><td>−1</td></tr><tr><td>(0,π)</td><td>m</td><td>−1</td></tr><tr><td>(π,π)</td><td>m−2</td><td>+1</td></tr></table>
+<p>单个连续 Dirac 负能带在整个平面的积分贡献为 \(\chi\,\mathrm{sgn}(M)/2\)。晶格模型把四个贡献加起来，得到整数：</p>
+\[C=\tfrac12[\mathrm{sgn}(m+2)-2\mathrm{sgn}(m)+\mathrm{sgn}(m-2)].\]
+<p>于是 m&lt;−2 为 0，−2&lt;m&lt;0 为 +1，0&lt;m&lt;2 为 −1，m&gt;2 为 0。m=−2、0、2 时占据态与未占据态接触，C 在这些点不定义。m=0 同时有两个锥闭隙，所以 C 可一下改变 2，而不只是改变 1。</p>
+<div data-lab="chern"></div>
+<p>左图计算负能带 Berry 曲率 \(F^-_{xy}=\mathbf d\cdot(\partial_x\mathbf d\times\partial_y\mathbf d)/(2|\mathbf d|^3)\)，右图沿 Γ→X→M→Γ 绘制体色散。读数中的数值积分采用周期中点网格，接近闭隙时曲率尖峰需要更密网格；解析相图用于对照，不把不收敛的小数冒充整数。</p>
+<h3>8.3 曲率公式的具体展开</h3>
+\[\partial_x\mathbf d=(\cos k_x,0,-\sin k_x),\quad\partial_y\mathbf d=(0,\cos k_y,-\sin k_y).\]
+<p>叉积后与 d 点乘，分子可整理为 \(\cos k_x+\cos k_y+m\cos k_x\cos k_y\)。因此实验中的每一个色块都来自显式公式，而不是预存图片。能隙越小，局部方向变化越快，曲率越集中。</p>
+<h3>8.4 为什么单个 Dirac 锥只有半个数</h3>
+<p>对 \(H=v_xq_x\sigma_x+v_yq_y\sigma_y+M\sigma_z\)，</p>
+\[F^-_{xy}=\frac{Mv_xv_y}{2(v_x^2q_x^2+v_y^2q_y^2+M^2)^{3/2}}.\]
+<p>把变量换成 \(p_i=|v_i|q_i\)，极坐标积分得</p>
+\[\frac1{2\pi}\int_{\mathbb R^2} F^-_{xy}d^2q=\frac{\mathrm{sgn}(v_xv_y)}2\int_0^\infty\frac{Mr\,dr}{(r^2+M^2)^{3/2}}=\frac\chi2\mathrm{sgn}(M).\]
+<p>无限平面并不是晶格 BZ 环面；大动量处单位向量停在赤道，未提供紧致闭合的整球映射。高能正则化补上剩下的部分，完整二维晶格绝缘体的 C 仍是整数。可靠的低能结论是质量变号引起的整数差。</p>
+<h3>8.5 Haldane 模型：零净磁通也可以破坏时间反演</h3>
+<p>蜂窝晶格上的复次近邻跃迁可让不同小回路获得相位，同时每个原胞净磁通为零。谷质量可以约定为 \(m_\tau=M_S-\tau3\sqrt3t_2\sin\phi\)，配合上章的谷速度定向：</p>
+\[C=\frac12[\mathrm{sgn}(m_+)-\mathrm{sgn}(m_-)].\]
+<p>当两谷质量异号，C 为 ±1；同号则为零。临界线是 \(|M_S|=3\sqrt3|t_2\sin\phi|\)。例如 \(M_S=0,\ t_2\sin\phi>0\)，在这里的谷约定下 C=−1；若 \(M_S\) 足够大，同号质量使体系平庸。</p>
+<details><summary>展开可运行 Python：二带模型的规范不变离散 Chern 算法</summary><pre><code class="python">import numpy as np
+
+def chern(m, N=81):
+    k = -np.pi + 2*np.pi*np.arange(N)/N
+    u = np.empty((N,N,2), complex)
+    gap = np.inf
+    for i,x in enumerate(k):
+        for j,y in enumerate(k):
+            dx,dy,dz = np.sin(x),np.sin(y),m+np.cos(x)+np.cos(y)
+            H = np.array([[dz,dx-1j*dy],[dx+1j*dy,-dz]])
+            e,v = np.linalg.eigh(H)
+            gap = min(gap,e[1]-e[0]); u[i,j] = v[:,0]
+    if gap &lt; 1e-8: raise ValueError('Gap closes on this mesh')
+    def link(a,b):
+        z = np.vdot(a,b)
+        if abs(z)&lt;1e-10: raise ValueError('Refine mesh')
+        return z/abs(z)
+    flux = 0.
+    for i in range(N):
+        for j in range(N):
+            a,b,c,d=u[i,j],u[(i+1)%N,j],u[(i+1)%N,(j+1)%N],u[i,(j+1)%N]
+            # A = i&lt;u|du&gt;: minus the phase of the overlap product
+            flux -= np.angle(link(a,b)*link(b,c)*link(c,d)*link(d,a))
+    return flux/(2*np.pi)
+
+for m in (-3,-1,1,3):
+    print(m, chern(m))  # 0, +1, -1, 0; verify mesh convergence
+</code></pre><p>离散算法的整数稳定性不是免检凭证：太粗的网格可能漏掉集中曲率。增加 N、换网格起点并远离临界点检查。多带情况要把单态重叠换成占据子空间重叠矩阵的行列式。</p></details>
+<h3>8.6 再走一条推导路线：从投影算符直接算曲率</h3><p>本征矢可以有规范奇点，投影算符却不受整体相位影响。对非简并负能带，</p>\[F_{xy}=i\,\mathrm{Tr}\left(P_-[\partial_xP_-,\partial_yP_-]\right).\]<p>代入 \(P_-=(1-\hat d\cdot\sigma)/2\)，使用 \([a\cdot\sigma,b\cdot\sigma]=2i(a\times b)\cdot\sigma\)，得到</p>\[[\partial_xP_-,\partial_yP_-]=\frac i2(\partial_x\hat d\times\partial_y\hat d)\cdot\sigma.\]<p>再用 \(\mathrm{Tr}(P_-\sigma_j)=-\hat d_j\)，两次 i 与负号结合，得到 \(F_{xy}=\hat d\cdot(\partial_x\hat d\times\partial_y\hat d)/2\)。这既核对了符号，也说明数值上完全可以绕开本征矢相位。</p><details><summary>三个数值例子：m=−3、−1、+1 分别在球面上发生什么？</summary><p>m=−3 时 d_z 始终为负，映射只落在南半球，可缩成一点，所以 C=0。m=−1 时 Γ 附近指北，其他高对称点多数指南，覆盖球面一次，C=+1。m=+1 时覆盖方向反过来，C=−1。这里“覆盖”需要看完整二维映射，不是只看四个点就能画出每一条轨迹。</p></details><div class="chapter-end"><label><input type="checkbox" data-read="8"> 标记本章已读</label><a href="#ch9">下一章 →</a></div></section><section class="chapter" id="ch9" data-title="时间反演拓扑绝缘体"><div class="chapter-meta">CHAPTER 09 <span>教材正文页 109–121</span></div><h2>时间反演拓扑绝缘体</h2><p class="subtitle">两套相反的 Chern 系统，还能留下什么？</p>
+<h3>9.1 从自旋守恒的极限开始</h3>
+<p>构造 \(H(\mathbf k)=\mathrm{diag}[h(\mathbf k),h^*(-\mathbf k)]\)。两块由时间反演联系，Chern 数相反。若暂时守恒 \(s_z\)，可定义 \(\nu=C_\uparrow\bmod2\)，而总电荷 Chern 数为零。边界上，自旋上向右、自旋下向左，这叫螺旋边界。</p>
+<p>在真实模型中，Rashba 自旋轨道耦合通常混合两个自旋。此时不能再随意把占据带分成“自旋上带”和“自旋下带”，自旋霍尔电导也不一般严格量子化，但 Z₂ 指标仍可在保隙、保时间反演的变形下定义。</p>
+<h3>9.2 一对螺旋边缘为什么不能被普通势打开隙</h3>
+<p>单对低能边缘写为 \(H=vk s_z\)。与动能反对易的质量是 \(m_xs_x+m_ys_y\)，两者都在时间反演下变号，因此不允许。标量势只会移动能量，不产生这样的质量。对相干单粒子弹性散射，时间反演不变势在 Kramers 伙伴之间的矩阵元为零。</p>
+<p>这并不意味着任何条件下都有完美电导：磁性、非弹性过程、强相互作用以及额外通道都会改变问题。这里的保护论证有明确的自由费米子与对称性前提。</p>
+<h3>9.3 为什么两对可以消掉</h3>
+<p>用 τ 标记两份边缘副本，动能为 \(vk s_z\otimes\tau_0\)。取</p>
+\[M=m\,s_x\otimes\tau_y.\]
+<p>它与动能反对易。时间反演让 \(s_x\to-s_x\)，复共轭同时让 \(\tau_y\to-\tau_y\)，两次负号抵消，所以质量被允许。这就把整数计数降成奇偶计数：奇数对至少剩下一对，偶数对可以配对打开隙。</p>
+<div data-lab="helical"></div>
+<p>图中“磁性质量”展示单对边缘破坏时间反演后的开隙；“两对的允许耦合”展示保持时间反演时偶数副本也能有隙。它们来自上述有效边缘模型，不是完整 Kane–Mele 条带计算。</p>
+<h3>9.4 Kane–Mele 与 BHZ：两条材料路线</h3>
+<p>Kane–Mele 构造相当于让自旋上、下感受反号的 Haldane 型自旋轨道质量。在合适参数下，总 C=0，但边缘有一对受保护螺旋态。BHZ 路线则从电子型与空穴型子带的轨道排序出发，低能块可写成</p>
+\[h(\mathbf k)=A k_x\sigma_x-A k_y\sigma_y+(M-Bk^2)\sigma_z+\epsilon(\mathbf k)I.\]
+<p>在这个连续正则化中，原点质量与大动量质量相反，即 M/B&gt;0，是非平庸的典型条件；符号约定变化时要重新比较两端。\(\epsilon I\) 不改变本征矢，但若它导致间接带重叠、破坏绝缘填充，就不能继续把体系当作绝缘体。HgTe/CdTe 量子阱的厚度改变子带排序，是教材中把模型与量子自旋霍尔实验连接起来的关键例子；这里不把 2013 年的材料状态当作当前实验综述。</p>
+<div class="exercise"><b>例题</b> 两块的 C 分别为 +2 与 −2，总 C=0，是否必然是非平庸 Z₂ 相？<details><summary>答案</summary><p>在守恒自旋并采用上述双块构造的条件下 ν=2 mod 2=0。允许时间反演耦合两套边界后，可以打开隙。总 C=0 单独无法区分 ν=0 与 ν=1。</p></details></div>
+<h3>9.5 电导例子：一条边与一个器件</h3><p>理想 Landauer 图像中，一条无反向散射的单向通道贡献 \(e^2/h\)。二维 QSH 条带的上下两条边在合适的理想两端接触下给出 \(2e^2/h\) 的两端电导。但这不是“每一条螺旋边有两条同向通道”：在某个给定电流方向，一条边只有一个进入漏极的模式。</p><details><summary>例题：为什么理想电导数值不能只数能谱上画出的线？</summary><p>必须数在费米能处连接指定端子的入射与出射模式，并说明接触与散射。±k 的线、上下两边的线、Kramers 伙伴和自旋简并不是可以不加区分地全乘在一起的因子。</p></details><div class="chapter-end"><label><input type="checkbox" data-read="9"> 标记本章已读</label><a href="#ch10">下一章 →</a></div></section><section class="chapter" id="ch10" data-title="Z₂ 不变量、极化与 Wilson 环"><div class="chapter-meta">CHAPTER 10 <span>教材正文页 123–145</span></div><h2>Z₂ 不变量、极化与 Wilson 环</h2><p class="subtitle">不追踪单条能带，而追踪整个占据子空间</p>
+<h3>10.1 极化为什么只能模一个电子电荷定义</h3>
+<p>在周期晶体里，把一个 Wannier 中心从原胞右边界移到下一原胞左边界，不改变无限晶体，却改变“这个原胞中的偶极矩”标签。对一维晶格常数取 1，电子部分极化为</p>
+\[P_{\mathrm{el}}=-\frac{e}{2\pi}\int_{\mathrm{BZ}}\mathrm{Tr}\,A_k\,dk\quad(\bmod e).\]
+<p>这只是电子部分，总极化还需离子背景。Berry 相位改变 2π 对应把一个电子中心平移一格。绝热演化中的连续极化差可以给出电流积分；一个闭合循环若泵走整数个电子，初末极化在模 e 意义下仍相同。</p>
+<h3>10.2 原创补充例子：SSH 链把抽象相位落到原子链</h3>
+\[H(k)=(t_1+t_2\cos k)\sigma_x+t_2\sin k\,\sigma_y.\]
+<p>d 向量在平面上画一个圆：圆心 \((t_1,0)\)，半径 \(|t_2|\)。若圆包围原点，绕数非零；若不包围，绕数零。在固定晶胞、固定轨道嵌入约定下，Zak 相位分别为 π 与 0。边界切在哪条键上必须说清楚，因为改变晶胞或终止方式会改变边界解释。</p>
+<div data-lab="ssh"></div>
+<p>实验固定 t₂=1，显示 d 平面轨迹和 24 个格点的开放链能级。零能边缘态由矩阵数值对角化得到；临界 t₁=t₂ 时体能隙关闭。有限链的边缘态可有指数小劈裂。此例是为入门补充的教学模型，不对应教材独立的一章。</p>
+<h3>10.3 从一条带到矩阵连接</h3>
+<p>多条占据带内部可以做任意平滑幺正混合，物理填充态不变。因此需要非阿贝尔连接</p>
+\[\mathcal A_i^{mn}=i\langle u_m|\partial_i u_n\rangle,\quad\mathcal F_{ij}=\partial_i\mathcal A_j-\partial_j\mathcal A_i-i[\mathcal A_i,\mathcal A_j].\]
+<p>沿固定 kᵧ 的 kₓ 闭路平行移动整个占据子空间，得到 Wilson 环。离散计算先构造相邻占据态的重叠矩阵；可对重叠矩阵做奇异值分解取幺正部分，避免有限网格的缩短效应。Wilson 环本征相位给出混合 Wannier 中心，规范变化只共轭整个环矩阵，因此本征值不变。</p>
+<h3>10.4 伙伴交换才是奇偶性的物理图像</h3>
+<p>在 kᵧ=0 与 π 两端，时间反演要求 Wannier 中心成 Kramers 对。把中心随 kᵧ 连续追踪：如果从一端的一对在另一端必须与别的伙伴配对，就发生非平庸交换。适当选择参考线后，半个 BZ 内穿越参考线的次数模 2 就是 ν。实际算法应处理相位的周期性与简并，不能仅凭某条看似弯曲的线目测。</p>
+<h3>10.5 缝合矩阵和 Pfaffian 到底在做什么</h3>
+\[w_{mn}(\mathbf k)=\langle u_m(-\mathbf k)|\Theta u_n(\mathbf k)\rangle.\]
+<p>它比较时间反演后的占据基与另一个动量点的占据基。在 TRIM 处，\(\Theta^2=-1\) 使 w 反对称，因此可以定义 Pfaffian，并满足 \(\mathrm{Pf}(w)^2=\det w\)。二维不变量可写成</p>
+\[(-1)^\nu=\prod_{i=1}^4\frac{\sqrt{\det w(\Lambda_i)}}{\mathrm{Pf}\,w(\Lambda_i)}.\]
+<p>这里平方根分支必须沿相关路径连续选择，不能在四个点各自随便取主值。正是全局分支拼接保留了 Z₂ 信息。教材还从另一种 Pfaffian 对象的零点讨论指标；不要把不同定义的 Pfaffian、缝合矩阵和各自零点条件混成同一个量。</p>
+<h3>10.6 三维为什么有四个 Z₂ 数</h3>
+<p>在三维 BZ 的六个时间反演平面 \(k_i=0,\pi\) 上定义二维指标。它们并不全独立：同方向两个平面的指标差给出相同的强指标 ν₀，另取三个 π 平面的指标作为弱指标 \((\nu_1,\nu_2,\nu_3)\)。强相不依赖简单层叠解释；弱相可以理解为二维量子自旋霍尔层的堆叠，并对晶格平移与无序更敏感。</p>
+<div class="exercise"><b>例题</b> 为什么 Wilson 环应该使用所有占据带，而不是只选最低一条？<details><summary>答案</summary><p>Kramers 简并与一般占据带交叉允许带间混合，单条带不一定在整个 BZ 能被唯一连续标记。占据子空间才是保隙时稳定的对象。</p></details></div>
+<h3>10.7 再做一次真实的泵：Rice–Mele 循环</h3><p>对 SSH 链加子格势差，取 \(t_1=1+0.55\cos\lambda\)、\(t_2=1-0.55\cos\lambda\)、\(\Delta_S=0.7\sin\lambda\)：</p>\[H(k,\lambda)=(t_1+t_2\cos k)\sigma_x+t_2\sin k\,\sigma_y+\Delta_S\sigma_z.\]<p>λ 从 0 变到 2π 时围绕临界点走一圈，但每一时刻仍有隙。单独时刻的 Zak 相位不必是 0 或 π，因为子格势差打破量子化条件；一个完整循环的连续 Wannier 中心位移却是整数。</p><div data-lab="pump"></div><p>左图对每个 λ 用 200 个 k 点的闭路重叠乘积求 Berry 相位，再沿 λ 连续展开。绘出的是固定晶胞约定下的电子 Wannier 中心，不含离子背景。一个循环移动一格，对应泵送一个电子电荷量；方向由循环定向决定。</p><h3>10.8 半 BZ 公式的逻辑</h3><p>在满足时间反演边界配对规范的半个 BZ 区域 τ 上，可以写</p>\[\nu=\frac1{2\pi}\left(\oint_{\partial\tau}\mathrm{Tr}\,\mathcal A-\int_\tau\mathrm{Tr}\,\mathcal F\right)\pmod2.\]<p>看起来连接的环积分应等于曲率面积分，但若能在全区域同时选到满足时间反演边界条件的光滑规范，结果才会平庸。非平庸相的障碍正是不能完成这种受约束拼接。任意独立规范下直接相减会丢掉边界条件信息；这也是实际入门数值常优先用 Wilson 环的原因。</p><div class="chapter-end"><label><input type="checkbox" data-read="10"> 标记本章已读</label><a href="#ch11">下一章 →</a></div></section><section class="chapter" id="ch11" data-title="不同维度中的能带相交"><div class="chapter-meta">CHAPTER 11 <span>教材正文页 147–156</span></div><h2>不同维度中的能带相交</h2><p class="subtitle">数方程，是寻找相变点的第一步</p>
+<h3>11.1 余维数的直觉</h3>
+<p>一般二能级厄米矩阵 \(H=d_0I+d_x\sigma_x+d_y\sigma_y+d_z\sigma_z\)，简并要求三个实方程同时成立。若只有二维动量，通常还需要调一个外参 λ；若有三维动量，三个方程可给出孤立节点。这里讲的是一般二带节点计数；现代术语中无额外简并的三维二带线性点通常叫 Weyl 点，四重 Dirac 点还需要额外对称性。</p>
+<h3>11.2 对称性怎样减少独立方程</h3>
+<p>如果某个对称性禁止 dᵧ，简并只剩两条方程，在二维可稳定出现点。如果在某条高对称线上，两条能带属于不同对称性表示，杂化矩阵元被禁止，相交也可以稳定。若对称性被打破，这种交叉往往变成避免交叉。</p>
+<h3>11.3 同宇称与异宇称的避免交叉</h3>
+<p>在反演不变点，反演对称要求 H 与 P 对易。两条同宇称态之间一般允许常数杂化，能量接近时发生排斥；两条异宇称态之间在该点的杂化被禁止，调节能级次序可产生真正闭隙。离开该点，奇于 k 的杂化项又可以出现，形成 Dirac 型低能模型。</p>
+\[H(q,\lambda)=v q\,\sigma_x+\lambda\sigma_z\quad\Longrightarrow\quad E_\pm=\pm\sqrt{v^2q^2+\lambda^2}.\]
+<p>若再允许常数 \(\delta\sigma_y\)，则即使 λ=0 也有能隙 \(2|\delta|\)。这说明“把某个质量调过零”不够，还得证明不存在别的允许质量绕开闭隙点。</p>
+<h3>11.4 从计数到相变，不能省略全局检查</h3>
+<p>节点存在与两个绝缘相拓扑不同不是完全等价。多个节点可能同时贡献相反的拓扑变化，也可能只造成局部能带重排而不改变指标。需把低能闭隙位置、保护对称性、各节点定向与占据态拓扑变化合在一起分析。</p>
+<div class="exercise"><b>例题</b> 二维二带系统同时扫描 kₓ、kᵧ 和一个 λ，为什么常见孤立临界点？<details><summary>答案</summary><p>三维参数空间中三个独立零点条件一般给零维解。固定 λ 时通常无简并；调到临界 λ 后出现离散动量闭隙。若方程不独立、受对称性约束或存在额外简并，结论会改变。</p></details></div>
+<details><summary>补充例题：实矩阵为什么常给不同的节点计数？</summary><p>若一个局部基底中的对称性要求 H 实，二带矩阵的 σᵧ 系数必须为零。二维的两个动量可解 dₓ=d_z=0，因此点节点不再需要额外调参。三维的三个动量解两条方程，通常剩下一维节点线。但这种实条件必须由实际对称性推导，不能因为某次计算恰好用了实参数就假定它永远成立。</p></details><div class="chapter-end"><label><input type="checkbox" data-read="11"> 标记本章已读</label><a href="#ch12">下一章 →</a></div></section><section class="chapter" id="ch12" data-title="反演对称性的快捷键"><div class="chapter-meta">CHAPTER 12 <span>教材正文页 158–163</span></div><h2>反演对称性的快捷键</h2><p class="subtitle">从整个 BZ 的几何，压缩到 TRIM 的宇称</p>
+<h3>12.1 为什么一个 Kramers 对只数一次</h3>
+<p>假定非相互作用、全隙、自旋 1/2 时间反演绝缘体，同时有反演 P，且 \(P^2=1,[P,\Theta]=0\)。在 TRIM，H 与 P 对易，占据态可以选为宇称本征态。若 \(P|u\rangle=\xi|u\rangle\)，则</p>
+\[P\Theta|u\rangle=\Theta P|u\rangle=\xi\Theta|u\rangle,\qquad\xi=\pm1.\]
+<p>所以伙伴宇称相同。把所有单态都乘进去会得到 \(\xi^2=1\)，反而丢掉信息。正确做法是每一对只取一个：</p>
+\[\delta_i=\prod_{a=1}^{N_{\rm pair}}\xi_a(\Lambda_i),\qquad(-1)^\nu=\prod_{i=1}^4\delta_i.\]
+<h3>12.2 三维强弱指标</h3>
+\[(-1)^{\nu_0}=\prod_{n_1,n_2,n_3=0,1}\delta_{n_1n_2n_3},\quad(-1)^{\nu_j}=\prod_{n_j=1}\delta_{n_1n_2n_3}.\]
+<p>动量点是 \(\Lambda_{n_1n_2n_3}=(n_1\mathbf b_1+n_2\mathbf b_2+n_3\mathbf b_3)/2\)。强指标乘八个点，某个弱指标乘对应 π 平面的四个点。</p>
+<div data-lab="parity"></div>
+<p>点击符号切换占据 Kramers 对宇称乘积 δ，立即重算四个指标。这个工具只演示宇称公式的代数；任意点选的符号不自动保证存在具有指定轨道、空间群与填充的真实材料。</p>
+<h3>12.3 两个手算例子</h3>
+<p>例一：只在 Γ=(0,0,0) 有 δ=−1，其余全为 +1，则强指标 ν₀=1，三个 π 平面全正，得到 (1;000)。例二：只在 (0,0,0) 和 (0,0,π) 为负，则总乘积为正，ν₀=0；k_z=π 平面乘积为负，得到 (0;001)，对应沿 z 方向的典型弱堆叠指标。</p>
+<h3>12.4 使用清单</h3>
+<p>先确认有反演，再确认有 \(\Theta^2=-1\) 时间反演与绝缘填充，然后在每个 TRIM 收集全部占据 Kramers 对宇称。缺少深能占据带可能使结论出错，除非已经证明其乘积贡献平庸。打破反演后 Z₂ 相不必消失，但宇称快捷公式失去适用前提，需要 Wilson 环或一般公式。</p>
+<div class="exercise"><b>自测</b> 在两个 TRIM 发生一对异宇称带反转，强指标一定翻转吗？<details><summary>答案</summary><p>如果每个点都使 δ 翻号，两个负号相乘使强指标不变。弱指标是否改变取决于这两个点落在哪些 π 平面。局部“反转次数”必须按全局乘积组织。</p></details></div>
+<h3>12.5 为何深能带通常“看不见”，却仍不能随便删</h3><p>用有效模型研究拓扑时，经常只保留接近费米能、可能反转的轨道。若被积掉的深能带形成固定的原子绝缘体背景，其对比较两相的指标变化可以相消。但计算绝对指标时，必须证明背景贡献。宇称只依赖高对称点，不意味着“任意几条带”已经包含全部拓扑。</p><details><summary>例题：二维四个 δ 是 (−,+,−,+)，ν 是多少？</summary><p>总乘积为正，ν=0。若只把第二个点改成负，总乘积变负，ν=1。在真实体系中改变宇称占据需要相应的带重排并经过闭隙；不能把交互工具的按钮视为保隙连续演化。</p></details><div class="chapter-end"><label><input type="checkbox" data-read="12"> 标记本章已读</label><a href="#ch13">下一章 →</a></div></section><section class="chapter" id="ch13" data-title="四维量子霍尔与第二 Chern 数"><div class="chapter-meta">CHAPTER 13 <span>教材正文页 164–175</span></div><h2>四维量子霍尔与第二 Chern 数</h2><p class="subtitle">高维不是炫技：它给三维响应提供母体</p>
+<h3>13.1 为什么二维以外还需要新的整数</h3>
+<p>二维 Chern 数积分曲率二形式 F，正好填满二维流形。四维需要四形式，最自然的构造是 \(\mathrm{Tr}(\mathcal F\wedge\mathcal F)\)。在本文的厄米连接约定下，定义量子霍尔文献常用的第二 Chern 特征数：</p>
+\[C_2=\frac1{8\pi^2}\int_{T^4}\mathrm{Tr}(\mathcal F\wedge\mathcal F)=\frac1{32\pi^2}\int d^4k\,\epsilon^{ijkl}\mathrm{Tr}(\mathcal F_{ij}\mathcal F_{kl}).\]
+<p>这里沿用物理文献的“第二 Chern 数”称呼；与数学上一般向量丛的第二 Chern 类应区分，特别是第一 Chern 类不为零时。对教材的 Dirac 构造，这个整数刻画占据子空间的高维绕行。</p>
+<h3>13.2 五个互相反对易的矩阵</h3>
+<p>二维二带用三个 Pauli 矩阵，四维的最简 Dirac 模型需要五个 \(4\times4\) Clifford 矩阵，满足 \(\{\Gamma_a,\Gamma_b\}=2\delta_{ab}\)：</p>
+\[H(\mathbf k)=\sum_{i=1}^4\sin k_i\Gamma_i+\left(m+\sum_{i=1}^4\cos k_i\right)\Gamma_5.\]
+<p>平方后交叉项消失，\(H^2=|d|^2I\)，能量为双重简并的 ±|d|。归一化 d 把四维 BZ 映射到四维球面 S⁴，C₂ 衡量覆盖次数。这个说法是二维球面覆盖图像的高维推广。</p>
+<h3>13.3 一个可以检查归一化的乘积例子</h3>
+<p>考虑一条占据线丛，其曲率可拆为两组互不混合的二维曲率：\(F=F_{12}dk_1\wedge dk_2+F_{34}dk_3\wedge dk_4\)。楔积为</p>
+\[F\wedge F=2F_{12}F_{34}\,dk_1\wedge dk_2\wedge dk_3\wedge dk_4.\]
+<p>若两个二维积分分别为 \(2\pi C_A\) 与 \(2\pi C_B\)，上面的物理 C₂ 定义给 \(C_2=C_AC_B\)。因子 2 来自两个交叉项；漏掉它会错一倍。这个例子展示 Chern 特征数的乘积结构，不应被误称为线丛的数学第二 Chern 类非零。</p>
+<h3>13.4 响应为什么是非线性的</h3>
+<p>在 4+1 维，拓扑有效作用包含 \(A\wedge dA\wedge dA\)。对 A 变分，得到电流含两个场强的乘积：一个电场与一个磁场可以共同产生横向响应。相比二维 Chern–Simons 项 \(A\wedge dA\) 给线性霍尔响应，维度提升要求多一份场强。</p>
+<p>物理上不需要真的制造四个空间方向才能使用这个思想：某个周期驱动相位、受控参数也能扮演额外动量。要从数学模型走向实验仍需明确参数维度、填充与绝热条件；这里不把参数空间直接说成真实空间。</p>
+<div class="exercise"><b>例题</b> 如果某个可分离模型的两组二维 Chern 数为 2 与 −1，上述四维特征数是多少？<details><summary>答案</summary><p>按固定定向为 −2。交换某一组坐标方向会反转对应 Chern 数和总符号。</p></details></div>
+<h3>13.5 拓扑不变性的短证明框架</h3><p>在光滑保隙变形下，连接变化为 δA，曲率变化为 \(\delta F=D(\delta A)\)。利用协变 Bianchi 恒等式 \(DF=0\)，以及迹中交换子消失，</p>\[\delta\mathrm{Tr}(F\wedge F)=2\,d\,\mathrm{Tr}(\delta A\wedge F).\]<p>对没有边界的 BZ 积分为零。因此 C₂ 不因小的光滑变形改变。若某处能隙关闭，占据子空间不再能保持光滑，上述推理的前提失效，整数才可能跳变。这是“拓扑保护”的一个精确版本，而不是说任何外界扰动都没有影响。</p><div class="chapter-end"><label><input type="checkbox" data-read="13"> 标记本章已读</label><a href="#ch14">下一章 →</a></div></section><section class="chapter" id="ch14" data-title="降维与轴子角 θ"><div class="chapter-meta">CHAPTER 14 <span>教材正文页 177–185</span></div><h2>降维与轴子角 θ</h2><p class="subtitle">三维拓扑响应，来自四维整数留下的余量</p>
+<h3>14.1 把一个动量当作外部参数</h3>
+<p>四维模型的 k₄ 也可以被视为一族三维哈密顿量的参数。沿这个参数走一圈，三维 Berry 连接构成的 Chern–Simons 积分可以改变整数。这与一维极化在泵周期里改变一个量子相似：绝对量有模糊性，周期变化由高维 Chern 数控制。</p>
+<h3>14.2 三维 Chern–Simons 几何</h3>
+<p>用形式记号可写 \(\theta=2\pi P_3\)，其中</p>
+\[P_3=\frac1{8\pi^2}\int_{\mathrm{BZ}}\mathrm{Tr}\left(\mathcal A\wedge d\mathcal A-\frac{2i}{3}\mathcal A\wedge\mathcal A\wedge\mathcal A\right)\quad(\bmod 1).\]
+<p>规范变换可能使 P₃ 改变整数，所以 θ 只模 2π 定义。这里选定 BZ 定向和连接约定；改变定向可改变 θ 的符号，但 0 与 π 两种时间反演允许的值仍然相同。</p>
+<h3>14.3 为什么时间反演把 θ 锁在 0 或 π</h3>
+<p>电磁响应中 θ 项与 \(\mathbf E\cdot\mathbf B\) 成正比。时间反演下 E 偶、B 奇，因此 θ→−θ。若体系时间反演不变，必须有</p>
+\[\theta=-\theta\pmod{2\pi}\quad\Longrightarrow\quad\theta=0\text{ 或 }\pi\pmod{2\pi}.\]
+<p>反演下 E 奇、B 偶，也能得到同样约束。θ=π 与三维强 Z₂ 非平庸相联系；弱指标不由这个单一电磁角完整编码。</p>
+<h3>14.4 为什么均匀 θ 不改变普通体 Maxwell 方程</h3>
+<p>在无磁单极子的普通区域，常数 θ 项是全导数，因此它的可观测低能效应集中在 θ 有空间或时间变化的地方。静态界面上 θ 从一个值跳到另一个值，产生表面霍尔响应：</p>
+\[\sigma_{H}^{\mathrm{surface}}=\frac{e^2}{h}\left(\frac{\Delta\theta}{2\pi}+n\right),\quad n\in\mathbb Z.\]
+<p>法向与电流定向决定总符号。整数 n 表示可以在表面额外贴一层二维整数量子霍尔系统；体只能固定小数部分。θ=π 的绝缘体与真空 θ=0 相邻，如果表面被合适的破时间反演机制完全打开能隙，小数部分是半整数。</p>
+<h3>14.5 一段具体的界面逻辑</h3>
+<p>先从保持时间反演的强 TI 表面出发：存在无隙 Dirac 锥，不能直接把它当作普通绝缘霍尔片。接着加垂直表面磁性质量，使化学势落在表面能隙里；此时可用低能表面霍尔响应。把质量反号，两个半整数响应相差一个整数，因此磁畴壁支持一条整数电荷手性通道。</p>
+<div class="exercise"><b>自测</b> θ=π 的体是否自动意味着任何表面都能测到 \(e^2/2h\)？<details><summary>答案</summary><p>不能。需要合适的绝缘表面、化学势位置与对称性破缺条件，还要考虑上下表面、侧面、接触与额外整数层。无隙金属表面不能直接套用绝缘表面的局域响应公式。</p></details></div>
+<details><summary>推导补充：界面项为什么由 θ 的跳变决定？</summary><p>阿贝尔场强 F=dA，故 \(F\wedge F=d(A\wedge dA)\)。将 \(\int\theta F\wedge F\) 分部积分，除外边界项外留下 \(-\int d\theta\wedge A\wedge dA\)。若 θ 在界面阶跃，dθ 集中于界面，积分就化成 2+1 维的 Chern–Simons 项，系数由 Δθ 决定。若 θ 连续缓变，响应分布在整个梯度区域。具体正负仍由四维与界面定向统一决定。</p></details><details><summary>例题：θ=π 与 θ=3π 是不同体相吗？</summary><p>作为这里的体电磁角，它们模 2π 相同。对应表面表示可相差一个整数霍尔层；因此“体相相同”不等于“每一种表面终止方式完全相同”。</p></details><div class="chapter-end"><label><input type="checkbox" data-read="14"> 标记本章已读</label><a href="#ch15">下一章 →</a></div></section><section class="chapter" id="ch15" data-title="Z₂ 指标怎样留下实验痕迹"><div class="chapter-meta">CHAPTER 15 <span>教材正文页 186–191</span></div><h2>Z₂ 指标怎样留下实验痕迹</h2><p class="subtitle">表面 Dirac 锥、半整数与整体整数之间</p>
+<h3>15.1 一个表面 Dirac 锥</h3>
+\[H_s=v(k_xs_y-k_ys_x)+m s_z.\]
+<p>m=0 时，正能态的自旋期望位于面内并垂直于动量，形成自旋动量锁定。真实材料中还可能有能带弯曲、各向异性与额外平庸表面带，最简圆锥只描述低能结构。</p>
+<p>磁性质量 m 打开能隙；面内均匀磁化在这个最简模型里主要移动 Dirac 点，垂直分量才与动能同时反对易并直接开隙。因此不能笼统地说“加磁场就一定开 Dirac 隙”。轨道磁场与 Zeeman 耦合也应区分。</p>
+<h3>15.2 Landau 能级为什么有一个特殊的零模</h3>
+<p>磁场下动量变成协变动量，两个方向不再对易。利用升降算符，Dirac 哈密顿量把相邻谐振子能级相连；除特殊的 n=0 态外，能量成对出现：</p>
+\[E_{n,\pm}=\pm\sqrt{m^2+2n\hbar e|B|v^2},\quad n\ge1.\]
+<p>n=0 的能量由质量、磁场方向和表面定向共同决定。无质量极限下它位于 Dirac 点。这种不成对的最低能级导致单表面低能霍尔序列出现半整数偏移。完整有限样品的电磁响应仍需上下表面与体的一致性，不能把单个连续锥当成独立二维晶格模型。</p>
+<h3>15.3 三种量，读实验时应分开</h3>
+<table><tr><th>对象</th><th>理想模型的含义</th><th>读数前要检查</th></tr><tr><td>表面谱</td><td>奇数个受保护 Dirac 锥</td><td>投影、化学势、额外平庸带</td></tr><tr><td>界面霍尔系数</td><td>θ 差固定半整数部分</td><td>磁性开隙、表面绝缘、整数层</td></tr><tr><td>器件总输运</td><td>所有导电路径的综合响应</td><td>体载流子、侧表面、接触与散射</td></tr></table>
+<h3>15.4 磁电响应的物理图像</h3>
+<p>把磁场穿过一个已开隙的表面，表面霍尔响应使磁通与诱导电荷关联；反过来，电场也关联磁化响应。它是“电磁场通过拓扑边界互相牵连”的图像。要把它变成某个具体测量公式，需要说明样品形状、频率、介电常数与边界条件，不能只写一个 θ 就跳过电动力学。</p>
+<div class="exercise"><b>例题</b> 一个闭合样品的两个区域表面霍尔系数分别为 \(+e^2/2h\) 与 \(-e^2/2h\)，畴壁净手性数是多少？<details><summary>答案</summary><p>差为 \(e^2/h\)，所以有一条净手性电荷通道。这里取两区域相同的局部定向比较；涉及不同法向的上下表面时，应先统一边界定向。</p></details></div>
+<h3>15.5 看见自旋动量锁定</h3><div data-lab="spin"></div><p>左图在固定 |k|=1 的圆上画出正能带的面内自旋期望，右图画 kᵧ=0 色散。质量 m 不为零时，自旋向面外倾斜，面内箭头变短。这里的 s 代表理想表面模型的真实自旋；实际材料中的有效赝自旋与测量自旋可能存在更复杂的投影关系。</p><details><summary>例题：为什么反向动量处的非磁性散射受到抑制？</summary><p>m=0 时，k 与 −k 的态是正交的 Kramers 伙伴。标量势不翻转相应自旋结构，单粒子弹性后向散射矩阵元消失。但一般角度散射并不全部消失，输运寿命、量子寿命和“完全没有散射”也不是一回事。</p></details><div class="chapter-end"><label><input type="checkbox" data-read="15"> 标记本章已读</label><a href="#ch16">下一章 →</a></div></section><section class="chapter" id="ch16" data-title="拓扑超导：从 BdG 到 Majorana"><div class="chapter-meta">CHAPTER 16 <span>教材正文页 193–211</span></div><h2>拓扑超导：从 BdG 到 Majorana</h2><p class="subtitle">零能态为什么只算“半个”复费米子</p>
+<h3>16.1 Nambu 加倍不是增加物理自由度</h3>
+<p>超导平均场把电子与空穴混合。设 \(\Psi_k=(c_k,c^\dagger_{-k})^T\)，二次型写为</p>
+\[\widehat H=\frac12\sum_k\Psi_k^\dagger\mathcal H_{\rm BdG}(k)\Psi_k+\mathrm{const}.\]
+<p>1/2 放在二次量子化表达外面，\(\mathcal H_{\rm BdG}\) 的本征值直接给准粒子能量；不要再把矩阵本征值除以 2。粒子空穴约束 \(\mathcal C\mathcal H(k)\mathcal C^{-1}=-\mathcal H(-k)\) 表示 ±E 本征态并不独立，不是普通绝缘体里额外的两条可独立填充能带。</p>
+<h3>16.2 Kitaev 链的体相图</h3>
+<p>固定 t&gt;0、实数 Δ，取一个常用 Nambu 约定：</p>
+\[\mathcal H(k)=(-\mu-2t\cos k)\tau_z+2\Delta\sin k\,\tau_y,\quad E_\pm=\pm\sqrt{(\mu+2t\cos k)^2+4\Delta^2\sin^2k}.\]
+<p>对 Δ≠0，闭隙只能在 k=0 或 π，得到 μ=−2t 或 +2t。两端质量乘积决定 class D 的 Z₂ 指标：</p>
+\[\mathcal M=\mathrm{sgn}[(-\mu-2t)(-\mu+2t)],\qquad |\mu|<2t\Rightarrow\mathcal M=-1.\]
+<p>若 Δ=0 且 |μ|&lt;2t，模型是无隙金属，不能因为质量乘积为负就称它为全隙拓扑超导。实参数最简链还可能有额外的有效时间反演与手征结构，落在 BDI 类；这里关注允许一般 class D 微扰后仍保留的奇偶保护。</p>
+<div data-lab="kitaev"></div>
+<p>左图由周期模型的解析色散绘制；右图是 t=Δ=1 时开放链的一个端部零模递推包络，\(|\psi_j|\propto|\mu/(2t)|^{j-1}\)。它是半无限链解在有限窗口的截取，<b>不是有限链精确零能本征态</b>。临界或平庸区域关闭该端模曲线；有限链另一端会造成指数小劈裂。</p>
+<h3>16.3 把一个电子拆成两个厄米算符</h3>
+\[a_j=c_j+c_j^\dagger,\quad b_j=-i(c_j-c_j^\dagger),\quad c_j=(a_j+ib_j)/2.\]
+<p>它们满足 \(a_j^\dagger=a_j,b_j^\dagger=b_j\) 和 \(\{a_i,a_j\}=\{b_i,b_j\}=2\delta_{ij}\)。任何复费米子都能这么拆，所以“写成 Majorana”本身不意味着拓扑。关键是哈密顿量怎样把这些分量配对。</p>
+<p>原子极限中 aⱼ 与 bⱼ 在同一个格点配对，没有剩余。μ=0、t=Δ 时，哈密顿量可化为相邻格点 bⱼ 与 aⱼ₊₁ 的配对，开放链留下 a₁ 与 bₙ。两个远端的 Majorana 可组合成一个非局域复费米子 \(f=(a_1+ib_N)/2\)，其占据与空置对应不同费米宇称。</p>
+<h3>16.4 端模递推与局域长度</h3>
+<p>在 t=Δ 时，寻找 \(\gamma_L=\sum_j\alpha_ja_j\)，要求 \([\widehat H,\gamma_L]=0\)，逐项抵消给出 \(\alpha_{j+1}=-(\mu/2t)\alpha_j\)。因此</p>
+\[\alpha_j\propto(-\mu/2t)^{j-1},\qquad\xi^{-1}=\ln|2t/\mu|.\]
+<p>只有 |μ|&lt;2t 才能在半无限链上归一化。μ→0 时零模集中于第一个分量；|μ|→2t 时局域长度发散，与体闭隙一致。有限链左右端混合形成 \(H_{\rm eff}=i\epsilon\gamma_L\gamma_R/2\)，一般不严格为零能。</p>
+<h3>16.5 二维 p+ip 与涡旋</h3>
+<p>连续模型可写为 \(\mathcal H=\Delta k_x\tau_x-\Delta k_y\tau_y+(k^2/2m_*-\mu)\tau_z\)。大动量的二次项提供正则化。μ&gt;0 时 d 的原点与无穷远方向相反，形成非平庸覆盖；μ&lt;0 为强配对平庸相，μ=0 闭隙。C 的正负还取决于 p+ip 手性和基底约定。</p>
+<p>奇数 Chern 的弱配对相中，合适的奇涡量涡旋可束缚一个 Majorana 零模。涡旋相位绕行改变边界量子化条件，是从边界环到涡核零模的直觉桥梁。普通涡核也可能有低能束缚态；看到低能峰并不能仅凭这一点确认 Majorana。</p>
+<h3>16.6 编织的代数图像</h3>
+<p>理想情况下交换两个充分分离的零模可表示为 \(U_{ij}=\exp(\pi\gamma_i\gamma_j/4)\)，作用使 Majorana 算符发生带符号交换。不同顺序的共享零模交换通常不对易，这就是非阿贝尔结构。需要绝热、保持能隙和宇称，以及真正的空间交换过程；仅仅画两条线交叉不是实现量子门。</p>
+<details><summary>展开 Python：有限开放 Kitaev 链本征值与最低能态分布</summary><pre><code class="python">import numpy as np
+N,t,Delta,mu = 50,1.,1.,.7
+h = -mu*np.eye(N)
+D = np.zeros((N,N))
+for j in range(N-1):
+    h[j,j+1]=h[j+1,j]=-t
+    D[j,j+1]=Delta; D[j+1,j]=-Delta
+H = np.block([[h,D],[-D,-h.T]])
+E,V = np.linalg.eigh(H)
+idx = np.argmin(np.abs(E))
+rho = abs(V[:N,idx])**2 + abs(V[N:,idx])**2
+print('minimum |E|:',abs(E[idx]))
+print('normalization:',rho.sum())
+# Inspect E for +/- pairs and compare N=30,50,80.
+# A finite-chain eigenvector can occupy BOTH ends.
+</code></pre></details>
+<div class="exercise"><b>例题</b> 四个分离 Majorana 有多少低能态？固定总宇称后呢？<details><summary>答案</summary><p>四个 Majorana 组成两个复费米子，若忽略劈裂共有 4 种占据。固定总宇称后只剩 2 个态。每个 Majorana 不是一个能独立占据的普通局域电子能级。</p></details></div>
+<h3>16.7 再检查一次 Bogoliubov 算符</h3><p>准粒子可写为 \(\eta=\sum_j(u_jc_j+v_jc_j^\dagger)\)。其厄米共轭系数交换并复共轭，对应相反能量的 BdG 解。如果零能解能选成 \(v_j=u_j^*\)，就有 \(\eta=\eta^\dagger\)。这一步把“零能”与“自共轭”连接起来，但一对普通零能复态也可拆成两个 Majorana；拓扑保护还取决于它们的空间分离及允许耦合。</p><details><summary>例题：μ=t，Δ=t，端模密度每向内一格缩小几倍？</summary><p>幅度比例为 −1/2，密度比例为 1/4。半无限归一化密度是 \(\rho_j=(3/4)(1/4)^{j-1}\)，幅度局域长度 \(\xi=1/\ln2\)。交替负号不影响密度，却可能影响有限长度的干涉与杂化符号。</p></details><details><summary>例题：两个邻近 Majorana 的 iγ₁γ₂ 为什么是厄米的？</summary><p>\((i\gamma_1\gamma_2)^\dagger=-i\gamma_2\gamma_1=i\gamma_1\gamma_2\)。利用 \(f=(\gamma_1+i\gamma_2)/2\)，可得 \(i\gamma_1\gamma_2=2f^\dagger f-1\)。所以耦合项正是给复费米子的两个宇称态造成能量劈裂。</p></details><div class="chapter-end"><label><input type="checkbox" data-read="16"> 标记本章已读</label><a href="#ch17">下一章 →</a></div></section><section class="chapter" id="ch17" data-title="时间反演拓扑超导与分类"><div class="chapter-meta">CHAPTER 17 <span>教材正文页 214–224</span></div><h2>时间反演拓扑超导与分类</h2><p class="subtitle">同样是成对，二维的奇偶与三维的整数不同</p>
+<h3>17.1 配对自旋结构</h3>
+<p>费米反对称要求 \(\Delta_{\alpha\beta}(\mathbf k)=-\Delta_{\beta\alpha}(-\mathbf k)\)。自旋单态通常对应偶宇称轨道部分，自旋三重态通常对应奇宇称轨道部分；在没有反演、存在强自旋轨道耦合的系统中，应在合适基底中更谨慎地描述，不能只靠“s 波 / p 波”名字判断拓扑。</p>
+<h3>17.2 二维 DIII：两套相反手性的 Majorana</h3>
+<p>把 p+ip 与 p−ip 的超导副本用时间反演联系，电荷不再守恒，但费米宇称保留。边界出现一对反向传播 Majorana，而不是一对普通复电子通道。单对的质量违反时间反演，两对可以用允许耦合配对开隙，因此二维自由费米子 DIII 分类为 Z₂。</p>
+<h3>17.3 三维 DIII：为什么整数能留下来</h3>
+<p>粒子空穴与时间反演联合给出手征约束。将压平哈密顿量变到手征算符对角的基底，可以写成</p>
+\[Q(\mathbf k)=\begin{pmatrix}0&q(\mathbf k)\\q^\dagger(\mathbf k)&0\end{pmatrix},\qquad q^\dagger q=1.\]
+<p>这里 q 是幺正映射，三维绕数为</p>
+\[N_3=\frac1{24\pi^2}\int d^3k\,\epsilon^{ijk}\mathrm{Tr}[(q^{-1}\partial_iq)(q^{-1}\partial_jq)(q^{-1}\partial_kq)].\]
+<p>同定向的多个表面 Majorana 锥在所有相应约束下不能像普通 AII 表面那样简单两两消去；反向绕数副本可以抵消。因而在自由费米子分类里需要整数，而不只是奇偶数。这里不把这一自由分类直接推广到强相互作用情形。</p>
+<h3>17.4 一个有边界的分类表</h3>
+<table><tr><th>类</th><th>时间反演</th><th>粒子空穴</th><th>1D</th><th>2D</th><th>3D</th></tr><tr><td>A</td><td>无</td><td>无</td><td>0</td><td>ℤ</td><td>0</td></tr><tr><td>AII</td><td>Θ²=−1</td><td>无</td><td>0</td><td>ℤ₂</td><td>ℤ₂</td></tr><tr><td>D</td><td>无</td><td>C²=+1</td><td>ℤ₂</td><td>ℤ</td><td>0</td></tr><tr><td>DIII</td><td>Θ²=−1</td><td>C²=+1</td><td>ℤ₂</td><td>ℤ₂</td><td>ℤ</td></tr></table>
+<p>这是稳定、强拓扑的自由费米子分类摘表，未列平移保护的弱指标、晶体对称性指标，也未包括相互作用修正。0 表示在这组条件与稳定等价下无非平庸强分类，不代表不能出现任何边界结构。加入平庸带后仍不变的分类才叫稳定分类。</p>
+<h3>17.5 热流比电流更自然</h3>
+<p>Majorana 准粒子不是确定电荷的电子，超导态中讨论电荷霍尔电导通常不能直接照搬绝缘体。手性边缘的低温热霍尔响应与手性中心荷有关：</p>
+\[\frac{\kappa_{xy}}{T}=c\,\frac{\pi^2k_B^2}{3h},\qquad c=\frac12\text{ 对单个手性 Majorana}.\]
+<p>一个手性复费米子相当于两个同向 Majorana，中心荷为 1。非手性的 DIII 边缘总净手性中心荷为零，不能把它直接当作有非零净热霍尔的手性态。</p>
+<div class="exercise"><b>例题</b> 三个同向手性 Majorana 与一个反向手性 Majorana，共有多少净中心荷？<details><summary>答案</summary><p>\(c=(3-1)/2=1\)。若反向通道能够在允许条件下与一个同向通道配对开隙，净热响应仍由剩余差值决定。</p></details></div>
+<details><summary>例题：把每个超导态都当成“绝缘体的负能带”，会漏什么？</summary><p>几何不变量确实可以从 BdG 负能子空间计算，但负能和正能之间存在粒子空穴冗余，边界准粒子也不具有确定电荷。若忘掉冗余，会把一个 Majorana 错数成一个复电子，并把热响应错当电荷响应。拓扑计算与可观测量解释必须同时遵守 BdG 约束。</p></details><div class="chapter-end"><label><input type="checkbox" data-read="17"> 标记本章已读</label><a href="#ch18">下一章 →</a></div></section><section class="chapter" id="ch18" data-title="近邻效应：在 TI 边界上工程化质量"><div class="chapter-meta">CHAPTER 18 <span>教材正文页 226–234；附录 237–240</span></div><h2>近邻效应：在 TI 边界上工程化质量</h2><p class="subtitle">磁体、超导体与畴壁，把全书连成一条线</p>
+<h3>18.1 把边缘看成可加工的 Dirac 系统</h3>
+<p>量子自旋霍尔边缘本来无隙。覆盖磁性层可以打破时间反演；覆盖超导层可以在平均场上混合电子空穴。两者都能开隙，却对应不同的质量结构。于是“界面上什么质量变号”成为设计局域态的工具。</p>
+<p>在一套适当 Nambu 基底中可取</p>
+\[\mathcal H=vk s_z\tau_z-\mu\tau_z+M s_x+\Delta\tau_x.\]
+<p>取实 Δ 且 μ=0，动能与两个质量分别反对易，而磁性质量与超导质量互相对易。平方后得到两个有效质量的组合：</p>
+\[E^2=v^2k^2+(M\pm\Delta)^2.\]
+<p>如果把 M 和 Δ 误当成彼此反对易，会错误地得到 \(M^2+\Delta^2\)，从而漏掉 M=±Δ 的相变。这是检查矩阵代数的一个好例子。</p>
+<div data-lab="proximity"></div>
+<p>实验固定 Δ=1、μ=0，显示两种质量的色散与界面长度标度 \(\xi_\pm=v/|M\pm\Delta|\)。一个质量过零时，相应长度发散。只在这个化学势与模型约定下，临界条件才是 |M|=|Δ|；μ≠0 时 k=0 的闭隙条件变为 \(M^2=\mu^2+\Delta^2\)，还要检查模型的完整谱。</p>
+<h3>18.2 为什么磁区与超导区之间会留下一个 Majorana</h3>
+<p>从纯超导区域走向纯磁性区域，M−Δ 的符号改变，而 M+Δ 可以不改变。只有一套有效 Dirac 质量形成畴壁。用第六章同样的正规化解方法得到局域零模，再考虑 BdG 的粒子空穴冗余，留下的是一个自共轭 Majorana 自由度，而不是两个独立复电子态。</p>
+<h3>18.3 三维 TI 表面上的 s 波为什么能投影出 p 波结构</h3>
+<p>TI 表面单个非简并螺旋费米面上，自旋方向随动量绕一圈。在 \(|\mu|\gg|\Delta|\)、低能仅保留一个螺旋带的条件下，把普通 s 波配对投影到这个动量相关的自旋基底，配对矩阵元会带 \(e^{\pm i\varphi_k}\) 的角相位。它像有效的 p±ip 配对。</p>
+<p>这个角结构来自波函数的自旋纹理，不是说原始接触超导体在微观上变成了本征 p 波。完整系统可在没有磁性和涡旋时保持时间反演，而投影到单个费米面后的形式与自旋无关手性 p 波相似。投影有能标与带隔离条件，不能超出范围使用。</p>
+<h3>18.4 不同界面的模式账本</h3>
+<table><tr><th>边界维度与区域</th><th>理想低能界面态</th><th>关键条件</th></tr><tr><td>QSH 一维边缘：磁性 / 超导</td><td>局域 Majorana</td><td>仅一套有效质量反号</td></tr><tr><td>3D TI 二维表面：反向磁畴</td><td>一维手性电荷态</td><td>霍尔响应差为一个量子</td></tr><tr><td>3D TI 二维表面：磁性 / 超导</td><td>手性 Majorana 通道</td><td>合适的全隙区域与质量插值</td></tr><tr><td>3D TI 表面：理想 π 超导结</td><td>反向 Majorana 对</td><td>相位与时间反演条件、额外质量受限</td></tr></table>
+<h3>18.5 附录的连接：三维模型放进磁场</h3>
+<p>教材附录把三维 TI 的体与表面模型放进磁场。入门时应分清三种长度：磁长度 \(\ell_B=\sqrt{\hbar/(e|B|)}\)、表面穿透深度以及样品厚度。若上下表面波函数重叠，或体 Landau 能级靠近化学势，单独表面的简化图像就需要修正。不能只用二维圆锥公式解释所有三维样品响应。</p>
+<h3>18.6 回头看全书：同一套思考步骤</h3>
+<p>先写清基底和对称性，再找所有允许的质量；接着找闭隙位置、追踪占据子空间的几何，最后用拓扑差预测界面。Berry 相位是局部平行移动，Chern 数是整体拼接，Z₂ 是时间反演限制下的奇偶障碍，Majorana 是 BdG 冗余与质量畴壁共同作用的结果。每一步都有可检查的计算，而不是从名字直接跳到结论。</p>
+<div class="exercise"><b>综合题</b> 磁性区 M=2、Δ=0，超导区 M=0、Δ=1，μ=0。比较两区有效质量，哪个变号？<details><summary>逐步答案</summary><p>磁区 M+Δ=2、M−Δ=2；超导区 M+Δ=1、M−Δ=−1。只有后者变号。若界面平滑且保持相关体隙与模型条件，预期有一套畴壁零模；BdG 自共轭条件把它识别为一个 Majorana。</p></details></div>
+<h3>18.7 一个可复用的模型检查模板</h3><ol><li>写出基底顺序，区分轨道、自旋和 Nambu 指标。</li><li>写明 Θ 与 𝒞，并验证平方、k 反号及哈密顿量约束。</li><li>检查质量矩阵与动能、不同质量之间的对易或反对易关系。</li><li>求完整闭隙条件，区分直接隙与固定化学势下的绝缘条件。</li><li>确定高能正则化和边界终止，再计算体指标或比较两侧指标差。</li><li>求界面解，检查归一化、有限尺寸劈裂与 BdG 冗余。</li></ol><p>这一模板适用于把书中的理论用于自己的模型。最常见的错误不在艰深积分，而在开头的基底、符号、因子 2 和最后的物理解释。</p><div class="chapter-end"><label><input type="checkbox" data-read="18"> 标记本章已读</label><a href="#appendix">符号与学习资源 →</a></div></section>
+<section class="chapter" id="appendix"><div class="chapter-meta">REFERENCE DESK</div><h2>把知识连起来</h2><h3>一张符号表</h3><table><tr><th>记号</th><th>含义与约定</th></tr><tr><td>k，p</td><td>k 是波矢，p 是动量；p=ℏk。数值演示通常取 a=ℏ=1。</td></tr><tr><td>σ，s，τ</td><td>分别用于模型中的二能级/轨道、真实自旋、Nambu 或副本空间；以每节声明为准。</td></tr><tr><td>A，F</td><td>Berry 连接 A=i⟨u|∂u⟩，F=∂A−∂A；非阿贝尔时需交换子。</td></tr><tr><td>C，ν，θ</td><td>第一 Chern 整数、Z₂ 指标、模 2π 的磁电角。</td></tr><tr><td>μ，Δ，M</td><td>化学势、超导配对幅、Dirac 或磁性质量；单位和符号在具体模型中定义。</td></tr><tr><td>Θ，𝒞</td><td>时间反演与 BdG 粒子空穴反幺正算符；不能仅根据矩阵长相猜其平方。</td></tr></table>
+<h3>模型之间的联系</h3><div class="concept-map"><div>绝热平行移动<br><b>Berry 相位</b></div><span>→</span><div>全局曲率通量<br><b>Chern 数</b></div><span>→</span><div>对称性限制<br><b>Z₂ / 绕数</b></div><span>→</span><div>质量差与界面<br><b>边缘 / Majorana</b></div></div>
+<h3>额外的综合练习</h3>
+<details><summary>A. 不对角化也能判断两带模型的拓扑相变吗？</summary><p>对第八章模型，求 d=0 得到 m=−2、0、2。再算各点速度定向和质量符号即可恢复完整相图。只看 Γ 点会漏掉 m=0 与 m=2 的变化。检查两个占据态之间的交叉没有意义，必须检查占据与未占据子空间的能隙。</p></details>
+<details><summary>B. 给所有能带加同一个随 k 变化的能量，拓扑会变吗？</summary><p>加入 ε(k)I 不改变本征矢，因此在固定带子空间上 Berry 曲率不变。但如果带的间接能隙消失，固定化学势下的占据情况改变，绝缘体响应的量子化前提就会失效。“本征矢不变”与“仍然是绝缘填充”要分别检查。</p></details>
+<details><summary>C. 让一个拓扑态和它的反向副本放在一起，总能变平庸吗？</summary><p>Chern 整数可相加为零，但能否开隙还要看允许耦合与保护对称性。保自旋守恒时，两套反向副本可能不能混合；只要求时间反演时，仍可能留下 Z₂ 障碍。必须明确比较的是哪一类哈密顿量。</p></details>
+<details><summary>D. 把一个开放 Kitaev 链接成环，零模去哪里？</summary><p>在 μ=0、t=Δ 极限，原来两端未配对的 Majorana 被最后一条键配对，边界不再存在。体的拓扑不因此改变：周期体系仍有非平庸指标，零模需要拓扑区域与平庸区域的界面。改变边界条件不是改变无限体相。</p></details>
+<details><summary>E. 怎样给数值 Chern 数做最有意义的检查？</summary><p>比较解析可解点；反转一个动量方向应使 C 变号；两条互补能带之和应为零；增加网格分辨率；每点随机乘相位后结果不变；监测最小能隙与相邻重叠大小。不要只把结果四舍五入成整数。</p></details>
+<details><summary>F. 表面质量小了，边界模式会更“强”吗？</summary><p>质量减小意味着局域长度增大。波函数更容易伸进体内、与另一表面杂化，保护能标也变小。拓扑指标不变并不保证器件性能或有限温度稳定性不变。</p></details>
+<h3>教材对照与版权说明</h3><p>主要来源：<cite>B. Andrei Bernevig, with Taylor L. Hughes, Topological Insulators and Topological Superconductors</cite>, Princeton University Press, 2013, ISBN 978-0-691-15175-5。每章顶部给出对应书内页码范围，便于在你持有的教材中核对。第 16–18 章在原书中由 Taylor L. Hughes 撰写。</p><p>网页中的中文解释、例题编排、交互代码和示意图为本项目重新撰写或计算；未包含原 PDF、原书插图、整段译文或教材习题的逐题答案。SSH、数值检查清单等内容为补充教学。物理公式与标准模型用于说明概念，不以原书版式或表述复现。后续若公开发布，请保留来源与第三方资源许可。</p><p>公式渲染使用随项目附带的 MathJax 3（Apache-2.0），许可见 <a href="assets/MathJax-LICENSE.txt">MathJax-LICENSE.txt</a>。本站没有外部字体、统计脚本、远程接口或在线依赖。源码与复核方法见 <a href="README.md">README</a>。</p><h3>这版的范围</h3><p>18 章主线均有伴读内容；Berry 相位、Chern 模型、畴壁与 Kitaev 链给出较细的分步推导。高维 Green 函数的一圈图积分、全部转移矩阵细节、Pfaffian 等价性长证明没有逐行穷尽；相应章节解释其结构与适用条件，并给出原书页码。这是一份可持续扩充的详细伴读版，不能声称替代原书全部计算。</p><a class="button" href="#top">回到起点 ↑</a></section><footer>态与边界 · 交互笔记 · 先理解，再计算，再检查。</footer></main></body></html>

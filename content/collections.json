@@ -31,7 +31,7 @@
   {
     "slug": "bands",
     "title": "能带与拓扑的第一步",
-    "summary": "从平移对称性到交替跃迁链，再用有限矩阵观察边界态。",
+    "summary": "从平移对称性与交替跃迁链出发，走向 Berry 相位、拓扑绝缘体与拓扑超导，用交互模型理解边界态。",
     "symbol": "k",
     "items": [
       [
@@ -54,6 +54,13 @@
         "构造开链矩阵，对照能谱、空间分布和本征方程残差。",
         "articles/numpy-ssh.html",
         "NumPy SSH 开链"
+      ],
+      [
+        "notes",
+        "系统理解拓扑绝缘体与拓扑超导",
+        "沿 Bernevig 教材主线学习18章笔记，通过11个交互实验连接几何、能隙、对称性与边界态。",
+        "courses/ti-tsc-bernevig/index.html",
+        "拓扑绝缘体与拓扑超导 (bernevig版本)笔记"
       ]
     ]
   },
