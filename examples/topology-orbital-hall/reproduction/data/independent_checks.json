@@ -1,0 +1,17 @@
+[
+  {
+    "epsilon2": 3.2,
+    "fhs_chern_n60": -0.0,
+    "fourier_reconstruction_error_eV": 1.3322679118944738e-15
+  },
+  {
+    "epsilon2": 4.1,
+    "fhs_chern_n60": 1.0,
+    "fourier_reconstruction_error_eV": 1.776370391875708e-15
+  },
+  {
+    "epsilon2": 4.9,
+    "fhs_chern_n60": -2.6504622345529306e-17,
+    "fourier_reconstruction_error_eV": 2.6645352591003757e-15
+  }
+]
